@@ -414,14 +414,12 @@ body {
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 <div id="unidade-de-analise" class="section level2 tabset">
 <h2 class="tabset"><em>Unidade de análise</em></h2>
-<p><br></p>
-<p>A unidade de análise de pesquisas na área de saúde geralmente é o indivíduo. Outras possibilidades são instituições em estudos multicêntricos (ex.: hospitais, clínicas) ou estudos publicados em meta-análises (ex.: ensaios clínicos). <br> <br> Identificar corretamente a unidade de análise é fundamental para evitar inflação do tamanho da amostra (ex.: medidas bilaterais resultando em o dobro de participantes), violações de suposições dos testes de hipótese (ex.: independência entre medidas e/ou unidade de análise) e resultados espúrios em testes de hipótese (ex.: p-valores menores que aqueles observados se a amostra não estivesse inflada) <span class="citation">(<a href="#ref-Matthews1990" role="doc-biblioref">Matthews et al. 1990</a>; <a href="#ref-Altman1997" role="doc-biblioref">Altman and Bland 1997</a>)</span>. <br> <br> Da unidade de análise podem ser coletadas informações em medidas únicas, repetidas ou múltiplas. Como exemplo, segue a avaliação da variável ‘pressão arterial sistólica’ em um indivíduo como unidade de análise.</p>
-<p><br></p>
+<p><br> A unidade de análise de pesquisas na área de saúde geralmente é o indivíduo. Outras possibilidades são instituições em estudos multicêntricos (ex.: hospitais, clínicas) ou estudos publicados em meta-análises (ex.: ensaios clínicos). <br> <br> É fundamental identificar corretamente a unidade de análise para evitar inflação do tamanho da amostra (ex.: medidas bilaterais resultando em o dobro de participantes), violações de suposições dos testes de hipótese (ex.: independência entre medidas e/ou unidade de análise) e resultados espúrios em testes de hipótese (ex.: p-valores menores que aqueles observados se a amostra não estivesse inflada) <span class="citation">(<a href="#ref-Matthews1990" role="doc-biblioref">Matthews et al. 1990</a>; <a href="#ref-Altman1997" role="doc-biblioref">Altman and Bland 1997</a>)</span>. <br> <br> Da unidade de análise podem ser coletadas informações em medidas únicas, repetidas ou múltiplas. Como exemplo, segue a avaliação da variável ‘pressão arterial sistólica’ em um indivíduo como unidade de análise. <br></p>
 <div id="medidas-únicas" class="section level3">
 <h3><strong>Medidas únicas</strong></h3>
-<p>A medida única da pressão arterial sistólica no braço esquerdo, resultando em um valor pontual. O valor pontual será considerado representativo da variável para a unidade de análise (ex.: <strong>118 mmHg</strong> para o participante <strong>#1</strong>). Medidas únicas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.</p>
+<p>A medida única da pressão arterial sistólica no braço esquerdo resulta em um valor pontual. O valor pontual será considerado representativo da variável para a unidade de análise (ex.: <strong>120 mmHg</strong> para o participante <strong>#9</strong>). Medidas únicas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.</p>
 <pre class="r"><code># para reprodutibilidade das simulações
-set.seed(0)
+set.seed(1)
 
 # tamanho do grupo
 n &lt;- 100
@@ -429,8 +427,12 @@ n &lt;- 100
 # cria o fator unidade de análise, sem reposição
 ID &lt;- seq(1:n)
 
+# determina os limites do espaço amostral para sorteio
+inferior &lt;- 110
+superior &lt;- 120
+
 # sorteia n dados no intervalo min-max, com reposição para cada variável
-VAR.1 &lt;- sample(110:120, n, replace = TRUE)
+VAR.1 &lt;- sample(inferior:superior, n, replace = TRUE)
 
 # organiza as informações de unidade de análise e dados
 table.1 &lt;- data.frame(ID, VAR.1)
@@ -444,7 +446,8 @@ library(kableExtra)
 # exibe as 10 linhas iniciais da tabela de dados 
 kable(head(table.1, n = 10L), align = &quot;c&quot;, format = &quot;html&quot;) %&gt;%
   kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
-  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;)</code></pre>
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;) %&gt;%
+  row_spec(k1, background = &quot;#E6E6E6&quot;, bold = TRUE)</code></pre>
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -522,10 +525,10 @@ Pressão arterial, braço esquerdo (mmHg)
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
 9
 </td>
-<td style="text-align:center;">
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
 120
 </td>
 </tr>
@@ -543,9 +546,9 @@ Pressão arterial, braço esquerdo (mmHg)
 </div>
 <div id="medidas-repetidas" class="section level3">
 <h3><strong>Medidas repetidas</strong></h3>
-<p>A medida repetida da pressão arterial no braço esquerdo, resultando em um conjunto de valores pontuais (ex.: <strong>118 mmHg</strong>, <strong>116 mmHg</strong> e <strong>117 mmHg</strong> para o participante <strong>#1</strong>). As medidas repetidas podem ser tabuladas separadamente, por exemplo para análise da confiabilidade de obtenção dessa medida.</p>
+<p>A medida repetida da pressão arterial no braço esquerdo, resultando em um conjunto de valores pontuais (ex.: <strong>110 mmHg</strong>, <strong>118 mmHg</strong> e <strong>116 mmHg</strong> para o participante <strong>#5</strong>). As medidas repetidas podem ser tabuladas separadamente, por exemplo para análise da confiabilidade de obtenção dessa medida.</p>
 <pre class="r"><code># para reprodutibilidade das simulações
-set.seed(0)
+set.seed(2)
 
 # tamanho do grupo
 n &lt;- 100
@@ -553,10 +556,14 @@ n &lt;- 100
 # cria o fator unidade de análise, sem reposição
 ID &lt;- seq(1:n)
 
+# determina os limites do espaço amostral para sorteio
+inferior &lt;- 110
+superior &lt;- 120
+
 # sorteia n dados no intervalo min-max, com reposição para cada variável
-VAR.1 &lt;- sample(110:120, n, replace = TRUE)
-VAR.2 &lt;- sample(110:120, n, replace = TRUE)
-VAR.3 &lt;- sample(110:120, n, replace = TRUE)
+VAR.1 &lt;- sample(inferior:superior, n, replace = TRUE)
+VAR.2 &lt;- sample(inferior:superior, n, replace = TRUE)
+VAR.3 &lt;- sample(inferior:superior, n, replace = TRUE)
 
 # organiza as informações de unidade de análise e dados
 VAR &lt;- data.frame(VAR.1, VAR.2, VAR.3)
@@ -571,7 +578,8 @@ library(kableExtra)
 # exibe as 10 linhas iniciais da tabela de dados 
 kable(head(table.2, n = 10L), align = &quot;c&quot;, format = &quot;html&quot;) %&gt;%
   kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
-  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;)</code></pre>
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;) %&gt;%
+  row_spec(k2, background = &quot;#E6E6E6&quot;, bold = TRUE)</code></pre>
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -595,13 +603,13 @@ Pressão arterial, braço esquerdo (mmHg) #3
 1
 </td>
 <td style="text-align:center;">
-118
+114
 </td>
 <td style="text-align:center;">
-116
+112
 </td>
 <td style="text-align:center;">
-117
+112
 </td>
 </tr>
 <tr>
@@ -609,10 +617,10 @@ Pressão arterial, braço esquerdo (mmHg) #3
 2
 </td>
 <td style="text-align:center;">
-113
+115
 </td>
 <td style="text-align:center;">
-117
+120
 </td>
 <td style="text-align:center;">
 113
@@ -623,13 +631,13 @@ Pressão arterial, braço esquerdo (mmHg) #3
 3
 </td>
 <td style="text-align:center;">
-116
+115
 </td>
 <td style="text-align:center;">
-114
+110
 </td>
 <td style="text-align:center;">
-119
+120
 </td>
 </tr>
 <tr>
@@ -637,27 +645,27 @@ Pressão arterial, braço esquerdo (mmHg) #3
 4
 </td>
 <td style="text-align:center;">
-110
-</td>
-<td style="text-align:center;">
-115
-</td>
-<td style="text-align:center;">
 117
 </td>
-</tr>
-<tr>
 <td style="text-align:center;">
-5
-</td>
-<td style="text-align:center;">
-111
-</td>
-<td style="text-align:center;">
-117
+116
 </td>
 <td style="text-align:center;">
 114
+</td>
+</tr>
+<tr>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+5
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+110
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+118
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+116
 </td>
 </tr>
 <tr>
@@ -665,13 +673,13 @@ Pressão arterial, braço esquerdo (mmHg) #3
 6
 </td>
 <td style="text-align:center;">
-116
-</td>
-<td style="text-align:center;">
 110
 </td>
 <td style="text-align:center;">
-114
+120
+</td>
+<td style="text-align:center;">
+113
 </td>
 </tr>
 <tr>
@@ -679,10 +687,10 @@ Pressão arterial, braço esquerdo (mmHg) #3
 7
 </td>
 <td style="text-align:center;">
-120
+118
 </td>
 <td style="text-align:center;">
-112
+114
 </td>
 <td style="text-align:center;">
 117
@@ -696,10 +704,10 @@ Pressão arterial, braço esquerdo (mmHg) #3
 111
 </td>
 <td style="text-align:center;">
-119
+112
 </td>
 <td style="text-align:center;">
-117
+119
 </td>
 </tr>
 <tr>
@@ -713,7 +721,7 @@ Pressão arterial, braço esquerdo (mmHg) #3
 112
 </td>
 <td style="text-align:center;">
-116
+117
 </td>
 </tr>
 <tr>
@@ -721,20 +729,20 @@ Pressão arterial, braço esquerdo (mmHg) #3
 10
 </td>
 <td style="text-align:center;">
-112
+110
 </td>
 <td style="text-align:center;">
-120
+115
 </td>
 <td style="text-align:center;">
-113
+115
 </td>
 </tr>
 </tbody>
 </table>
-<p>As medidas repetidas podem ser agregadas por algum parâmetro — ex.: média, mediana, máximo, mínimo, entre outros—, observando-se a relevância biológica, clínica e/ou metodológica desta escolha. O valor agregado será considerado representativo da variável para a unidade de análise (ex.: média = <strong>117 mmHg</strong> para o participante <strong>#1</strong>). Medidas agregadas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.</p>
+<p>As medidas repetidas podem ser agregadas por algum parâmetro — ex.: média, mediana, máximo, mínimo, entre outros—, observando-se a relevância biológica, clínica e/ou metodológica desta escolha. O valor agregado será considerado representativo da variável para a unidade de análise (ex.: média = <strong>115 mmHg</strong> para o participante <strong>#5</strong>). Medidas agregadas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.</p>
 <pre class="r"><code># para reprodutibilidade das simulações
-set.seed(0)
+set.seed(2)
 
 # tamanho do grupo
 n &lt;- 100
@@ -742,10 +750,14 @@ n &lt;- 100
 # cria o fator unidade de análise, sem reposição
 ID &lt;- seq(1:n)
 
+# determina os limites do espaço amostral para sorteio
+inferior &lt;- 110
+superior &lt;- 120
+
 # sorteia n dados no intervalo min-max, com reposição para cada variável
-VAR.1 &lt;- sample(110:120, n, replace = TRUE)
-VAR.2 &lt;- sample(110:120, n, replace = TRUE)
-VAR.3 &lt;- sample(110:120, n, replace = TRUE)
+VAR.1 &lt;- sample(inferior:superior, n, replace = TRUE)
+VAR.2 &lt;- sample(inferior:superior, n, replace = TRUE)
+VAR.3 &lt;- sample(inferior:superior, n, replace = TRUE)
 
 # organiza as informações de unidade de análise e dados
 VAR &lt;- data.frame(VAR.1, VAR.2, VAR.3)
@@ -753,7 +765,7 @@ VAR &lt;- data.frame(VAR.1, VAR.2, VAR.3)
 # converte dados para variável numérica contínua
 VAR &lt;- sapply(VAR, as.numeric)
 
-# agrega os valres repetidos com a média
+# agrega os valores repetidos em linhas com a média
 VAR.aggr &lt;- apply(VAR, 1, FUN = mean)
 
 # organiza as informações de unidade de análise e dados
@@ -771,7 +783,8 @@ library(kableExtra)
 # exibe as 10 linhas iniciais da tabela de dados 
 kable(head(table.3, n = 10L), align = &quot;c&quot;, format = &quot;html&quot;) %&gt;%
   kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
-  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;)</code></pre>
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;) %&gt;%
+  row_spec(k2, background = &quot;#E6E6E6&quot;, bold = TRUE)</code></pre>
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -789,7 +802,7 @@ Pressão arterial, braço esquerdo (mmHg) média
 1
 </td>
 <td style="text-align:center;">
-117
+113
 </td>
 </tr>
 <tr>
@@ -797,7 +810,7 @@ Pressão arterial, braço esquerdo (mmHg) média
 2
 </td>
 <td style="text-align:center;">
-114
+116
 </td>
 </tr>
 <tr>
@@ -805,7 +818,7 @@ Pressão arterial, braço esquerdo (mmHg) média
 3
 </td>
 <td style="text-align:center;">
-116
+115
 </td>
 </tr>
 <tr>
@@ -813,15 +826,15 @@ Pressão arterial, braço esquerdo (mmHg) média
 4
 </td>
 <td style="text-align:center;">
-114
+116
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
 5
 </td>
-<td style="text-align:center;">
-114
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+115
 </td>
 </tr>
 <tr>
@@ -829,7 +842,7 @@ Pressão arterial, braço esquerdo (mmHg) média
 6
 </td>
 <td style="text-align:center;">
-113
+114
 </td>
 </tr>
 <tr>
@@ -845,7 +858,7 @@ Pressão arterial, braço esquerdo (mmHg) média
 8
 </td>
 <td style="text-align:center;">
-116
+114
 </td>
 </tr>
 <tr>
@@ -861,7 +874,7 @@ Pressão arterial, braço esquerdo (mmHg) média
 10
 </td>
 <td style="text-align:center;">
-115
+113
 </td>
 </tr>
 </tbody>
@@ -870,8 +883,46 @@ Pressão arterial, braço esquerdo (mmHg) média
 </div>
 <div id="medidas-seriadas" class="section level3">
 <h3><strong>Medidas seriadas</strong></h3>
-<p>Medidas seriadas são possivelmente relacionadas e, portanto, dependentes na mesma unidade de análise. Por exemplo, a medida seriada da pressão arterial no braço esquerdo, em intervalos tipicamente regulares (ex.: <strong>118 mmHg</strong>, <strong>116 mmHg</strong> e <strong>114 mmHg</strong> em <strong>0 min</strong>, <strong>5 min</strong> e <strong>10 min</strong>, respectivamente).</p>
-<p><br></p>
+<p>Medidas seriadas são possivelmente relacionadas e, portanto, dependentes na mesma unidade de análise. Por exemplo, a medida seriada da pressão arterial no braço esquerdo, em intervalos tipicamente regulares (ex.: <strong>114 mmHg</strong>, <strong>119 mmHg</strong> e <strong>116 mmHg</strong> em <strong>1 min</strong>, <strong>2 min</strong> e <strong>3 min</strong>, respectivamente, para o participante <strong>#1</strong>).</p>
+<pre class="r"><code># para reprodutibilidade das simulações
+set.seed(3)
+
+# tamanho do grupo
+n &lt;- 100
+
+# número de medidas seriadas
+k &lt;- 3
+
+# cria o fator unidade de análise, sem reposição
+ID &lt;- seq(1:n)
+ID &lt;- rep(ID, each = k)
+
+# cria o fator de repetição seriada
+TIME &lt;- seq(1:k)
+TIME &lt;- rep(TIME, times = n)
+
+# determina os limites do espaço amostral para sorteio
+inferior &lt;- 110
+superior &lt;- 120
+
+# sorteia n dados no intervalo min-max, com reposição para cada variável
+VAR &lt;- sample(inferior:superior, n, replace = TRUE)
+VAR &lt;- rep(VAR, times = k)
+
+# organiza as informações de unidade de análise e dados
+table.4 &lt;- data.frame(ID, TIME, VAR)
+
+# atribui rótulos para a tabela de dados
+colnames(table.4) &lt;- c(&quot;Unidade de análise&quot;, &quot;Tempo (min)&quot;, &quot;Pressão arterial, braço esquerdo (mmHg)&quot;)
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados 
+kable(head(table.4, n = 10L), align = &quot;c&quot;, format = &quot;html&quot;) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;) %&gt;%
+  row_spec(1:3, background = &quot;#E6E6E6&quot;, bold = TRUE)</code></pre>
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -888,36 +939,47 @@ Pressão arterial, braço esquerdo (mmHg)
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
 1
 </td>
-<td style="text-align:center;">
-0
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+1
 </td>
-<td style="text-align:center;">
-118
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+114
 </td>
 </tr>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
 1
 </td>
-<td style="text-align:center;">
-5
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+2
 </td>
-<td style="text-align:center;">
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+119
+</td>
+</tr>
+<tr>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+1
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+3
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
 116
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
 1
 </td>
 <td style="text-align:center;">
-10
-</td>
-<td style="text-align:center;">
-114
+113
 </td>
 </tr>
 <tr>
@@ -925,10 +987,10 @@ Pressão arterial, braço esquerdo (mmHg)
 2
 </td>
 <td style="text-align:center;">
-0
+2
 </td>
 <td style="text-align:center;">
-…
+119
 </td>
 </tr>
 <tr>
@@ -936,21 +998,32 @@ Pressão arterial, braço esquerdo (mmHg)
 2
 </td>
 <td style="text-align:center;">
-5
+3
 </td>
 <td style="text-align:center;">
-…
+117
 </td>
 </tr>
 <tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+120
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
 <td style="text-align:center;">
 2
 </td>
 <td style="text-align:center;">
-10
-</td>
-<td style="text-align:center;">
-…
+117
 </td>
 </tr>
 <tr>
@@ -958,39 +1031,65 @@ Pressão arterial, braço esquerdo (mmHg)
 3
 </td>
 <td style="text-align:center;">
-0
+3
 </td>
 <td style="text-align:center;">
-…
+113
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-3
+4
 </td>
 <td style="text-align:center;">
-5
+1
 </td>
 <td style="text-align:center;">
-…
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-10
-</td>
-<td style="text-align:center;">
-…
+119
 </td>
 </tr>
 </tbody>
 </table>
-<p><br></p>
-<p>Medidas seriadas também agregadas por parâmetros — ex.: máximo, mínimo, amplitude — são considerados representativos da variação temporal ou de uma característica de interesse (ex.: amplitude = <strong>4 mmHg</strong>).</p>
-<p><br></p>
+<p>Medidas seriadas também agregadas por parâmetros — ex.: máximo, mínimo, amplitude — são consideradas representativas da variação temporal ou de uma característica de interesse (ex.: amplitude = <strong>5 mmHg</strong> para o participante <strong>#1</strong>).</p>
+<pre class="r"><code># para reprodutibilidade das simulações
+set.seed(3)
+
+# tamanho do grupo
+n &lt;- 100
+
+# número de medidas seriadas
+k &lt;- 3
+
+# cria o fator unidade de análise, sem reposição
+ID &lt;- seq(1:n)
+ID &lt;- rep(ID, each = k)
+
+# cria o fator de repetição seriada
+TIME &lt;- seq(1:k)
+TIME &lt;- rep(TIME, times = n)
+
+# determina os limites do espaço amostral para sorteio
+inferior &lt;- 110
+superior &lt;- 120
+
+# sorteia n dados no intervalo min-max, com reposição para cada variável
+VAR &lt;- sample(inferior:superior, n, replace = TRUE)
+VAR &lt;- rep(VAR, times = k)
+
+# organiza as informações de unidade de análise e dados
+table.5 &lt;- data.frame(ID, VAR)
+
+# atribui rótulos para a tabela de dados
+colnames(table.5) &lt;- c(&quot;Unidade de análise&quot;, &quot;Pressão arterial, braço esquerdo (mmHg) amplitude&quot;)
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados 
+kable(head(table.5, n = 10L), align = &quot;c&quot;, format = &quot;html&quot;) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;) %&gt;%
+  row_spec(1, background = &quot;#E6E6E6&quot;, bold = TRUE)</code></pre>
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1004,11 +1103,27 @@ Pressão arterial, braço esquerdo (mmHg) amplitude
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+1
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+114
+</td>
+</tr>
+<tr>
 <td style="text-align:center;">
 1
 </td>
 <td style="text-align:center;">
-4
+119
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+116
 </td>
 </tr>
 <tr>
@@ -1016,7 +1131,23 @@ Pressão arterial, braço esquerdo (mmHg) amplitude
 2
 </td>
 <td style="text-align:center;">
-…
+113
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+119
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+117
 </td>
 </tr>
 <tr>
@@ -1024,7 +1155,31 @@ Pressão arterial, braço esquerdo (mmHg) amplitude
 3
 </td>
 <td style="text-align:center;">
-…
+120
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+117
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+113
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+119
 </td>
 </tr>
 </tbody>
@@ -1033,8 +1188,39 @@ Pressão arterial, braço esquerdo (mmHg) amplitude
 </div>
 <div id="medidas-múltiplas" class="section level3">
 <h3><strong>Medidas múltiplas</strong></h3>
-<p>A medida de pressão arterial bilateral resultan em um conjunto de valores pontuais (ex.: braço esquerdo = <strong>122 mmHg</strong>, braço direito = <strong>124 mmHg</strong>). Neste caso, ambos os valores pontuais são considerados representativos daquela unidade de análise. Medidas múltiplas também são possivelmente relacionadas e portanto são dependentes na mesma unidade de análise. Medidas múltiplas podem ser obtidas de modo repetido para análise agregada ou seriada.</p>
-<p><br></p>
+<p>A medida de pressão arterial bilateral resultan em um conjunto de valores pontuais (ex.: braço esquerdo = <strong>114 mmHg</strong>, braço direito = <strong>118 mmHg</strong> para o participante <strong>#8</strong>). Neste caso, ambos os valores pontuais são considerados representativos daquela unidade de análise. Medidas múltiplas também são possivelmente relacionadas e portanto são dependentes na mesma unidade de análise. Medidas múltiplas podem ser obtidas de modo repetido para análise agregada ou seriada.</p>
+<pre class="r"><code># para reprodutibilidade das simulações
+set.seed(4)
+
+# tamanho do grupo
+n &lt;- 100
+
+# cria o fator unidade de análise, sem reposição
+ID &lt;- seq(1:n)
+
+# determina os limites do espaço amostral para sorteio
+inferior &lt;- 110
+superior &lt;- 120
+
+# sorteia n dados no intervalo min-max, com reposição para cada variável
+VAR.1 &lt;- sample(inferior:superior, n, replace = TRUE)
+VAR.2 &lt;- sample(inferior:superior, n, replace = TRUE)
+
+# organiza as informações de unidade de análise e dados
+VAR &lt;- data.frame(VAR.1, VAR.2)
+table.6 &lt;- data.frame(ID, VAR)
+
+# atribui rótulos para a tabela de dados
+colnames(table.6) &lt;- c(&quot;Unidade de análise&quot;, &quot;Pressão arterial, braço esquerdo (mmHg)&quot;, &quot;Pressão arterial, braço direito (mmHg)&quot;)
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados 
+kable(head(table.6, n = 10L), align = &quot;c&quot;, format = &quot;html&quot;) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;) %&gt;%
+  row_spec(k4, background = &quot;#E6E6E6&quot;, bold = TRUE)</code></pre>
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1055,10 +1241,10 @@ Pressão arterial, braço direito (mmHg)
 1
 </td>
 <td style="text-align:center;">
-122
+117
 </td>
 <td style="text-align:center;">
-124
+115
 </td>
 </tr>
 <tr>
@@ -1066,10 +1252,10 @@ Pressão arterial, braço direito (mmHg)
 2
 </td>
 <td style="text-align:center;">
-…
+120
 </td>
 <td style="text-align:center;">
-…
+118
 </td>
 </tr>
 <tr>
@@ -1077,10 +1263,87 @@ Pressão arterial, braço direito (mmHg)
 3
 </td>
 <td style="text-align:center;">
-…
+112
 </td>
 <td style="text-align:center;">
-…
+118
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+112
+</td>
+<td style="text-align:center;">
+112
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+116
+</td>
+<td style="text-align:center;">
+112
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+112
+</td>
+<td style="text-align:center;">
+118
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+7
+</td>
+<td style="text-align:center;">
+115
+</td>
+<td style="text-align:center;">
+113
+</td>
+</tr>
+<tr>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+8
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+114
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
+118
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+9
+</td>
+<td style="text-align:center;">
+119
+</td>
+<td style="text-align:center;">
+114
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+10
+</td>
+<td style="text-align:center;">
+112
+</td>
+<td style="text-align:center;">
+116
 </td>
 </tr>
 </tbody>
