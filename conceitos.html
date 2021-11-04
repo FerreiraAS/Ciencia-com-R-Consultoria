@@ -33,6 +33,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
@@ -243,6 +244,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -385,6 +389,14 @@ div.tocify {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">Conceitos fundamentais</h1>
@@ -394,7 +406,7 @@ div.tocify {
 
 <style type="text/css">
 body {
-  font-size: 1.75em;
+  font-size: 1.5em;
 }
 </style>
 <p><br> <br></p>
@@ -407,8 +419,32 @@ body {
 <p><br></p>
 <div id="medidas-únicas" class="section level3">
 <h3><strong>Medidas únicas</strong></h3>
-<p>A medida única da pressão arterial sistólica no braço esquerdo, resultando em um valor pontual. O valor pontual será considerado representativo da variável para a unidade de análise (ex.: <strong>120 mmHg</strong>). Medidas únicas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.</p>
-<p><br></p>
+<p>A medida única da pressão arterial sistólica no braço esquerdo, resultando em um valor pontual. O valor pontual será considerado representativo da variável para a unidade de análise (ex.: <strong>118 mmHg</strong> para o participante <strong>#1</strong>). Medidas únicas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.</p>
+<pre class="r"><code># para reprodutibilidade
+set.seed(0)
+
+# tamanho do grupo
+n &lt;- 100
+
+# cria o fator unidade de análise
+ID &lt;- seq(1:n)
+
+# sorteia n dados no intervalo min-max, com reposição
+data &lt;- sample(110:120, n, replace = TRUE)
+
+# organiza as informações de unidade de análise e dados
+table.1 &lt;- data.frame(ID, data)
+
+# atribui rótulos para a tabela de dados
+colnames(table.1) &lt;- c(&quot;Unidade de análise&quot;, &quot;Pressão arterial, braço esquerdo (mmHg)&quot;)
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados 
+kable(head(table.1, n = 10L), align = &quot;c&quot;, format = &quot;html&quot;) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;)</code></pre>
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -426,7 +462,7 @@ Pressão arterial, braço esquerdo (mmHg)
 1
 </td>
 <td style="text-align:center;">
-120
+118
 </td>
 </tr>
 <tr>
@@ -434,7 +470,7 @@ Pressão arterial, braço esquerdo (mmHg)
 2
 </td>
 <td style="text-align:center;">
-…
+113
 </td>
 </tr>
 <tr>
@@ -442,7 +478,63 @@ Pressão arterial, braço esquerdo (mmHg)
 3
 </td>
 <td style="text-align:center;">
-…
+116
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+110
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+111
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+116
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+7
+</td>
+<td style="text-align:center;">
+120
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+8
+</td>
+<td style="text-align:center;">
+111
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+9
+</td>
+<td style="text-align:center;">
+120
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+10
+</td>
+<td style="text-align:center;">
+112
 </td>
 </tr>
 </tbody>
@@ -847,6 +939,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 <script>
 $(document).ready(function ()  {

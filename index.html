@@ -33,6 +33,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
@@ -219,6 +220,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -361,6 +365,14 @@ div.tocify {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">Statistics DIY</h1>
@@ -370,7 +382,7 @@ div.tocify {
 
 <style type="text/css">
 body {
-  font-size: 1.75em;
+  font-size: 1.5em;
 }
 </style>
 <p><br> <br></p>
@@ -390,7 +402,7 @@ body {
 <p><br></p>
 <div>
 <center>
-<img width="10%" height="10%" src="https://github.com/rstudio/hex-stickers/blob/master/thumbs/RStudio.png?raw=true"> Esta página foi integralmente desenvolvida em <a href="https://www.rstudio.com"><strong>R version 4.1.1 (2021-08-10)</strong></a>
+<img width="10%" height="10%" src="https://github.com/rstudio/hex-stickers/blob/master/thumbs/RStudio.png?raw=true"> Esta página foi desenvolvida em <a href="https://www.rstudio.com"><strong>R version 4.1.1 (2021-08-10)</strong></a>
 </center>
 </div>
 <p><a style="float:right" href="#top"><b>Início</b></a></p>
@@ -434,7 +446,7 @@ body {
 </div>
 </div>
 <p><br></p>
-<p>Arthur de Sá Ferreira possui graduação em Fisioterapia pela Universidade Federal do Rio de Janeiro (1999), mestrado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2002) e doutorado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2006). <br> <br> Atualmente é membro efetivo da Associação Brasileira de Pesquisa e Pós-Graduação em Fisioterapia (<a href="https://abrapg-ft.org.br/portal/"><strong>ABRAPG-FT</strong></a>), do Committee on Publication Ethics (<a href="https://publicationethics.org"><strong>COPE</strong></a>) e da Royal Statistical Society (<a href="https://rss.org.uk"><strong>RSS</strong></a>). <br> <br> Compõe o corpo editoral dos periódicos internacionais e nacionais: * <a href="https://www.nature.com/srep/about/editors"><strong>Scientific Reports</strong></a> * <a href="https://www.frontiersin.org/research-topics/26395/systemic-effects-and-disabilities-in-long-covid-syndrome-current-approaches-and-clinical-challenges"><strong>Frontiers in Rehabilitation Sciences</strong></a> * <a href="https://www.hindawi.com/journals/ecam/editors/"><strong>Evidence-Based Complementary and Alternative Medicine</strong></a> * <a href="https://www.springer.com/journal/11655/editors"><strong>Chinese Journal of Integrative Medicine</strong></a> * <a href="https://www.journals.elsevier.com/journal-of-integrative-medicine/editorial-board"><strong>Journal of Integrative Medicine</strong></a> * <a href="https://www.scielo.br/journal/fp/about/#editors"><strong>Fisioterapia e Pesquisa</strong></a> <br> <br> Atua como professor adjunto do Centro Universitário Augusto Motta (<a href="https://www.unisuam.edu.br"><strong>UNISUAM</strong></a>) e pesquisador no Laboratório de Simulação Computacional e Modelagem em Reabilitação dos Programas de Pós-graduação em Ciências da Reabilitação e de Desenvolvimento Local da UNISUAM. <br> <br> Tem experiência na área de Fisioterapia e Terapia Ocupacional, atuando principalmente nos seguintes temas: <strong>movimento funcional humano</strong>, <strong>processamento de sinais biomédicos</strong>, <strong>modelagem computacional</strong>, <strong>bioestatística</strong>, <strong>fisioterapia musculoesquelética</strong> e <strong>fisioterapia cardiovascular</strong>,<strong>medicina tradicional (chinesa)</strong>.</p>
+<p>Arthur de Sá Ferreira possui graduação em Fisioterapia pela Universidade Federal do Rio de Janeiro (1999), mestrado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2002) e doutorado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2006). <br> <br> Atualmente é membro efetivo da Associação Brasileira de Pesquisa e Pós-Graduação em Fisioterapia (<a href="https://abrapg-ft.org.br/portal/"><strong>ABRAPG-FT</strong></a>), do Committee on Publication Ethics (<a href="https://publicationethics.org"><strong>COPE</strong></a>) e da Royal Statistical Society (<a href="https://rss.org.uk"><strong>RSS</strong></a>). <br> <br> Compõe o corpo editoral dos periódicos internacionais e nacionais: * <a href="https://www.nature.com/srep/about/editors"><strong>Scientific Reports</strong></a> * <a href="https://www.frontiersin.org/research-topics/26395/systemic-effects-and-disabilities-in-long-covid-syndrome-current-approaches-and-clinical-challenges"><strong>Frontiers in Rehabilitation Sciences</strong></a> * <a href="https://www.hindawi.com/journals/ecam/editors/"><strong>Evidence-Based Complementary and Alternative Medicine</strong></a> * <a href="https://www.springer.com/journal/11655/editors"><strong>Chinese Journal of Integrative Medicine</strong></a> * <a href="https://www.journals.elsevier.com/journal-of-integrative-medicine/editorial-board"><strong>Journal of Integrative Medicine</strong></a> * <a href="https://www.scielo.br/journal/fp/about/#editors"><strong>Fisioterapia e Pesquisa</strong></a> <br> <br> Atua como professor adjunto do Centro Universitário Augusto Motta (<a href="https://www.unisuam.edu.br"><strong>UNISUAM</strong></a>) e pesquisador no Laboratório de Simulação Computacional e Modelagem em Reabilitação dos Programas de Pós-graduação em Ciências da Reabilitação e de Desenvolvimento Local da UNISUAM. <br> <br> Tem experiência na área de Fisioterapia e Terapia Ocupacional, atuando principalmente nos seguintes temas: <strong>movimento funcional humano</strong>, <strong>processamento de sinais biomédicos</strong>, <strong>modelagem computacional</strong>, <strong>bioestatística</strong>, <strong>fisioterapia musculoesquelética</strong> e <strong>fisioterapia cardiovascular</strong> e <strong>medicina tradicional (chinesa)</strong>.</p>
 <p><a style="float:right" href="#top"><b>Início</b></a></p>
 <p><br></p>
 <!--script for generating HORIZONTAL LINE-->
@@ -477,6 +489,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 <script>
 $(document).ready(function ()  {
