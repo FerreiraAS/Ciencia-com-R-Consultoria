@@ -33,7 +33,6 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
@@ -220,9 +219,6 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
-<style type="text/css">
-.code-folding-btn { margin-bottom: 4px; }
-</style>
 
 
 
@@ -365,14 +361,6 @@ div.tocify {
 
 <div id="header">
 
-<div class="btn-group pull-right float-right">
-<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
-<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
-<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
-<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
-</ul>
-</div>
-
 
 
 <h1 class="title toc-ignore">Sobre o autor</h1>
@@ -396,10 +384,12 @@ body {
 </div>
 <div class="col-sm-8">
 <p><right></p>
-<div id="arthur-de-sá-ferreira-phd" class="section level3">
-<h3><strong>Arthur de Sá Ferreira, PhD</strong></h3>
-<div id="fisioterapeuta-engenheiro-biomédico" class="section level4">
-<h4>Fisioterapeuta, Engenheiro biomédico 🇧🇷</h4>
+<div id="arthur-de-sá-ferreira" class="section level3">
+<h3><strong>Arthur de Sá Ferreira</strong></h3>
+<div id="pt-biomed-eng-phd" class="section level4">
+<h4>PT, Biomed Eng, PhD</h4>
+<div id="rio-de-janeiro" class="section level5">
+<h5>Rio de Janeiro, 🇧🇷</h5>
 <!--ORCID badge-->
 <div itemscope="" itemtype="https://schema.org/Person">
 <a itemprop="sameAs" content="https://orcid.org/0000-0001-7014-2002" href="https://orcid.org/0000-0001-7014-2002" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-7014-2002</a>
@@ -422,24 +412,25 @@ body {
 </div>
 </div>
 </div>
+</div>
 <p><br></p>
 <p>Arthur de Sá Ferreira possui graduação em Fisioterapia pela Universidade Federal do Rio de Janeiro (1999), mestrado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2002) e doutorado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2006).</p>
 <p><br></p>
 <p>Atualmente é membro efetivo das seguintes entidades:</p>
 <ul>
-<li>Committee on Publication Ethics (<a href="https://publicationethics.org"><strong>COPE</strong></a>) 🇬🇧</li>
-<li>Royal Statistical Society (<a href="https://rss.org.uk"><strong>RSS</strong></a>) 🇬🇧</li>
-<li>Associação Brasileira de Pesquisa e Pós-Graduação em Fisioterapia (<a href="https://abrapg-ft.org.br/portal/"><strong>ABRAPG-FT</strong></a>) 🇧🇷</li>
+<li>🇬🇧 Committee on Publication Ethics (COPE) <a href="https://publicationethics.org"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></li>
+<li>🇬🇧 Royal Statistical Society (RSS) <a href="https://rss.org.uk"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></li>
+<li>🇧🇷 Associação Brasileira de Pesquisa e Pós-Graduação em Fisioterapia (ABRAPG-FT) <a href="https://abrapg-ft.org.br/portal/"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></li>
 </ul>
 <p><br></p>
 <p>Compõe o corpo editoral dos periódicos internacionais e nacionais:</p>
 <ul>
-<li><a href="https://www.nature.com/srep/about/editors">Scientific Reports</a> 🇬🇧</li>
-<li><a href="https://www.frontiersin.org/research-topics/26395/systemic-effects-and-disabilities-in-long-covid-syndrome-current-approaches-and-clinical-challenges">Frontiers in Rehabilitation Sciences</a> 🇨🇭</li>
-<li><a href="https://www.hindawi.com/journals/ecam/editors/">Evidence-Based Complementary and Alternative Medicine</a> 🇪🇬</li>
-<li><a href="https://www.springer.com/journal/11655/editors">Chinese Journal of Integrative Medicine</a> 🇨🇭</li>
-<li><a href="https://www.journals.elsevier.com/journal-of-integrative-medicine/editorial-board">Journal of Integrative Medicine**</a> 🇭🇰</li>
-<li><a href="https://www.scielo.br/journal/fp/about/#editors">Fisioterapia e Pesquisa</a> 🇧🇷</li>
+<li>🇬🇧 Scientific Reports <a href="https://www.nature.com/srep/about/editors"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></li>
+<li>🇨🇭 Frontiers in Rehabilitation Sciences <a href="https://www.frontiersin.org/research-topics/26395/systemic-effects-and-disabilities-in-long-covid-syndrome-current-approaches-and-clinical-challenges"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></li>
+<li>🇪🇬 Evidence-Based Complementary and Alternative Medicine <a href="https://www.hindawi.com/journals/ecam/editors/"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></li>
+<li>🇨🇭 Chinese Journal of Integrative Medicine <a href="https://www.springer.com/journal/11655/editors"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></li>
+<li>🇭🇰 Journal of Integrative Medicine** <a href="https://www.journals.elsevier.com/journal-of-integrative-medicine/editorial-board"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></li>
+<li>🇧🇷 Fisioterapia e Pesquisa <a href="https://www.scielo.br/journal/fp/about/#editors"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></li>
 </ul>
 <p><br></p>
 <p>Atua como professor adjunto do Centro Universitário Augusto Motta (<a href="https://www.unisuam.edu.br">UNISUAM</a>) e pesquisador no Laboratório de Simulação Computacional e Modelagem em Reabilitação dos Programas de Pós-graduação em Ciências da Reabilitação e de Desenvolvimento Local da UNISUAM.</p>
@@ -495,11 +486,6 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
-<script>
-$(document).ready(function () {
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
 
 <script>
 $(document).ready(function ()  {
