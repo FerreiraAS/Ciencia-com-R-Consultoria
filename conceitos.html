@@ -369,10 +369,19 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="conceitos.html#var-par">Variáveis, parâmetros</a>
+    </li>
+    <li>
       <a href="conceitos.html#unidade-de-analise">Unidade de análise</a>
     </li>
     <li>
       <a href="conceitos.html#pareamento">Pareamento</a>
+    </li>
+    <li>
+      <a href="conceitos.html#referencias">Referências</a>
+    </li>
+    <li>
+      <a href="conceitos.html#pacotes">Pacotes</a>
     </li>
   </ul>
 </li>
@@ -415,9 +424,25 @@ body {
 </p>
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+<div id="var-par" class="section level2 tabset">
+<h2 class="tabset"><em>Variáveis, Parâmetros</em></h2>
+<p><br></p>
+<p><em>Em construção</em></p>
+<p><span class="citation">(<a href="#ref-Altman1999" role="doc-biblioref">Altman and Bland 1999</a>)</span></p>
+<p><br></p>
+<p><a style="float:right" href="#top"><b>Início</b></a></p>
+<p><br></p>
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+</div>
 <div id="unidade-de-analise" class="section level2 tabset">
 <h2 class="tabset"><em>Unidade de análise</em></h2>
-<p><br> A unidade de análise de pesquisas na área de saúde geralmente é o indivíduo. Outras possibilidades são instituições em estudos multicêntricos (ex.: hospitais, clínicas) ou estudos publicados em meta-análises (ex.: ensaios clínicos). <br> <br> É fundamental identificar corretamente a unidade de análise para evitar inflação do tamanho da amostra (ex.: medidas bilaterais resultando em o dobro de participantes), violações de suposições dos testes de hipótese (ex.: independência entre medidas e/ou unidade de análise) e resultados espúrios em testes de hipótese (ex.: p-valores menores que aqueles observados se a amostra não estivesse inflada) <span class="citation">(<a href="#ref-Matthews1990" role="doc-biblioref">Matthews et al. 1990</a>; <a href="#ref-Altman1997" role="doc-biblioref">Altman and Bland 1997</a>)</span>. <br> <br> Da unidade de análise podem ser coletadas informações em medidas únicas, repetidas ou múltiplas. Como exemplo, segue a avaliação da variável ‘pressão arterial sistólica’ em um indivíduo como unidade de análise. <br></p>
+<p><br> A unidade de análise de pesquisas na área de saúde geralmente é o indivíduo. Outras possibilidades são instituições em estudos multicêntricos (ex.: hospitais, clínicas) ou estudos publicados em meta-análises (ex.: ensaios clínicos).</p>
+<p><br></p>
+<p>É fundamental identificar corretamente a unidade de análise para evitar inflação do tamanho da amostra (ex.: medidas bilaterais resultando em o dobro de participantes), violações de suposições dos testes de hipótese (ex.: independência entre medidas e/ou unidade de análise) e resultados espúrios em testes de hipótese (ex.: p-valores menores que aqueles observados se a amostra não estivesse inflada) <span class="citation">(<a href="#ref-Matthews1990" role="doc-biblioref">Matthews et al. 1990</a>; <a href="#ref-Altman1997" role="doc-biblioref">Altman and Bland 1997</a>)</span>.</p>
+<p><br></p>
+<p>Da unidade de análise podem ser coletadas informações em medidas únicas, repetidas ou múltiplas. Como exemplo, segue a avaliação da variável ‘pressão arterial sistólica’ em um indivíduo como unidade de análise.</p>
+<p><br></p>
 <div id="medidas-únicas" class="section level3">
 <h3><strong>Medidas únicas</strong></h3>
 <p>A medida única da pressão arterial sistólica no braço esquerdo resulta em um valor pontual. O valor pontual será considerado representativo da variável para a unidade de análise (ex.: <strong>120 mmHg</strong> para o participante <strong>#9</strong>). Medidas únicas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.</p>
@@ -886,42 +911,58 @@ Pressão arterial, braço esquerdo (mmHg) média
 </div>
 <div id="medidas-seriadas" class="section level3">
 <h3><strong>Medidas seriadas</strong></h3>
-<p>Medidas seriadas são possivelmente relacionadas e, portanto, dependentes na mesma unidade de análise. Por exemplo, a medida seriada da pressão arterial no braço esquerdo, em intervalos tipicamente regulares (ex.: <strong>114 mmHg</strong>, <strong>119 mmHg</strong> e <strong>116 mmHg</strong> em <strong>1 min</strong>, <strong>2 min</strong> e <strong>3 min</strong>, respectivamente, para o participante <strong>#1</strong>).</p>
+<p>Medidas seriadas são possivelmente relacionadas e, portanto, dependentes na mesma unidade de análise. Por exemplo, a medida seriada da pressão arterial no braço esquerdo, em intervalos tipicamente regulares (ex.: <strong>114 mmHg</strong>, <strong>120 mmHg</strong> e <strong>110 mmHg</strong> em <strong>1 min</strong>, <strong>2 min</strong> e <strong>3 min</strong>, respectivamente, para o participante <strong>#1</strong>).</p>
 <pre class="r"><code># para reprodutibilidade das simulações
 set.seed(3)
 
 # tamanho do grupo
 n &lt;- 100
 
-# número de medidas seriadas
-k &lt;- 3
-
 # cria o fator unidade de análise, sem reposição
 ID &lt;- seq(1:n)
-ID &lt;- rep(ID, each = k)
 
-# cria o fator de repetição seriada
-TIME &lt;- seq(1:k)
-TIME &lt;- rep(TIME, times = n)
+# número de medidas seriadas
+k &lt;- 3
 
 # determina os limites do espaço amostral para sorteio
 inferior &lt;- 110
 superior &lt;- 120
 
-# sorteia n dados no intervalo min-max, com reposição para cada variável
-VAR &lt;- sample(inferior:superior, n, replace = TRUE)
-VAR &lt;- rep(VAR, times = k)
+# prepara a tabela de resultados
+table.4 &lt;- data.frame(matrix(vector(), nrow = 0, ncol = 3, dimnames=list(c(), c(&quot;Unidade de análise&quot;, &quot;Tempo (min)&quot;, &quot;Pressão arterial, braço esquerdo (mmHg)&quot;))))
 
-# organiza as informações de unidade de análise e dados
-table.4 &lt;- data.frame(ID, TIME, VAR)
+# para cada série
+for(i in 1:k){
+
+  # cria o fator de repetição seriada
+  TIME &lt;- rep(i, n)
+
+  # sorteia n dados no intervalo min-max, com reposição para cada variável
+  VAR &lt;- sample(inferior:superior, n, replace = TRUE)
+  
+  # organiza as informações de unidade de análise e dados
+  serie &lt;- data.frame(ID, TIME, VAR)
+
+  # atribui rótulos para a tabela de dados
+  colnames(serie) &lt;- c(&quot;Unidade de análise&quot;, &quot;Tempo (min)&quot;, &quot;Pressão arterial, braço esquerdo (mmHg)&quot;)
+
+  # concatena as informações de unidade de análise e dados para cada série de coleta
+  table.4 &lt;- rbind(table.4, serie)
+}
+
+# reordena a tabela de dados
+table.4 &lt;- table.4[order(table.4[ ,1], table.4[ ,2], decreasing = FALSE), ]
 
 # atribui rótulos para a tabela de dados
 colnames(table.4) &lt;- c(&quot;Unidade de análise&quot;, &quot;Tempo (min)&quot;, &quot;Pressão arterial, braço esquerdo (mmHg)&quot;)
 
+# remove rótulos para as linhas
+row.names(table.4) &lt;- NULL
+
 # carrega a biblioteca
 library(kableExtra)
 
-# exibe as 10 linhas iniciais da tabela de dados 
+# exibe as 10 linhas iniciais da tabela de dados
 kable(head(table.4, n = 10L), align = &quot;c&quot;, format = &quot;html&quot;) %&gt;%
   kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
   row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;) %&gt;%
@@ -960,7 +1001,7 @@ Pressão arterial, braço esquerdo (mmHg)
 2
 </td>
 <td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
-119
+120
 </td>
 </tr>
 <tr>
@@ -971,7 +1012,7 @@ Pressão arterial, braço esquerdo (mmHg)
 3
 </td>
 <td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
-116
+110
 </td>
 </tr>
 <tr>
@@ -980,17 +1021,6 @@ Pressão arterial, braço esquerdo (mmHg)
 </td>
 <td style="text-align:center;">
 1
-</td>
-<td style="text-align:center;">
-113
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-2
-</td>
-<td style="text-align:center;">
-2
 </td>
 <td style="text-align:center;">
 119
@@ -1001,18 +1031,7 @@ Pressão arterial, braço esquerdo (mmHg)
 2
 </td>
 <td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-117
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-1
+2
 </td>
 <td style="text-align:center;">
 120
@@ -1020,13 +1039,35 @@ Pressão arterial, braço esquerdo (mmHg)
 </tr>
 <tr>
 <td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+114
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+116
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
 3
 </td>
 <td style="text-align:center;">
 2
 </td>
 <td style="text-align:center;">
-117
+114
 </td>
 </tr>
 <tr>
@@ -1037,7 +1078,7 @@ Pressão arterial, braço esquerdo (mmHg)
 3
 </td>
 <td style="text-align:center;">
-113
+116
 </td>
 </tr>
 <tr>
@@ -1048,39 +1089,58 @@ Pressão arterial, braço esquerdo (mmHg)
 1
 </td>
 <td style="text-align:center;">
-119
+113
 </td>
 </tr>
 </tbody>
 </table>
-<p>Medidas seriadas também agregadas por parâmetros — ex.: máximo, mínimo, amplitude — são consideradas representativas da variação temporal ou de uma característica de interesse (ex.: amplitude = <strong>5 mmHg</strong> para o participante <strong>#1</strong>).</p>
+<p>Medidas seriadas também agregadas por parâmetros — ex.: máximo, mínimo, amplitude — são consideradas representativas da variação temporal ou de uma característica de interesse (ex.: amplitude = <strong>10 mmHg</strong> para o participante <strong>#1</strong>).</p>
 <pre class="r"><code># para reprodutibilidade das simulações
 set.seed(3)
 
 # tamanho do grupo
 n &lt;- 100
 
-# número de medidas seriadas
-k &lt;- 3
-
 # cria o fator unidade de análise, sem reposição
 ID &lt;- seq(1:n)
-ID &lt;- rep(ID, each = k)
 
-# cria o fator de repetição seriada
-TIME &lt;- seq(1:k)
-TIME &lt;- rep(TIME, times = n)
+# número de medidas seriadas
+k &lt;- 3
 
 # determina os limites do espaço amostral para sorteio
 inferior &lt;- 110
 superior &lt;- 120
 
-# sorteia n dados no intervalo min-max, com reposição para cada variável
-VAR &lt;- sample(inferior:superior, n, replace = TRUE)
-VAR &lt;- rep(VAR, times = k)
+# prepara a tabela de resultados
+table.5 &lt;- data.frame(matrix(vector(), nrow = 0, ncol = 3, dimnames=list(c(), c(&quot;Unidade de análise&quot;, &quot;Tempo (min)&quot;, &quot;Pressão arterial, braço esquerdo (mmHg)&quot;))))
 
-# organiza as informações de unidade de análise e dados
-table.5 &lt;- data.frame(ID, VAR)
+# para cada série
+for(i in 1:k){
+
+  # cria o fator de repetição seriada
+  TIME &lt;- rep(i, n)
+
+  # sorteia n dados no intervalo min-max, com reposição para cada variável
+  VAR &lt;- sample(inferior:superior, n, replace = TRUE)
+  
+  # organiza as informações de unidade de análise e dados
+  serie &lt;- data.frame(ID, TIME, VAR)
+
+  # atribui rótulos para a tabela de dados
+  colnames(serie) &lt;- c(&quot;Unidade de análise&quot;, &quot;Tempo (min)&quot;, &quot;Pressão arterial, braço esquerdo (mmHg)&quot;)
+
+  # concatena as informações de unidade de análise e dados para cada série de coleta
+  table.5 &lt;- rbind(table.5, serie)
+}
+
+# converte dados para variável numérica contínua
+table.5[, 3] &lt;- sapply(table.5[, 3], as.numeric)
+
+# agrega os valores seriados em linhas com a amplitude
+table.5 &lt;- aggregate(table.5[, 3] ~ table.5[, 1], FUN = function(x) {range(x)[2] - range(x)[1]})
+
+# formata a visualzaçào de casas decimais das variáveis numéricas
+table.5 &lt;- format(table.5, digits = 0, nsmall = 0)
 
 # atribui rótulos para a tabela de dados
 colnames(table.5) &lt;- c(&quot;Unidade de análise&quot;, &quot;Pressão arterial, braço esquerdo (mmHg) amplitude&quot;)
@@ -1110,23 +1170,7 @@ Pressão arterial, braço esquerdo (mmHg) amplitude
 1
 </td>
 <td style="text-align:center;font-weight: bold;background-color: #E6E6E6 !important;">
-114
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-1
-</td>
-<td style="text-align:center;">
-119
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-1
-</td>
-<td style="text-align:center;">
-116
+10
 </td>
 </tr>
 <tr>
@@ -1134,47 +1178,15 @@ Pressão arterial, braço esquerdo (mmHg) amplitude
 2
 </td>
 <td style="text-align:center;">
-113
+6
 </td>
 </tr>
 <tr>
+<td style="text-align:center;">
+3
+</td>
 <td style="text-align:center;">
 2
-</td>
-<td style="text-align:center;">
-119
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-2
-</td>
-<td style="text-align:center;">
-117
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-120
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-117
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-113
 </td>
 </tr>
 <tr>
@@ -1182,7 +1194,55 @@ Pressão arterial, braço esquerdo (mmHg) amplitude
 4
 </td>
 <td style="text-align:center;">
-119
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+7
+</td>
+<td style="text-align:center;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+8
+</td>
+<td style="text-align:center;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+9
+</td>
+<td style="text-align:center;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+10
+</td>
+<td style="text-align:center;">
+5
 </td>
 </tr>
 </tbody>
@@ -1352,27 +1412,6 @@ Pressão arterial, braço direito (mmHg)
 </tbody>
 </table>
 <p><br></p>
-</div>
-</div>
-<div id="section" class="section level2 unlisted unnumbered">
-<h2 class="unlisted unnumbered"></h2>
-<div id="referências" class="section level4">
-<h4><em>Referências</em></h4>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-Altman1997" class="csl-entry">
-Altman, D. G, and J M. Bland. 1997. <span>“Statistics Notes: Units of Analysis.”</span> <em>BMJ</em> 314 (7098): 1874–74. <a href="https://doi.org/10.1136/bmj.314.7098.1874">https://doi.org/10.1136/bmj.314.7098.1874</a>.
-</div>
-<div id="ref-Matthews1990" class="csl-entry">
-Matthews, J N, D G Altman, M J Campbell, and P Royston. 1990. <span>“Analysis of Serial Measurements in Medical Research.”</span> <em>BMJ</em> 300 (6719): 230–35. <a href="https://doi.org/10.1136/bmj.300.6719.230">https://doi.org/10.1136/bmj.300.6719.230</a>.
-</div>
-</div>
-<p><br></p>
-</div>
-<div id="pacotes-computacionais" class="section level4">
-<h4><em>Pacotes computacionais</em></h4>
-<p>kableExtra: Construct Complex Table with ‘kable’ and Pipe Syntax. 2021. R package version 1.3.4 <a href="https://CRAN.R-project.org/package=kableExtra" class="uri">https://CRAN.R-project.org/package=kableExtra</a></p>
-<p><a style="float:right" href="#top"><b>Início</b></a></p>
-<p><br></p>
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 </div>
@@ -1381,7 +1420,41 @@ Matthews, J N, D G Altman, M J Campbell, and P Royston. 1990. <span>“Analysis 
 <h2 class="tabset"><em>Pareamento</em></h2>
 <p><br></p>
 <p><em>Em construção</em></p>
+<p><span class="citation">(<a href="#ref-Bland1994" role="doc-biblioref">Bland and Altman 1994</a>)</span></p>
 <p><br></p>
+<p><a style="float:right" href="#top"><b>Início</b></a></p>
+<p><br></p>
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+</div>
+<div id="referencias" class="section level2 tabset">
+<h2 class="tabset"><em>Referências</em></h2>
+<p><br></p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Altman1997" class="csl-entry">
+Altman, D. G, and J M. Bland. 1997. <span>“Statistics Notes: Units of Analysis.”</span> <em>BMJ</em> 314 (7098): 1874–74. <a href="https://doi.org/10.1136/bmj.314.7098.1874">https://doi.org/10.1136/bmj.314.7098.1874</a>.
+</div>
+<div id="ref-Altman1999" class="csl-entry">
+———. 1999. <span>“Statistics Notes Variables and Parameters.”</span> <em>BMJ</em> 318 (7199): 1667–67. <a href="https://doi.org/10.1136/bmj.318.7199.1667">https://doi.org/10.1136/bmj.318.7199.1667</a>.
+</div>
+<div id="ref-Bland1994" class="csl-entry">
+Bland, J M, and D G Altman. 1994. <span>“Statistics Notes: Matching.”</span> <em>BMJ</em> 309 (6962): 1128–28. <a href="https://doi.org/10.1136/bmj.309.6962.1128">https://doi.org/10.1136/bmj.309.6962.1128</a>.
+</div>
+<div id="ref-Matthews1990" class="csl-entry">
+Matthews, J N, D G Altman, M J Campbell, and P Royston. 1990. <span>“Analysis of Serial Measurements in Medical Research.”</span> <em>BMJ</em> 300 (6719): 230–35. <a href="https://doi.org/10.1136/bmj.300.6719.230">https://doi.org/10.1136/bmj.300.6719.230</a>.
+</div>
+</div>
+<p><br></p>
+<p><a style="float:right" href="#top"><b>Início</b></a></p>
+<p><br></p>
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+</div>
+<div id="pacotes" class="section level2 tabset">
+<h2 class="tabset"><em>Pacotes computacionais</em></h2>
+<p><br></p>
+<p>R: A Language and Environment for Statistical Computing. 2021. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a></p>
+<p>kableExtra: Construct Complex Table with ‘kable’ and Pipe Syntax. 2021. R package version 1.3.4 <a href="https://CRAN.R-project.org/package=kableExtra" class="uri">https://CRAN.R-project.org/package=kableExtra</a> <br></p>
 <p><a style="float:right" href="#top"><b>Início</b></a></p>
 <p><br></p>
 <!--script for generating HORIZONTAL LINE-->
