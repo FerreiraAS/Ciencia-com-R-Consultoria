@@ -349,7 +349,7 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html#OCR">
+  <a href="index.html">
     <span class="fa fa-home"></span>
      
     
@@ -357,22 +357,22 @@ div.tocify {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Estatística DIY
+    Consultoria
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="index.html#DIY">Do It Yourself!</a>
+      <a href="consultoria.html#calculoamostral">Cálculo de amostra</a>
     </li>
     <li>
-      <a href="index.html#roteiros">Roteiros</a>
+      <a href="consultoria.html#plano">Plano de análise</a>
     </li>
     <li>
-      <a href="index.html#inicio">Por onde começar</a>
+      <a href="consultoria.html#analise">Análise estatística</a>
     </li>
     <li>
-      <a href="index.html#nuvem">Rode seu script</a>
+      <a href="consultoria.html#redacao">Interpretacão e Redação</a>
     </li>
   </ul>
 </li>
@@ -383,6 +383,9 @@ div.tocify {
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="conceitos.html">Conceitos</a>
+    </li>
     <li>
       <a href="conceitos.html#dados-tabelas">Dados, Tabelas</a>
     </li>
@@ -420,32 +423,13 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="run.html">
-        <span class="fa fa-play"></span>
-         
-        
-      </a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Consultoria
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="consultoria.html#calculoamostral">Cálculo de amostra</a>
+      <a href="run.html">Por onde começar</a>
     </li>
     <li>
-      <a href="consultoria.html#plano">Plano de análise</a>
+      <a href="run.html#local">Rode no computador</a>
     </li>
     <li>
-      <a href="consultoria.html#analise">Análise estatística</a>
-    </li>
-    <li>
-      <a href="consultoria.html#redacao">Interpretacão e Redação</a>
+      <a href="run.html#nuvem">Rode na nuvem</a>
     </li>
   </ul>
 </li>
@@ -510,8 +494,1123 @@ body {
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 </div>
-<div id="tabelas" class="section level3">
-<h3><em>Tabelas</em></h3>
+<div id="tabelas" class="section level3 tabset">
+<h3 class="tabset"><em>Tabelas</em></h3>
+<p><br> Tabelas são comumente utilizadas para entrada, armazenamento, análises e visualização de dados. Embora a maioria dos programas de computador permitam todas essas tarefas, recomenda-se que as tabelas sejam utilizadas principalmente para entrada e armazenamento de dados - análise e visualização de dados devem ser feitas separadamente. Em geral, <em>seja consistente</em>!</p>
+<p><br></p>
+<ul>
+<li>Mantenha o formato 2x2, de modo que cada linha seja uma unidade de análise e cada coluna uma variável ou fator do estudo</li>
+<li>Armazene todos os dados em apenas uma tabela</li>
+</ul>
+<pre class="r"><code># cria a tabela de exemplos
+table.0 &lt;- matrix(&quot;dado&quot;, nrow = 10, ncol = 5)
+
+# atribui rótulos para a tabela de dados
+colnames(table.0) &lt;- c(&quot;V1&quot;, &quot;V2&quot;, &quot;V3&quot;, &quot;V4&quot;, &quot;V5&quot;)
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela
+kable(table.0, align = &quot;c&quot;, format = &quot;html&quot;, escape = FALSE) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;)</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+V1
+</th>
+<th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+V2
+</th>
+<th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+V3
+</th>
+<th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+V4
+</th>
+<th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+V5
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+<td style="text-align:center;">
+dado
+</td>
+</tr>
+</tbody>
+</table>
+<p><br> Algumas recomendações podem ser úteis na construçào de novas tabelas em planilhas eletrônicas <span class="citation">(<a href="#ref-broman2018a" role="doc-biblioref">Broman and Woo 2018</a>)</span>:</p>
+<p><br></p>
+<ul>
+<li>Use identificadores consistentes e únicos para cada unidade de análise</li>
+<li>Use formatos de data consistentes (ex.: DD-MM-AAAA)”</li>
+</ul>
+<pre class="r"><code># cria a tabela de exemplos
+table.1 &lt;- matrix(NA, nrow = 10, ncol = 2)
+
+# atribui rótulos para a tabela de dados
+colnames(table.1) &lt;- c(&quot;ID&quot;, &quot;Data.Coleta&quot;)
+
+# preenche a tabela com identificação da unidade de análise
+table.1[, 1] &lt;- seq(1:10)
+
+# preenche a tabela com maus exemplos
+table.1[, 2] &lt;- as.character(Sys.Date() + seq(1:10))
+
+# preenche a tabela com melhores exemplos
+table.1[, 2] &lt;- format(as.Date(table.1[,2], origin = &quot;1950-01-01&quot;), &quot;%d-%m-%Y&quot;)
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela
+kable(table.1, align = &quot;c&quot;, format = &quot;html&quot;, escape = FALSE) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;)</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+ID
+</th>
+<th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Data.Coleta
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+26-12-2021
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+27-12-2021
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+28-12-2021
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+29-12-2021
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+30-12-2021
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+31-12-2021
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+7
+</td>
+<td style="text-align:center;">
+01-01-2022
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+8
+</td>
+<td style="text-align:center;">
+02-01-2022
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+9
+</td>
+<td style="text-align:center;">
+03-01-2022
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+10
+</td>
+<td style="text-align:center;">
+04-01-2022
+</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ul>
+<li>Não misture letras com caixa alta e baixa para representar o mesmo nível</li>
+<li>Evite usar caracteres de espaço na entrada de dados no início, meio ou fim dos dados</li>
+<li>Use códigos consistentes para variáveis categóricas</li>
+</ul>
+<pre class="r"><code># cria a tabela de exemplos
+table.2 &lt;- matrix(NA, nrow = 10, ncol = 6)
+
+# atribui rótulos para a tabela de dados
+colnames(table.2) &lt;- c(&quot;ID&quot;, &quot;Estado Civil&quot;, &quot;Estado Civil (mesma caixa)&quot;, &quot;Estado Civil (sem espaço)&quot;, &quot;Estado.Civil.Cod&quot;, &quot;Estado.Civil&quot;)
+
+# preenche a tabela com identificação da unidade de análise
+table.2[, 1] &lt;- seq(1:10)
+
+# preenche a tabela com maus exemplos (&amp;nbsp; representa o caracter &quot; &quot; em HTML)
+table.2[, 2] &lt;- c(&quot;casado&quot;, &quot;Casado&quot;, &quot;&amp;nbsp;casado&quot;, &quot;Solteiro&quot;, &quot;&amp;nbsp;Casado&quot;, &quot;&amp;nbsp;solteiro&quot;, &quot;solteiro&quot;, &quot;Solteiro&amp;nbsp;&quot;, &quot;&amp;nbsp;casado&quot;, &quot;&amp;nbsp;Solteiro&amp;nbsp;&quot;)
+
+# preenche a tabela com melhores exemplos
+# altera para caixa baixa
+table.2[, 3] &lt;- tolower(table.2[, 2])
+# remove espaços em branco
+table.2[, 4] &lt;- trimws(table.2[, 3], which = &quot;both&quot;, whitespace = &quot;[\t\r\n]&quot;)
+# remove espaço em branco de HTML
+table.2[, 4] &lt;- gsub(&quot;&amp;nbsp;&quot;, &quot;&quot;, table.2[, 4])
+# converte em fator codificado
+table.2[, 5] &lt;- factor(table.2[, 4])
+# converte em fator rotulado
+table.2[, 6] &lt;- levels(factor(table.2[, 4]))[as.numeric(table.2[, 5])]
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela 
+kable(table.2, align = &quot;l&quot;, format = &quot;html&quot;, escape = FALSE) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;)</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+ID
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Estado Civil
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Estado Civil (mesma caixa)
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Estado Civil (sem espaço)
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Estado.Civil.Cod
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Estado.Civil
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+casado
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+Casado
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+casado
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+ casado
+</td>
+<td style="text-align:left;">
+ casado
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+casado
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+Solteiro
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+ Casado
+</td>
+<td style="text-align:left;">
+ casado
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+casado
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+ solteiro
+</td>
+<td style="text-align:left;">
+ solteiro
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+Solteiro 
+</td>
+<td style="text-align:left;">
+solteiro 
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+ casado
+</td>
+<td style="text-align:left;">
+ casado
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+casado
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+ Solteiro 
+</td>
+<td style="text-align:left;">
+ solteiro 
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ul>
+<li>Não deixe células vazias, use código para dados perdidos</li>
+<li>Use o mesmo código para dados perdidos</li>
+<li>Não use códigos numéricos para dados perdidos</li>
+</ul>
+<pre class="r"><code># cria a tabela de exemplos
+table.3 &lt;- matrix(NA, nrow = 10, ncol = 3)
+
+# preenche a tabela com identificação da unidade de análise
+table.3[, 1] &lt;- seq(1:10)
+
+# atribui rótulos para a tabela de dados
+colnames(table.3) &lt;- c(&quot;ID&quot;, &quot;Filhos&quot;, &quot;Filhos&quot;)
+
+# preenche a tabela com maus exemplos
+table.3[, 2] &lt;- c(&quot;NA&quot;, 1, &quot;NaN&quot;, &quot;N/A&quot;, &quot;N.A.&quot;, 0, &quot;&quot;, &quot;na&quot;, &quot;n.a.&quot;, &quot;999&quot;)
+
+# preenche a tabela com código único
+table.3[, 3] &lt;- gsub(&quot;NA|NaN|N/A|N.A.|na|n.a.|\t\r\n|^$|\\d{3}&quot;, NA, table.3[, 2])
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela 
+kable(table.3, align = &quot;c&quot;, format = &quot;html&quot;, escape = FALSE) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;)</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+ID
+</th>
+<th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Filhos
+</th>
+<th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Filhos
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+NaN
+</td>
+<td style="text-align:center;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+N/A
+</td>
+<td style="text-align:center;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+N.A.
+</td>
+<td style="text-align:center;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+7
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+8
+</td>
+<td style="text-align:center;">
+na
+</td>
+<td style="text-align:center;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+9
+</td>
+<td style="text-align:center;">
+n.a.
+</td>
+<td style="text-align:center;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+10
+</td>
+<td style="text-align:center;">
+999
+</td>
+<td style="text-align:center;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ul>
+<li>Use rótulos consistentes para as variáveis, principalmente quando há medidas repetidas</li>
+<li>Use hífens ou pontos como separador (ex.: estado.civil) (ex.: teste.1, teste.2)</li>
+</ul>
+<p><br></p>
+<p>Compare as tabelas a seguir:</p>
+<p><br></p>
+<div id="evite" class="section level4">
+<h4><svg aria-hidden="true" role="img" viewBox="0 0 352 512" style="height:1em;width:0.69em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:red;overflow:visible;position:relative;"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></svg> <em>Evite</em></h4>
+<pre class="r"><code># cria a tabela de exemplos
+table.final &lt;- data.frame(table.1[, 1], table.1[, 2], table.2[, 2], table.3[, 2])
+colnames(table.final) &lt;- c(&quot;ID&quot;, &quot;Data de Coleta&quot;, &quot;Estado Civil&quot;, &quot;Número de Filhos&quot;)
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela 
+kable(table.final, align = &quot;l&quot;, format = &quot;html&quot;, escape = FALSE) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;)</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+ID
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Data de Coleta
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Estado Civil
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Número de Filhos
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+26-12-2021
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+27-12-2021
+</td>
+<td style="text-align:left;">
+Casado
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+28-12-2021
+</td>
+<td style="text-align:left;">
+ casado
+</td>
+<td style="text-align:left;">
+NaN
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+29-12-2021
+</td>
+<td style="text-align:left;">
+Solteiro
+</td>
+<td style="text-align:left;">
+N/A
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+30-12-2021
+</td>
+<td style="text-align:left;">
+ Casado
+</td>
+<td style="text-align:left;">
+N.A.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+31-12-2021
+</td>
+<td style="text-align:left;">
+ solteiro
+</td>
+<td style="text-align:left;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+01-01-2022
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+02-01-2022
+</td>
+<td style="text-align:left;">
+Solteiro 
+</td>
+<td style="text-align:left;">
+na
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+03-01-2022
+</td>
+<td style="text-align:left;">
+ casado
+</td>
+<td style="text-align:left;">
+n.a.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+04-01-2022
+</td>
+<td style="text-align:left;">
+ Solteiro 
+</td>
+<td style="text-align:left;">
+999
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="recomendado" class="section level4">
+<h4><svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:green;overflow:visible;position:relative;"><path d="M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z"/></svg> <em>Recomendado</em></h4>
+<pre class="r"><code># cria a tabela de exemplos
+table.final &lt;- data.frame(table.1[, 1], table.1[, 2], table.2[, 6], table.3[, 3])
+colnames(table.final) &lt;- c(&quot;ID&quot;, &quot;Data.Coleta&quot;, &quot;Estado.Civil&quot;, &quot;Numero.Filhos&quot;)
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela 
+kable(table.final, align = &quot;l&quot;, format = &quot;html&quot;, escape = FALSE) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), full_width = T, position = &quot;center&quot;) %&gt;%
+  row_spec(0, background = &quot;#2C3E50&quot;, bold = TRUE, color = &quot;white&quot;)</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+ID
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Data.Coleta
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Estado.Civil
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+Numero.Filhos
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+26-12-2021
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+27-12-2021
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+28-12-2021
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+29-12-2021
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+30-12-2021
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+31-12-2021
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+01-01-2022
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+02-01-2022
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+03-01-2022
+</td>
+<td style="text-align:left;">
+casado
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+04-01-2022
+</td>
+<td style="text-align:left;">
+solteiro
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="section" class="section level3 unlisted unnumbered">
+<h3 class="unlisted unnumbered"></h3>
+<p>Sugestõwes finais incluem:</p>
+<ul>
+<li>Não use cores (de fonte ou fundo) para formatação de células, linhas e/ou colunas</li>
+<li>Não use células mescladas</li>
+<li>Delete linhas e/ou colunas totalmente em branco (sem unidades de análise e/ou sem variáveis)</li>
+</ul>
 <p><br></p>
 <p><a style="float:right" href="#top"><b>Início <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z"/></svg></b></a></p>
 <p><br></p>
@@ -1653,6 +2752,9 @@ Altman, D. G, and J M. Bland. 1997. <span>“Statistics Notes: Units of Analysis
 </div>
 <div id="ref-Altman1999" class="csl-entry">
 ———. 1999. <span>“Statistics Notes Variables and Parameters.”</span> <em>BMJ</em> 318 (7199): 1667–67. <a href="https://doi.org/10.1136/bmj.318.7199.1667">https://doi.org/10.1136/bmj.318.7199.1667</a>.
+</div>
+<div id="ref-broman2018a" class="csl-entry">
+Broman, Karl W., and Kara H. Woo. 2018. <span>“Data Organization in Spreadsheets.”</span> <em>The American Statistician</em> 72 (1): 2–10. <a href="https://doi.org/10.1080/00031305.2017.1375989">https://doi.org/10.1080/00031305.2017.1375989</a>.
 </div>
 <div id="ref-Matthews1990" class="csl-entry">
 Matthews, J N, D G Altman, M J Campbell, and P Royston. 1990. <span>“Analysis of Serial Measurements in Medical Research.”</span> <em>BMJ</em> 300 (6719): 230–35. <a href="https://doi.org/10.1136/bmj.300.6719.230">https://doi.org/10.1136/bmj.300.6719.230</a>.
