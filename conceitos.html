@@ -363,16 +363,7 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="consultoria.html#calculoamostral">Cálculo de amostra</a>
-    </li>
-    <li>
-      <a href="consultoria.html#plano">Plano de análise</a>
-    </li>
-    <li>
-      <a href="consultoria.html#analise">Análise estatística</a>
-    </li>
-    <li>
-      <a href="consultoria.html#redacao">Interpretacão e Redação</a>
+      <a href="consultoria.html">Serviços</a>
     </li>
   </ul>
 </li>
@@ -496,18 +487,25 @@ body {
 </div>
 <div id="tabelas" class="section level3 tabset">
 <h3 class="tabset"><em>Tabelas</em></h3>
-<p><br> Tabelas são comumente utilizadas para entrada, armazenamento, análises e visualização de dados. Embora a maioria dos programas de computador permitam todas essas tarefas, recomenda-se que as tabelas sejam utilizadas principalmente para entrada e armazenamento de dados - análise e visualização de dados devem ser feitas separadamente. Em geral, <em>seja consistente</em>!</p>
+<p><br> Tabelas são comumente utilizadas para entrada, armazenamento, análises e visualização de dados. Embora a maioria dos programas de computador permitam todas essas tarefas, recomenda-se que as tabelas sejam utilizadas principalmente para entrada e armazenamento de dados - análise e visualização de dados devem ser feitas separadamente.</p>
+<p><br> Em geral, <em>seja consistente</em>! Algumas recomendações podem ser úteis na construção de novas tabelas em planilhas eletrônicas <span class="citation">(<a href="#ref-broman2018a" role="doc-biblioref">Broman and Woo 2018</a>)</span>:</p>
 <p><br></p>
 <ul>
-<li>Mantenha o formato 2x2, de modo que cada linha seja uma unidade de análise e cada coluna uma variável ou fator do estudo</li>
+<li>Construa a tabela em formato retangular <em>NxM</em> (linhas x colunas), de modo que cada linha <em>n</em> seja uma unidade de análise e cada coluna <em>m</em> uma variável ou fator do estudo</li>
 <li>Armazene todos os dados em apenas uma tabela</li>
 </ul>
 <pre class="r"><code># cria a tabela de exemplos
 table.0 &lt;- matrix(&quot;dado&quot;, nrow = 10, ncol = 5)
 
 # atribui rótulos para a tabela de dados
-colnames(table.0) &lt;- c(&quot;V1&quot;, &quot;V2&quot;, &quot;V3&quot;, &quot;V4&quot;, &quot;V5&quot;)
-
+N &lt;- 10
+M &lt;- 5
+colnames(table.0) &lt;- c(&quot;V.1&quot;, &quot;V.2&quot;, &quot;V.3&quot;, &quot;V.4&quot;, &quot;V.5&quot;)
+for(i in 1:N){
+  for(j in 1:M){
+    table.0[i,j] &lt;- paste0(&quot;$$X&quot;, &quot;_{&quot;, as.character(i), &quot;,&quot;, as.character(j), &quot;}$$&quot;)
+  }
+}
 # carrega a biblioteca
 library(kableExtra)
 
@@ -519,196 +517,195 @@ kable(table.0, align = &quot;c&quot;, format = &quot;html&quot;, escape = FALSE)
 <thead>
 <tr>
 <th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
-V1
+V.1
 </th>
 <th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
-V2
+V.2
 </th>
 <th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
-V3
+V.3
 </th>
 <th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
-V4
+V.4
 </th>
 <th style="text-align:center;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
-V5
+V.5
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{1,1}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{1,2}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{1,3}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{1,4}\]</span>
 </td>
 <td style="text-align:center;">
-dado
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
+<span class="math display">\[X_{1,5}\]</span>
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{2,1}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{2,2}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{2,3}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{2,4}\]</span>
 </td>
 <td style="text-align:center;">
-dado
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
+<span class="math display">\[X_{2,5}\]</span>
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{3,1}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{3,2}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{3,3}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{3,4}\]</span>
 </td>
 <td style="text-align:center;">
-dado
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
+<span class="math display">\[X_{3,5}\]</span>
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{4,1}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{4,2}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{4,3}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{4,4}\]</span>
 </td>
 <td style="text-align:center;">
-dado
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
-</td>
-<td style="text-align:center;">
-dado
+<span class="math display">\[X_{4,5}\]</span>
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{5,1}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{5,2}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{5,3}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{5,4}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{5,5}\]</span>
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{6,1}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{6,2}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{6,3}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{6,4}\]</span>
 </td>
 <td style="text-align:center;">
-dado
+<span class="math display">\[X_{6,5}\]</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+<span class="math display">\[X_{7,1}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{7,2}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{7,3}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{7,4}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{7,5}\]</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+<span class="math display">\[X_{8,1}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{8,2}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{8,3}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{8,4}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{8,5}\]</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+<span class="math display">\[X_{9,1}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{9,2}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{9,3}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{9,4}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{9,5}\]</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+<span class="math display">\[X_{10,1}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{10,2}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{10,3}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{10,4}\]</span>
+</td>
+<td style="text-align:center;">
+<span class="math display">\[X_{10,5}\]</span>
 </td>
 </tr>
 </tbody>
 </table>
-<p><br> Algumas recomendações podem ser úteis na construçào de novas tabelas em planilhas eletrônicas <span class="citation">(<a href="#ref-broman2018a" role="doc-biblioref">Broman and Woo 2018</a>)</span>:</p>
 <p><br></p>
 <ul>
 <li>Use identificadores consistentes e únicos para cada unidade de análise</li>
@@ -753,7 +750,7 @@ Data.Coleta
 1
 </td>
 <td style="text-align:center;">
-26-12-2021
+28-12-2021
 </td>
 </tr>
 <tr>
@@ -761,7 +758,7 @@ Data.Coleta
 2
 </td>
 <td style="text-align:center;">
-27-12-2021
+29-12-2021
 </td>
 </tr>
 <tr>
@@ -769,7 +766,7 @@ Data.Coleta
 3
 </td>
 <td style="text-align:center;">
-28-12-2021
+30-12-2021
 </td>
 </tr>
 <tr>
@@ -777,7 +774,7 @@ Data.Coleta
 4
 </td>
 <td style="text-align:center;">
-29-12-2021
+31-12-2021
 </td>
 </tr>
 <tr>
@@ -785,7 +782,7 @@ Data.Coleta
 5
 </td>
 <td style="text-align:center;">
-30-12-2021
+01-01-2022
 </td>
 </tr>
 <tr>
@@ -793,7 +790,7 @@ Data.Coleta
 6
 </td>
 <td style="text-align:center;">
-31-12-2021
+02-01-2022
 </td>
 </tr>
 <tr>
@@ -801,7 +798,7 @@ Data.Coleta
 7
 </td>
 <td style="text-align:center;">
-01-01-2022
+03-01-2022
 </td>
 </tr>
 <tr>
@@ -809,7 +806,7 @@ Data.Coleta
 8
 </td>
 <td style="text-align:center;">
-02-01-2022
+04-01-2022
 </td>
 </tr>
 <tr>
@@ -817,7 +814,7 @@ Data.Coleta
 9
 </td>
 <td style="text-align:center;">
-03-01-2022
+05-01-2022
 </td>
 </tr>
 <tr>
@@ -825,7 +822,7 @@ Data.Coleta
 10
 </td>
 <td style="text-align:center;">
-04-01-2022
+06-01-2022
 </td>
 </tr>
 </tbody>
@@ -837,10 +834,10 @@ Data.Coleta
 <li>Use códigos consistentes para variáveis categóricas</li>
 </ul>
 <pre class="r"><code># cria a tabela de exemplos
-table.2 &lt;- matrix(NA, nrow = 10, ncol = 6)
+table.2 &lt;- matrix(NA, nrow = 10, ncol = 4)
 
 # atribui rótulos para a tabela de dados
-colnames(table.2) &lt;- c(&quot;ID&quot;, &quot;Estado Civil&quot;, &quot;Estado Civil (mesma caixa)&quot;, &quot;Estado Civil (sem espaço)&quot;, &quot;Estado.Civil.Cod&quot;, &quot;Estado.Civil&quot;)
+colnames(table.2) &lt;- c(&quot;ID&quot;, &quot;Estado Civil&quot;, &quot;Estado.Civil&quot;, &quot;Estado.Civil.Cod&quot;)
 
 # preenche a tabela com identificação da unidade de análise
 table.2[, 1] &lt;- seq(1:10)
@@ -852,13 +849,11 @@ table.2[, 2] &lt;- c(&quot;casado&quot;, &quot;Casado&quot;, &quot;&amp;nbsp;cas
 # altera para caixa baixa
 table.2[, 3] &lt;- tolower(table.2[, 2])
 # remove espaços em branco
-table.2[, 4] &lt;- trimws(table.2[, 3], which = &quot;both&quot;, whitespace = &quot;[\t\r\n]&quot;)
+table.2[, 3] &lt;- trimws(table.2[, 3], which = &quot;both&quot;, whitespace = &quot;[\t\r\n]&quot;)
 # remove espaço em branco de HTML
-table.2[, 4] &lt;- gsub(&quot;&amp;nbsp;&quot;, &quot;&quot;, table.2[, 4])
+table.2[, 3] &lt;- gsub(&quot;&amp;nbsp;&quot;, &quot;&quot;, table.2[, 3])
 # converte em fator codificado
-table.2[, 5] &lt;- factor(table.2[, 4])
-# converte em fator rotulado
-table.2[, 6] &lt;- levels(factor(table.2[, 4]))[as.numeric(table.2[, 5])]
+table.2[, 4] &lt;- factor(table.2[, 3])
 
 # carrega a biblioteca
 library(kableExtra)
@@ -877,16 +872,10 @@ ID
 Estado Civil
 </th>
 <th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
-Estado Civil (mesma caixa)
-</th>
-<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
-Estado Civil (sem espaço)
+Estado.Civil
 </th>
 <th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
 Estado.Civil.Cod
-</th>
-<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
-Estado.Civil
 </th>
 </tr>
 </thead>
@@ -902,13 +891,7 @@ casado
 casado
 </td>
 <td style="text-align:left;">
-casado
-</td>
-<td style="text-align:left;">
 1
-</td>
-<td style="text-align:left;">
-casado
 </td>
 </tr>
 <tr>
@@ -922,13 +905,7 @@ Casado
 casado
 </td>
 <td style="text-align:left;">
-casado
-</td>
-<td style="text-align:left;">
 1
-</td>
-<td style="text-align:left;">
-casado
 </td>
 </tr>
 <tr>
@@ -939,16 +916,10 @@ casado
  casado
 </td>
 <td style="text-align:left;">
- casado
-</td>
-<td style="text-align:left;">
 casado
 </td>
 <td style="text-align:left;">
 1
-</td>
-<td style="text-align:left;">
-casado
 </td>
 </tr>
 <tr>
@@ -962,13 +933,7 @@ Solteiro
 solteiro
 </td>
 <td style="text-align:left;">
-solteiro
-</td>
-<td style="text-align:left;">
 2
-</td>
-<td style="text-align:left;">
-solteiro
 </td>
 </tr>
 <tr>
@@ -979,16 +944,10 @@ solteiro
  Casado
 </td>
 <td style="text-align:left;">
- casado
-</td>
-<td style="text-align:left;">
 casado
 </td>
 <td style="text-align:left;">
 1
-</td>
-<td style="text-align:left;">
-casado
 </td>
 </tr>
 <tr>
@@ -999,16 +958,10 @@ casado
  solteiro
 </td>
 <td style="text-align:left;">
- solteiro
-</td>
-<td style="text-align:left;">
 solteiro
 </td>
 <td style="text-align:left;">
 2
-</td>
-<td style="text-align:left;">
-solteiro
 </td>
 </tr>
 <tr>
@@ -1022,13 +975,7 @@ solteiro
 solteiro
 </td>
 <td style="text-align:left;">
-solteiro
-</td>
-<td style="text-align:left;">
 2
-</td>
-<td style="text-align:left;">
-solteiro
 </td>
 </tr>
 <tr>
@@ -1039,16 +986,10 @@ solteiro
 Solteiro 
 </td>
 <td style="text-align:left;">
-solteiro 
-</td>
-<td style="text-align:left;">
 solteiro
 </td>
 <td style="text-align:left;">
 2
-</td>
-<td style="text-align:left;">
-solteiro
 </td>
 </tr>
 <tr>
@@ -1059,16 +1000,10 @@ solteiro
  casado
 </td>
 <td style="text-align:left;">
- casado
-</td>
-<td style="text-align:left;">
 casado
 </td>
 <td style="text-align:left;">
 1
-</td>
-<td style="text-align:left;">
-casado
 </td>
 </tr>
 <tr>
@@ -1079,16 +1014,10 @@ casado
  Solteiro 
 </td>
 <td style="text-align:left;">
- solteiro 
-</td>
-<td style="text-align:left;">
 solteiro
 </td>
 <td style="text-align:left;">
 2
-</td>
-<td style="text-align:left;">
-solteiro
 </td>
 </tr>
 </tbody>
@@ -1291,7 +1220,7 @@ Número de Filhos
 1
 </td>
 <td style="text-align:left;">
-26-12-2021
+28-12-2021
 </td>
 <td style="text-align:left;">
 casado
@@ -1305,7 +1234,7 @@ NA
 2
 </td>
 <td style="text-align:left;">
-27-12-2021
+29-12-2021
 </td>
 <td style="text-align:left;">
 Casado
@@ -1319,7 +1248,7 @@ Casado
 3
 </td>
 <td style="text-align:left;">
-28-12-2021
+30-12-2021
 </td>
 <td style="text-align:left;">
  casado
@@ -1333,7 +1262,7 @@ NaN
 4
 </td>
 <td style="text-align:left;">
-29-12-2021
+31-12-2021
 </td>
 <td style="text-align:left;">
 Solteiro
@@ -1347,7 +1276,7 @@ N/A
 5
 </td>
 <td style="text-align:left;">
-30-12-2021
+01-01-2022
 </td>
 <td style="text-align:left;">
  Casado
@@ -1361,7 +1290,7 @@ N.A.
 6
 </td>
 <td style="text-align:left;">
-31-12-2021
+02-01-2022
 </td>
 <td style="text-align:left;">
  solteiro
@@ -1375,7 +1304,7 @@ N.A.
 7
 </td>
 <td style="text-align:left;">
-01-01-2022
+03-01-2022
 </td>
 <td style="text-align:left;">
 solteiro
@@ -1388,7 +1317,7 @@ solteiro
 8
 </td>
 <td style="text-align:left;">
-02-01-2022
+04-01-2022
 </td>
 <td style="text-align:left;">
 Solteiro 
@@ -1402,7 +1331,7 @@ na
 9
 </td>
 <td style="text-align:left;">
-03-01-2022
+05-01-2022
 </td>
 <td style="text-align:left;">
  casado
@@ -1416,7 +1345,7 @@ n.a.
 10
 </td>
 <td style="text-align:left;">
-04-01-2022
+06-01-2022
 </td>
 <td style="text-align:left;">
  Solteiro 
@@ -1431,7 +1360,7 @@ n.a.
 <div id="recomendado" class="section level4">
 <h4><svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:green;overflow:visible;position:relative;"><path d="M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z"/></svg> <em>Recomendado</em></h4>
 <pre class="r"><code># cria a tabela de exemplos
-table.final &lt;- data.frame(table.1[, 1], table.1[, 2], table.2[, 6], table.3[, 3])
+table.final &lt;- data.frame(table.1[, 1], table.1[, 2], table.2[, 3], table.3[, 3])
 colnames(table.final) &lt;- c(&quot;ID&quot;, &quot;Data.Coleta&quot;, &quot;Estado.Civil&quot;, &quot;Numero.Filhos&quot;)
 
 # carrega a biblioteca
@@ -1464,7 +1393,7 @@ Numero.Filhos
 1
 </td>
 <td style="text-align:left;">
-26-12-2021
+28-12-2021
 </td>
 <td style="text-align:left;">
 casado
@@ -1478,7 +1407,7 @@ NA
 2
 </td>
 <td style="text-align:left;">
-27-12-2021
+29-12-2021
 </td>
 <td style="text-align:left;">
 casado
@@ -1492,7 +1421,7 @@ casado
 3
 </td>
 <td style="text-align:left;">
-28-12-2021
+30-12-2021
 </td>
 <td style="text-align:left;">
 casado
@@ -1506,7 +1435,7 @@ NA
 4
 </td>
 <td style="text-align:left;">
-29-12-2021
+31-12-2021
 </td>
 <td style="text-align:left;">
 solteiro
@@ -1520,7 +1449,7 @@ NA
 5
 </td>
 <td style="text-align:left;">
-30-12-2021
+01-01-2022
 </td>
 <td style="text-align:left;">
 casado
@@ -1534,7 +1463,7 @@ NA
 6
 </td>
 <td style="text-align:left;">
-31-12-2021
+02-01-2022
 </td>
 <td style="text-align:left;">
 solteiro
@@ -1548,7 +1477,7 @@ solteiro
 7
 </td>
 <td style="text-align:left;">
-01-01-2022
+03-01-2022
 </td>
 <td style="text-align:left;">
 solteiro
@@ -1562,7 +1491,7 @@ NA
 8
 </td>
 <td style="text-align:left;">
-02-01-2022
+04-01-2022
 </td>
 <td style="text-align:left;">
 solteiro
@@ -1576,7 +1505,7 @@ NA
 9
 </td>
 <td style="text-align:left;">
-03-01-2022
+05-01-2022
 </td>
 <td style="text-align:left;">
 casado
@@ -1590,7 +1519,7 @@ NA
 10
 </td>
 <td style="text-align:left;">
-04-01-2022
+06-01-2022
 </td>
 <td style="text-align:left;">
 solteiro
