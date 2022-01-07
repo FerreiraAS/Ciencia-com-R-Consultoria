@@ -11,32 +11,6 @@ Nessa plataforma estarão disponíveis três ambientes distintos:
 
 <br>
 
-### **Conceitos**
-
-*Conteúdo didático para autoaprendizado*
-
-Aqui você encontrará definições e explicações que de forma simples, proporcionam um conhecimento básico sobre estatística e análise de dados, possibilitando obter uma maior qualidade na conclusão do seu trabalho, através de maior coerência e acurácia na análise dos dados obtidos.
-
-<br>
-
-### **Rode seu script**
-
-*Inicie ou desenvolva habilidades de programação com o multiversátil programa R*
-
-Disponibilização de roteiros e links para download dos programas R e RStudio e de campo preparado para você rodar seus modelos próprios diretamente na nuvem.
-
-<br>
-
-### **Consultoria**
-
-*Proposta customizada para auxílio em todas as etapas da elaboração do trabalho, em acordo com seu tema, objetivo e prazo*
-
-Caso seja de interesse, <a href="mailto:arthur_sf@icloud.com?subject=Cotação de serviço">solicite</a> uma proposta personalizada para auxílio em todas as etapas da elaboração do trabalho.
-
-Em acordo com o tema, prazos e objetivo do projeto, o orçamento será feito discriminando as etapas do trabalho a serem fornecidas, a partir de um acordo prévio com o solicitante, para completo atendimento do seu interesse e a viabilidade de execução da consultoria.
-
-<br>
-
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
