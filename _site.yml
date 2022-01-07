@@ -1,0 +1,75 @@
+---
+title: "Estatística DIY"
+date: '`r format(Sys.Date())`'
+name: "stat-diy"
+author: "Arthur Ferreira"
+bibliography: references.bib
+link-citations: yes
+output_dir: "docs"
+include:
+  - /Qualis
+  - /Scripts
+  - /SJR
+navbar:
+  search: true
+  left:
+    - text: ""
+      icon: "fa-home"
+      href: index.html
+    - text: "Conceitos"
+      href: conceitos.html
+      menu:
+        - text: "Conceitos"
+          href: [conceitos.html]
+        - text: "Dados, Tabelas"
+          href: [conceitos.html#dados-tabelas]
+        - text: "Variáveis, Fatores"
+          href: [conceitos.html#var-fat]
+        - text: "Distribuições, Parâmetros"
+          href: [conceitos.html#distr-par]
+        - text: "Transformação, Codificação"
+          href: [conceitos.html#transf-cod]
+        - text: "Unidade de análise"
+          href: [conceitos.html#unidade-de-analise]
+        - text: "População, Amostra"
+          href: [conceitos.html#pop-amostr]
+        - text: "Amostragem, Reamostragem"
+          href: [conceitos.html#amostragem-reamostragem]
+        - text: "Pareamento, Casamento"
+          href: [conceitos.html#pareamento-casamento]
+        - text: "Referências, Pacotes"
+          href: [conceitos.html#refs-packs]
+    - text: "Rode seu script"
+      href: [run.html]
+      menu:
+        - text: "Por onde começar"
+          href: [run.html]
+        - text: "Rode no computador"
+          href: [run.html#local]
+        - text: "Rode na nuvem"
+          href: [run.html#nuvem]
+    - text: "Consultoria"
+      href: [consultoria.html]
+      menu:
+        - text: "Serviços"
+          href: [consultoria.html]
+    - text: "Sobre"
+      href: [sobre.html]
+      menu:
+        - text: "Autor"
+          href: [sobre.html#autor]
+        - text: "Publicações"
+          href: [sobre.html#artigos]
+
+output:
+  html_document:
+    theme: flatly
+    highlight: textmate
+    css: style.css
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    edit: null
+    include:
+      after_body: footer.html
+---

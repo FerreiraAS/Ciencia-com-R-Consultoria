@@ -1,0 +1,265 @@
+---
+title: Sobre
+bibliography: references.bib
+link-citations: yes
+output:
+  html_document:
+    code_folding: none
+    toc: false
+---
+
+```{css, echo=FALSE}
+body {
+  font-size: 2em;
+}
+```
+
+<br>
+<br>
+
+### **Autor** {#autor}
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<div class="row"><center>
+
+<div class="col-sm-4"><center>
+![](ASF.png)
+</center></div>
+
+<div class="col-sm-8"><right>
+
+### **Arthur de Sá Ferreira**
+#### *PT, Biomed Eng, PhD*
+##### `r library(emo); flag("Brazil")` Rio de Janeiro
+
+<br>
+
+<!--ORCID badge-->
+<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7014-2002" href="https://orcid.org/0000-0001-7014-2002" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">0000-0001-7014-2002</a></div>
+
+<!--LATTES badge-->
+<div> <img src="http://buscatextual.cnpq.br/buscatextual/images/v2/icone_lattes.png"> [&nbsp;5432142731317894](http://lattes.cnpq.br/5432142731317894) </div>
+
+<!--PUBLONS badge-->
+<div> <span id="badgeCont345"><script type="text/javascript" src="https://publons.com/mashlets?el=badgeCont345&rid=F-6831-2012&size=small"></script></span> [&nbsp;F-6831-2012](https://publons.com/researcher/F-6831-2012)</a></div>
+
+<!--TWITTER badge-->
+<!-- <div><a href="https://twitter.com/Arthur_SF_BR?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div> -->
+
+</right></div>
+
+</center></div>
+
+<br>
+
+Possui graduação em Fisioterapia pela Universidade Federal do Rio de Janeiro (1999), mestrado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2002) e doutorado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2006).
+
+<br>
+
+Atua como professor adjunto do Centro Universitário Augusto Motta ([UNISUAM ](https://www.unisuam.edu.br)) e pesquisador no Laboratório de Simulação Computacional e Modelagem em Reabilitação dos Programas de Pós-graduação em Ciências da Reabilitação e de Desenvolvimento Local da UNISUAM.
+
+<br>
+
+Tem experiência na área de Fisioterapia e Terapia Ocupacional, atuando principalmente nos seguintes temas:
+
+`r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Bioestatística
+
+`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Modelagem e simulação computacional
+
+`r library(fontawesome); fa("wave-square", margin_right = "0.1em")` Processamento de sinais biomédicos
+
+`r library(fontawesome); fa("walking", margin_right = "0.1em")` Movimento funcional humano
+
+`r library(fontawesome); fa("user-injured", margin_right = "0.1em")` Distúrbios musculoesqueléticos
+
+`r library(fontawesome); fa("heartbeat", margin_right = "0.1em")` Doenças cardiovasculares
+
+`r library(fontawesome); fa("user-md", margin_right = "0.1em")` Medicina tradicional (chinesa)
+
+<br>
+
+Atualmente é membro efetivo das seguintes entidades:
+
+`r library(emo); flag("Brazil")` Associação Brasileira de Pesquisa e Pós-Graduação em Fisioterapia  (ABRAPG-FT) &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://abrapg-ft.org.br/portal/)
+
+`r library(emo); flag("United Kingdom")` Committee on Publication Ethics (COPE) &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://publicationethics.org)
+
+`r library(emo); flag("United Kingdom")` Royal Statistical Society (RSS) &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://rss.org.uk)
+
+<br>
+
+Compõe o corpo editoral dos periódicos internacionais e nacionais:
+
+`r library(emo); flag("Brazil")` Fisioterapia e Pesquisa &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.scielo.br/journal/fp/about/#editors)
+
+`r library(emo); flag("United Kingdom")` Scientific Reports &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.nature.com/srep/about/editors)
+
+`r library(emo); flag("Switzerland")` Frontiers in Rehabilitation Sciences &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.frontiersin.org/research-topics/26395/systemic-effects-and-disabilities-in-long-covid-syndrome-current-approaches-and-clinical-challenges)
+
+`r library(emo); flag("Egypt")` Evidence-Based Complementary and Alternative Medicine &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.hindawi.com/journals/ecam/editors/)
+
+`r library(emo); flag("Switzerland")` Chinese Journal of Integrative Medicine &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.springer.com/journal/11655/editors)
+
+`r library(emo); flag("Hong Kong")` Journal of Integrative Medicine &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.journals.elsevier.com/journal-of-integrative-medicine/editorial-board)
+
+<br>
+
+<a style="float:right" href="#top"><b>Início</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
+### **Publicações** {#artigos}
+
+<br>
+
+```{r papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis", out.width="100%"}
+library(knitr)
+library(kableExtra)
+library(magrittr)
+library(readxl)
+library(tidyverse)
+library(hrbrthemes)
+library(gridExtra)
+
+# read SCImago csv file (download from https://www.scimagojr.com)
+scimago <-
+  read.csv(
+    "SJR/scimagojr 2020.csv",
+    header = TRUE,
+    sep = ";",
+    quote = "\"",
+    dec = ",",
+    fill = TRUE
+  )
+
+# read QUALIS xlsx file (download from Plataforma Sucupira)
+qualis <-
+  data.frame(read_excel(
+    "Qualis/QUALIS Referência 2017-2018.xlsx",
+    sheet = 1,
+    col_types = c("text")
+  ))
+
+# baixa todos os artigos (com repetições)
+my_orcid <- c("0000-0001-7014-2002")
+my_works <- rorcid::works(my_orcid) %>%
+  as_tibble() %>%
+  janitor::clean_names() %>%
+  dplyr::mutate(created_date_value = anytime::anydate(created_date_value/1000))
+my_works_ids <- my_works %>%
+  tidyr::unnest(external_ids_external_id) %>%
+  janitor::clean_names()
+
+# seleciona os artigos com DOI
+my_dois_works <-
+  my_works_ids[my_works_ids$external_id_type == 'doi', ]
+my_dois_works$external_id_value <-
+  tolower(my_dois_works$external_id_value)
+
+# remove as repetições pelo DOI
+my_dois_works <-
+  my_dois_works[!duplicated(my_dois_works[, "external_id_value"]),]
+
+# cria metadados para rastreio pelo Altmetrics
+dois_2_meta <- my_dois_works$external_id_value
+source("scripts/altmetric_meta_from_dois.R")
+
+# # Make the histogram publications x year
+# years <- as.data.frame(as.numeric(my_dois_works$publication_date_year_value))
+# names(years) <- c("years")
+# 
+# p1 <- years %>%
+#   ggplot(aes(x=years)) + geom_density(fill="#2C3E50", color="black", alpha=0.8) +
+#  labs(
+#     x = "Anos",
+#     y = "Número de Publicações",
+#     title = "Distribuição de publicações por ano"
+#   ) +
+#   theme_ipsum(base_size = 12) + 
+#   theme(axis.ticks.x = element_blank(),
+#         axis.text.x = element_blank()) + 
+#   theme(axis.ticks.y = element_blank(),
+#         axis.text.y = element_blank())
+# 
+# # Make the bar plot journal x frequency
+# journals <- as.data.frame(my_dois_works$journal_title_value)
+# journals.freq <- data.frame(
+#   names(sort(table(journals), decreasing = TRUE)),
+#   as.numeric(sort(table(journals), decreasing = TRUE))
+#   )
+# names(journals.freq) <- c("journals", "frequency")
+# 
+# # top-five
+# p2 <- ggplot(journals.freq[1:5, ], aes(x=reorder(journals, frequency), y=frequency)) + 
+#   geom_bar(stat = "identity", color="black", fill="#2C3E50") +
+#   labs(
+#     x = "",
+#     y = "",
+#     title = "Top-5 períódicos"
+#   ) +
+#   coord_flip() +
+#   theme_ipsum(base_size = 12) + 
+#   theme(axis.ticks.x = element_blank(),
+#         axis.text.x = element_blank())
+# 
+# grid.arrange(p1, p2, nrow = 2)
+# 
+# cat('<br>')
+
+# Step 5. Convert the doi column in your dataset to a list.
+dois_list <- as.list(my_dois_works$external_id_value)
+
+# roda o script para obter dados do Altmetric
+source("scripts/altmetrics_using_doi.R")
+
+# remove duplicate entries
+doi_unique <-
+  doi_reshaped_data[!duplicated(doi_reshaped_data$doi), ]
+  
+# sort columns by citations
+doi_sort <-
+  doi_unique[order(doi_unique$title), ]
+
+# get data of papers without Altmetrics from CrossRef
+my_dois_works <-
+  rcrossref::cr_works(dois = unlist(no_altmetric_dois_list)) %>%
+  pluck("data")
+
+# print table of papers with/without badges
+source("scripts/table_with_badges.R")
+```
+
+<br>
+
+*Fontes:*
+^1^ [**Altmetric**](https://www.altmetric.com)
+^2^ [**Dimensions**](https://www.dimensions.ai)
+^3^ [**PlumX**](https://plu.mx)
+^4^ [**SCImago**](https://www.scimagojr.com)
+^5^ [**WebQualis**](https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf)
+
+
+<!--script for generating ALTMETRIC badges-->
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+<!--script for generating multiple DIMENSIONS badges-->
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+
+<!--script for generating multiple PLUMX badges-->
+<script type="text/javascript" src="//cdn.plu.mx/widget-all.js"></script>
+
+<br>
+
+<a style="float:right" href="#top"><b>Início</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">

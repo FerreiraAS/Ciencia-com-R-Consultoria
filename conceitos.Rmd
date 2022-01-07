@@ -1,0 +1,865 @@
+---
+title: Conceitos
+bibliography: references.bib
+link-citations: yes
+output:
+  html_document:
+    code_folding: hide
+---
+
+```{css, echo=FALSE}
+body {
+  font-size: 2em;
+}
+```
+
+<br>
+
+<p align="right">
+```{r share, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# sorteia participante para relatar no texto
+library(fontawesome)
+
+cat("[")
+fa("twitter-square", margin_left = "0.2em", margin_right = "0.2em", height = "2em", width = "2em")
+cat("](https://twitter.com/share?url=rehab-tech.github.io/statisticsDIY/)")
+cat("&nbsp;&nbsp;&nbsp;")
+cat("[")
+fa("facebook-square", margin_left = "0.2em", margin_right = "0.2em", height = "2em", width = "2em")
+cat("](http://www.facebook.com/sharer.php?u=rehab-tech.github.io/statisticsDIY/)")
+cat("&nbsp;&nbsp;&nbsp;")
+cat("[")
+fa("linkedin", margin_left = "0.2em", margin_right = "0.2em", height = "2em", width = "2em")
+cat("](http://www.linkedin.com/shareArticle?mini=true&amp;url=rehab-tech.github.io/statisticsDIY/)")
+```
+</p>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## *Dados, Tabelas* {#dados-tabelas}
+
+<br>
+
+*Em construção*
+
+[@Altman1999]
+
+<br>
+
+### *Dados*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+### *Dados perdidos*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+### *Tabelas* {.tabset}
+
+<br>
+Tabelas são comumente utilizadas para entrada, armazenamento, análises e visualização de dados. Embora a maioria dos programas de computador permitam todas essas tarefas, recomenda-se que as tabelas sejam utilizadas principalmente para entrada e armazenamento de dados - análise e visualização de dados devem ser feitas separadamente.
+
+<br>
+Em geral, *seja consistente*! Algumas recomendações podem ser úteis na construção de novas tabelas em planilhas eletrônicas [@broman2018a]:
+
+<br>
+
+- Construa a tabela em formato retangular *NxM* (linhas x colunas), de modo que cada linha *n* seja uma unidade de análise e cada coluna *m* uma variável ou fator do estudo
+- Armazene todos os dados em apenas uma tabela
+
+```{r tabela.0, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# cria a tabela de exemplos
+table.0 <- matrix("dado", nrow = 10, ncol = 5)
+
+# atribui rótulos para a tabela de dados
+N <- 10
+M <- 5
+colnames(table.0) <- c("V.1", "V.2", "V.3", "V.4", "V.5")
+for(i in 1:N){
+  for(j in 1:M){
+    table.0[i,j] <- paste0("$$X", "_{", as.character(i), ",", as.character(j), "}$$")
+  }
+}
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela
+kable(table.0, align = "c", format = "html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white")
+```
+
+<br>
+
+- Use identificadores consistentes e únicos para cada unidade de análise
+- Use formatos de data consistentes (ex.: DD-MM-AAAA)"
+
+```{r tabela.1, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# cria a tabela de exemplos
+table.1 <- matrix(NA, nrow = 10, ncol = 2)
+
+# atribui rótulos para a tabela de dados
+colnames(table.1) <- c("ID", "Data.Coleta")
+
+# preenche a tabela com identificação da unidade de análise
+table.1[, 1] <- seq(1:10)
+
+# preenche a tabela com maus exemplos
+table.1[, 2] <- as.character(Sys.Date() + seq(1:10))
+
+# preenche a tabela com melhores exemplos
+table.1[, 2] <- format(as.Date(table.1[,2], origin = "1950-01-01"), "%d-%m-%Y")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela
+kable(table.1, align = "c", format = "html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white")
+```
+
+<br>
+
+- Não misture letras com caixa alta e baixa para representar o mesmo nível
+- Evite usar caracteres de espaço na entrada de dados no início, meio ou fim dos dados
+- Use códigos consistentes para variáveis categóricas
+
+```{r tabela.2, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# cria a tabela de exemplos
+table.2 <- matrix(NA, nrow = 10, ncol = 4)
+
+# atribui rótulos para a tabela de dados
+colnames(table.2) <- c("ID", "Estado Civil", "Estado.Civil", "Estado.Civil.Cod")
+
+# preenche a tabela com identificação da unidade de análise
+table.2[, 1] <- seq(1:10)
+
+# preenche a tabela com maus exemplos (&nbsp; representa o caracter " " em HTML)
+table.2[, 2] <- c("casado", "Casado", "&nbsp;casado", "Solteiro", "&nbsp;Casado", "&nbsp;solteiro", "solteiro", "Solteiro&nbsp;", "&nbsp;casado", "&nbsp;Solteiro&nbsp;")
+
+# preenche a tabela com melhores exemplos
+# altera para caixa baixa
+table.2[, 3] <- tolower(table.2[, 2])
+# remove espaços em branco
+table.2[, 3] <- trimws(table.2[, 3], which = "both", whitespace = "[\t\r\n]")
+# remove espaço em branco de HTML
+table.2[, 3] <- gsub("&nbsp;", "", table.2[, 3])
+# converte em fator codificado
+table.2[, 4] <- factor(table.2[, 3])
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela 
+kable(table.2, align = "l", format = "html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white")
+```
+
+<br>
+
+- Não deixe células vazias, use código para dados perdidos
+- Use o mesmo código para dados perdidos
+- Não use códigos numéricos para dados perdidos
+
+```{r tabela.3, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# cria a tabela de exemplos
+table.3 <- matrix(NA, nrow = 10, ncol = 3)
+
+# preenche a tabela com identificação da unidade de análise
+table.3[, 1] <- seq(1:10)
+
+# atribui rótulos para a tabela de dados
+colnames(table.3) <- c("ID", "Filhos", "Filhos")
+
+# preenche a tabela com maus exemplos
+table.3[, 2] <- c("NA", 1, "NaN", "N/A", "N.A.", 0, "", "na", "n.a.", "999")
+
+# preenche a tabela com código único
+table.3[, 3] <- gsub("NA|NaN|N/A|N.A.|na|n.a.|\t\r\n|^$|\\d{3}", NA, table.3[, 2])
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela 
+kable(table.3, align = "c", format = "html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white")
+```
+
+<br>
+
+- Use rótulos consistentes para as variáveis, principalmente quando há medidas repetidas
+- Use hífens ou pontos como separador (ex.: estado.civil)
+(ex.: teste.1, teste.2)
+
+<br>
+
+Compare as tabelas a seguir:
+
+<br>
+
+#### `r library(fontawesome); fa("times", fill = "red", margin_right = "0.1em")` *Evite*
+
+```{r tabela.evite, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# cria a tabela de exemplos
+table.final <- data.frame(table.1[, 1], table.1[, 2], table.2[, 2], table.3[, 2])
+colnames(table.final) <- c("ID", "Data de Coleta", "Estado Civil", "Número de Filhos")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela 
+kable(table.final, align = "l", format = "html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white")
+```
+
+#### `r library(fontawesome); fa("check-square", fill = "green", margin_right = "0.1em")` *Recomendado*
+
+```{r tabela.recomendada, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# cria a tabela de exemplos
+table.final <- data.frame(table.1[, 1], table.1[, 2], table.2[, 3], table.3[, 3])
+colnames(table.final) <- c("ID", "Data.Coleta", "Estado.Civil", "Numero.Filhos")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela 
+kable(table.final, align = "l", format = "html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white")
+```
+
+### {.unlisted .unnumbered}
+
+Sugestõwes finais incluem:
+
+- Não use cores (de fonte ou fundo) para formatação de células, linhas e/ou colunas
+- Não use células mescladas
+- Delete linhas e/ou colunas totalmente em branco (sem unidades de análise e/ou sem variáveis)
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## *Variáveis, Fatores* {#var-fat}
+
+<br>
+
+*Em construção*
+
+[@Altman1999]
+
+<br>
+
+### *Variáveis*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+### *Fatores*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## *Distribuições, Parâmetros* {#distr-par}
+
+<br>
+
+*Em construção*
+
+<br>
+
+### *Distribuições*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+### *Parâmetros*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## *Transformação, Codificação* {#transf-cod}
+
+<br>
+
+*Em construção*
+
+<br>
+
+### *Transformação*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+### *Codificação*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## *Unidade de análise* {#unidade-de-analise}
+
+<br>
+A unidade de análise de pesquisas na área de saúde geralmente é o indivíduo. Outras possibilidades são instituições em estudos multicêntricos (ex.: hospitais, clínicas) ou estudos publicados em meta-análises (ex.: ensaios clínicos).
+
+<br>
+
+É fundamental identificar corretamente a unidade de análise para evitar inflação do tamanho da amostra (ex.: medidas bilaterais resultando em o dobro de participantes), violações de suposições dos testes de hipótese (ex.: independência entre medidas e/ou unidade de análise) e resultados espúrios em testes de hipótese (ex.: p-valores menores que aqueles observados se a amostra não estivesse inflada) [@Matthews1990; @Altman1997].
+
+<br>
+
+Da unidade de análise podem ser coletadas informações em medidas únicas, repetidas ou múltiplas. Como exemplo, segue a avaliação da variável 'pressão arterial sistólica' em um indivíduo como unidade de análise.
+
+<br>
+
+### *Medidas únicas*
+
+```{r k1, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "hide"}
+# sorteia participante para relatar no texto
+set.seed(1)
+k1 <- sample(1:10, 1)
+```
+
+```{r medidas-unicas, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(1)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# sorteia n dados no intervalo min-max, com reposição para cada variável
+VAR.1 <- sample(inferior:superior, n, replace = TRUE)
+
+# organiza as informações de unidade de análise e dados
+table.1 <- data.frame(ID, VAR.1)
+
+# atribui rótulos para a tabela de dados
+colnames(table.1) <- c("Unidade de análise", "Pressão arterial, braço esquerdo (mmHg)")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados 
+kable(head(table.1, n = 10L), align = "c", format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white") %>%
+  row_spec(k1, background = "#E6E6E6", bold = TRUE)
+```
+
+A medida única da pressão arterial sistólica no braço esquerdo resulta em um valor pontual. O valor pontual será considerado representativo da variável para a unidade de análise (ex.: **`r VAR.1[k1]` mmHg** para o participante **\#`r k1`**). Medidas únicas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.
+
+```{r medidas-unicas, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
+### *Medidas repetidas*
+
+```{r k2, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "hide"}
+# sorteia participante para relatar no texto
+set.seed(2)
+k2 <- sample(1:10, 1)
+```
+
+```{r medidas-repetidas-separadas, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(2)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# sorteia n dados no intervalo min-max, com reposição para cada variável
+VAR.1 <- sample(inferior:superior, n, replace = TRUE)
+VAR.2 <- sample(inferior:superior, n, replace = TRUE)
+VAR.3 <- sample(inferior:superior, n, replace = TRUE)
+
+# organiza as informações de unidade de análise e dados
+VAR <- data.frame(VAR.1, VAR.2, VAR.3)
+table.2 <- data.frame(ID, VAR)
+
+# atribui rótulos para a tabela de dados
+colnames(table.2) <- c("Unidade de análise", "Pressão arterial, braço esquerdo (mmHg) #1", "Pressão arterial, braço esquerdo (mmHg) #2", "Pressão arterial, braço esquerdo (mmHg) #3")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados 
+kable(head(table.2, n = 10L), align = "c", format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white") %>%
+  row_spec(k2, background = "#E6E6E6", bold = TRUE)
+```
+
+A medida repetida da pressão arterial no braço esquerdo, resultando em um conjunto de valores pontuais (ex.: **`r VAR.1[k2]` mmHg**, **`r VAR.2[k2]` mmHg** e **`r VAR.3[k2]` mmHg** para o participante **\#`r k2`**). As medidas repetidas podem ser tabuladas separadamente, por exemplo para análise da confiabilidade de obtenção dessa medida.
+
+```{r medidas-repetidas-separadas, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+```{r medidas-repetidas-agregadas, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(2)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# sorteia n dados no intervalo min-max, com reposição para cada variável
+VAR.1 <- sample(inferior:superior, n, replace = TRUE)
+VAR.2 <- sample(inferior:superior, n, replace = TRUE)
+VAR.3 <- sample(inferior:superior, n, replace = TRUE)
+
+# organiza as informações de unidade de análise e dados
+VAR <- data.frame(VAR.1, VAR.2, VAR.3)
+
+# converte dados para variável numérica contínua
+VAR <- sapply(VAR, as.numeric)
+
+# agrega os valores repetidos em linhas com a média
+VAR.aggr <- apply(VAR, 1, FUN = mean)
+
+# organiza as informações de unidade de análise e dados
+table.3 <- data.frame(ID, VAR.aggr)
+
+# formata a visualzaçào de casas decimais das variáveis numéricas
+table.3 <- format(table.3, digits = 0, nsmall = 0)
+
+# atribui rótulos para a tabela de dados
+colnames(table.3) <- c("Unidade de análise", "Pressão arterial, braço esquerdo (mmHg) média")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados 
+kable(head(table.3, n = 10L), align = "c", format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white") %>%
+  row_spec(k2, background = "#E6E6E6", bold = TRUE)
+```
+
+As medidas repetidas podem ser agregadas por algum parâmetro --- ex.: média, mediana, máximo, mínimo, entre outros---, observando-se a relevância biológica, clínica e/ou metodológica desta escolha. O valor agregado será considerado representativo da variável para a unidade de análise (ex.: média = **`r round(VAR.aggr[k2], digits = 0)` mmHg** para o participante **\#`r k2`**). Medidas agregadas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.
+
+```{r medidas-repetidas-agregadas, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
+### *Medidas seriadas*
+
+```{r k3, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "hide"}
+# sorteia participante para relatar no texto
+set.seed(2)
+k2 <- sample(1:10, 1)
+```
+
+```{r medidas-seriadas-separadas, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(3)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# número de medidas seriadas
+k <- 3
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# prepara a tabela de resultados
+table.4 <- data.frame(matrix(vector(), nrow = 0, ncol = 3, dimnames=list(c(), c("Unidade de análise", "Tempo (min)", "Pressão arterial, braço esquerdo (mmHg)"))))
+
+# para cada série
+for(i in 1:k){
+
+  # cria o fator de repetição seriada
+  TIME <- rep(i, n)
+
+  # sorteia n dados no intervalo min-max, com reposição para cada variável
+  VAR <- sample(inferior:superior, n, replace = TRUE)
+  
+  # organiza as informações de unidade de análise e dados
+  serie <- data.frame(ID, TIME, VAR)
+
+  # atribui rótulos para a tabela de dados
+  colnames(serie) <- c("Unidade de análise", "Tempo (min)", "Pressão arterial, braço esquerdo (mmHg)")
+
+  # concatena as informações de unidade de análise e dados para cada série de coleta
+  table.4 <- rbind(table.4, serie)
+}
+
+# reordena a tabela de dados
+table.4 <- table.4[order(table.4[ ,1], table.4[ ,2], decreasing = FALSE), ]
+
+# atribui rótulos para a tabela de dados
+colnames(table.4) <- c("Unidade de análise", "Tempo (min)", "Pressão arterial, braço esquerdo (mmHg)")
+
+# remove rótulos para as linhas
+row.names(table.4) <- NULL
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados
+kable(head(table.4, n = 10L), align = "c", format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white") %>%
+  row_spec(1:3, background = "#E6E6E6", bold = TRUE)
+```
+
+Medidas seriadas são possivelmente relacionadas e, portanto, dependentes na mesma unidade de análise. Por exemplo, a medida seriada da pressão arterial no braço esquerdo, em intervalos tipicamente regulares (ex.: **`r table.4[1,3]` mmHg**, **`r table.4[2,3]` mmHg** e **`r table.4[3,3]` mmHg** em **`r 1` min**, **`r 2` min** e **`r 3` min**, respectivamente, para o participante **#1**).
+
+```{r medidas-seriadas-separadas, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+```{r medidas-seriadas-agregadas, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(3)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# número de medidas seriadas
+k <- 3
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# prepara a tabela de resultados
+table.5 <- data.frame(matrix(vector(), nrow = 0, ncol = 3, dimnames=list(c(), c("Unidade de análise", "Tempo (min)", "Pressão arterial, braço esquerdo (mmHg)"))))
+
+# para cada série
+for(i in 1:k){
+
+  # cria o fator de repetição seriada
+  TIME <- rep(i, n)
+
+  # sorteia n dados no intervalo min-max, com reposição para cada variável
+  VAR <- sample(inferior:superior, n, replace = TRUE)
+  
+  # organiza as informações de unidade de análise e dados
+  serie <- data.frame(ID, TIME, VAR)
+
+  # atribui rótulos para a tabela de dados
+  colnames(serie) <- c("Unidade de análise", "Tempo (min)", "Pressão arterial, braço esquerdo (mmHg)")
+
+  # concatena as informações de unidade de análise e dados para cada série de coleta
+  table.5 <- rbind(table.5, serie)
+}
+
+# converte dados para variável numérica contínua
+table.5[, 3] <- sapply(table.5[, 3], as.numeric)
+
+# agrega os valores seriados em linhas com a amplitude
+table.5 <- aggregate(table.5[, 3] ~ table.5[, 1], FUN = function(x) {range(x)[2] - range(x)[1]})
+
+# formata a visualzaçào de casas decimais das variáveis numéricas
+table.5 <- format(table.5, digits = 0, nsmall = 0)
+
+# atribui rótulos para a tabela de dados
+colnames(table.5) <- c("Unidade de análise", "Pressão arterial, braço esquerdo (mmHg) amplitude")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados 
+kable(head(table.5, n = 10L), align = "c", format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white") %>%
+  row_spec(1, background = "#E6E6E6", bold = TRUE)
+```
+
+Medidas seriadas também agregadas por parâmetros --- ex.: máximo, mínimo, amplitude --- são consideradas representativas da variação temporal ou de uma característica de interesse (ex.: amplitude = **`r table.5[1,2]` mmHg** para o participante **#1**).
+
+```{r medidas-seriadas-agregadas, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
+### *Medidas múltiplas*
+
+```{r k4, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "hide"}
+# sorteia participante para relatar no texto
+set.seed(4)
+k4 <- sample(1:10, 1)
+```
+
+```{r medidas-multiplas, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(4)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# sorteia n dados no intervalo min-max, com reposição para cada variável
+VAR.1 <- sample(inferior:superior, n, replace = TRUE)
+VAR.2 <- sample(inferior:superior, n, replace = TRUE)
+
+# organiza as informações de unidade de análise e dados
+VAR <- data.frame(VAR.1, VAR.2)
+table.6 <- data.frame(ID, VAR)
+
+# atribui rótulos para a tabela de dados
+colnames(table.6) <- c("Unidade de análise", "Pressão arterial, braço esquerdo (mmHg)", "Pressão arterial, braço direito (mmHg)")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados 
+kable(head(table.6, n = 10L), align = "c", format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white") %>%
+  row_spec(k4, background = "#E6E6E6", bold = TRUE)
+```
+
+A medida de pressão arterial bilateral resulta em um conjunto de valores pontuais (ex.: braço esquerdo = **`r round(VAR.1[k4], digits = 0)` mmHg**, braço direito = **`r round(VAR.2[k4], digits = 0)` mmHg** para o participante **\#`r k4`**). Neste caso, ambos os valores pontuais são considerados representativos daquela unidade de análise. Medidas múltiplas também são possivelmente relacionadas e portanto são dependentes na mesma unidade de análise. Medidas múltiplas podem ser obtidas de modo repetido para análise agregada ou seriada.
+
+```{r medidas-multiplas, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## *População, Amostra* {#pop-amostr}
+
+<br>
+
+*Em construção*
+
+<br>
+
+### *População*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+### *Amostra*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## *Amostragem, Reamostragem* {#amostragem-reamostragem}
+
+<br>
+
+*Em construção*
+
+<br>
+
+### *Amostragem*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+### *Reamostragem*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## *Pareamento, Casamento* {#pareamento-casamento}
+
+<br>
+
+*Em construção*
+
+<br>
+
+### *Pareamento*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+### *Casamento*
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## *Referências, Pacotes* {#refs-packs}
+
+<br>
+
+### *Referências*
+
+<br>
+
+<div id="refs"></div> 
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+### *Pacotes*
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+
+packs <- c("base", "kableExtra")
+
+for(i in 1:length(packs)){
+  a <- citation(packs[i])$title
+  b <- citation(packs[i])$year
+  c <- citation(packs[i])$note
+  d <- citation(packs[i])$url
+  cat(paste0(a, ". ", b, ". ", c, " ", d))
+  cat('\n\n')
+}
+
+```
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
