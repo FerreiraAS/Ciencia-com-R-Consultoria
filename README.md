@@ -1,1 +1,1 @@
-<iframe src="https://rehab-tech.github.io/statisticsDIY/"></iframe>
+<a src="https://rehab-tech.github.io/statisticsDIY/"></a>
