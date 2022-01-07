@@ -1,5 +1,7 @@
 # statisticsDIY
-Config files for my GitHub profile.
+
+<br>
+
 ## *Do It Yourself!*
 
 <br>
