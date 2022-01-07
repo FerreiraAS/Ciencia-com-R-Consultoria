@@ -171,47 +171,47 @@ my_dois_works <-
 dois_2_meta <- my_dois_works$external_id_value
 source("scripts/altmetric_meta_from_dois.R")
 
-# Make the histogram publications x year
-years <- as.data.frame(as.numeric(my_dois_works$publication_date_year_value))
-names(years) <- c("years")
-
-p1 <- years %>%
-  ggplot(aes(x=years)) + geom_density(fill="#2C3E50", color="black", alpha=0.8) +
- labs(
-    x = "Anos",
-    y = "Número de Publicações",
-    title = "Distribuição de publicações por ano"
-  ) +
-  theme_ipsum(base_size = 12) +
-  theme(axis.ticks.x = element_blank(),
-        axis.text.x = element_blank()) +
-  theme(axis.ticks.y = element_blank(),
-        axis.text.y = element_blank())
-
-# Make the bar plot journal x frequency
-journals <- as.data.frame(my_dois_works$journal_title_value)
-journals.freq <- data.frame(
-  names(sort(table(journals), decreasing = TRUE)),
-  as.numeric(sort(table(journals), decreasing = TRUE))
-  )
-names(journals.freq) <- c("journals", "frequency")
-
-# top-five
-p2 <- ggplot(journals.freq[1:5, ], aes(x=reorder(journals, frequency), y=frequency)) +
-  geom_bar(stat = "identity", color="black", fill="#2C3E50") +
-  labs(
-    x = "",
-    y = "",
-    title = "Top-5 períódicos"
-  ) +
-  coord_flip() +
-  theme_ipsum(base_size = 12) +
-  theme(axis.ticks.x = element_blank(),
-        axis.text.x = element_blank())
-
-grid.arrange(p1, p2, nrow = 2)
-
-cat('<br>')
+# # Make the histogram publications x year
+# years <- as.data.frame(as.numeric(my_dois_works$publication_date_year_value))
+# names(years) <- c("years")
+# 
+# p1 <- years %>%
+#   ggplot(aes(x=years)) + geom_density(fill="#2C3E50", color="black", alpha=0.8) +
+#  labs(
+#     x = "Anos",
+#     y = "Número de Publicações",
+#     title = "Distribuição de publicações por ano"
+#   ) +
+#   theme_ipsum(base_size = 12) + 
+#   theme(axis.ticks.x = element_blank(),
+#         axis.text.x = element_blank()) + 
+#   theme(axis.ticks.y = element_blank(),
+#         axis.text.y = element_blank())
+# 
+# # Make the bar plot journal x frequency
+# journals <- as.data.frame(my_dois_works$journal_title_value)
+# journals.freq <- data.frame(
+#   names(sort(table(journals), decreasing = TRUE)),
+#   as.numeric(sort(table(journals), decreasing = TRUE))
+#   )
+# names(journals.freq) <- c("journals", "frequency")
+# 
+# # top-five
+# p2 <- ggplot(journals.freq[1:5, ], aes(x=reorder(journals, frequency), y=frequency)) + 
+#   geom_bar(stat = "identity", color="black", fill="#2C3E50") +
+#   labs(
+#     x = "",
+#     y = "",
+#     title = "Top-5 períódicos"
+#   ) +
+#   coord_flip() +
+#   theme_ipsum(base_size = 12) + 
+#   theme(axis.ticks.x = element_blank(),
+#         axis.text.x = element_blank())
+# 
+# grid.arrange(p1, p2, nrow = 2)
+# 
+# cat('<br>')
 
 # Step 5. Convert the doi column in your dataset to a list.
 dois_list <- as.list(my_dois_works$external_id_value)
