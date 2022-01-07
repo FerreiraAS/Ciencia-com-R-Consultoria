@@ -21,9 +21,5 @@ Nessa plataforma estarão disponíveis três ambientes distintos:
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
-
-<br>
-
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
