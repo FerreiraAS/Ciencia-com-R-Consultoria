@@ -1,20 +1,6 @@
 # statisticsDIY
 
 <br>
-
-## *Do It Yourself!*
-
-<br>
-
-<p><center>
-[`r library(fontawesome); fa("book", margin_left = "0.5em", margin_right = "0.5em", height = "5em", width = "5em")`](conceitos.html)
-[`r library(fontawesome); fa("play", margin_left = "0.5em", margin_right = "0.5em", height = "5em", width = "5em")`](run.html)
-[`r library(fontawesome); fa("chalkboard-teacher", margin_left = "0.5em", margin_right = "0.5em", height = "5em", width = "5em")`](consultoria.html)
-[`r library(fontawesome); fa("address-card", margin_left = "0.5em", margin_right = "0.5em", height = "5em", width = "5em")`](sobre.html)
-</center></p>
-
-<br>
-
 **Statistics DIY** é um projeto que tem como objetivo dar maior independência ao pesquisador na elaboração de seus projetos, auxiliando no desenvolvimento das habilidades na elaboração de estudos e trabalhos científicos, sejam acadêmicos ou profissionais.
 <br>
 <br>
