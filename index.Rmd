@@ -51,10 +51,10 @@ body {
 
 <br>
 
-**Statistics DIY** é um projeto que tem como objetivo dar maior independência ao pesquisador na elaboração de seus projetos, auxiliando no desenvolvimento das habilidades na elaboração de estudos e trabalhos científicos, sejam acadêmicos ou profissionais.
+**Statistics DIY** é um projeto que tem como objetivo dar maior independência ao pesquisador na elaboração de seus projetos, auxiliando no desenvolvimento das habilidades de elaboração de estudos e trabalhos científicos, sejam acadêmicos ou profissionais.
 <br>
 <br>
-Os *públicos-alvo* são alunos de todo os níveis de graduação, pós-graduação e pesquisadores em todas as áreas, com ênfase na Área de Saúde, independente de formação ou área, que pretenda elaborar uma análise estatística que embase e valide a conclusão do seu trabalho acadêmico – monografia, dissertação, tese ou artigo.
+Os *públicos-alvo* são alunos de todo os níveis de graduação, pós-graduação e pesquisadores em todas as áreas, com ênfase na Área de Saúde, que pretendem elaborar uma análise estatística que embase e valide a conclusão do seu trabalho acadêmico – monografia, dissertação, tese ou artigo.
 <br>
 <br>
 Nessa plataforma estarão disponíveis três ambientes distintos:
