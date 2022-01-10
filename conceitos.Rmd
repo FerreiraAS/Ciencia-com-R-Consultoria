@@ -249,7 +249,7 @@ kable(table.final, align = "l", format = "html", escape = FALSE) %>%
 
 ### {.unlisted .unnumbered}
 
-Sugestõwes finais incluem:
+Sugestões finais incluem:
 
 - Não use cores (de fonte ou fundo) para formatação de células, linhas e/ou colunas
 - Não use células mescladas
