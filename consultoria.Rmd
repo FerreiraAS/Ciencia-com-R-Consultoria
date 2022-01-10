@@ -38,6 +38,20 @@ cat("](http://www.linkedin.com/shareArticle?mini=true&amp;url=rehab-tech.github.
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
+<br>
+
+Área para solicitação de consultoria customizada para auxílio na elaboração do seu Projeto.
+
+Solicite uma proposta, informando o tema e objetivos da sua pesquisa, e também os prazos e o apoio desejado, se em todas ou em etapas específicas do mesmo.
+
+Será feito um orçamento, discriminando o trabalho de consultoria a ser fornecido, por etapa do projeto, de modo a atender à solicitação e à viabilidade de execução da consultoria.
+
+<br>
+
+<center> **Solcite um orçamento!** <a href="mailto:arthur_sf@icloud.com?subject=Orçamento: StatisticsDIY">**`r library(fontawesome); fa("paper-plane", margin_right = "0.1em")` **</a> </center>
+
+<br>
+
 <h3>**`r library(fontawesome); fa("users", margin_right = "0.1em")` Cálculo de tamanho de amostra**</h3>
 <p>*Quer definir o número necessário de participantes para realizar sua pesquisa?*</p>
 
@@ -60,10 +74,6 @@ cat("](http://www.linkedin.com/shareArticle?mini=true&amp;url=rehab-tech.github.
 
 <h3>**`r library(fontawesome); fa("chalkboard-teacher", margin_right = "0.1em")` Mentoria**</h3>
 <p>*Precisa de orientações detalhadas para delineamento, análise, redação e interpretação estatística?*</p>
-
-<br>
-
-<center> **Solcite um orçamento!** <a href="mailto:arthur_sf@icloud.com?subject=Orçamento: StatisticsDIY">**`r library(fontawesome); fa("paper-plane", margin_right = "0.1em")` **</a> </center>
 
 <br>
 <br>
