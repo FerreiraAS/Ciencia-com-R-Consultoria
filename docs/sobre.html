@@ -32,6 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -331,6 +333,9 @@ $(document).ready(function () {
       <a href="sobre.html#autor">Autor</a>
     </li>
     <li>
+      <a href="sobre.html#revisor">Revisor</a>
+    </li>
+    <li>
       <a href="sobre.html#artigos">Publicações</a>
     </li>
   </ul>
@@ -402,11 +407,11 @@ body {
 </center>
 </div>
 <p><br></p>
-<p>Possui graduação em Fisioterapia pela Universidade Federal do Rio de Janeiro (1999), mestrado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2002) e doutorado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2006).</p>
+<p>Graduação em Fisioterapia pela Universidade Federal do Rio de Janeiro (1999), Mestrado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2002) e Doutorado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2006).</p>
 <p><br></p>
-<p>Atua como professor adjunto do Centro Universitário Augusto Motta (<a href="https://www.unisuam.edu.br">UNISUAM</a>) e pesquisador no Laboratório de Simulação Computacional e Modelagem em Reabilitação dos Programas de Pós-graduação em Ciências da Reabilitação e de Desenvolvimento Local da UNISUAM.</p>
+<p>Professor adjunto do Centro Universitário Augusto Motta (<a href="https://www.unisuam.edu.br">UNISUAM</a>) e pesquisador no Laboratório de Simulação Computacional e Modelagem em Reabilitação dos Programas de Pós-graduação em Ciências da Reabilitação e de Desenvolvimento Local da UNISUAM.</p>
 <p><br></p>
-<p>Tem experiência na área de Fisioterapia e Terapia Ocupacional, atuando principalmente nos seguintes temas:</p>
+<p>Experiência na área de Fisioterapia e Terapia Ocupacional, atuando principalmente nos seguintes temas:</p>
 <p><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M332.8 320h38.4c6.4 0 12.8-6.4 12.8-12.8V172.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v134.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h38.4c6.4 0 12.8-6.4 12.8-12.8V76.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v230.4c0 6.4 6.4 12.8 12.8 12.8zm-288 0h38.4c6.4 0 12.8-6.4 12.8-12.8v-70.4c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v70.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h38.4c6.4 0 12.8-6.4 12.8-12.8V108.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v198.4c0 6.4 6.4 12.8 12.8 12.8zM496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"/></svg> Bioestatística</p>
 <p><svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z"/></svg> Modelagem e simulação computacional</p>
 <p><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M476 480H324a36 36 0 0 1-36-36V96h-96v156a36 36 0 0 1-36 36H16a16 16 0 0 1-16-16v-32a16 16 0 0 1 16-16h112V68a36 36 0 0 1 36-36h152a36 36 0 0 1 36 36v348h96V260a36 36 0 0 1 36-36h140a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16H512v156a36 36 0 0 1-36 36z"/></svg> Processamento de sinais biomédicos</p>
@@ -415,7 +420,7 @@ body {
 <p><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M320.2 243.8l-49.7 99.4c-6 12.1-23.4 11.7-28.9-.6l-56.9-126.3-30 71.7H60.6l182.5 186.5c7.1 7.3 18.6 7.3 25.7 0L451.4 288H342.3l-22.1-44.2zM473.7 73.9l-2.4-2.5c-51.5-52.6-135.8-52.6-187.4 0L256 100l-27.9-28.5c-51.5-52.7-135.9-52.7-187.4 0l-2.4 2.4C-10.4 123.7-12.5 203 31 256h102.4l35.9-86.2c5.4-12.9 23.6-13.2 29.4-.4l58.2 129.3 49-97.9c5.9-11.8 22.7-11.8 28.6 0l27.6 55.2H481c43.5-53 41.4-132.3-7.3-182.1z"/></svg> Doenças cardiovasculares</p>
 <p><svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zM104 424c0 13.3 10.7 24 24 24s24-10.7 24-24-10.7-24-24-24-24 10.7-24 24zm216-135.4v49c36.5 7.4 64 39.8 64 78.4v41.7c0 7.6-5.4 14.2-12.9 15.7l-32.2 6.4c-4.3.9-8.5-1.9-9.4-6.3l-3.1-15.7c-.9-4.3 1.9-8.6 6.3-9.4l19.3-3.9V416c0-62.8-96-65.1-96 1.9v26.7l19.3 3.9c4.3.9 7.1 5.1 6.3 9.4l-3.1 15.7c-.9 4.3-5.1 7.1-9.4 6.3l-31.2-4.2c-7.9-1.1-13.8-7.8-13.8-15.9V416c0-38.6 27.5-70.9 64-78.4v-45.2c-2.2.7-4.4 1.1-6.6 1.9-18 6.3-37.3 9.8-57.4 9.8s-39.4-3.5-57.4-9.8c-7.4-2.6-14.9-4.2-22.6-5.2v81.6c23.1 6.9 40 28.1 40 53.4 0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.3 16.9-46.5 40-53.4v-80.4C48.5 301 0 355.8 0 422.4v44.8C0 491.9 20.1 512 44.8 512h358.4c24.7 0 44.8-20.1 44.8-44.8v-44.8c0-72-56.8-130.3-128-133.8z"/></svg> Medicina tradicional (chinesa)</p>
 <p><br></p>
-<p>Atualmente é membro efetivo das seguintes entidades:</p>
+<p>Membro efetivo das seguintes entidades:</p>
 <p>🇧🇷 Associação Brasileira de Pesquisa e Pós-Graduação em Fisioterapia (ABRAPG-FT)   <a href="https://abrapg-ft.org.br/portal/"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></p>
 <p>🇬🇧 Committee on Publication Ethics (COPE)   <a href="https://publicationethics.org"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></p>
 <p>🇬🇧 Royal Statistical Society (RSS)   <a href="https://rss.org.uk"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></p>
@@ -428,6 +433,171 @@ body {
 <p>🇨🇭 Chinese Journal of Integrative Medicine   <a href="https://www.springer.com/journal/11655/editors"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></p>
 <p>🇭🇰 Journal of Integrative Medicine   <a href="https://www.journals.elsevier.com/journal-of-integrative-medicine/editorial-board"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></p>
 <p><br></p>
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+<p><br></p>
+</div>
+<div id="revisor" class="section level3">
+<h3><strong>Revisor de periódicos</strong></h3>
+<p><br></p>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+</th>
+<th style="text-align:left;font-weight: bold;color: white !important;background-color: #2C3E50 !important;">
+SJR
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+2073-8994
+</td>
+<td style="text-align:left;">
+Symmetry
+</td>
+<td style="text-align:left;">
+1.132
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2044-6055
+</td>
+<td style="text-align:left;">
+BMJ Open
+</td>
+<td style="text-align:left;">
+0.909
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2616-2806
+</td>
+<td style="text-align:left;">
+Longhua Chinese Medicine
+</td>
+<td style="text-align:left;">
+0.837
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2224-5839
+</td>
+<td style="text-align:left;">
+Annals of Palliative Medicine
+</td>
+<td style="text-align:left;">
+0.83
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1660-4601
+</td>
+<td style="text-align:left;">
+International Journal of Environmental Research and Public Health
+</td>
+<td style="text-align:left;">
+0.747
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1471-2474
+</td>
+<td style="text-align:left;">
+BMC Musculoskeletal Disorders
+</td>
+<td style="text-align:left;">
+0.674
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1532-5040
+</td>
+<td style="text-align:left;">
+Physiotherapy Theory and Practice
+</td>
+<td style="text-align:left;">
+0.651
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2446-4740
+</td>
+<td style="text-align:left;">
+Research on Biomedical Engineering
+</td>
+<td style="text-align:left;">
+0.62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2326-3660
+</td>
+<td style="text-align:left;">
+The Physician and Sportsmedicine
+</td>
+<td style="text-align:left;">
+0.546
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1751-7176
+</td>
+<td style="text-align:left;">
+Journal of Clinical Hypertension
+</td>
+<td style="text-align:left;">
+0.496
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2227-9032
+</td>
+<td style="text-align:left;">
+Healthcare
+</td>
+<td style="text-align:left;">
+0.385
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2223-3660
+</td>
+<td style="text-align:left;">
+Cardiovascular Diagnosis and Therapy
+</td>
+<td style="text-align:left;">
+0.21
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1552-4175
+</td>
+<td style="text-align:left;">
+Biological Research For Nursing
+</td>
+<td style="text-align:left;">
+0.208
+</td>
+</tr>
+</tbody>
+</table>
 <p><a style="float:right" href="#top"><b>Início</b></a></p>
 <p><br></p>
 <!--script for generating HORIZONTAL LINE-->
@@ -2615,7 +2785,7 @@ body {
 </tr>
 <tr>
 <td valign="top">
-<br><a href="https://doi.org/10.5812/asjsm.108537" target="_blank"><strong>Heart Rate Variability in Adults with Sickle Cell Anemia During a Multitasking Field Test</strong></a><br>Rafael Alexandre de Oliveira Deucher, Arthur de Sá Ferreira, Leila Paula Alves da Silva Nascimento, Mariana Soares da Cal, Jannis Vasileios Papathanasiou, Agnaldo José Lopes<br>2021  -  <em>Asian Journal of Sports Medicine</em><br>
+<br><a href="https://doi.org/10.5812/asjsm.108537" target="_blank"><strong>Heart Rate Variability in Adults with Sickle Cell Anemia During a Multitasking Field Test</strong></a><br>Rafael Alexandre de Oliveira Deucher, Arthur de Sá Ferreira, Leila Paula Alves da Silva Nascimento, Mariana Soares da Cal, Jannis Vasileios Papathanasiou, Agnaldo José Lopes<br>2022  -  <em>Asian Journal of Sports Medicine</em><br>
 <div style="vertical-align: middle;">
 <img style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" src="https://badges.altmetric.com/?score=?&types=????????"><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" data-legend="hover-right" class="__dimensions_badge_embed__" data-doi="10.5812/asjsm.108537" data-style="small_circle"></a>
 <style>.PlumX-Popup{display: inline-block; float: left;}</style>
@@ -2628,7 +2798,7 @@ body {
 </tr>
 <tr>
 <td valign="top">
-<br><a href="https://doi.org/10.5812/asjsm.103030" target="_blank"><strong>The Relationship Between Postural Stability, Anthropometry Measurements, Body Composition, and Sport Experience in Judokas with Visual Impairment</strong></a><br>Bruno Ferreira Jeronymo, Pablo Rodrigo de Oliveira Silva, Míriam Mainenti, Lilian Ramiro Felicio, Arthur de Sá Ferreira, Thiago Lemos de Carvalho, Patrícia Vigário<br>2020  -  <em>Asian Journal of Sports Medicine</em><br>
+<br><a href="https://doi.org/10.5812/asjsm.103030" target="_blank"><strong>The Relationship Between Postural Stability, Anthropometry Measurements, Body Composition, and Sport Experience in Judokas with Visual Impairment</strong></a><br>Bruno Ferreira Jeronymo, Pablo Rodrigo de Oliveira Silva, Míriam Mainenti, Lilian Ramiro Felicio, Arthur de Sá Ferreira, Thiago Lemos de Carvalho, Patrícia Vigário<br>2022  -  <em>Asian Journal of Sports Medicine</em><br>
 <div style="vertical-align: middle;">
 <img style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" src="https://badges.altmetric.com/?score=?&types=????????"><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" data-legend="hover-right" class="__dimensions_badge_embed__" data-doi="10.5812/asjsm.103030" data-style="small_circle"></a>
 <style>.PlumX-Popup{display: inline-block; float: left;}</style>

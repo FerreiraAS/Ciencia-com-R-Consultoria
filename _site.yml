@@ -58,6 +58,8 @@ navbar:
       menu:
         - text: "Autor"
           href: [sobre.html#autor]
+        - text: "Revisor"
+          href: [sobre.html#revisor]
         - text: "Publicações"
           href: [sobre.html#artigos]
 

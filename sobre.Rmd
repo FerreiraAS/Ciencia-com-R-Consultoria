@@ -54,15 +54,15 @@ body {
 
 <br>
 
-Possui graduação em Fisioterapia pela Universidade Federal do Rio de Janeiro (1999), mestrado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2002) e doutorado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2006).
+Graduação em Fisioterapia pela Universidade Federal do Rio de Janeiro (1999), Mestrado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2002) e Doutorado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2006).
 
 <br>
 
-Atua como professor adjunto do Centro Universitário Augusto Motta ([UNISUAM ](https://www.unisuam.edu.br)) e pesquisador no Laboratório de Simulação Computacional e Modelagem em Reabilitação dos Programas de Pós-graduação em Ciências da Reabilitação e de Desenvolvimento Local da UNISUAM.
+Professor adjunto do Centro Universitário Augusto Motta ([UNISUAM ](https://www.unisuam.edu.br)) e pesquisador no Laboratório de Simulação Computacional e Modelagem em Reabilitação dos Programas de Pós-graduação em Ciências da Reabilitação e de Desenvolvimento Local da UNISUAM.
 
 <br>
 
-Tem experiência na área de Fisioterapia e Terapia Ocupacional, atuando principalmente nos seguintes temas:
+Experiência na área de Fisioterapia e Terapia Ocupacional, atuando principalmente nos seguintes temas:
 
 `r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Bioestatística
 
@@ -80,7 +80,7 @@ Tem experiência na área de Fisioterapia e Terapia Ocupacional, atuando princip
 
 <br>
 
-Atualmente é membro efetivo das seguintes entidades:
+Membro efetivo das seguintes entidades:
 
 `r library(emo); flag("Brazil")` Associação Brasileira de Pesquisa e Pós-Graduação em Fisioterapia  (ABRAPG-FT) &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://abrapg-ft.org.br/portal/)
 
@@ -106,6 +106,65 @@ Compõe o corpo editoral dos periódicos internacionais e nacionais:
 
 <br>
 
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
+### **Revisor de periódicos** {#revisor}
+
+<br>
+
+```{r peer-review, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis", out.width="100%"}
+
+# read packages
+library(knitr)
+library(kableExtra)
+library(magrittr)
+library(tidyverse)
+library(rorcid)
+
+# read SCImago csv file (download from https://www.scimagojr.com)
+scimago <-
+  read.csv(
+    "SJR/scimagojr 2020.csv",
+    header = TRUE,
+    sep = ";",
+    quote = "\"",
+    dec = ",",
+    fill = TRUE
+  )
+
+my_orcid <- c("0000-0001-7014-2002")
+
+# get peer review data
+res <- orcid_peer_reviews(my_orcid)
+
+# list of ISSN
+issn <- sapply(strsplit(sapply(res[[1]]$group$`external-ids.external-id`, `[[`, 2), ":"), `[[`, 2)
+
+# get SJR from SCImago database
+SJR <- c()
+for(i in 1:length(issn)){
+  SJR.i <- scimago[grep(gsub("-", "", substr(issn[i], 1, 9)), scimago$Issn), 6]
+  SJR <- c(SJR, SJR.i)
+}
+
+# list journals
+journals <- issn_title[issn]
+
+# bind and rank by SJR
+peer.review <- cbind(names(journals), unname(journals), SJR)
+peer.review <- peer.review[order(as.numeric(SJR), decreasing = TRUE), ]
+
+# exibe a tabela
+kable(peer.review, align = "l", format = "html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
+  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white")
+
+```
+
+
 <a style="float:right" href="#top"><b>Início</b></a>
 
 <br>
@@ -120,6 +179,7 @@ Compõe o corpo editoral dos periódicos internacionais e nacionais:
 <br>
 
 ```{r papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis", out.width="100%"}
+# read packages
 library(knitr)
 library(kableExtra)
 library(magrittr)
