@@ -2,16 +2,18 @@
 title: "Estatística DIY"
 date: '`r format(Sys.Date())`'
 name: "stat-diy"
-author: "Arthur Ferreira"
-bibliography: references.bib
-link-citations: yes
+author: "Arthur de Sá Ferreira"
+repository_url: https://rehab-tech.github.io/statisticsDIY/
+source_url: true
+creative_commons: CC BY-NC
 output_dir: "docs"
 include:
   - /Qualis
   - /Scripts
   - /SJR
+bibliography: references.bib
+link-citations: yes
 navbar:
-  search: true
   left:
     - text: ""
       icon: "fa-home"
@@ -62,16 +64,25 @@ navbar:
           href: [sobre.html#revisor]
         - text: "Publicações"
           href: [sobre.html#artigos]
+    - text: ""
+      icon: "fa-github"
+      href: [https://github.com/rehab-tech/observatoriocr/]
 
 output:
   html_document:
     theme: flatly
     highlight: textmate
-    css: style.css
-    toc: true
-    toc_float: true
-    toc_depth: 3
-    edit: null
     include:
       after_body: footer.html
+    css:
+      - style.css
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    edit: null
+    sharing:
+      facebook: yes
+      twitter: yes
+      google: yes
+      all: ["facebook", "twitter", "google"]
 ---
