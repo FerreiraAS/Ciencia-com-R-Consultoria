@@ -18,7 +18,7 @@ for (i in 1:dim(doi_sort)[1]) {
 	cat("<br>")
 	cat(paste0("[**", doi_sort$title[i], "**](", doi_sort$url[i], "){target=\"_blank\"}", "<br>"))
 	cat(doi_sort$author.names[i])
-	cat(paste0("<br>", paste0(doi_sort$published_on[i], "&nbsp; - &nbsp;")))
+	cat(paste0("<br>", paste0(doi_sort$last_updated[i], "&nbsp; - &nbsp;")))
 	cat(paste0("*", doi_sort$journal[i], "*", "<br>"))
 	# initialize the DIV element for the badges
 	cat("<div style=\"vertical-align: middle;\">")

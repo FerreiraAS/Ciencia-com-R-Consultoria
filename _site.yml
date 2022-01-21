@@ -64,7 +64,7 @@ navbar:
           href: [sobre.html#revisor]
         - text: "Publicações"
           href: [sobre.html#artigos]
-    - text: ""
+    - text: "GitHub"
       icon: "fa-github"
       href: [https://github.com/rehab-tech/observatoriocr/]
 

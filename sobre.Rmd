@@ -239,6 +239,10 @@ my_dois_works$external_id_value <-
 my_dois_works <-
   my_dois_works[!duplicated(my_dois_works[, "external_id_value"]),]
 
+# sort columns by title
+my_dois_works <-
+  my_dois_works[order(as.vector(my_dois_works$title_title_value)), ]
+
 # cria metadados para rastreio pelo Altmetrics
 dois_2_meta <- my_dois_works$external_id_value
 source("scripts/altmetric_meta_from_dois.R")
@@ -253,7 +257,7 @@ source("scripts/altmetrics_using_doi.R")
 doi_unique <-
   doi_reshaped_data[!duplicated(doi_reshaped_data$doi), ]
   
-# sort columns by citations
+# sort columns by title
 doi_sort <-
   doi_unique[order(doi_unique$title), ]
 
@@ -261,6 +265,10 @@ doi_sort <-
 my_dois_works <-
   rcrossref::cr_works(dois = unlist(no_altmetric_dois_list)) %>%
   pluck("data")
+
+# sort columns by title
+my_dois_works <-
+  my_dois_works[order(as.vector(my_dois_works$title)), ]
 
 # print table of papers with/without badges
 source("scripts/table_with_badges.R")
