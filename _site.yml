@@ -8,9 +8,10 @@ source_url: true
 creative_commons: CC BY-NC
 output_dir: "docs"
 include:
-  - /Qualis
   - /Scripts
-  - /SJR
+exclude:
+  - /docs/Qualis
+  - /docs/SJR
 bibliography: references.bib
 link-citations: yes
 search: true
