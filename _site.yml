@@ -13,6 +13,7 @@ include:
   - /SJR
 bibliography: references.bib
 link-citations: yes
+search: true
 navbar:
   left:
     - text: ""
@@ -64,6 +65,7 @@ navbar:
           href: [sobre.html#revisor]
         - text: "Publicações"
           href: [sobre.html#artigos]
+  right:
     - text: "GitHub"
       icon: "fa-github"
       href: [https://github.com/rehab-tech/observatoriocr/]
