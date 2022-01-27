@@ -70,6 +70,15 @@ navbar:
     - text: "GitHub"
       icon: "fa-github"
       href: [https://github.com/rehab-tech/observatoriocr/]
+      menu:
+        - text: "Tabela 2x2"
+          href: [https://github.com/rehab-tech/CT/]
+        - text: "ICC"
+          href: [https://github.com/rehab-tech/ICC/]
+        - text: "RCT"
+          href: [https://github.com/rehab-tech/RCT/]
+        - text: "ROC"
+          href: [https://github.com/rehab-tech/ROC/]
 
 output:
   html_document:
