@@ -33,7 +33,7 @@ for (i in 1:dim(doi_sort)[1]) {
   )
   cat(doi_sort$author.names[i])
   cat(paste0("<br>", paste0(
-    doi_sort$last_updated[i], "&nbsp; - &nbsp;"
+    doi_sort$published_on[i], "&nbsp; - &nbsp;"
   )))
   cat(paste0("*", doi_sort$journal[i], "*", "<br>"))
   # initialize the DIV element for the badges

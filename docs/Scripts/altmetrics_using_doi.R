@@ -70,7 +70,7 @@ columns_to_grab <-
     "cited_by_msm_count",
     "cited_by_tweeters_count",
     "cited_by_accounts_count",
-    "last_updated"
+    "published_on"
   )
 columns_to_grab <-
   c("title",
@@ -81,7 +81,7 @@ columns_to_grab <-
     "issns1",
     "issns2",
     "issns",
-    "last_updated")
+    "published_on")
 
 # Step 12. Create a data subset only including columns specified in Step 9.
 subset_data <- select(metric_data, one_of(columns_to_grab))
@@ -105,38 +105,38 @@ doi_reshaped_data <- subset_data
 #  mutate(times = as.numeric(times))
 
 year_publ <-
-  as.Date(as.POSIXct(as.numeric(metric_data$last_updated), origin = "1970-01-01"))
+  as.Date(as.POSIXct(as.numeric(metric_data$published_on), origin = "1970-01-01"))
 
 author.names <- c()
 for (k in 1:dim(metric_data)[1]) {
   names <-
-    paste(
-      na.omit(metric_data$authors1[k]),
-      na.omit(metric_data$authors2[k]),
-      na.omit(metric_data$authors3[k]),
-      na.omit(metric_data$authors4[k]),
-      na.omit(metric_data$authors5[k]),
-      na.omit(metric_data$authors6[k]),
-      na.omit(metric_data$authors7[k]),
-      na.omit(metric_data$authors8[k]),
-      na.omit(metric_data$authors9[k]),
-      na.omit(metric_data$authors10[k]),
-      na.omit(metric_data$authors11[k]),
-      na.omit(metric_data$authors12[k]),
-      na.omit(metric_data$authors13[k]),
-      na.omit(metric_data$authors14[k]),
-      na.omit(metric_data$authors15[k]),
-      sep = ", ",
-      collapse = ""
+    # remove the comma and reorder the author name (name-surname)
+    c(
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors1[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors2[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors3[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors4[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors5[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors6[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors7[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors8[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors9[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors10[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors11[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors12[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors13[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors14[k])),
+      sub('(.*)\\,\\s+(.*)','\\2 \\1', na.omit(metric_data$authors15[k]))
     )
-  names <- gsub(", , ", "", names)
+  # collapse the authors' names vector into an atomic vector string
+  names <- paste(unique(names[names != ""]), collapse = ", ")
   author.names <- c(author.names, names)
 }
 
 # convert score to integer
 doi_reshaped_data$score <-
   ceiling(as.numeric(doi_reshaped_data$score))
-doi_reshaped_data$last_updated <-
+doi_reshaped_data$published_on <-
   as.numeric(format(year_publ, "%Y"))
 doi_reshaped_data$author.names <- author.names
 
