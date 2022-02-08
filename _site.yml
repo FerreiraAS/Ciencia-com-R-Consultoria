@@ -12,7 +12,9 @@ include:
 exclude:
   - /docs/Qualis
   - /docs/SJR
-bibliography: references.bib
+bibliography:
+  - references.bib
+  - grateful-refs.bib
 link-citations: yes
 search: true
 navbar:
@@ -41,8 +43,8 @@ navbar:
           href: [conceitos.html#amostragem-reamostragem]
         - text: "Pareamento, Casamento"
           href: [conceitos.html#pareamento-casamento]
-        - text: "Referências, Pacotes"
-          href: [conceitos.html#refs-packs]
+        - text: "Pacotes, Referências"
+          href: [conceitos.html#packs-refs]
     - text: "Rode seu script"
       href: [run.html]
       menu:

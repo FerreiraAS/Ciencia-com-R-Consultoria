@@ -1,6 +1,8 @@
 ---
 title: Conceitos
-bibliography: references.bib
+bibliography:
+  - references.bib
+  - grateful-refs.bib
 link-citations: yes
 output:
   html_document:
@@ -818,48 +820,17 @@ A medida de pressão arterial bilateral resulta em um conjunto de valores pontua
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-## *Referências, Pacotes* {#refs-packs}
+## *Pacotes, Referências* {#packs-refs}
 
 <br>
-
-### *Referências*
-
-<br>
-
-<div id="refs"></div> 
-<br>
-
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
-
-<br>
-
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
 ### *Pacotes*
 
-<br>
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
-
-packs <- c("base", "kableExtra")
-
-for(i in 1:length(packs)){
-  a <- citation(packs[i])$title
-  b <- citation(packs[i])$year
-  c <- citation(packs[i])$note
-  d <- citation(packs[i])$url
-  cat(paste0(a, ". ", b, ". ", c, " ", d))
-  cat('\n\n')
-}
-
+```{r pacotes, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+library(grateful)
+cite_packages(output = "paragraph", dependencies = FALSE)
 ```
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
-
-<br>
-
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+### *Referências*
