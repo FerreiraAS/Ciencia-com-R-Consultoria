@@ -160,8 +160,12 @@ journals <- issn_title[issn]
 # bind and rank by SJR
 peer.review <- cbind(unname(journals), SJR)
 peer.review <- peer.review[order(as.numeric(SJR), decreasing = TRUE), ]
-colnames(peer.review) <- c(paste("Periódicos (", length(journals), ")", sep = ""), "SJR")
-  
+
+# remove rows with incomplete data
+peer.review <- peer.review[complete.cases(peer.review),]
+
+colnames(peer.review) <- c(paste("Periódicos (", dim(peer.review)[1], ")", sep = ""), "SJR")
+
 # exibe a tabela
 kable(peer.review, align = "l", format = "html", escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
