@@ -98,5 +98,8 @@ output:
       facebook: yes
       twitter: yes
       google: yes
-      all: ["facebook", "twitter", "google"]
+      all:
+        - facebook
+        - twitter
+        - google
 ---
