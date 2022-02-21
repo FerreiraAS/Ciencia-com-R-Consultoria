@@ -10,6 +10,7 @@ output_dir: "docs"
 include:
   - /Scripts
 exclude:
+  - /docs/CiteScore
   - /docs/Qualis
   - /docs/SJR
 bibliography:
