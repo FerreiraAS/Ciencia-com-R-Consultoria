@@ -306,9 +306,28 @@ Sugestões finais incluem:
 
 <br>
 
-### *Distribuições*
+### *Distribuições* {.tabset}
 
-<br>
+#### *Variáveis contínuas* {.tabset}
+
+##### *Beta*
+
+```{r beta, echo = TRUE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis"}
+#distributions <- c("Binomial", "Cauchy", "Chi-square", "Esxponencial", "F", "Gamma", "Geometric", "Hypergeometric", "Logistic", "Log Normal", "Negative Binomial", "Normal", "Poisson", "Student t", "Uniform", "Weibull", "Wilcoxon Rank Sum Statistic", "Wicoxon Signed Rank Statistic")
+
+#functions <- c(dbinom, dcauchy, dchisq, dexp, df, dgamma, dgeom, dhyper, dlogis, dlnorm, dnbinom, dnorm, dpois, dt, dunif, dweibull, dwilcox, dsignrank)
+
+library(ggplot2)
+ggplot() +
+  stat_function(
+    fun = dbeta,
+    args = list(shape1 = 2, shape2 = 2),
+    geom = "area",
+    color = "steelblue"
+  ) +
+  xlim(c(0, 1)) +
+  ggtitle("Beta", subtitle = "Função densidade de probabilidade")
+```
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
 
