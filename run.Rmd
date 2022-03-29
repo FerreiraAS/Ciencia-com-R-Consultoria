@@ -1,10 +1,13 @@
 ---
 title: Rode seu script
-bibliography: references.bib
+bibliography:
+  - references.bib
+  - grateful-refs.bib
 link-citations: yes
 output:
   html_document:
     code_folding: none
+    toc: true
 ---
 
 ```{css, echo=FALSE}

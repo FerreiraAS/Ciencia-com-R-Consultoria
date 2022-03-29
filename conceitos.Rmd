@@ -7,6 +7,7 @@ link-citations: yes
 output:
   html_document:
     code_folding: hide
+    toc: true
 ---
 
 ```{css, echo=FALSE}

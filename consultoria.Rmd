@@ -1,6 +1,8 @@
 ---
 title: Consultoria
-bibliography: references.bib
+bibliography:
+  - references.bib
+  - grateful-refs.bib
 link-citations: yes
 output:
   html_document:

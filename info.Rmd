@@ -1,0 +1,46 @@
+---
+title: Sessão
+bibliography:
+  - references.bib
+  - grateful-refs.bib
+link-citations: yes
+output:
+  html_document:
+    code_folding: none
+    toc: false
+---
+
+```{css, echo=FALSE}
+body {
+  font-size: 2em;
+}
+```
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
+<div><center><img width="10%" height="10%" src="https://github.com/rstudio/hex-stickers/blob/master/thumbs/RStudio.png?raw=true"> Esta página foi desenvolvida em [**`r R.version$version.string`**](https://www.rstudio.com) usando [**R markdown**](https://rmarkdown.rstudio.com)
+</center></div>
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+## **Informações da sessão** {#sessioninfo}
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+```{r session-info}
+sessionInfo()
+```
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
