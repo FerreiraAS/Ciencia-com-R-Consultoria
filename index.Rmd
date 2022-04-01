@@ -18,25 +18,6 @@ body {
 
 <br>
 
-<p align="right">
-```{r share, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
-# # sorteia participante para relatar no texto
-# library(fontawesome)
-# 
-# cat("[")
-# fa("twitter-square", margin_left = "0.2em", margin_right = "0.2em", height = "2em", width = "2em")
-# cat("](https://twitter.com/share?url=rehab-tech.github.io/statisticsDIY/)")
-# cat("&nbsp;&nbsp;&nbsp;")
-# cat("[")
-# fa("facebook-square", margin_left = "0.2em", margin_right = "0.2em", height = "2em", width = "2em")
-# cat("](http://www.facebook.com/sharer.php?u=rehab-tech.github.io/statisticsDIY/)")
-# cat("&nbsp;&nbsp;&nbsp;")
-# cat("[")
-# fa("linkedin", margin_left = "0.2em", margin_right = "0.2em", height = "2em", width = "2em")
-# cat("](http://www.linkedin.com/shareArticle?mini=true&amp;url=rehab-tech.github.io/statisticsDIY/)")
-```
-</p>
-
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
