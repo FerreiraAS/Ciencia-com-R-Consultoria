@@ -141,13 +141,8 @@ scimago <-
   )
 
 my_orcid <- c("0000-0001-7014-2002")
-
+reviewer.name <- "Arthur de Sá Ferreira"
 source("Scripts/reviewer-board.R")
-
-# exibe a tabela
-kable(peer.review, align = "l", format = "html", escape = FALSE) %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = T, position = "center") %>%
-  row_spec(0, background = "#2C3E50", bold = TRUE, color = "white")
 ```
 
 <br>
