@@ -175,6 +175,9 @@ library("anytime")
 library("httpuv")
 library("lubridate")
 library("dplyr")
+library("rAltmetric")
+library("plyr")
+library("tidyverse")
 
 # read SCImago csv file (download from https://www.scimagojr.com)
 scimago <-
@@ -219,15 +222,15 @@ my_dois_works <-
 my_dois_works <-
   my_dois_works[order(as.vector(my_dois_works$title_title_value)), ]
 
-# cria metadados para rastreio pelo Altmetrics
+# cria metadados para rastreio pelo Altmetric
 dois_2_meta <- my_dois_works$external_id_value
-source("scripts/altmetric_meta_from_dois.R")
+source("scripts/altmetric-meta-from-dois.R")
 
 # Step 5. Convert the doi column in your dataset to a list.
 dois_list <- as.list(my_dois_works$external_id_value)
 
 # roda o script para obter dados do Altmetric
-source("scripts/altmetrics_using_doi.R")
+source("scripts/altmetric-from-dois.R")
 
 # remove duplicate entries
 doi_unique <-
@@ -237,7 +240,7 @@ doi_unique <-
 doi_sort <-
   doi_unique[order(doi_unique$title), ]
 
-# get data of papers without Altmetrics from CrossRef
+# get data of papers without Altmetric from CrossRef
 my_dois_works <-
   rcrossref::cr_works(dois = unlist(no_altmetric_dois_list)) %>%
   pluck("data")
@@ -247,7 +250,8 @@ my_dois_works <-
   my_dois_works[order(as.vector(my_dois_works$title)), ]
 
 # print table of papers with/without badges
-source("scripts/table_with_badges.R")
+source("scripts/papers-with-badges.R")
+table.with.badges(show.Altmetric = TRUE, show.Dimensions = TRUE, show.PlumX = TRUE, show.SJR = TRUE, show.Qualis = TRUE, doi_sort, my_dois_works, scimago, qualis)
 ```
 
 <br>
