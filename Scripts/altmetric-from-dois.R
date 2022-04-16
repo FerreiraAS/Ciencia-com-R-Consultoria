@@ -2,6 +2,10 @@
 # by Markus Wust, Alison Blaine, and Erica Hayes
 # adapted by Arthur de Sá Ferreira
 
+# initialize output vectores
+doi_reshaped_data <- c()
+doi_sort <- c()
+
 # Step 6. Create a function to test whether the doi leads to an actual article.
 # If no data is returned, assign the value NA.
 getArticleData <- function(x) {
@@ -20,6 +24,8 @@ raw_metrics <-
   lapply(dois_list, function(x)
     getArticleData(x))  # apply getArticleFunction to dois_list data.
 
+no_altmetric_dois_list <- dois_list[is.na(raw_metrics)]
+
 # Step 8. Notice that there are lots of dois with NA values. Now write a function to remove all those dois that have NA values (because they have no data).
 # This code comes from this source on github : https://gist.github.com/rhochreiter/7029236
 na.omit.list <- function(y) {
@@ -27,24 +33,15 @@ na.omit.list <- function(y) {
     all(is.na(x)))])
 }
 
-no_altmetric_dois_list <- dois_list[is.na(raw_metrics)]
-
 # Step 9. You haven't actually removed the values yet. Now remove those NA values by passing the raw_metrics
 # data into the function just created, na.omit.list().
 raw_metrics <- na.omit.list(raw_metrics)
 
-if (is_empty(raw_metrics)) {
-  doi_reshaped_data <- c()
-  doi_sort <- c()
-} else {
+if (!is_empty(raw_metrics)) {
   # Step 10. Now use ldply() to apply the altmetric_data function to get the actual data and return results as a data frame.
   metric_data <- ldply(raw_metrics, altmetric_data)
   
   #### Section 3. Data Cleaning, Subsetting and Filtering ####
-  
-  # Altmetric Details Page - Counts Only API Documentation : Free API
-  # https://docs.google.com/spreadsheets/d/1ndVY8Q2LOaZO_P_HDmSQulagjeUrS250mAL2N5V8GvY/htmlview#gid=0
-  
   # Step 11. Specify a list of the columns you want for your analysis. (issns1 -> print; issns2 -> online)
   columns_to_grab <-
     c(
@@ -56,6 +53,7 @@ if (is_empty(raw_metrics)) {
       "issns1",
       "issns2",
       "published_on",
+      "last_updated",
       "cited_by_posts_count",
       "cited_by_tweeters_count",
       "cited_by_fbwalls_count",
@@ -75,13 +73,21 @@ if (is_empty(raw_metrics)) {
   
   # https://en.wikipedia.org/wiki/Unix_time
   # The Unix epoch is 00:00:00 UTC on 1 January 1970 (an arbitrary date)
-  year_publ <-
-    format(as.Date(
-      as.POSIXct(as.numeric(metric_data$published_on), origin = "1970-01-01")
-    ), format = "%Y")
+  if(!is.null(doi_reshaped_data$published_on)){
+    year_publ <-
+      format(as.Date(
+        as.POSIXct(as.numeric(doi_reshaped_data$published_on), origin = "1970-01-01")
+      ), format = "%Y")
+  } else {
+    year_publ <-
+      format(as.Date(
+        as.POSIXct(as.numeric(doi_reshaped_data$last_updated), origin = "1970-01-01")
+      ), format = "%Y")
+  }
+  doi_reshaped_data$published_on <- year_publ
   
   author.names <- c()
-  for (k in 1:dim(metric_data)[1]) {
+  for (k in 1:dim(doi_reshaped_data)[1]) {
     names <-
       # remove the comma and reorder the author name (name-surname)
       c(
@@ -166,21 +172,28 @@ if (is_empty(raw_metrics)) {
     author.names <- c(author.names, names)
   }
   
+  # filling with output data
+
   # convert score to integer
   doi_reshaped_data$score <-
     ceiling(as.numeric(doi_reshaped_data$score))
   doi_reshaped_data$author.names <- author.names
   
   # merge at least one ISSN to each journal to search for in the CSV provided by SCImago
-  # initialize with lastest ISSN vector
-  issn <- doi_reshaped_data$issns
-  # try replacing with first issn
-  issn[is.na(issn)] <- doi_reshaped_data$issns1[is.na(issn)]
-  # try replacing with second issn
-  issn[is.na(issn)] <- doi_reshaped_data$issns2[is.na(issn)]
-  
-  doi_reshaped_data$issn <- issn
-  doi_reshaped_data$published_on <- year_publ
+  issns <- matrix(NA, nrow = dim(doi_reshaped_data)[1])
+  # initialize with latest ISSN vector if available
+  if(length(doi_reshaped_data$issns) != 0){
+    issns <- doi_reshaped_data$issns
+  }
+  # try replacing with first issn (print)
+  if(length(doi_reshaped_data$issns1) != 0){
+    issns[is.na(issns)] <- doi_reshaped_data$issns1[is.na(issns)]
+  }
+  # try replacing with second issn (online)
+  if(length(doi_reshaped_data$issns2) != 0){
+    issns[is.na(issns)] <- doi_reshaped_data$issns2[is.na(issns)]
+  }  
+  doi_reshaped_data$issn <- issns
   
   # remove duplicate entries
   doi_unique <-

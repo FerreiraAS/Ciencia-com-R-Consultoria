@@ -23,7 +23,7 @@ table.with.badges <-
     
     # start table
     cat(
-      "<table style=\"width:100%\">\n    <tr>\n      <th>Artigos (n = ",
+      "<table style=\"width:100%\">\n    <tr>\n      <th>Produtos (n = ",
       ifelse(length(doi_sort) != 0, dim(doi_sort)[1], 0) + ifelse(length(my_dois_works) != 0, dim(my_dois_works)[1],
                                                                   0),
       ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, SJR^4^, Qualis^5^) \n\n </th>\n    </tr>",
@@ -88,15 +88,15 @@ table.with.badges <-
         # add SJR
         if (show.SJR == TRUE) {
           SJR_id <-
-            scimago[grep(gsub("-", "", doi_sort$issn[i]), scimago$Issn), 2]
+            scimago[grep(gsub("-", "", doi_sort$issn[i]), scimago$Issn), 2][1]
+          SJR <-
+            scimago[grep(gsub("-", "", doi_sort$issn[i]), scimago$Issn), 6][1]
           cat(
             "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
             SJR_id,
             "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; font-size:1.1em; color:white; background-color:rgb(216,124,78);\"> SJR <br>",
             sep = ""
           )
-          SJR <-
-            scimago[grep(gsub("-", "", doi_sort$issn[i]), scimago$Issn), 6]
           cat(paste0(ifelse(
             identical(SJR, numeric(0)) |
               all(is.na(SJR)), "?", SJR
@@ -146,17 +146,15 @@ table.with.badges <-
             collapse = ", "
           )
         )
-        cat(paste0(
-          "<br>",
-          paste0(
-            ifelse(
-              !is.na(my_dois_works$issued[i]),
-              substr(my_dois_works$issued[i], 1, 4),
-              substr(my_dois_works$created[i], 1, 4)
-              ),
-            "&nbsp; - &nbsp;"
-          )
-        ))
+        cat(paste0("<br>",
+                   paste0(
+                     ifelse(
+                       !is.na(my_dois_works$issued[i]),
+                       substr(my_dois_works$issued[i], 1, 4),
+                       substr(my_dois_works$created[i], 1, 4)
+                     ),
+                     "&nbsp; - &nbsp;"
+                   )))
         cat(paste0("*", my_dois_works$container.title[i], "*", "<br>"))
         
         # initialize the DIV element for the badges
@@ -193,15 +191,15 @@ table.with.badges <-
         # add SJR
         if (show.SJR == TRUE) {
           SJR_id <-
-            scimago[grep(gsub("-", "", substr(my_dois_works$issn[i], 1, 9)), scimago$Issn), 2]
+            scimago[grep(gsub("-", "", substr(my_dois_works$issn[i], 1, 9)), scimago$Issn), 2][1]
+          SJR <-
+            scimago[grep(gsub("-", "", substr(my_dois_works$issn[i], 1, 9)), scimago$Issn), 6][1]
           cat(
             "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
             SJR_id,
             "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.5em 0.3em 0.5em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; font-size:1.1em; color:white; background-color:rgb(216,124,78);\"> SJR <br>",
             sep = ""
           )
-          SJR <-
-            scimago[grep(gsub("-", "", substr(my_dois_works$issn[i], 1, 9)), scimago$Issn), 6]
           cat(paste0(ifelse(
             identical(SJR, numeric(0)) |
               all(is.na(SJR)), "?", SJR
@@ -229,4 +227,20 @@ table.with.badges <-
     }
     # end table
     cat("</table>")
+    cat('\n\n<!-- -->\n\n')
+    cat('*Fontes:*', sep = "")
+    cat('^1^ [**Altmetric**](https://www.altmetric.com)', ', ', sep = "")
+    cat('^2^ [**Dimensions**](https://www.dimensions.ai)',
+        ', ',
+        sep = "")
+    cat('^3^ [**PlumX**](https://plu.mx)', ', ', sep = "")
+    cat('^4^ [**SCImago**](https://www.scimagojr.com)', ', ', sep = "")
+    cat(
+      '^5^ [**WebQualis**](https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf)',
+      sep = ""
+    )
+    cat('\n\n<!-- -->\n\n')
+    cat('<br><a style="float:right" href="#top"><b>Início &nbsp;</b>⬆️</a><br>')
   }
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')

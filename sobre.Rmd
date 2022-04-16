@@ -203,24 +203,25 @@ my_orcid <- c("0000-0001-7014-2002")
 my_works <- rorcid::works(my_orcid) %>%
   as_tibble() %>%
   janitor::clean_names() %>%
-  dplyr::mutate(created_date_value = anytime::anydate(created_date_value/1000))
+  dplyr::mutate(created_date_value = anytime::anydate(created_date_value /
+                                                        1000))
 my_works_ids <- my_works %>%
   tidyr::unnest(external_ids_external_id) %>%
   janitor::clean_names()
 
 # seleciona os artigos com DOI
 my_dois_works <-
-  my_works_ids[my_works_ids$external_id_type == 'doi', ]
+  my_works_ids[my_works_ids$external_id_type == 'doi',]
 my_dois_works$external_id_value <-
   tolower(my_dois_works$external_id_value)
 
 # remove as repetições pelo DOI
 my_dois_works <-
-  my_dois_works[!duplicated(my_dois_works[, "external_id_value"]),]
+  my_dois_works[!duplicated(my_dois_works[, "external_id_value"]), ]
 
 # sort columns by title
 my_dois_works <-
-  my_dois_works[order(as.vector(my_dois_works$title_title_value)), ]
+  my_dois_works[order(as.vector(my_dois_works$title_title_value)),]
 
 # cria metadados para rastreio pelo Altmetric
 dois_2_meta <- my_dois_works$external_id_value
@@ -232,14 +233,6 @@ dois_list <- as.list(my_dois_works$external_id_value)
 # roda o script para obter dados do Altmetric
 source("scripts/altmetric-from-dois.R")
 
-# remove duplicate entries
-doi_unique <-
-  doi_reshaped_data[!duplicated(doi_reshaped_data$doi), ]
-  
-# sort columns by title
-doi_sort <-
-  doi_unique[order(doi_unique$title), ]
-
 # get data of papers without Altmetric from CrossRef
 my_dois_works <-
   rcrossref::cr_works(dois = unlist(no_altmetric_dois_list)) %>%
@@ -247,22 +240,24 @@ my_dois_works <-
 
 # sort columns by title
 my_dois_works <-
-  my_dois_works[order(as.vector(my_dois_works$title)), ]
+  my_dois_works[order(as.vector(my_dois_works$title)),]
 
 # print table of papers with/without badges
 source("scripts/papers-with-badges.R")
-table.with.badges(show.Altmetric = TRUE, show.Dimensions = TRUE, show.PlumX = TRUE, show.SJR = TRUE, show.Qualis = TRUE, doi_sort, my_dois_works, scimago, qualis)
+table.with.badges(
+  show.Altmetric = TRUE,
+  show.Dimensions = TRUE,
+  show.PlumX = TRUE,
+  show.SJR = TRUE,
+  show.Qualis = TRUE,
+  doi_sort,
+  my_dois_works,
+  scimago,
+  qualis
+)
 ```
 
 <br>
-
-*Fontes:*
-^1^ [**Altmetric**](https://www.altmetric.com)
-^2^ [**Dimensions**](https://www.dimensions.ai)
-^3^ [**PlumX**](https://plu.mx)
-^4^ [**SCImago**](https://www.scimagojr.com)
-^5^ [**WebQualis**](https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf)
-
 
 <!--script for generating ALTMETRIC badges-->
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
