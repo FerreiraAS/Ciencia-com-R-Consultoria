@@ -49,8 +49,6 @@ navbar:
     - text: "Rode seu script"
       href: [run.html]
       menu:
-        - text: "Por onde começar"
-          href: [run.html]
         - text: "Rode no computador"
           href: [run.html#local]
         - text: "Rode na nuvem"

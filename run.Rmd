@@ -46,9 +46,9 @@ source("Scripts/social-media-sharing.R")
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-<br>
-
 ## *Rode na nuvem* {#nuvem}
+
+<br>
 
 <iframe width='100%' height='300' src='https://rdrr.io/snippets/embed/' frameborder='0'></iframe>
 
