@@ -515,7 +515,7 @@ VAR.aggr <- apply(VAR, 1, FUN = mean)
 table.3 <- data.frame(ID, VAR.aggr)
 
 # formata a visualzaçào de casas decimais das variáveis numéricas
-table.3 <- format(table.3, digits = 0, nsmall = 0)
+table.3 <- format(table.3, nsmall = 0)
 
 # atribui rótulos para a tabela de dados
 colnames(table.3) <- c("Unidade de análise", "Pressão arterial, braço esquerdo (mmHg) média")
@@ -657,7 +657,7 @@ table.5[, 3] <- sapply(table.5[, 3], as.numeric)
 table.5 <- aggregate(table.5[, 3] ~ table.5[, 1], FUN = function(x) {range(x)[2] - range(x)[1]})
 
 # formata a visualzaçào de casas decimais das variáveis numéricas
-table.5 <- format(table.5, digits = 0, nsmall = 0)
+table.5 <- format(table.5, nsmall = 0)
 
 # atribui rótulos para a tabela de dados
 colnames(table.5) <- c("Unidade de análise", "Pressão arterial, braço esquerdo (mmHg) amplitude")
@@ -835,8 +835,20 @@ A medida de pressão arterial bilateral resulta em um conjunto de valores pontua
 
 ### *Pacotes*
 
-```{r pacotes, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
-library(grateful)
+```{r pacotes-instalador, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "hide"}
+if (!require("remotes", character.only = TRUE, quietly = TRUE))
+  install.packages("remotes", character.only = TRUE)
+library("remotes", character.only = TRUE)
+
+if (!require("grateful", character.only = TRUE, quietly = TRUE))
+  remotes::install_github("Pakillo/grateful")
+library("grateful", character.only = TRUE)
+
+if (!require("emo", character.only = TRUE, quietly = TRUE))
+  devtools::install_github("hadley/emo")
+```
+
+```{r pacotes-ciraca, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
 cite_packages(output = "paragraph", dependencies = FALSE)
 ```
 
