@@ -10,7 +10,7 @@ output:
     toc: false
 ---
 
-```{css, echo=FALSE}
+```{css, echo = FALSE}
 body {
   font-size: 2em;
 }
@@ -37,8 +37,19 @@ body {
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-```{r session-info}
-sessionInfo()
+```{r install, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE, results = "hide"}
+if (!require("details", character.only = TRUE, quietly = TRUE))
+    install.packages("details", character.only = TRUE)
+if (!require("sessioninfo", character.only = TRUE, quietly = TRUE))
+    install.packages("sessioninfo", character.only = TRUE)
+```
+
+```{r session-info, echo = FALSE}
+sessioninfo::session_info()%>%
+  details::details(
+    summary = 'Current session info',
+    open = TRUE
+  )
 ```
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
