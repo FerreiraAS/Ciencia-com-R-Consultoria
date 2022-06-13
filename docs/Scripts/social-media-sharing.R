@@ -1,5 +1,3 @@
-library(fontawesome)
-
 cat("*Compartilhe*")
 cat("&nbsp;&nbsp;&nbsp;")
 
@@ -7,7 +5,7 @@ cat("&nbsp;&nbsp;&nbsp;")
 # https://twitter.com
 cat("[", sep = "")
 cat(
-  fa(
+  fontawesome::fa(
     "twitter-square",
     margin_left = "0.2em",
     margin_right = "0.2em",
@@ -21,7 +19,7 @@ cat("](https://twitter.com/share?url=", home, ") ", sep = "")
 # https://www.facebook.com
 cat("[", sep = "")
 cat(
-  fa(
+  fontawesome::fa(
     "facebook-square",
     margin_left = "0.2em",
     margin_right = "0.2em",
@@ -35,7 +33,7 @@ cat('](https://www.facebook.com/sharer.php?u=', home, ') ', sep = "")
 # https://www.linkedin.com
 cat("[", sep = "")
 cat(
-  fa(
+  fontawesome::fa(
     "linkedin",
     margin_left = "0.2em",
     margin_right = "0.2em",
