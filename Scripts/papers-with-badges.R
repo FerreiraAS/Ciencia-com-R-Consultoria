@@ -20,7 +20,7 @@ table.with.badges <-
     cat(
       "<style>.plx-print{display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;}</style>"
     )
-
+    
     # start table
     cat(
       "<table style=\"width:100%\">\n    <tr>\n      <th>Produtos (n = ",
@@ -116,9 +116,31 @@ table.with.badges <-
             "?",
             WebQualis
           ), "</a>"), sep = "")
-          cat("</div>")
-          cat("</tr>")
         }
+        
+        # add OPEN ACESS badge
+        tryCatch(
+          expr = {
+            my_doi_oa <-
+              roadoi::oadoi_fetch(dois = doi_unique$doi[ix], email = "arthur_sf@icloud.com")
+            if (my_doi_oa$is_oa) {
+              cat(
+                "<a style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; padding:0.1em 0.3em 0.1em 0.3em;\" href=\"",
+                doi_unique$url[ix],
+                "\" target=\"_blank\">",
+                "<img height=\"64px;\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png\">",
+                "</a>",
+                sep = ""
+              )
+            }
+          },
+          error = function(e) {
+            
+          }
+        )
+        
+        cat("</div>")
+        cat("</tr>")
       }
     }
     
@@ -220,6 +242,28 @@ table.with.badges <-
             WebQualis
           ), "</a>"), sep = "")
         }
+        
+        # add OPEN ACESS badge
+        tryCatch(
+          expr = {
+            my_doi_oa <-
+              roadoi::oadoi_fetch(dois = my_dois_works$doi[ix], email = "arthur_sf@icloud.com")
+            if (my_doi_oa$is_oa) {
+              cat(
+                "<a style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; padding:0.1em 0.3em 0.1em 0.3em;\" href=\"",
+                paste0("https://doi.org/", my_dois_works$doi[ix]),
+                "\" target=\"_blank\">",
+                "<img height=\"64px;\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png\">",
+                "</a>",
+                sep = ""
+              )
+            }
+          },
+          error = function(e) {
+            
+          }
+        )
+        
         cat("</div>")
         cat("</td></tr>")
       }
@@ -230,7 +274,9 @@ table.with.badges <-
     cat('\n\n<!-- -->\n\n')
     cat('\n\n<!-- -->\n\n')
     cat('*Fontes:*', sep = "")
-    cat('^1^ [**Altmetric**](https://www.altmetric.com)', ', ', sep = "")
+    cat('^1^ [**Altmetric**](https://www.altmetric.com)',
+        ', ',
+        sep = "")
     cat('^2^ [**Dimensions**](https://www.dimensions.ai)',
         ', ',
         sep = "")

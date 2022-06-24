@@ -28,7 +28,8 @@ columns_to_grab <-
     "cited_by_accounts_count",
     "cited_by_patents_count",
     "mendeley",
-    "score"
+    "score",
+    "is_oa"
   )
 
 # initialize dataframe
@@ -172,13 +173,13 @@ doi_reshaped_data$cited_by_patents_count[doi_reshaped_data$cited_by_patents_coun
 doi_reshaped_data <-
   doi_reshaped_data[complete.cases(doi_reshaped_data), ]
 
-# sort columns by title
-doi_reshaped_data <-
-  doi_reshaped_data[order(doi_reshaped_data$title), ]
-
 # remove duplicate entries
 doi_reshaped_data <-
   doi_reshaped_data[!duplicated(doi_reshaped_data$doi), ]
+
+# sort columns by title
+doi_reshaped_data <-
+  doi_reshaped_data[order(doi_reshaped_data$title), ]
 
 # collect DOIs without altmetric data
 no_altmetric_dois_list <-

@@ -22,6 +22,7 @@ if (is_empty(dois)) {
         my_dois_works[order(as.vector(my_dois_works$title)),]
     }
   }
+  # add issued (created) year of publication
   tryCatch(
     expr = {
       # get year from issued

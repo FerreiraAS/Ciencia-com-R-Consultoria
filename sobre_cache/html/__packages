@@ -24,6 +24,7 @@ lubridate
 magrittr
 plyr
 readxl
+roadoi
 rorcid
 tidyverse
 tibble
