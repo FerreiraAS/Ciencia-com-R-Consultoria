@@ -10,16 +10,14 @@ output:
     toc: false
 ---
 
-```{css, echo=FALSE}
+```{css, echo = FALSE}
 body {
   font-size: 2em;
 }
 ```
 
-<br>
-
 <!--read additional files-->
-```{r packages-sources, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis", out.width="100%"}
+```{r packages-sources, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
 # read packages
 library(anytime)
 library(dplyr)
@@ -37,12 +35,17 @@ library(roadoi)
 library(rorcid)
 library(tidyverse)
 library(usethis)
+```
 
+<!--read additional files-->
+```{r metrics, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width  ="100%"}
 source("Scripts/sjr.R", local = knitr::knit_global())
 source("Scripts/webqualis.R", local = knitr::knit_global())
 ```
 
-### **Autor** {#autor}
+<br>
+
+### **Sobre mim** {#autor}
 
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
@@ -140,11 +143,11 @@ Compõe o corpo editoral dos periódicos internacionais e nacionais:
 
 <br>
 
-### **Revisor** {#revisor}
+### **Minhas revisões** {#revisor}
 
 <br>
 
-```{r peer-review, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis", out.width="100%"}
+```{r peer-review, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
 my_orcid <- c("0000-0001-7014-2002")
 reviewer.name <- "Arthur de Sá Ferreira"
 source("Scripts/reviewer-board.R")
@@ -161,11 +164,9 @@ source("Scripts/reviewer-board.R")
 
 <br>
 
-### **Publicações** {#artigos .tabset}
+### **Minhas publicações** {#artigos .tabset}
 
-<br>
-
-```{r papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis", out.width="100%", cache = TRUE}
+```{r read-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE}
 # baixa todos os artigos (com repetições)
 my_orcid <- c("0000-0001-7014-2002")
 my_works <- rorcid::works(my_orcid) %>%
@@ -199,7 +200,9 @@ source("Scripts/get-metrics-from-dois.R", local = knitr::knit_global())
 
 # available years of publication
 years <- na.omit(sort(unique(c(doi_unique$published_on, my_dois_works$published_on)), decreasing = TRUE))
+```
 
+```{r print-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
 # Verifica se há DOIs
 if (max(dim(doi_unique)[1], 0) == 0 & max(dim(my_dois_works)[1], 0) == 0) {
   cat('\n')

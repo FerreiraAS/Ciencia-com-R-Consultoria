@@ -10,7 +10,7 @@ output:
     toc: false
 ---
 
-```{css, echo=FALSE}
+```{css, echo = FALSE}
 body {
 font-size: 2em;
 }
@@ -39,30 +39,35 @@ Será feito um orçamento, discriminando o trabalho de consultoria a ser forneci
 
 <br>
 
-<center> **Solcite um orçamento!** <a href="mailto:arthur_sf@icloud.com?subject=Orçamento: StatisticsDIY">**`r library(fontawesome); fa("paper-plane", margin_right = "0.1em")` **</a> </center>
+<center> **Solicite um orçamento!** <a href="mailto:arthur_sf@icloud.com?subject=Orçamento: StatisticsDIY">**`r library(fontawesome); fa("paper-plane", margin_right = "0.1em")` **</a> </center>
 
 <br>
 
-<h3>**`r library(fontawesome); fa("users", margin_right = "0.1em")` Cálculo de tamanho de amostra**</h3>
+## {#calculo}
+<h3>**`r library(fontawesome); fa("users", margin_right = "0.1em")` Estimativa de tamanho de amostra**</h3>
 <p>*Quer definir o número necessário de participantes para realizar sua pesquisa?*</p>
 
 <br>
 
+## {#plano}
 <h3>**`r library(fontawesome); fa("file-alt", margin_right = "0.1em")` Plano de análise estatística**</h3>
 <p>*Precisa escolher e elaborar os parâmetros e testes para sua análise estatística?*</p>
 
 <br>
 
-<h3>**`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação de dados**</h3>
+## {#simulacao}
+<h3>**`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação de estudos**</h3>
 <p>*Pretende testar seu plano de análise estatística em dados simulados?*</p>
 
 <br>
 
+## {#analise}
 <h3>**`r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Análise estatística de dados**</h3>
 <p>*Quer analisar os dados coletados de sua pesquisa?*</p>
 
 <br>
 
+## {#mentoria}
 <h3>**`r library(fontawesome); fa("chalkboard-teacher", margin_right = "0.1em")` Mentoria**</h3>
 <p>*Precisa de orientações detalhadas para delineamento, análise, redação e interpretação estatística?*</p>
 

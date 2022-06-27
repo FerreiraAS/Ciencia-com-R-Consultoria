@@ -10,7 +10,7 @@ output:
     toc: true
 ---
 
-```{css, echo=FALSE}
+```{css, echo = FALSE}
 body {
   font-size: 2em;
 }

@@ -23,7 +23,7 @@ table.with.badges <-
     
     # start table
     cat(
-      "<table style=\"width:100%\">\n    <tr>\n      <th>Produtos (n = ",
+      "<table class=\"tb\" style=\"width:100%; font-size: 16px !important;\">\n    <tr>\n      <th>Produtos (n = ",
       max(dim(doi_unique)[1], 0) + max(dim(my_dois_works)[1], 0),
       ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, SJR^4^, Qualis^5^) </th>\n    </tr>",
       sep = ""

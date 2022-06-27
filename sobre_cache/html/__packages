@@ -11,8 +11,6 @@ ggplot2
 remotes
 grateful
 emo
-details
-sessioninfo
 anytime
 dplyr
 gridExtra

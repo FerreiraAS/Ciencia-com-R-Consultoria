@@ -1,11 +1,11 @@
 ---
-title: "Estatística DIY"
+title: "Ferreira AS | Statístics DIY"
 date: '`r format(Sys.Date())`'
 name: "stat-diy"
 author: "Arthur de Sá Ferreira"
 repository_url: https://rehab-tech.github.io/statisticsDIY/
 source_url: true
-creative_commons: CC BY-NC
+creative_commons: CC BY-NC-SA
 output_dir: "docs"
 include:
   - /Scripts
@@ -23,60 +23,27 @@ navbar:
     - text: ""
       icon: "fa-home"
       href: index.html
-    - text: "Conceitos"
-      href: conceitos.html
-      menu:
-        - text: "Conceitos"
-          href: [conceitos.html]
-        - text: "Dados, Tabelas"
-          href: [conceitos.html#dados-tabelas]
-        - text: "Variáveis, Fatores"
-          href: [conceitos.html#var-fat]
-        - text: "Distribuições, Parâmetros"
-          href: [conceitos.html#distr-par]
-        - text: "Transformação, Codificação"
-          href: [conceitos.html#transf-cod]
-        - text: "Unidade de análise"
-          href: [conceitos.html#unidade-de-analise]
-        - text: "População, Amostra"
-          href: [conceitos.html#pop-amostr]
-        - text: "Amostragem, Reamostragem"
-          href: [conceitos.html#amostragem-reamostragem]
-        - text: "Pareamento, Casamento"
-          href: [conceitos.html#pareamento-casamento]
-        - text: "Pacotes, Referências"
-          href: [conceitos.html#packs-refs]
-    - text: "Rode seu script"
-      href: [run.html]
-      menu:
-        - text: "Rode no computador"
-          href: [run.html#local]
-        - text: "Rode na nuvem"
-          href: [run.html#nuvem]
     - text: "Consultoria"
       href: [consultoria.html]
       menu:
-        - text: "Serviços"
-          href: [consultoria.html]
-    - text: "Sobre"
-      href: [sobre.html]
+        - text: "Estimativa de tamanho de amostra"
+          href: [consultoria.html#calculo]
+        - text: "Plano de análise estatística"
+          href: [consultoria.html#plano]
+        - text: "Simulação de estudos"
+          href: [consultoria.html#simulacao]
+        - text: "Análise estatística de dados"
+          href: [consultoria.html#analise]
+        - text: "Mentoria"
+          href: [consultoria.html#mentoria]
+    - text: "Crie scripts"
+      href: [run.html]
       menu:
-        - text: "Autor"
-          href: [sobre.html#autor]
-        - text: "Revisor"
-          href: [sobre.html#revisor]
-        - text: "Publicações"
-          href: [sobre.html#artigos]
-  right:
-    - text: ""
-      icon: "fa-info"
-      href: [info.html]
-    - text: ""
-      icon: "fa-envelope"
-      href: [mailto:arthur_sf@icloud.com]
-    - text: ""
-      icon: "fa-github"
-      href: [https://github.com/rehab-tech/observatoriocr/]
+        - text: "Rode na nuvem"
+          href: [run.html#nuvem]
+        - text: "Rode no computador"
+          href: [run.html#local]
+    - text: "Reutilize meus scripts"
       menu:
         - text: "Tabela 2x2"
           href: [https://github.com/rehab-tech/CT/]
@@ -86,6 +53,22 @@ navbar:
           href: [https://github.com/rehab-tech/RCT/]
         - text: "ROC"
           href: [https://github.com/rehab-tech/ROC/]
+  right:
+    - text: "Arthur Sá Ferreira, PhD"
+      href: [sobre.html]
+      menu:
+        - text: "Sobre mim"
+          href: [sobre.html#autor]
+        - text: "Minhas revisões"
+          href: [sobre.html#revisor]
+        - text: "Minhas publicações"
+          href: [sobre.html#artigos]
+    - text: ""
+      icon: "fa-envelope"
+      href: [mailto:arthur_sf@icloud.com]
+    - text: ""
+      icon: "fa-github"
+      href: [https://github.com/rehab-tech/]
 
 output:
   html_document:

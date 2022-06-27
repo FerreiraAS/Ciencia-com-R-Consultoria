@@ -1,5 +1,5 @@
 ---
-title: Rode seu script
+title: Rode scripts
 bibliography:
   - references.bib
   - grateful-refs.bib
@@ -10,7 +10,7 @@ output:
     toc: true
 ---
 
-```{css, echo=FALSE}
+```{css, echo = FALSE}
 body {
   font-size: 2em;
 }
@@ -29,6 +29,19 @@ source("Scripts/social-media-sharing.R")
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
+## *Rode na nuvem* {#nuvem}
+
+<br>
+
+<iframe width='100%' height='300' src='https://rdrr.io/snippets/embed/' frameborder='0'></iframe>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
 ## *Rode no computador* {#local}
 
 <br>
@@ -38,19 +51,6 @@ source("Scripts/social-media-sharing.R")
 2. Baixe e instale a versão estável mais recente do **RStudio** &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.rstudio.com)
 
 3. Abra o Rstudio e, na janela do console, digite e/ou copie-cole os roteiros apresentados em cada seção.
-
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
-
-<br>
-
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-## *Rode na nuvem* {#nuvem}
-
-<br>
-
-<iframe width='100%' height='300' src='https://rdrr.io/snippets/embed/' frameborder='0'></iframe>
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
 
