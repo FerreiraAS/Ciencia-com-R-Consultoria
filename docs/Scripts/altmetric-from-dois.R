@@ -183,4 +183,4 @@ doi_reshaped_data <-
 
 # collect DOIs without altmetric data
 no_altmetric_dois_list <-
-  dois_list[is.na(match(dois_list, doi_reshaped_data$doi))]
+  dois_list[is.na(match(lapply(dois_list, tolower), lapply(doi_reshaped_data$doi, tolower)))]

@@ -214,7 +214,7 @@ if (max(dim(doi_unique)[1], 0) == 0 & max(dim(my_dois_works)[1], 0) == 0) {
   cat(paste(
     "*Produtos (n = ",
     max(dim(doi_unique)[1], 0) + max(dim(my_dois_works)[1], 0),
-    ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, SJR^4^, Qualis^5^)* \n\n",
+    ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, SJR^4^, Qualis^5^, Open Access^6^)* \n\n",
     sep = "")
   )
   cat('<br>')

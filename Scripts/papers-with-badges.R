@@ -25,7 +25,7 @@ table.with.badges <-
     cat(
       "<table class=\"tb\" style=\"width:100%; font-size: 16px !important;\">\n    <tr>\n      <th>Produtos (n = ",
       max(dim(doi_unique)[1], 0) + max(dim(my_dois_works)[1], 0),
-      ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, SJR^4^, Qualis^5^) </th>\n    </tr>",
+      ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, SJR^4^, Qualis^5^, Open Access^6^) </th>\n    </tr>",
       sep = ""
     )
     
@@ -93,7 +93,7 @@ table.with.badges <-
           cat(
             "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
             SJR_id,
-            "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; font-size:1.1em; color:white; background-color:rgb(216,124,78);\"> SJR <br>",
+            "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:white; border-color:rgb(216,124,78); background-color:rgb(216,124,78);\"> SJR <br>",
             sep = ""
           )
           cat(paste0(ifelse(
@@ -105,7 +105,7 @@ table.with.badges <-
         # add QUALIS
         if (show.Qualis == TRUE) {
           cat(
-            "<a style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; font-size:1.1em; color:black;\"> Qualis <br>",
+            "<a style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:black;\"> Qualis <br>",
             sep = ""
           )
           WebQualis <-
@@ -218,7 +218,7 @@ table.with.badges <-
           cat(
             "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
             SJR_id,
-            "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.5em 0.3em 0.5em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; font-size:1.1em; color:white; background-color:rgb(216,124,78);\"> SJR <br>",
+            "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:white; border-color:rgb(216,124,78); background-color:rgb(216,124,78);\"> SJR <br>",
             sep = ""
           )
           cat(paste0(ifelse(
@@ -230,7 +230,7 @@ table.with.badges <-
         # add QUALIS
         if (show.Qualis == TRUE) {
           cat(
-            "<a style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; font-size:1.1em; color:black;\">  Qualis <br>",
+            "<a style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:black;\">  Qualis <br>",
             sep = ""
           )
           WebQualis <-
@@ -271,23 +271,21 @@ table.with.badges <-
     
     # end table
     cat("</table>")
-    cat('\n\n<!-- -->\n\n')
-    cat('\n\n<!-- -->\n\n')
+    cat('<br>')
     cat('*Fontes:*', sep = "")
-    cat('^1^ [**Altmetric**](https://www.altmetric.com)',
-        ', ',
-        sep = "")
-    cat('^2^ [**Dimensions**](https://www.dimensions.ai)',
-        ', ',
-        sep = "")
-    cat('^3^ [**PlumX**](https://plu.mx)', ', ', sep = "")
-    cat('^4^ [**SCImago**](https://www.scimagojr.com)', ', ', sep = "")
-    cat(
-      '^5^ [**WebQualis**](https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf)',
-      sep = ""
-    )
-    cat('\n\n<!-- -->\n\n')
+    cat('^1^ [**Altmetric**](https://www.altmetric.com)', sep = "")
+    cat(', ', sep = "")
+    cat('^2^ [**Dimensions**](https://www.dimensions.ai)', sep = "")
+    cat(', ', sep = "")
+    cat('^3^ [**PlumX**](https://plu.mx)', sep = "")
+    cat(', ', sep = "")
+    cat('^4^ [**SCImago**](https://www.scimagojr.com)', sep = "")
+    cat(', ', sep = "")
+    cat('^5^ [**WebQualis**](https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf)', sep = "")
+    cat(', ', sep = "")
+    cat('^6^ [**DOAJ**](https://doaj.org)', sep = "")
+    cat('<br>')
+    cat('<br>')
     cat('<br><a style="float:right" href="#top"><b>Início &nbsp;</b>⬆️</a><br>')
   }
-cat('\n\n<!-- -->\n\n')
-cat('\n\n<!-- -->\n\n')
+cat('<br>')
