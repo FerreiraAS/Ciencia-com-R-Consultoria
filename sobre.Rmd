@@ -40,6 +40,7 @@ library(usethis)
 <!--read additional files-->
 ```{r metrics, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width  ="100%"}
 source("Scripts/sjr.R", local = knitr::knit_global())
+source("Scripts/citescore.R", local = knitr::knit_global())
 source("Scripts/webqualis.R", local = knitr::knit_global())
 ```
 
@@ -172,8 +173,7 @@ my_orcid <- c("0000-0001-7014-2002")
 my_works <- rorcid::works(my_orcid) %>%
   as_tibble() %>%
   janitor::clean_names() %>%
-  dplyr::mutate(created_date_value = anytime::anydate(created_date_value /
-                                                        1000))
+  dplyr::mutate(created_date_value = anytime::anydate(created_date_value / 1000))
 my_works_ids <- my_works %>%
   tidyr::unnest(external_ids_external_id) %>%
   janitor::clean_names()
@@ -214,7 +214,7 @@ if (max(dim(doi_unique)[1], 0) == 0 & max(dim(my_dois_works)[1], 0) == 0) {
   cat(paste(
     "*Produtos (n = ",
     max(dim(doi_unique)[1], 0) + max(dim(my_dois_works)[1], 0),
-    ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, SJR^4^, Qualis^5^, Open Access^6^)* \n\n",
+    ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, CiteScore^4^, SJR^5^, Qualis^6^, Open Access^7^)* \n\n",
     sep = "")
   )
   cat('<br>')
@@ -230,6 +230,7 @@ if (max(dim(doi_unique)[1], 0) == 0 & max(dim(my_dois_works)[1], 0) == 0) {
       show.Altmetric = TRUE,
       show.Dimensions = TRUE,
       show.PlumX = TRUE,
+      show.CiteScore = TRUE,
       show.SJR = TRUE,
       show.Qualis = TRUE,
       doi_unique = tryCatch(
@@ -243,8 +244,9 @@ if (max(dim(doi_unique)[1], 0) == 0 & max(dim(my_dois_works)[1], 0) == 0) {
           return(my_dois_works <- list())
         }
       ),
-      scimago,
-      qualis
+      citescore = citescore,
+      scimago = scimago,
+      qualis = qualis
     )
   }
 }

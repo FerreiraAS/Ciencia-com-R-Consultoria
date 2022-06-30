@@ -2,10 +2,12 @@ table.with.badges <-
   function(show.Altmetric = NULL,
            show.Dimensions = NULL,
            show.PlumX = NULL,
+           show.CiteScore = NULL,
            show.SJR = NULL,
            show.Qualis = NULL,
            doi_unique,
            my_dois_works,
+           citescore,
            scimago,
            qualis) {
     cat(
@@ -25,7 +27,7 @@ table.with.badges <-
     cat(
       "<table class=\"tb\" style=\"width:100%; font-size: 16px !important;\">\n    <tr>\n      <th>Produtos (n = ",
       max(dim(doi_unique)[1], 0) + max(dim(my_dois_works)[1], 0),
-      ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, SJR^4^, Qualis^5^, Open Access^6^) </th>\n    </tr>",
+      ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, CiteScore^4^, SJR^5^, Qualis^6^, Open Access^7^) </th>\n    </tr>",
       sep = ""
     )
     
@@ -51,6 +53,7 @@ table.with.badges <-
           paste0(doi_unique$published_on[ix], "&nbsp; - &nbsp;")
         ))
         cat(paste0("*", doi_unique$journal[ix], "*", "<br>"))
+        
         # initialize the DIV element for the badges
         cat("<div style=\"vertical-align: middle; display: inline-block;\">")
         
@@ -84,6 +87,57 @@ table.with.badges <-
           )
         }
         
+        # add CiteScore
+        if (show.CiteScore == TRUE) {
+          citescore_id <-
+            as.character(citescore$sourcerecord_id[grep(gsub("-", "", doi_unique$issn[ix]), citescore$issn)])
+          citescore_value <-
+            citescore$x2021_cite_score[grep(gsub("-", "", doi_unique$issn[ix]), citescore$issn)]
+          citescore_year <-
+            citescore$last_coverage[grep(gsub("-", "", doi_unique$issn[ix]), citescore$issn)]
+          citescore_p <-
+            round(citescore$percentile[grep(gsub("-", "", doi_unique$issn[ix]), citescore$issn)] * 100, 0)
+          cat(
+            "<a href=\"https://www.scopus.com/sourceid/",
+            citescore_id,
+            '?dgcid=sc_widget_citescore\" style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050\"><div style=\"height:100px;width:180px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block\"><div style=\"padding: 0px 16px;\"><div style=\"padding-top:3px;line-height:1;\"><div style=\"float:left;font-size:28px\"><span id=\"citescoreVal\" style=\"letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;\">',
+            paste0(ifelse(
+              identical(citescore_value, numeric(0)) |
+                all(is.na(citescore_value)),
+              "?",
+              format(round(as.numeric(
+                citescore_value
+              ), 2), nsmall = 2)
+            )),
+            "</span></div><div style=\"float:right;font-size:14px;padding-top:3px;text-align: right;\"><span id=\"citescoreYearVal\" style=\"display:block;\">",
+            ifelse(
+              identical(citescore_year, numeric(0)) |
+                all(is.na(citescore_year)),
+              "?",
+              citescore_year
+            ),
+            "</span>CiteScore</div></div><div style=\"clear:both;\"></div><div style=\"padding-top:3px;\"><div style=\"height:4px;background-color:#DCDCDC;\"><div style=\"height: 4px; background-color: rgb(0, 115, 152); width:",
+            paste0(ifelse(
+              identical(citescore_p, numeric(0)) |
+                all(is.na(citescore_p)),
+              "?",
+              round(citescore_p, 0)
+            )),
+            "%;\" id=\"percentActBar\">&nbsp;</div></div><div style=\"font-size:11px;\"><span id=\"citescorePerVal\">",
+            paste0(ifelse(
+              identical(citescore_p, numeric(0)) |
+                all(is.na(citescore_p)),
+              "?",
+              paste0(as.character(round(
+                citescore_p, 0
+              )), "th percentile")
+            )),
+            "</span></div></div><div style=\"font-size:12px;text-align:right;\">Powered by &nbsp;<span><img alt=\"Scopus\" style=\"width:50px;height:15px;\" src=\"https://www.scopus.com/static/images/scopusLogoOrange.svg\"></span></div></div></div></a>",
+            sep = ""
+          )
+          
+        }
+        
         # add SJR
         if (show.SJR == TRUE) {
           SJR_id <-
@@ -94,35 +148,36 @@ table.with.badges <-
             "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
             SJR_id,
             "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:white; border-color:rgb(216,124,78); background-color:rgb(216,124,78);\"> SJR <br>",
+            paste0(ifelse(
+              identical(SJR, numeric(0)) |
+                all(is.na(SJR)), "?", SJR
+            )),
+            "</a>",
             sep = ""
           )
-          cat(paste0(ifelse(
-            identical(SJR, numeric(0)) |
-              all(is.na(SJR)), "?", SJR
-          ), "</a>"), sep = "")
         }
         
         # add QUALIS
         if (show.Qualis == TRUE) {
-          cat(
-            "<a style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:black;\"> Qualis <br>",
-            sep = ""
-          )
           WebQualis <-
             qualis[match(doi_unique$issn[ix], qualis$ISSN), 3]
-          cat(paste0(ifelse(
-            identical(WebQualis, numeric(0)) |
-              all(is.na(WebQualis)),
-            "?",
-            WebQualis
-          ), "</a>"), sep = "")
+          cat(
+            "<a style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:black;\"> Qualis <br>",
+            paste0(ifelse(
+              identical(WebQualis, numeric(0)) |
+                all(is.na(WebQualis)),
+              "?",
+              WebQualis
+            ), "</a>"),
+            sep = ""
+          )
         }
         
         # add OPEN ACESS badge
         tryCatch(
           expr = {
             my_doi_oa <-
-              roadoi::oadoi_fetch(dois = doi_unique$doi[ix], email = "arthur_sf@icloud.com")
+              roadoi::oadoi_fetch(dois = doi_unique$doi[ix], email = "cienciasdareabilitacao@souunisuam.com.br")
             if (my_doi_oa$is_oa) {
               cat(
                 "<a style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; padding:0.1em 0.3em 0.1em 0.3em;\" href=\"",
@@ -209,6 +264,57 @@ table.with.badges <-
           )
         }
         
+        # add CiteScore
+        if (show.CiteScore == TRUE) {
+          citescore_id <-
+            as.character(citescore$sourcerecord_id[grep(gsub("-", "", my_dois_works$issn[ix]), citescore$issn)])
+          citescore_value <-
+            citescore$x2021_cite_score[grep(gsub("-", "", my_dois_works$issn[ix]), citescore$issn)]
+          citescore_year <-
+            citescore$last_coverage[grep(gsub("-", "", my_dois_works$issn[ix]), citescore$issn)]
+          citescore_p <-
+            round(citescore$percentile[grep(gsub("-", "", my_dois_works$issn[ix]), citescore$issn)] * 100, 0)
+          cat(
+            "<a href=\"https://www.scopus.com/sourceid/",
+            citescore_id,
+            '?dgcid=sc_widget_citescore\" style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050\"><div style=\"height:100px;width:180px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block\"><div style=\"padding: 0px 16px;\"><div style=\"padding-top:3px;line-height:1;\"><div style=\"float:left;font-size:28px\"><span id=\"citescoreVal\" style=\"letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;\">',
+            paste0(ifelse(
+              identical(citescore_value, numeric(0)) |
+                all(is.na(citescore_value)),
+              "?",
+              format(round(as.numeric(
+                citescore_value
+              ), 2), nsmall = 2)
+            )),
+            "</span></div><div style=\"float:right;font-size:14px;padding-top:3px;text-align: right;\"><span id=\"citescoreYearVal\" style=\"display:block;\">",
+            ifelse(
+              identical(citescore_year, numeric(0)) |
+                all(is.na(citescore_year)),
+              "?",
+              citescore_year
+            ),
+            "</span>CiteScore</div></div><div style=\"clear:both;\"></div><div style=\"padding-top:3px;\"><div style=\"height:4px;background-color:#DCDCDC;\"><div style=\"height: 4px; background-color: rgb(0, 115, 152); width:",
+            paste0(ifelse(
+              identical(citescore_p, numeric(0)) |
+                all(is.na(citescore_p)),
+              "?",
+              round(citescore_p, 0)
+            )),
+            "%;\" id=\"percentActBar\">&nbsp;</div></div><div style=\"font-size:11px;\"><span id=\"citescorePerVal\">",
+            paste0(ifelse(
+              identical(citescore_p, numeric(0)) |
+                all(is.na(citescore_p)),
+              "?",
+              paste0(as.character(round(
+                citescore_p, 0
+              )), "th percentile")
+            )),
+            "</span></div></div><div style=\"font-size:12px;text-align:right;\">Powered by &nbsp;<span><img alt=\"Scopus\" style=\"width:50px;height:15px;\" src=\"https://www.scopus.com/static/images/scopusLogoOrange.svg\"></span></div></div></div></a>",
+            sep = ""
+          )
+          
+        }
+        
         # add SJR
         if (show.SJR == TRUE) {
           SJR_id <-
@@ -219,28 +325,29 @@ table.with.badges <-
             "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
             SJR_id,
             "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:white; border-color:rgb(216,124,78); background-color:rgb(216,124,78);\"> SJR <br>",
+            paste0(ifelse(
+              identical(SJR, numeric(0)) |
+                all(is.na(SJR)), "?", SJR
+            )),
+            "</a>",
             sep = ""
           )
-          cat(paste0(ifelse(
-            identical(SJR, numeric(0)) |
-              all(is.na(SJR)), "?", SJR
-          ), "</a>"), sep = "")
         }
         
         # add QUALIS
         if (show.Qualis == TRUE) {
-          cat(
-            "<a style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:black;\">  Qualis <br>",
-            sep = ""
-          )
           WebQualis <-
             qualis$ESTRATO[match(my_dois_works$issn[ix], qualis$ISSN)]
-          cat(paste0(ifelse(
-            identical(WebQualis, numeric(0)) |
-              all(is.na(WebQualis)),
-            "?",
-            WebQualis
-          ), "</a>"), sep = "")
+          cat(
+            "<a style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:black;\"> Qualis <br>",
+            paste0(ifelse(
+              identical(WebQualis, numeric(0)) |
+                all(is.na(WebQualis)),
+              "?",
+              WebQualis
+            ), "</a>"),
+            sep = ""
+          )
         }
         
         # add OPEN ACESS badge
@@ -279,11 +386,13 @@ table.with.badges <-
     cat(', ', sep = "")
     cat('^3^ [**PlumX**](https://plu.mx)', sep = "")
     cat(', ', sep = "")
-    cat('^4^ [**SCImago**](https://www.scimagojr.com)', sep = "")
+    cat('^4^ [**CiteScore**](https://www.scopus.com/sources)', sep = "")
     cat(', ', sep = "")
-    cat('^5^ [**WebQualis**](https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf)', sep = "")
+    cat('^5^ [**SCImago**](https://www.scimagojr.com)', sep = "")
     cat(', ', sep = "")
-    cat('^6^ [**DOAJ**](https://doaj.org)', sep = "")
+    cat('^6^ [**WebQualis**](https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf)', sep = "")
+    cat(', ', sep = "")
+    cat('^7^ [**DOAJ**](https://doaj.org)', sep = "")
     cat('<br>')
     cat('<br>')
     cat('<br><a style="float:right" href="#top"><b>Início &nbsp;</b>⬆️</a><br>')
