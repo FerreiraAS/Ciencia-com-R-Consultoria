@@ -2,12 +2,16 @@
 title: "Ferreira AS | Statístics DIY"
 date: '`r format(Sys.Date())`'
 name: "stat-diy"
-author: "Arthur de Sá Ferreira"
+author:
+  - name: "Arthur de Sá Ferreira"
+  - email: arthur_sfd@icloud.com
 repository_url: https://rehab-tech.github.io/statisticsDIY/
 source_url: true
 creative_commons: CC BY-NC-SA
 output_dir: "docs"
 include:
+  - header.html
+  - google-translate.html
   - /Scripts
 exclude:
   - /docs/CiteScore

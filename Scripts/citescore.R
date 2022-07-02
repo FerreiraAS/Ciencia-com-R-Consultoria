@@ -13,7 +13,7 @@ columns_to_grab <-
     "coverage")
 
 # initialize dataframe
-citescore <- citescore %>% dplyr::select(columns_to_grab)
+citescore <- citescore %>% dplyr::select(all_of(columns_to_grab))
 citescore <- as.data.frame(citescore)
 
 # calculate percentile value

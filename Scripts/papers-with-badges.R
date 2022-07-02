@@ -35,7 +35,7 @@ table.with.badges <-
     if (max(dim(doi_unique)[1], 0) != 0) {
       for (ix in 1:dim(doi_unique)[1]) {
         # add bibliography info
-        cat("<tr><td valign=top>")
+        cat("<tr><td valign=top;>")
         cat("<br>")
         cat(
           paste0(
@@ -56,6 +56,9 @@ table.with.badges <-
         
         # initialize the DIV element for the badges
         cat("<div style=\"vertical-align: middle; display: inline-block;\">")
+
+        # initialize the NOBR element for the badges
+        cat("<nobr>")
         
         # add Altmetric badge
         if (show.Altmetric == TRUE) {
@@ -100,7 +103,7 @@ table.with.badges <-
           cat(
             "<a href=\"https://www.scopus.com/sourceid/",
             citescore_id,
-            '?dgcid=sc_widget_citescore\" style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050\"><div style=\"height:100px;width:180px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block\"><div style=\"padding: 0px 16px;\"><div style=\"padding-top:3px;line-height:1;\"><div style=\"float:left;font-size:28px\"><span id=\"citescoreVal\" style=\"letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;\">',
+            '?dgcid=sc_widget_citescore\" style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050\"><div style=\"height:100px;width:160px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block\"><div style=\"padding: 0px 16px;\"><div style=\"padding-top:3px;line-height:1;\"><div style=\"float:left;font-size:28px\"><span id=\"citescoreVal\" style=\"letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;\">',
             paste0(ifelse(
               identical(citescore_value, numeric(0)) |
                 all(is.na(citescore_value)),
@@ -132,11 +135,30 @@ table.with.badges <-
                 citescore_p, 0
               )), "th percentile")
             )),
-            "</span></div></div><div style=\"font-size:12px;text-align:right;\">Powered by &nbsp;<span><img alt=\"Scopus\" style=\"width:50px;height:15px;\" src=\"https://www.scopus.com/static/images/scopusLogoOrange.svg\"></span></div></div></div></a>",
+            "</span></div></div><div style=\"font-size:12px;text-align:right;\"></div></div></div></a>",
             sep = ""
           )
           
         }
+        
+        # add SJR
+        # if (show.SJR == TRUE) {
+        #   SJR_id <-
+        #     scimago[grep(gsub("-", "", doi_unique$issn[ix]), scimago$Issn), 2][1]
+        #   SJR <-
+        #     scimago[grep(gsub("-", "", doi_unique$issn[ix]), scimago$Issn), 6][1]
+        #   cat(
+        #     "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
+        #     SJR_id,
+        #     "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:white; border-color:rgb(216,124,78); background-color:rgb(216,124,78);\"> SJR <br>",
+        #     paste0(ifelse(
+        #       identical(SJR, numeric(0)) |
+        #         all(is.na(SJR)), "?", SJR
+        #     )),
+        #     "</a>",
+        #     sep = ""
+        #   )
+        # }
         
         # add SJR
         if (show.SJR == TRUE) {
@@ -145,14 +167,17 @@ table.with.badges <-
           SJR <-
             scimago[grep(gsub("-", "", doi_unique$issn[ix]), scimago$Issn), 6][1]
           cat(
-            "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
-            SJR_id,
-            "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:white; border-color:rgb(216,124,78); background-color:rgb(216,124,78);\"> SJR <br>",
+            "<a style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
             paste0(ifelse(
               identical(SJR, numeric(0)) |
-                all(is.na(SJR)), "?", SJR
+                all(is.na(SJR)), "0?", SJR_id
             )),
-            "</a>",
+            "&amp;tip=sid&amp;exact=no\" target=\"_blank\" title=\"SCImago Journal &amp; Country Rank\"><img border=\"0\" height=\"80px;\" src=\"https://www.scimagojr.com/journal_img.php?id=",
+            paste0(ifelse(
+              identical(SJR, numeric(0)) |
+                all(is.na(SJR)), "0", SJR_id
+            )),
+            "\" alt=\"SCImago Journal &amp; Country Rank\"  /></a>",
             sep = ""
           )
         }
@@ -194,6 +219,8 @@ table.with.badges <-
           }
         )
         
+        # close the NOBR element for the badges
+        cat("</nobr>")
         cat("</div>")
         cat("</tr>")
       }
@@ -203,7 +230,7 @@ table.with.badges <-
     if (max(dim(my_dois_works)[1], 0) != 0) {
       for (ix in 1:dim(my_dois_works)[1]) {
         # add bibliography info
-        cat("<tr><td valign=top>")
+        cat("<tr><td valign=top;>")
         cat("<br>")
         cat(
           paste0(
@@ -235,6 +262,9 @@ table.with.badges <-
         
         # initialize the DIV element for the badges
         cat("<div style=\"vertical-align: middle; display: inline-block;\">")
+        
+        # initialize the NOBR element for the badges
+        cat("<nobr>")
         
         # add Altmetric badge
         if (show.Altmetric == TRUE) {
@@ -277,7 +307,7 @@ table.with.badges <-
           cat(
             "<a href=\"https://www.scopus.com/sourceid/",
             citescore_id,
-            '?dgcid=sc_widget_citescore\" style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050\"><div style=\"height:100px;width:180px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block\"><div style=\"padding: 0px 16px;\"><div style=\"padding-top:3px;line-height:1;\"><div style=\"float:left;font-size:28px\"><span id=\"citescoreVal\" style=\"letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;\">',
+            '?dgcid=sc_widget_citescore\" style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050\"><div style=\"height:100px;width:160px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block\"><div style=\"padding: 0px 16px;\"><div style=\"padding-top:3px;line-height:1;\"><div style=\"float:left;font-size:28px\"><span id=\"citescoreVal\" style=\"letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;\">',
             paste0(ifelse(
               identical(citescore_value, numeric(0)) |
                 all(is.na(citescore_value)),
@@ -309,27 +339,48 @@ table.with.badges <-
                 citescore_p, 0
               )), "th percentile")
             )),
-            "</span></div></div><div style=\"font-size:12px;text-align:right;\">Powered by &nbsp;<span><img alt=\"Scopus\" style=\"width:50px;height:15px;\" src=\"https://www.scopus.com/static/images/scopusLogoOrange.svg\"></span></div></div></div></a>",
+            "</span></div></div><div style=\"font-size:12px;text-align:right;\"></div></div></div></a>",
             sep = ""
           )
           
         }
         
-        # add SJR
+        # # add SJR
+        # if (show.SJR == TRUE) {
+        #   SJR_id <-
+        #     scimago[grep(gsub("-", "", substr(my_dois_works$issn[ix], 1, 9)), scimago$Issn), 2][1]
+        #   SJR <-
+        #     scimago[grep(gsub("-", "", substr(my_dois_works$issn[ix], 1, 9)), scimago$Issn), 6][1]
+        #   cat(
+        #     "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
+        #     SJR_id,
+        #     "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:white; border-color:rgb(216,124,78); background-color:rgb(216,124,78);\"> SJR <br>",
+        #     paste0(ifelse(
+        #       identical(SJR, numeric(0)) |
+        #         all(is.na(SJR)), "?", SJR
+        #     )),
+        #     "</a>",
+        #     sep = ""
+        #   )
+        # }
+        
         if (show.SJR == TRUE) {
           SJR_id <-
             scimago[grep(gsub("-", "", substr(my_dois_works$issn[ix], 1, 9)), scimago$Issn), 2][1]
           SJR <-
             scimago[grep(gsub("-", "", substr(my_dois_works$issn[ix], 1, 9)), scimago$Issn), 6][1]
           cat(
-            "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
-            SJR_id,
-            "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:white; border-color:rgb(216,124,78); background-color:rgb(216,124,78);\"> SJR <br>",
+            "<a style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
             paste0(ifelse(
               identical(SJR, numeric(0)) |
-                all(is.na(SJR)), "?", SJR
+                all(is.na(SJR)), "0?", SJR_id
             )),
-            "</a>",
+            "&amp;tip=sid&amp;exact=no\" target=\"_blank\" title=\"SCImago Journal &amp; Country Rank\"><img border=\"0\" height=\"80px;\" src=\"https://www.scimagojr.com/journal_img.php?id=",
+            paste0(ifelse(
+              identical(SJR, numeric(0)) |
+                all(is.na(SJR)), "0", SJR_id
+            )),
+            "\" alt=\"SCImago Journal &amp; Country Rank\"  /></a>",
             sep = ""
           )
         }
@@ -371,6 +422,8 @@ table.with.badges <-
           }
         )
         
+        # close the NOBR element for the badges
+        cat("</nobr>")
         cat("</div>")
         cat("</td></tr>")
       }
