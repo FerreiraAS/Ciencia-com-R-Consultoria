@@ -38,6 +38,28 @@ table.with.badges <-
         cat("<tr><td valign=top;>")
         cat("<br>")
         cat(
+          # add OPEN ACESS badge
+          tryCatch(
+            expr = {
+              my_doi_oa <-
+                roadoi::oadoi_fetch(dois = doi_unique$doi[ix], email = "cienciasdareabilitacao@souunisuam.com.br")
+              if (my_doi_oa$is_oa) {
+                cat(
+                  "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
+                  doi_unique$url[ix],
+                  "\" target=\"_blank\">",
+                  "<img height=\"18px;\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png\">",
+                  "</a>",
+                  sep = ""
+                )
+              }
+            },
+            error = function(e) {
+              
+            }
+          ),
+          
+          # add title with link
           paste0(
             "[**",
             doi_unique$title[ix],
@@ -47,11 +69,17 @@ table.with.badges <-
             "<br>"
           )
         )
+        
+        # add authors' names
         cat(doi_unique$author.names[ix])
+        
+        # add year
         cat(paste0(
           "<br>",
           paste0(doi_unique$published_on[ix], "&nbsp; - &nbsp;")
         ))
+        
+        # add journal's title
         cat(paste0("*", doi_unique$journal[ix], "*", "<br>"))
         
         # initialize the DIV element for the badges
@@ -103,7 +131,7 @@ table.with.badges <-
           cat(
             "<a href=\"https://www.scopus.com/sourceid/",
             citescore_id,
-            '?dgcid=sc_widget_citescore\" style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050\"><div style=\"height:100px;width:160px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block\"><div style=\"padding: 0px 16px;\"><div style=\"padding-top:3px;line-height:1;\"><div style=\"float:left;font-size:28px\"><span id=\"citescoreVal\" style=\"letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;\">',
+            '?dgcid=sc_widget_citescore\" style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050\"><div style=\"height:64px;width:160px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block\"><div style=\"padding: 0px 16px;\"><div style=\"padding-top:3px;line-height:1;\"><div style=\"float:left;font-size:28px\"><span id=\"citescoreVal\" style=\"letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;\">',
             paste0(ifelse(
               identical(citescore_value, numeric(0)) |
                 all(is.na(citescore_value)),
@@ -142,25 +170,6 @@ table.with.badges <-
         }
         
         # add SJR
-        # if (show.SJR == TRUE) {
-        #   SJR_id <-
-        #     scimago[grep(gsub("-", "", doi_unique$issn[ix]), scimago$Issn), 2][1]
-        #   SJR <-
-        #     scimago[grep(gsub("-", "", doi_unique$issn[ix]), scimago$Issn), 6][1]
-        #   cat(
-        #     "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
-        #     SJR_id,
-        #     "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:white; border-color:rgb(216,124,78); background-color:rgb(216,124,78);\"> SJR <br>",
-        #     paste0(ifelse(
-        #       identical(SJR, numeric(0)) |
-        #         all(is.na(SJR)), "?", SJR
-        #     )),
-        #     "</a>",
-        #     sep = ""
-        #   )
-        # }
-        
-        # add SJR
         if (show.SJR == TRUE) {
           SJR_id <-
             scimago[grep(gsub("-", "", doi_unique$issn[ix]), scimago$Issn), 2][1]
@@ -172,7 +181,7 @@ table.with.badges <-
               identical(SJR, numeric(0)) |
                 all(is.na(SJR)), "0?", SJR_id
             )),
-            "&amp;tip=sid&amp;exact=no\" target=\"_blank\" title=\"SCImago Journal &amp; Country Rank\"><img border=\"0\" height=\"80px;\" src=\"https://www.scimagojr.com/journal_img.php?id=",
+            "&amp;tip=sid&amp;exact=no\" target=\"_blank\" title=\"SCImago Journal &amp; Country Rank\"><img border=\"0\" height=\"64px;\" src=\"https://www.scimagojr.com/journal_img.php?id=",
             paste0(ifelse(
               identical(SJR, numeric(0)) |
                 all(is.na(SJR)), "0", SJR_id
@@ -198,27 +207,6 @@ table.with.badges <-
           )
         }
         
-        # add OPEN ACESS badge
-        tryCatch(
-          expr = {
-            my_doi_oa <-
-              roadoi::oadoi_fetch(dois = doi_unique$doi[ix], email = "cienciasdareabilitacao@souunisuam.com.br")
-            if (my_doi_oa$is_oa) {
-              cat(
-                "<a style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; padding:0.1em 0.3em 0.1em 0.3em;\" href=\"",
-                doi_unique$url[ix],
-                "\" target=\"_blank\">",
-                "<img height=\"64px;\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png\">",
-                "</a>",
-                sep = ""
-              )
-            }
-          },
-          error = function(e) {
-            
-          }
-        )
-        
         # close the NOBR element for the badges
         cat("</nobr>")
         cat("</div>")
@@ -233,6 +221,28 @@ table.with.badges <-
         cat("<tr><td valign=top;>")
         cat("<br>")
         cat(
+          # add OPEN ACESS badge
+          tryCatch(
+            expr = {
+              my_doi_oa <-
+                roadoi::oadoi_fetch(dois = doi_unique$doi[ix], email = "cienciasdareabilitacao@souunisuam.com.br")
+              if (my_doi_oa$is_oa) {
+                cat(
+                  "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
+                  doi_unique$url[ix],
+                  "\" target=\"_blank\">",
+                  "<img height=\"18px;\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png\">",
+                  "</a>",
+                  sep = ""
+                )
+              }
+            },
+            error = function(e) {
+              
+            }
+          ),
+          
+          # add title with link
           paste0(
             "[**",
             my_dois_works$title[ix],
@@ -242,6 +252,8 @@ table.with.badges <-
             "<br>"
           )
         )
+        
+        # add authors' names
         cat(
           paste(
             my_dois_works$author[[ix]]$given,
@@ -249,6 +261,8 @@ table.with.badges <-
             collapse = ", "
           )
         )
+        
+        # add year
         cat(paste0("<br>",
                    paste0(
                      ifelse(
@@ -258,6 +272,8 @@ table.with.badges <-
                      ),
                      "&nbsp; - &nbsp;"
                    )))
+        
+        # add jornal's title
         cat(paste0("*", my_dois_works$container.title[ix], "*", "<br>"))
         
         # initialize the DIV element for the badges
@@ -307,7 +323,7 @@ table.with.badges <-
           cat(
             "<a href=\"https://www.scopus.com/sourceid/",
             citescore_id,
-            '?dgcid=sc_widget_citescore\" style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050\"><div style=\"height:100px;width:160px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block\"><div style=\"padding: 0px 16px;\"><div style=\"padding-top:3px;line-height:1;\"><div style=\"float:left;font-size:28px\"><span id=\"citescoreVal\" style=\"letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;\">',
+            '?dgcid=sc_widget_citescore\" style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050\"><div style=\"height:64px;width:160px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block\"><div style=\"padding: 0px 16px;\"><div style=\"padding-top:3px;line-height:1;\"><div style=\"float:left;font-size:28px\"><span id=\"citescoreVal\" style=\"letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;\">',
             paste0(ifelse(
               identical(citescore_value, numeric(0)) |
                 all(is.na(citescore_value)),
@@ -345,25 +361,7 @@ table.with.badges <-
           
         }
         
-        # # add SJR
-        # if (show.SJR == TRUE) {
-        #   SJR_id <-
-        #     scimago[grep(gsub("-", "", substr(my_dois_works$issn[ix], 1, 9)), scimago$Issn), 2][1]
-        #   SJR <-
-        #     scimago[grep(gsub("-", "", substr(my_dois_works$issn[ix], 1, 9)), scimago$Issn), 6][1]
-        #   cat(
-        #     "<a target=\"_blank\" href=\"https://www.scimagojr.com/journalsearch.php?q=",
-        #     SJR_id,
-        #     "&tip=sid&clean=0\" style=\"border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:white; border-color:rgb(216,124,78); background-color:rgb(216,124,78);\"> SJR <br>",
-        #     paste0(ifelse(
-        #       identical(SJR, numeric(0)) |
-        #         all(is.na(SJR)), "?", SJR
-        #     )),
-        #     "</a>",
-        #     sep = ""
-        #   )
-        # }
-        
+        # add SJR
         if (show.SJR == TRUE) {
           SJR_id <-
             scimago[grep(gsub("-", "", substr(my_dois_works$issn[ix], 1, 9)), scimago$Issn), 2][1]
@@ -375,7 +373,7 @@ table.with.badges <-
               identical(SJR, numeric(0)) |
                 all(is.na(SJR)), "0?", SJR_id
             )),
-            "&amp;tip=sid&amp;exact=no\" target=\"_blank\" title=\"SCImago Journal &amp; Country Rank\"><img border=\"0\" height=\"80px;\" src=\"https://www.scimagojr.com/journal_img.php?id=",
+            "&amp;tip=sid&amp;exact=no\" target=\"_blank\" title=\"SCImago Journal &amp; Country Rank\"><img border=\"0\" height=\"64px;\" src=\"https://www.scimagojr.com/journal_img.php?id=",
             paste0(ifelse(
               identical(SJR, numeric(0)) |
                 all(is.na(SJR)), "0", SJR_id
@@ -400,27 +398,6 @@ table.with.badges <-
             sep = ""
           )
         }
-        
-        # add OPEN ACESS badge
-        tryCatch(
-          expr = {
-            my_doi_oa <-
-              roadoi::oadoi_fetch(dois = my_dois_works$doi[ix], email = "arthur_sf@icloud.com")
-            if (my_doi_oa$is_oa) {
-              cat(
-                "<a style=\"display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; padding:0.1em 0.3em 0.1em 0.3em;\" href=\"",
-                paste0("https://doi.org/", my_dois_works$doi[ix]),
-                "\" target=\"_blank\">",
-                "<img height=\"64px;\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png\">",
-                "</a>",
-                sep = ""
-              )
-            }
-          },
-          error = function(e) {
-            
-          }
-        )
         
         # close the NOBR element for the badges
         cat("</nobr>")
