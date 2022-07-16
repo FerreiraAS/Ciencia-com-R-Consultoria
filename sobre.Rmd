@@ -34,6 +34,7 @@ library(readxl)
 library(roadoi)
 library(rorcid)
 library(tidyverse)
+library(tools)
 library(usethis)
 ```
 
