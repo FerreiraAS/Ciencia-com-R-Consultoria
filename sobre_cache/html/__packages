@@ -31,4 +31,5 @@ readr
 purrr
 stringr
 forcats
+tools
 usethis

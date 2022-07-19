@@ -1,6 +1,6 @@
 # read SCImago csv file (download from https://www.scimagojr.com)
 citescore <-
-  read_excel("CiteScore/extlistJune2022.xlsx", sheet = 1)
+  read_excel("CiteScore/extlistJuly2022.xlsx", sheet = 1)
 citescore <- janitor::clean_names(citescore)
 
 # get columns
