@@ -1,16 +1,15 @@
 ---
-title: Statistics DIY
+title: "Ciência com R"
 bibliography:
   - references.bib
   - grateful-refs.bib
 link-citations: yes
 output:
   html_document:
-    code_folding: none
     toc: false
 ---
 
-```{css, echo=FALSE}
+```{css, echo = FALSE}
 body {
   font-size: 2em;
 }
@@ -29,7 +28,7 @@ source("Scripts/social-media-sharing.R")
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-**Statistics DIY** (*do it yourself*) é um projeto que tem como objetivo dar maior independência ao pesquisador na elaboração de seus projetos, auxiliando no desenvolvimento das habilidades de elaboração de estudos e trabalhos científicos, sejam acadêmicos ou profissionais.
+**Ciência com R** é um projeto que tem como objetivo dar maior independência ao pesquisador na elaboração de seus projetos, auxiliando no desenvolvimento das habilidades de elaboração de estudos e trabalhos científicos, sejam acadêmicos ou profissionais.
 <br>
 <br>
 Este projeto é direcionado a alunos de todo os níveis - graduação e pós-graduação - e pesquisadores em todas as áreas, com ênfase na Área de Saúde, que pretendem elaborar uma análise estatística que embase e valide a conclusão do seu trabalho acadêmico – monografia, dissertação, tese ou artigo.
@@ -42,7 +41,7 @@ Nessa plataforma estarão disponíveis três ambientes distintos.
 
 <br>
 
-### **1. Consultoria**
+### **1. Assessoria**
 
 *Proposta customizada para auxílio em todas as etapas da elaboração do trabalho, em acordo com seu tema, objetivo e prazo*
 

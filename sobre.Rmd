@@ -1,12 +1,11 @@
 ---
-title: Sobre
+title: "Sobre"
 bibliography:
   - references.bib
   - grateful-refs.bib
 link-citations: yes
 output:
   html_document:
-    code_folding: none
     toc: false
 ---
 
@@ -18,24 +17,52 @@ body {
 
 <!--read additional files-->
 ```{r packages-sources, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
-# read packages
-library(anytime)
-library(dplyr)
-library(gridExtra)
-library(hrbrthemes)
-library(httpuv)
-library(janitor)
-library(knitr)
-library(kableExtra)
-library(lubridate)
-library(magrittr)
-library(plyr)
-library(readxl)
-library(roadoi)
-library(rorcid)
-library(tidyverse)
-library(tools)
-library(usethis)
+# most packages work fine if installed from CRAN
+packs.cran <-
+  c(
+    "anytime",
+    "dplyr",
+    "gridExtra",
+    "hrbrthemes",
+    "httpuv",
+    "janitor",
+    "knitr",
+    "kableExtra",
+    "lubridate",
+    "magrittr",
+    "plyr",
+    "readxl",
+    "roadoi",
+    "rorcid",
+    "tidyverse",
+    "tools",
+    "usethis"
+  )
+
+for (i in 1:length(packs.cran)) {
+  if (!require(packs.cran[i], character.only = TRUE, quietly = TRUE))
+    install.packages(packs.cran[i], character.only = TRUE)
+}
+
+# other packages work better if installed from github
+packs.git <-
+  c(
+    "packup",
+    "rcrossref"
+    )
+
+if (!require("packup", character.only = TRUE, quietly = TRUE))
+  devtools::install_github("milesmcbain/packup")
+
+if (!require("rcrossref", character.only = TRUE, quietly = TRUE))
+  devtools::install_github("ropensci/rcrossref")
+
+# load all libraries
+packs <- c(packs.cran, packs.git)
+
+for (i in 1:length(packs)) {
+  library(packs[i], character.only = TRUE)
+}
 ```
 
 <!--read additional files-->
@@ -47,7 +74,7 @@ source("Scripts/webqualis.R", local = knitr::knit_global())
 
 <br>
 
-### **Sobre mim** {#autor}
+### **Bio** {#autor}
 
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
@@ -100,39 +127,39 @@ Experiência na área de Fisioterapia e Terapia Ocupacional, atuando principalme
 
 `r library(fontawesome); fa("wave-square", margin_right = "0.1em")` Processamento de sinais biomédicos
 
-`r library(fontawesome); fa("walking", margin_right = "0.1em")` Movimento funcional humano
+`r library(fontawesome); fa("person-walking", margin_right = "0.1em")` Movimento funcional humano
 
 `r library(fontawesome); fa("user-injured", margin_right = "0.1em")` Distúrbios musculoesqueléticos
 
-`r library(fontawesome); fa("heartbeat", margin_right = "0.1em")` Doenças cardiovasculares
+`r library(fontawesome); fa("heart-pulse", margin_right = "0.1em")` Doenças cardiovasculares
 
-`r library(fontawesome); fa("user-md", margin_right = "0.1em")` Medicina tradicional (chinesa)
+`r library(fontawesome); fa("user-doctor", margin_right = "0.1em")` Medicina tradicional (chinesa)
 
 <br>
 
 Membro efetivo das seguintes entidades:
 
-`r library(emo); flag("Brazil")` Associação Brasileira de Pesquisa e Pós-Graduação em Fisioterapia  (ABRAPG-FT) &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://abrapg-ft.org.br/portal/)
+`r library(emo); flag("Brazil")` Associação Brasileira de Pesquisa e Pós-Graduação em Fisioterapia  (ABRAPG-FT) &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://abrapg-ft.org.br/portal/)
 
-`r library(emo); flag("United Kingdom")` Committee on Publication Ethics (COPE) &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://publicationethics.org)
+`r library(emo); flag("United Kingdom")` Committee on Publication Ethics (COPE) &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://publicationethics.org)
 
-`r library(emo); flag("United Kingdom")` Royal Statistical Society (RSS) &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://rss.org.uk)
+`r library(emo); flag("United Kingdom")` Royal Statistical Society (RSS) &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://rss.org.uk)
 
 <br>
 
 Compõe o corpo editoral dos periódicos internacionais e nacionais:
 
-`r library(emo); flag("Brazil")` Fisioterapia e Pesquisa &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.scielo.br/journal/fp/about/#editors)
+`r library(emo); flag("Brazil")` Fisioterapia e Pesquisa &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.scielo.br/journal/fp/about/#editors)
 
-`r library(emo); flag("United Kingdom")` Scientific Reports &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.nature.com/srep/about/editors)
+`r library(emo); flag("United Kingdom")` Scientific Reports &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.nature.com/srep/about/editors)
 
-`r library(emo); flag("Switzerland")` Frontiers in Rehabilitation Sciences &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.frontiersin.org/research-topics/26395/systemic-effects-and-disabilities-in-long-covid-syndrome-current-approaches-and-clinical-challenges)
+`r library(emo); flag("Switzerland")` Frontiers in Rehabilitation Sciences &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.frontiersin.org/research-topics/26395/systemic-effects-and-disabilities-in-long-covid-syndrome-current-approaches-and-clinical-challenges)
 
-`r library(emo); flag("Egypt")` Evidence-Based Complementary and Alternative Medicine &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.hindawi.com/journals/ecam/editors/)
+`r library(emo); flag("Egypt")` Evidence-Based Complementary and Alternative Medicine &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.hindawi.com/journals/ecam/editors/)
 
-`r library(emo); flag("Switzerland")` Chinese Journal of Integrative Medicine &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.springer.com/journal/11655/editors)
+`r library(emo); flag("Switzerland")` Chinese Journal of Integrative Medicine &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.springer.com/journal/11655/editors)
 
-`r library(emo); flag("Hong Kong")` Journal of Integrative Medicine &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.journals.elsevier.com/journal-of-integrative-medicine/editorial-board)
+`r library(emo); flag("Hong Kong")` Journal of Integrative Medicine &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.journals.elsevier.com/journal-of-integrative-medicine/editorial-board)
 
 <br>
 
@@ -145,7 +172,7 @@ Compõe o corpo editoral dos periódicos internacionais e nacionais:
 
 <br>
 
-### **Minhas revisões** {#revisor}
+### **Revisor de periódicos** {#revisor}
 
 <br>
 
@@ -166,11 +193,10 @@ source("Scripts/reviewer-board.R")
 
 <br>
 
-### **Minhas publicações** {#artigos .tabset}
+### **Autoria em Publicações** {#artigos .tabset}
 
 ```{r read-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE}
 # baixa todos os artigos (com repetições)
-my_orcid <- c("0000-0001-7014-2002")
 my_works <- rorcid::works(my_orcid) %>%
   as_tibble() %>%
   janitor::clean_names() %>%

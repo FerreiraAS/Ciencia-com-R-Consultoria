@@ -1,12 +1,11 @@
 ---
-title: Conceitos
+title: "Conceitos"
 bibliography:
   - references.bib
   - grateful-refs.bib
 link-citations: yes
 output:
   html_document:
-    code_folding: hide
     toc: true
 ---
 
@@ -43,7 +42,7 @@ source("Scripts/social-media-sharing.R")
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -54,7 +53,7 @@ source("Scripts/social-media-sharing.R")
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -207,7 +206,7 @@ Compare as tabelas a seguir:
 
 <br>
 
-#### `r library(fontawesome); fa("times", fill = "red", margin_right = "0.1em")` *Evite*
+#### `r library(fontawesome); fa("xmark", fill = "red", margin_right = "0.1em")` *Evite*
 
 ```{r tabela.evite, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
 # cria a tabela de exemplos
@@ -223,7 +222,7 @@ kable(table.final, align = "l", format = "html", escape = FALSE) %>%
   row_spec(0, background = "#2C3E50", bold = TRUE, color = "white")
 ```
 
-#### `r library(fontawesome); fa("check-square", fill = "green", margin_right = "0.1em")` *Recomendado*
+#### `r library(fontawesome); fa("square-check", fill = "green", margin_right = "0.1em")` *Recomendado*
 
 ```{r tabela.recomendada, echo = TRUE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
 # cria a tabela de exemplos
@@ -249,7 +248,7 @@ Sugestões finais incluem:
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -270,7 +269,7 @@ Sugestões finais incluem:
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -281,7 +280,7 @@ Sugestões finais incluem:
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -319,7 +318,7 @@ ggplot() +
   ggtitle("Beta", subtitle = "Função densidade de probabilidade")
 ```
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -330,7 +329,7 @@ ggplot() +
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -349,7 +348,7 @@ ggplot() +
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -360,7 +359,7 @@ ggplot() +
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -732,7 +731,7 @@ A medida de pressão arterial bilateral resulta em um conjunto de valores pontua
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -751,7 +750,7 @@ A medida de pressão arterial bilateral resulta em um conjunto de valores pontua
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -762,7 +761,7 @@ A medida de pressão arterial bilateral resulta em um conjunto de valores pontua
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -781,7 +780,7 @@ A medida de pressão arterial bilateral resulta em um conjunto de valores pontua
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -792,7 +791,7 @@ A medida de pressão arterial bilateral resulta em um conjunto de valores pontua
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -811,7 +810,7 @@ A medida de pressão arterial bilateral resulta em um conjunto de valores pontua
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -822,7 +821,7 @@ A medida de pressão arterial bilateral resulta em um conjunto de valores pontua
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 

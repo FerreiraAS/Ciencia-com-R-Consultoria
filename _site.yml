@@ -1,12 +1,11 @@
 ---
-title: "Ferreira AS | Statístics DIY"
+title: "Ciência com R | Ferreira AS"
 date: '`r format(Sys.Date())`'
-name: "stat-diy"
+name: "ASF-R"
 author:
   - name: "Arthur de Sá Ferreira"
-  - email: arthur_sfd@icloud.com
-repository_url: https://rehab-tech.github.io/statisticsDIY/
-source_url: true
+  - email: "arthur_sf@icloud.com"
+repository_url: "https://github.com/FerreiraAS/codes"
 creative_commons: CC BY-NC-SA
 output_dir: "docs"
 include:
@@ -21,58 +20,57 @@ bibliography:
   - references.bib
   - grateful-refs.bib
 link-citations: yes
-search: true
 navbar:
   left:
     - text: ""
       icon: "fa-home"
       href: index.html
-    - text: "Consultoria"
-      href: [consultoria.html]
+    - text: "Assessoria"
+      href: [assessoria.html]
       menu:
         - text: "Estimativa de tamanho de amostra"
-          href: [consultoria.html#calculo]
+          href: [assessoria.html#calculo]
         - text: "Plano de análise estatística"
-          href: [consultoria.html#plano]
+          href: [assessoria.html#plano]
         - text: "Simulação de estudos"
-          href: [consultoria.html#simulacao]
+          href: [assessoria.html#simulacao]
         - text: "Análise estatística de dados"
-          href: [consultoria.html#analise]
+          href: [assessoria.html#analise]
         - text: "Mentoria"
-          href: [consultoria.html#mentoria]
-    - text: "Crie scripts"
-      href: [run.html]
+          href: [assessoria.html#mentoria]
+    - text: "R scripts"
+      href: [rodar.html]
       menu:
         - text: "Rode na nuvem"
-          href: [run.html#nuvem]
+          href: [rodar.html#nuvem]
         - text: "Rode no computador"
-          href: [run.html#local]
-    - text: "Reutilize meus scripts"
+          href: [rodar.html#local]
+    - text: "Meus scripts"
       menu:
         - text: "Tabela 2x2"
-          href: [https://github.com/rehab-tech/CT/]
+          href: [https://github.com/FerreiraAS/CT]
         - text: "ICC"
-          href: [https://github.com/rehab-tech/ICC/]
+          href: [https://github.com/FerreiraAS/ICC]
         - text: "RCT"
-          href: [https://github.com/rehab-tech/RCT/]
+          href: [https://github.com/FerreiraAS/RCT]
         - text: "ROC"
-          href: [https://github.com/rehab-tech/ROC/]
+          href: [https://github.com/FerreiraAS/ROC]
   right:
-    - text: "Arthur Sá Ferreira, PhD"
+    - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]
       menu:
-        - text: "Sobre mim"
+        - text: "Bio"
           href: [sobre.html#autor]
-        - text: "Minhas revisões"
+        - text: "Revisor de periódicos"
           href: [sobre.html#revisor]
-        - text: "Minhas publicações"
+        - text: "Autoria em Publicações"
           href: [sobre.html#artigos]
     - text: ""
       icon: "fa-envelope"
       href: [mailto:arthur_sf@icloud.com]
     - text: ""
       icon: "fa-github"
-      href: [https://github.com/rehab-tech/]
+      href: [https://github.com/FerreiraAS]
 
 output:
   html_document:
@@ -85,6 +83,7 @@ output:
     toc: true
     toc_depth: 3
     toc_float: true
+    toc_collapsed: false
     edit: null
     sharing:
       facebook: yes

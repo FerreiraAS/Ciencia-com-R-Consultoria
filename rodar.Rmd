@@ -1,12 +1,11 @@
 ---
-title: Rode scripts
+title: "R Scripts"
 bibliography:
   - references.bib
   - grateful-refs.bib
 link-citations: yes
 output:
   html_document:
-    code_folding: none
     toc: true
 ---
 
@@ -35,7 +34,7 @@ source("Scripts/social-media-sharing.R")
 
 <iframe width='100%' height='300' src='https://rdrr.io/snippets/embed/' frameborder='0'></iframe>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 
@@ -46,13 +45,13 @@ source("Scripts/social-media-sharing.R")
 
 <br>
 
-1. Baixe e instale a versão estável mais recente do **R `r x <- readLines("http://cran.r-project.org/sources.html"); rls <- x[grep("latest release", x) + 1L]; newver <- gsub("(.*R-|\\.tar\\.gz.*)", "", rls); newver`** &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://cran.r-project.org/)
+1. Baixe e instale a versão estável mais recente do **R `r x <- readLines("http://cran.r-project.org/sources.html"); rls <- x[grep("latest release", x) + 1L]; newver <- gsub("(.*R-|\\.tar\\.gz.*)", "", rls); newver`** &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://cran.r-project.org/)
 
-2. Baixe e instale a versão estável mais recente do **RStudio** &nbsp; [`r library(fontawesome); fa("external-link-alt")`](https://www.rstudio.com)
+2. Baixe e instale a versão estável mais recente do **RStudio** &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.rstudio.com)
 
 3. Abra o Rstudio e, na janela do console, digite e/ou copie-cole os roteiros apresentados em cada seção.
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("arrow-alt-circle-up")`</b></a>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 <br>
 

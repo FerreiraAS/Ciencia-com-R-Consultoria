@@ -1,18 +1,17 @@
 ---
-title: Consultoria
+title: "Assessoria"
 bibliography:
   - references.bib
   - grateful-refs.bib
 link-citations: yes
 output:
   html_document:
-    code_folding: none
-    toc: false
+    toc: true
 ---
 
 ```{css, echo = FALSE}
 body {
-font-size: 2em;
+  font-size: 2em;
 }
 ```
 
@@ -50,7 +49,7 @@ Será feito um orçamento, discriminando o trabalho de consultoria a ser forneci
 <br>
 
 ## {#plano}
-<h3>**`r library(fontawesome); fa("file-alt", margin_right = "0.1em")` Plano de análise estatística**</h3>
+<h3>**`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise estatística**</h3>
 <p>*Precisa escolher e elaborar os parâmetros e testes para sua análise estatística?*</p>
 
 <br>
@@ -68,7 +67,7 @@ Será feito um orçamento, discriminando o trabalho de consultoria a ser forneci
 <br>
 
 ## {#mentoria}
-<h3>**`r library(fontawesome); fa("chalkboard-teacher", margin_right = "0.1em")` Mentoria**</h3>
+<h3>**`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
 <p>*Precisa de orientações detalhadas para delineamento, análise, redação e interpretação estatística?*</p>
 
 <br>
