@@ -1,5 +1,5 @@
 ---
-title: "Ciência com R"
+title: "**Ciência com R**"
 bibliography:
   - references.bib
   - grateful-refs.bib

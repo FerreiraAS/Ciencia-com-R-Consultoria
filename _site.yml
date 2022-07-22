@@ -81,9 +81,8 @@ output:
     css:
       - style.css
     toc: true
-    toc_depth: 3
+    toc_depth: 4
     toc_float: true
-    toc_collapsed: false
     edit: null
     sharing:
       facebook: yes

@@ -43,31 +43,31 @@ Será feito um orçamento, discriminando o trabalho de consultoria a ser forneci
 <br>
 
 ## {#calculo}
-<h3>**`r library(fontawesome); fa("users", margin_right = "0.1em")` Estimativa de tamanho de amostra**</h3>
+<h2>**`r library(fontawesome); fa("users", margin_right = "0.1em")` Tamanho amostral**</h3>
 <p>*Quer definir o número necessário de participantes para realizar sua pesquisa?*</p>
 
 <br>
 
 ## {#plano}
-<h3>**`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise estatística**</h3>
+<h2>**`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise**</h3>
 <p>*Precisa escolher e elaborar os parâmetros e testes para sua análise estatística?*</p>
 
 <br>
 
 ## {#simulacao}
-<h3>**`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação de estudos**</h3>
+<h2>**`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação**</h3>
 <p>*Pretende testar seu plano de análise estatística em dados simulados?*</p>
 
 <br>
 
 ## {#analise}
-<h3>**`r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Análise estatística de dados**</h3>
+<h2>**`r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Análise estatística**</h3>
 <p>*Quer analisar os dados coletados de sua pesquisa?*</p>
 
 <br>
 
 ## {#mentoria}
-<h3>**`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
+<h2>**`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
 <p>*Precisa de orientações detalhadas para delineamento, análise, redação e interpretação estatística?*</p>
 
 <br>
