@@ -38,13 +38,6 @@ navbar:
           href: [assessoria.html#analise]
         - text: "Mentoria"
           href: [assessoria.html#mentoria]
-    - text: "R scripts"
-      href: [rodar.html]
-      menu:
-        - text: "Rode na nuvem"
-          href: [rodar.html#nuvem]
-        - text: "Rode no computador"
-          href: [rodar.html#local]
     - text: "Meus scripts"
       menu:
         - text: "Tabela 2x2"
@@ -55,7 +48,6 @@ navbar:
           href: [https://github.com/FerreiraAS/RCT]
         - text: "ROC"
           href: [https://github.com/FerreiraAS/ROC]
-  right:
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]
       menu:
@@ -65,6 +57,7 @@ navbar:
           href: [sobre.html#revisor]
         - text: "Autoria em Publicações"
           href: [sobre.html#artigos]
+  right:
     - text: ""
       icon: "fa-envelope"
       href: [mailto:arthur_sf@icloud.com]

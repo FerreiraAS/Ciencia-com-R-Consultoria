@@ -20,7 +20,7 @@ body {
 <!--script for sharing-->
 <p align="right">
 ```{r share, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis"}
-home <- "rehab-tech.github.io/statisticsDIY/"
+home <- "https://github.com/FerreiraAS/codes"
 source("Scripts/social-media-sharing.R")
 ```
 </p>

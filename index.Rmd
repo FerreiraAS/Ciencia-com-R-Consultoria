@@ -17,55 +17,32 @@ body {
 
 <br>
 
-<!--script for sharing-->
-<p align="right">
-```{r share, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis"}
-home <- "rehab-tech.github.io/statisticsDIY/"
-source("Scripts/social-media-sharing.R")
-```
-</p>
-
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-**Ciência com R** é um projeto que tem como objetivo dar maior independência ao pesquisador na elaboração de seus projetos, auxiliando no desenvolvimento das habilidades de elaboração de estudos e trabalhos científicos, sejam acadêmicos ou profissionais.
+**Ciência com R** tem por objetivo dar maior independência na elaboração de seus projetos, auxiliar no desenvolvimento das habilidades de elaboração de trabalhos científicos, acadêmicos ou profissionais.
 <br>
 <br>
 Este projeto é direcionado a alunos de todo os níveis - graduação e pós-graduação - e pesquisadores em todas as áreas, com ênfase na Área de Saúde, que pretendem elaborar uma análise estatística que embase e valide a conclusão do seu trabalho acadêmico – monografia, dissertação, tese ou artigo.
 <br>
 <br>
-Nessa plataforma estarão disponíveis três ambientes distintos.
 
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-<br>
-
-### **1. Assessoria**
-
-*Proposta customizada para auxílio em todas as etapas da elaboração do trabalho, em acordo com seu tema, objetivo e prazo*
-
-Caso seja de interesse, <a href="mailto:arthur_sf@icloud.com?subject=Cotação de serviço">solicite</a> uma proposta personalizada para auxílio em todas as etapas da elaboração do trabalho.
-
-Em acordo com o tema, prazos e objetivo do projeto, o orçamento será feito discriminando as etapas do trabalho a serem fornecidas, a partir de um acordo prévio com o solicitante, para completo atendimento do seu interesse e a viabilidade de execução da consultoria.
-
-<br>
-
-### **2. Crie scripts**
-
-*Inicie ou desenvolva habilidades de programação com o multiversátil programa R*
-
-Disponibilização de roteiros e links para download dos programas R e RStudio e de campo preparado para você rodar seus modelos próprios diretamente na nuvem.
-
-<br>
-
-### **3. Reutilize meus scripts**
-
-*Analise dados reutilizando scripts implementados e publicados em pesquisas anteriores*
-
-Roteiros para download dos scripts em R para você rodar com seus próprios dados, com links para os artigos em que foram utilizados.
-
-<br>
+<table style="width=100%;">
+  <colgroup>
+       <col span="1" style="width: 50%;">
+       <col span="1" style="width: 50%;">
+    </colgroup>
+  <tr>
+    <th style="background-color:#2C3E50;"><font color="white">Reutilize meus scripts</th>
+    <th style="background-color:#2C3E50"><font color="white">Assessoria científica</th> 
+  </tr>
+  <tr style="vertical-align:top">
+    <td><br>*Analise dados reutilizando scripts implementados e publicados em pesquisas anteriores<br><br>*</td>
+    <td><br>*Proposta customizada para auxílio em todas as etapas da elaboração do trabalho, em acordo com seu tema, objetivo e prazo<br><br>*</td> 
+  </tr>
+  <tr style="vertical-align:top">
+    <td>Roteiros para download dos scripts em R para você rodar com seus próprios dados, com links para os artigos em que foram utilizados.
+</td>
+    <td>Em acordo com o tema, prazos e objetivo do projeto, o orçamento será feito discriminando as etapas do trabalho a serem fornecidas, a partir de um acordo prévio com o solicitante, para completo atendimento do seu interesse e a viabilidade de execução da consultoria. *<a href="mailto:arthur_sf@icloud.com?subject=Cotação">Clique aqui</a>*</td>
+  </tr>
+</table>
 
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
