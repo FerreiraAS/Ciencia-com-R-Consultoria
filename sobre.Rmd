@@ -15,6 +15,8 @@ body {
 }
 ```
 
+<br>
+
 <!--read additional files-->
 ```{r packages-sources, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
 # most packages work fine if installed from CRAN
@@ -71,8 +73,6 @@ source("Scripts/sjr.R", local = knitr::knit_global())
 source("Scripts/citescore.R", local = knitr::knit_global())
 source("Scripts/webqualis.R", local = knitr::knit_global())
 ```
-
-<br>
 
 ### **Bio** {#autor}
 

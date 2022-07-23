@@ -6,7 +6,7 @@ bibliography:
 link-citations: yes
 output:
   html_document:
-    toc: true
+    toc: false
 ---
 
 ```{css, echo = FALSE}
@@ -17,60 +17,38 @@ body {
 
 <br>
 
-<!--script for sharing-->
-<p align="right">
-```{r share, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis"}
-home <- "https://github.com/FerreiraAS/codes"
-source("Scripts/social-media-sharing.R")
-```
-</p>
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+Solicite uma proposta, informando o tema e objetivos da sua pesquisa, e também os prazos e o apoio desejado, se em todas ou em etapas específicas do mesmo.
+
+Será feito um orçamento, discriminando o trabalho de assessoria a ser fornecido, por etapa do projeto, de modo a atender à solicitação e à viabilidade de execução da assessoria.
+
+<center> **Solicite um orçamento &nbsp;** <a href="mailto:arthur_sf@icloud.com?subject=Orçamento">**`r library(fontawesome); fa("paper-plane", margin_right = "0.1em")` **</a> </center>
 
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-<br>
-
-Área para solicitação de consultoria customizada para auxílio na elaboração do seu Projeto.
-
-Solicite uma proposta, informando o tema e objetivos da sua pesquisa, e também os prazos e o apoio desejado, se em todas ou em etapas específicas do mesmo.
-
-Será feito um orçamento, discriminando o trabalho de consultoria a ser fornecido, por etapa do projeto, de modo a atender à solicitação e à viabilidade de execução da consultoria.
-
-<br>
-
-<center> **Solicite um orçamento!** <a href="mailto:arthur_sf@icloud.com?subject=Orçamento: StatisticsDIY">**`r library(fontawesome); fa("paper-plane", margin_right = "0.1em")` **</a> </center>
-
-<br>
-
-## {#calculo}
-<h2>**`r library(fontawesome); fa("users", margin_right = "0.1em")` Tamanho amostral**</h3>
+## {#calculo .unlisted .unnumbered}
+<h3>**`r library(fontawesome); fa("users", margin_right = "0.1em")` Tamanho amostral**</h3>
 <p>*Quer definir o número necessário de participantes para realizar sua pesquisa?*</p>
 
-<br>
-
-## {#plano}
-<h2>**`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise**</h3>
+## {#plano .unlisted .unnumbered}
+<h3>**`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise**</h3>
 <p>*Precisa escolher e elaborar os parâmetros e testes para sua análise estatística?*</p>
 
-<br>
-
-## {#simulacao}
-<h2>**`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação**</h3>
+## {#simulacao .unlisted .unnumbered}
+<h3>**`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação**</h3>
 <p>*Pretende testar seu plano de análise estatística em dados simulados?*</p>
 
-<br>
-
-## {#analise}
-<h2>**`r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Análise estatística**</h3>
+## {#analise .unlisted .unnumbered}
+<h3>**`r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Análise estatística**</h3>
 <p>*Quer analisar os dados coletados de sua pesquisa?*</p>
 
-<br>
-
-## {#mentoria}
-<h2>**`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
+## {#mentoria .unlisted .unnumbered}
+<h3>**`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
 <p>*Precisa de orientações detalhadas para delineamento, análise, redação e interpretação estatística?*</p>
 
-<br>
 <br>
 
 <!--script for generating HORIZONTAL LINE-->

@@ -6,7 +6,7 @@ author:
   - name: "Arthur de Sá Ferreira"
   - email: "arthur_sf@icloud.com"
 repository_url: "https://github.com/FerreiraAS/codes"
-creative_commons: CC BY-NC-SA
+creative_commons: "CC BY-NC-SA"
 output_dir: "docs"
 include:
   - header.html
@@ -24,7 +24,17 @@ navbar:
   left:
     - text: ""
       icon: "fa-home"
-      href: index.html
+      href: [index.html]
+    - text: "Meus scripts"
+      menu:
+        - text: "Tabela 2x2"
+          href: [https://github.com/FerreiraAS/CT]
+        - text: "ICC"
+          href: [https://github.com/FerreiraAS/ICC]
+        - text: "RCT"
+          href: [https://github.com/FerreiraAS/RCT]
+        - text: "ROC"
+          href: [https://github.com/FerreiraAS/ROC]
     - text: "Assessoria"
       href: [assessoria.html]
       menu:
@@ -38,16 +48,6 @@ navbar:
           href: [assessoria.html#analise]
         - text: "Mentoria"
           href: [assessoria.html#mentoria]
-    - text: "Meus scripts"
-      menu:
-        - text: "Tabela 2x2"
-          href: [https://github.com/FerreiraAS/CT]
-        - text: "ICC"
-          href: [https://github.com/FerreiraAS/ICC]
-        - text: "RCT"
-          href: [https://github.com/FerreiraAS/RCT]
-        - text: "ROC"
-          href: [https://github.com/FerreiraAS/ROC]
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]
       menu:
@@ -74,7 +74,7 @@ output:
     css:
       - style.css
     toc: true
-    toc_depth: 4
+    toc_depth: 3
     toc_float: true
     edit: null
     sharing:

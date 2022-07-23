@@ -40,7 +40,7 @@ Este projeto é direcionado a alunos de todo os níveis - graduação e pós-gra
   <tr style="vertical-align:top">
     <td>Roteiros para download dos scripts em R para você rodar com seus próprios dados, com links para os artigos em que foram utilizados.
 </td>
-    <td>Em acordo com o tema, prazos e objetivo do projeto, o orçamento será feito discriminando as etapas do trabalho a serem fornecidas, a partir de um acordo prévio com o solicitante, para completo atendimento do seu interesse e a viabilidade de execução da consultoria. *<a href="mailto:arthur_sf@icloud.com?subject=Cotação">Clique aqui</a>*</td>
+    <td>Em acordo com o seu tema, prazos e objetivo do projeto, o orçamento será feito discriminando as etapas do trabalho a serem fornecidas, para completo atendimento do seu interesse e a viabilidade de execução da assessoria *<a href="mailto:arthur_sf@icloud.com?subject=Cotação">Clique aqui</a>*</td>
   </tr>
 </table>
 
