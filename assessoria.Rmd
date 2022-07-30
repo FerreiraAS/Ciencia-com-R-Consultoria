@@ -77,11 +77,11 @@ body {
 
 ### {#scripts-estatistica .unlisted .unnumbered}
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Computação estatística**
-<p>*Revisão/sugestão de códigos em R | Criação de códigos em R *</p>
+<p>*Eficácia | Efetividade | Confiabilidade | Concordância | Acurácia | Validade | Desempenho diagnóstico | Meta-análise | Revisão/sugestão de códigos em R | Criação de códigos em R *</p>
 
 ### {#scripts-sinais .unlisted .unnumbered}
-### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Processamento de sinais**
-<p>*Revisão/sugestão de códigos em R | Criação de códigos em R *</p>
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Processamento de sinais biomédicos**
+<p>*Eletromiografia de superfície | Eletrogoniometria | Cinemetria | Revisão/sugestão de códigos em R | Criação de códigos em R *</p>
 
 ### {.unlisted .unnumbered}
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**

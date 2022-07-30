@@ -58,7 +58,7 @@ navbar:
           menu:
             - text: "Computação estatística"
               href: [assessoria.html#scripts-estatistica]
-            - text: "Processamento de sinais"
+            - text: "Processamento de sinais biomédicos"
               href: [assessoria.html#scripts-sinais]
         - text: "Manuscrito"
           href: [assessoria.html#manuscrito]

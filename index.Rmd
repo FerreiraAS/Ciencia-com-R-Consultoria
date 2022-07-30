@@ -34,8 +34,8 @@ Este projeto é direcionado a alunos de todo os níveis - graduação e pós-gra
     <th style="background-color:#2C3E50"><font color="white">Assessoria científica</th> 
   </tr>
   <tr style="vertical-align:top">
-    <td><br>*Analise dados reutilizando scripts implementados e publicados em pesquisas anteriores<br><br>*</td>
-    <td><br>*Proposta customizada para auxílio em todas as etapas da elaboração do trabalho, em acordo com seu tema, objetivo e prazo<br><br>*</td> 
+    <td><br>*Analise dados reutilizando scripts implementados e publicados em pesquisas anteriores*<br><br></td>
+    <td><br>*Proposta customizada para auxílio em todas as etapas da elaboração do trabalho, em acordo com seu tema, objetivo e prazo*<br><br></td> 
   </tr>
   <tr style="vertical-align:top">
     <td>Roteiros para download dos scripts em R para você rodar com seus próprios dados, com links para os artigos em que foram utilizados.
