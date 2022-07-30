@@ -17,37 +17,97 @@ body {
 
 <br>
 
+# {#assessoria-projeto .unlisted .unnumbered .tabset .tabset-fade .tabset-pills}
+
+```{css, echo = FALSE}
+  .nav-pills>li>a:hover, .nav-pills>li>a:focus, .nav-pills>li.active>a,     .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+     background-color: #2C3E50;
+     }
+```
+
+## **Projeto de pesquisa** {#projeto-de-pesquisa}
+
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-Solicite uma proposta, informando o tema e objetivos da sua pesquisa, e também os prazos e o apoio desejado, se em todas ou em etapas específicas do mesmo.
+### {#assessoria-projeto .unlisted .unnumbered}
+### **`r library(fontawesome); fa("magnifying-glass", margin_right = "0.1em")` Assessoria para projeto**
+<p>*Revisão/sugestão de conteúdo e métodos | Revisão de estilo científico | Revisão de referências | Formatação de referências com software gerenciador*</p>
 
-Será feito um orçamento, discriminando o trabalho de assessoria a ser fornecido, por etapa do projeto, de modo a atender à solicitação e à viabilidade de execução da assessoria.
+### {#calculo .unlisted .unnumbered}
+### **`r library(fontawesome); fa("users", margin_right = "0.1em")` Estimativa de tamanho amostral**
+<p>*Texto editável | R Script*</p>
 
-<center> **Solicite um orçamento &nbsp;** <a href="mailto:arthur_sf@icloud.com?subject=Orçamento">**`r library(fontawesome); fa("paper-plane", margin_right = "0.1em")` **</a> </center>
+### {#sorteio .unlisted .unnumbered}
+### **`r library(fontawesome); fa("shuffle", margin_right = "0.1em")` Aleatorização em grupos**
+<p>*Texto editável | R Script*</p>
+
+### {#plano .unlisted .unnumbered}
+### **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise estatística**
+<p>*Revisão de objetivos geral/específicos | Plano de análise em texto editável*</p>
+
+### {#simulacao .unlisted .unnumbered}
+### **`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação de estudos**
+<p>*Texto editável | Tabela descritiva | Tabela/gráfico inferencial | R Script*</p>
+
+### {.unlisted .unnumbered}
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
+<p>*Orientação*</p>
 
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-## {#calculo .unlisted .unnumbered}
-<h3>**`r library(fontawesome); fa("users", margin_right = "0.1em")` Tamanho amostral**</h3>
-<p>*Quer definir o número necessário de participantes para realizar sua pesquisa?*</p>
+## **Manuscrito** {#manuscrito}
 
-## {#plano .unlisted .unnumbered}
-<h3>**`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise**</h3>
-<p>*Precisa escolher e elaborar os parâmetros e testes para sua análise estatística?*</p>
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-## {#simulacao .unlisted .unnumbered}
-<h3>**`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação**</h3>
-<p>*Pretende testar seu plano de análise estatística em dados simulados?*</p>
+### {#assessoria-manuscrito .unlisted .unnumbered}
+### **`r library(fontawesome); fa("magnifying-glass", margin_right = "0.1em")` Assessoria para manuscrito**
+<p>*Revisão de estilo científico | Revisão de referências | Formatação de referências com software gerenciador*</p>
 
-## {#analise .unlisted .unnumbered}
-<h3>**`r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Análise estatística**</h3>
-<p>*Quer analisar os dados coletados de sua pesquisa?*</p>
+### {#analise .unlisted .unnumbered}
+### **`r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Análise estatística**
+<p>*Tabela descritiva | Tabela/gráfico inferencial | R Script*</p>
 
-## {#mentoria .unlisted .unnumbered}
-<h3>**`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
-<p>*Precisa de orientações detalhadas para delineamento, análise, redação e interpretação estatística?*</p>
+### {.unlisted .unnumbered}
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
+<p>*Orientação*</p>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## **Submissão** {#submissão}
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+### {#revisão .unlisted .unnumbered}
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Revisão por pares**
+<p>*Revisão de carta-resposta | Revisão/sugestão de referências | Formatação de referências com software gerenciador*</p>
+
+### {.unlisted .unnumbered}
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
+<p>*Orientação*</p>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## **Cotação**
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+### {#cotação .unlisted .unnumbered}
+### **`r library(fontawesome); fa("file-invoice-dollar", margin_right = "0.1em")` Solicite uma cotação**
+
+*Solicite uma proposta, informando o tema e objetivos da sua pesquisa, e também os prazos e o apoio desejado, se em todas ou em etapas específicas do mesmo.*
+
+*Retornaremos um orçamento, discriminando o trabalho de assessoria a ser fornecido, por etapa do projeto, de modo a atender à solicitação e à viabilidade de execução da assessoria.*
+
+<br>
+
+<center> **Contato &nbsp;** <a href="mailto:arthur_sf@icloud.com?subject=Orçamento">**`r library(fontawesome); fa("paper-plane", margin_right = "0.1em")` **</a> </center>
 
 <br>
 
