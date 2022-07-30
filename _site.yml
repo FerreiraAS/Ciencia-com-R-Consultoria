@@ -61,12 +61,12 @@ navbar:
             - text: "Análise estatística de dados"
               href: [assessoria.html#analise]
         - text: "Submissão"
-          href: [assessoria.html#submissão]
+          href: [assessoria.html#submissao]
           menu:
             - text: "Revisão por pares"
-              href: [assessoria.html#revisão]
+              href: [assessoria.html#revisao]
         - text: "Cotação"
-          href: [assessoria.html#cotação]
+          href: [assessoria.html#cotacao]
 
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]

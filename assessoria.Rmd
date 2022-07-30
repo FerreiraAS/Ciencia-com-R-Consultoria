@@ -77,12 +77,12 @@ body {
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-## **Submissão** {#submissão}
+## **Submissão** {#submissao}
 
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-### {#revisão .unlisted .unnumbered}
+### {#revisao .unlisted .unnumbered}
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Revisão por pares**
 <p>*Revisão de carta-resposta | Revisão/sugestão de referências | Formatação de referências com software gerenciador*</p>
 
@@ -93,12 +93,12 @@ body {
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-## **Cotação**
+## **Cotação** {#cotacao}
 
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-### {#cotação .unlisted .unnumbered}
+### {.unlisted .unnumbered}
 ### **`r library(fontawesome); fa("file-invoice-dollar", margin_right = "0.1em")` Solicite uma cotação**
 
 *Solicite uma proposta, informando o tema e objetivos da sua pesquisa, e também os prazos e o apoio desejado, se em todas ou em etapas específicas do mesmo.*
