@@ -17,18 +17,32 @@ body {
 
 <br>
 
-# {#assessoria-projeto .unlisted .unnumbered .tabset .tabset-fade .tabset-pills}
+# {.unlisted .unnumbered}
+
+<center>
+  <div class="d-grid gap-2"">
+    <button class="btn btn-lg btn-primary" type="button" style="width:100%;font-size:1.1em">
+      <a href="mailto:arthur_sf@icloud.com?subject=Cotação">`r library(fontawesome); paste0("Entre em contato e solicite uma cotação &nbsp; ", fa("paper-plane", margin_right = "0.1em"))`
+      </a>
+    </button>
+  </div>
+</center>
 
 ```{css, echo = FALSE}
-  .nav-pills>li>a:hover, .nav-pills>li>a:focus, .nav-pills>li.active>a,     .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
-     background-color: #2C3E50;
-     }
+.nav-pills>li>a:hover,
+.nav-pills>li>a:focus,
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus{
+   background-color: #2C3E50;
+   }
 ```
 
-## **Projeto de pesquisa** {#projeto-de-pesquisa}
+# {#assessoria-projeto .unlisted .unnumbered .tabset .tabset-fade .tabset-pills .tabset}
 
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+<br>
+
+## **Projeto de pesquisa** {#projeto-de-pesquisa}
 
 ### {#assessoria-projeto .unlisted .unnumbered}
 ### **`r library(fontawesome); fa("magnifying-glass", margin_right = "0.1em")` Assessoria para projeto**
@@ -57,10 +71,28 @@ body {
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-## **Manuscrito** {#manuscrito}
+
+
+## **Computação** {#computacao}
+
+### {#scripts-estatistica .unlisted .unnumbered}
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Computação estatística**
+<p>*Revisão/sugestão de códigos em R | Criação de códigos em R *</p>
+
+### {#scripts-sinais .unlisted .unnumbered}
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Processamento de sinais**
+<p>*Revisão/sugestão de códigos em R | Criação de códigos em R *</p>
+
+### {.unlisted .unnumbered}
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
+<p>*Orientação*</p>
 
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+
+
+## **Manuscrito** {#manuscrito}
 
 ### {#assessoria-manuscrito .unlisted .unnumbered}
 ### **`r library(fontawesome); fa("magnifying-glass", margin_right = "0.1em")` Assessoria para manuscrito**
@@ -77,10 +109,9 @@ body {
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-## **Submissão** {#submissao}
 
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+## **Submissão** {#submissao}
 
 ### {#revisao .unlisted .unnumbered}
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Revisão por pares**
@@ -89,27 +120,6 @@ body {
 ### {.unlisted .unnumbered}
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
 <p>*Orientação*</p>
-
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-## **Cotação** {#cotacao}
-
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-### {.unlisted .unnumbered}
-### **`r library(fontawesome); fa("file-invoice-dollar", margin_right = "0.1em")` Solicite uma cotação**
-
-*Solicite uma proposta, informando o tema e objetivos da sua pesquisa, e também os prazos e o apoio desejado, se em todas ou em etapas específicas do mesmo.*
-
-*Retornaremos um orçamento, discriminando o trabalho de assessoria a ser fornecido, por etapa do projeto, de modo a atender à solicitação e à viabilidade de execução da assessoria.*
-
-<br>
-
-<center> **Contato &nbsp;** <a href="mailto:arthur_sf@icloud.com?subject=Orçamento">**`r library(fontawesome); fa("paper-plane", margin_right = "0.1em")` **</a> </center>
-
-<br>
 
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
