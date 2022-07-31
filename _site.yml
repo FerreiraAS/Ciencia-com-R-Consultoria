@@ -53,11 +53,14 @@ navbar:
               href: [assessoria.html#plano]
             - text: "Simulação de estudos"
               href: [assessoria.html#simulacao]
-        - text: "Computação"
+        - text: "Computação estatística"
           href: [assessoria.html#computacao]
           menu:
             - text: "Computação estatística"
               href: [assessoria.html#scripts-estatistica]
+        - text: "Computação biomédica"
+          href: [assessoria.html#computacao]
+          menu:
             - text: "Processamento de sinais biomédicos"
               href: [assessoria.html#scripts-sinais]
         - text: "Manuscrito"

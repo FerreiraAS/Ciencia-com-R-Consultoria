@@ -21,9 +21,9 @@ body {
 
 <center>
   <div class="d-grid gap-2"">
-    <button class="btn btn-lg btn-primary" type="button" style="width:100%;font-size:1.1em">
-      <a href="mailto:arthur_sf@icloud.com?subject=Cotação">`r library(fontawesome); paste0("Entre em contato e solicite uma cotação &nbsp; ", fa("paper-plane", margin_right = "0.1em"))`
-      </a>
+    <button class="btn btn-secondary btn-lg" type="button" style="width:100%;font-size:1.1em">
+      <span href="mailto:arthur_sf@icloud.com?subject=Cotação">`r library(fontawesome); paste0("Entre em contato! &nbsp; ", fa("envelope", margin_right = "0.1em"))`
+      </span>
     </button>
   </div>
 </center>
@@ -42,7 +42,7 @@ body {
 
 <br>
 
-## **Projeto de pesquisa** {#projeto-de-pesquisa}
+## **Projeto** {#projeto-de-pesquisa}
 
 ### {#assessoria-projeto .unlisted .unnumbered}
 ### **`r library(fontawesome); fa("magnifying-glass", margin_right = "0.1em")` Assessoria para projeto**
@@ -73,14 +73,25 @@ body {
 
 
 
-## **Computação** {#computacao}
+## **Computação estatística** {#computacao-estatistica}
 
 ### {#scripts-estatistica .unlisted .unnumbered}
-### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Computação estatística**
-<p>*Eficácia | Efetividade | Confiabilidade | Concordância | Acurácia | Validade | Desempenho diagnóstico | Meta-análise | Revisão/sugestão de códigos em R | Criação de códigos em R *</p>
+### **`r library(fontawesome); fa("table", margin_right = "0.1em")` Computação estatística**
+<p>*Eficácia | Efetividade | Confiabilidade | Concordância | Acurácia | Validade | Desempenho diagnóstico | Meta-análise | Análise de redes | Revisão/sugestão de códigos em R | Criação de códigos em R *</p>
+
+### {.unlisted .unnumbered}
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
+<p>*Orientação*</p>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+
+
+## **Computação biomédica** {#computacao-biomedica}
 
 ### {#scripts-sinais .unlisted .unnumbered}
-### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Processamento de sinais biomédicos**
+### **`r library(fontawesome); fa("chart-line", margin_right = "0.1em")` Processamento de sinais biomédicos**
 <p>*Eletromiografia de superfície | Eletrogoniometria | Cinemetria | Revisão/sugestão de códigos em R | Criação de códigos em R *</p>
 
 ### {.unlisted .unnumbered}
