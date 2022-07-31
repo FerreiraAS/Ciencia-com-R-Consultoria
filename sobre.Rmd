@@ -1,5 +1,5 @@
 ---
-title: "Sobre"
+title: "**Sobre**"
 bibliography:
   - references.bib
   - grateful-refs.bib
@@ -12,6 +12,12 @@ output:
 ```{css, echo = FALSE}
 body {
   font-size: 2em;
+}
+
+div.main-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 ```
 

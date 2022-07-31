@@ -38,43 +38,18 @@ navbar:
     - text: "Assessoria"
       href: [assessoria.html]
       menu:
-        - text: "Opções"
-          href: [assessoria.html#assessoria]
-        - text: "Projeto de pesquisa"
+        - text: "Contato"
+          href: [assessoria.html#contato]
+        - text: "Elaboração de projetos"
           href: [assessoria.html#projeto-de-pesquisa]
-          menu:
-            - text: "Assessoria para projeto"
-              href: [assessoria.html#assessoria-projeto]
-            - text: "Estimativa de tamanho de amostra"
-              href: [assessoria.html#calculo]
-            - text: "Aleatorização em grupos"
-              href: [assessoria.html#sorteio]
-            - text: "Plano de análise estatística"
-              href: [assessoria.html#plano]
-            - text: "Simulação de estudos"
-              href: [assessoria.html#simulacao]
         - text: "Computação estatística"
-          href: [assessoria.html#computacao]
-          menu:
-            - text: "Computação estatística"
-              href: [assessoria.html#scripts-estatistica]
+          href: [assessoria.html#computacao-estatistica]
         - text: "Computação biomédica"
-          href: [assessoria.html#computacao]
-          menu:
-            - text: "Processamento de sinais biomédicos"
-              href: [assessoria.html#scripts-sinais]
-        - text: "Manuscrito"
-          href: [assessoria.html#manuscrito]
-          menu:
-            - text: "Assessoria para manuscrito"
-              href: [assessoria.html#assessoria-manuscrito]
-            - text: "Análise estatística de dados"
-              href: [assessoria.html#analise]
-        - text: "Submissão"
-          href: [assessoria.html#submissao]
-          menu:
-            - text: "Revisão por pares"
-              href: [assessoria.html#revisao]
+          href: [assessoria.html#computacao-biomedica]
+        - text: "Redação de manuscrito"
+          href: [assessoria.html#manuscrito-redacao]
+        - text: "Submissão de manuscritos"
+          href: [assessoria.html#manuscrito-submissao]
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]
       menu:

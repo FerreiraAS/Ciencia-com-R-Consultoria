@@ -1,5 +1,5 @@
 ---
-title: "Assessoria"
+title: "**Assessoria**"
 bibliography:
   - references.bib
   - grateful-refs.bib
@@ -13,11 +13,17 @@ output:
 body {
   font-size: 2em;
 }
+
+div.main-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
 ```
 
 <br>
 
-# {.unlisted .unnumbered}
+# {#contato .unlisted .unnumbered}
 
 <center>
   <div class="d-grid gap-2"">
@@ -38,33 +44,33 @@ body {
    }
 ```
 
-# {#assessoria-projeto .unlisted .unnumbered .tabset .tabset-fade .tabset-pills .tabset}
+# {.tabset .tabset-fade .tabset-pills .tabset}
+
+## **Elaboração de projetos** {#projeto-de-pesquisa}
 
 <br>
 
-## **Projeto** {#projeto-de-pesquisa}
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Objetivo geral </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Objetivos específicos </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Hipóteses </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Delineamento </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Aspectos éticos </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Critérios de elegibilidade </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Formatação </span>
+</center></div>
 
-### {#assessoria-projeto .unlisted .unnumbered}
-### **`r library(fontawesome); fa("magnifying-glass", margin_right = "0.1em")` Assessoria para projeto**
-<p>*Revisão/sugestão de conteúdo e métodos | Revisão de estilo científico | Revisão de referências | Formatação de referências com software gerenciador*</p>
+<br>
 
-### {#calculo .unlisted .unnumbered}
-### **`r library(fontawesome); fa("users", margin_right = "0.1em")` Estimativa de tamanho amostral**
-<p>*Texto editável | R Script*</p>
+### **`r library(fontawesome); fa("clipboard-list", margin_right = "0.1em")` Revisão de métodos**
+<p>*Texto editável | Referências sugeridas*</p>
 
-### {#sorteio .unlisted .unnumbered}
-### **`r library(fontawesome); fa("shuffle", margin_right = "0.1em")` Aleatorização em grupos**
-<p>*Texto editável | R Script*</p>
+### **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**
+<p>*Texto editável | Referências sugeridas*</p>
 
-### {#plano .unlisted .unnumbered}
-### **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise estatística**
-<p>*Revisão de objetivos geral/específicos | Plano de análise em texto editável*</p>
+### **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Formatação de referências**
+<p>*Texto editável | Biblioteca de software gerenciador*</p>
 
-### {#simulacao .unlisted .unnumbered}
-### **`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação de estudos**
-<p>*Texto editável | Tabela descritiva | Tabela/gráfico inferencial | R Script*</p>
-
-### {.unlisted .unnumbered}
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
 <p>*Orientação*</p>
 
@@ -75,11 +81,36 @@ body {
 
 ## **Computação estatística** {#computacao-estatistica}
 
-### {#scripts-estatistica .unlisted .unnumbered}
-### **`r library(fontawesome); fa("table", margin_right = "0.1em")` Computação estatística**
-<p>*Eficácia | Efetividade | Confiabilidade | Concordância | Acurácia | Validade | Desempenho diagnóstico | Meta-análise | Análise de redes | Revisão/sugestão de códigos em R | Criação de códigos em R *</p>
+<br>
 
-### {.unlisted .unnumbered}
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eficácia </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Efetividade </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Confiabilidade </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Concordância </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Acurácia </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Validade </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Desempenho diagnóstico </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Meta-análise </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Análise de redes </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Criação de códigos em R </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão de códigos em R </span>
+</center></div>
+
+<br>
+
+### **`r library(fontawesome); fa("users", margin_right = "0.1em")` Estimativa de tamanho amostral**
+<p>*Texto editável | R Script*</p>
+
+### **`r library(fontawesome); fa("shuffle", margin_right = "0.1em")` Aleatorização em grupos**
+<p>*Texto editável | R Script*</p>
+
+### **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise estatística**
+<p>*Revisão de objetivos geral/específicos | Plano de análise em texto editável*</p>
+
+### **`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação de estudos**
+<p>*Texto editável | Tabela descritiva | Tabela/gráfico inferencial | R Script*</p>
+
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
 <p>*Orientação*</p>
 
@@ -90,11 +121,19 @@ body {
 
 ## **Computação biomédica** {#computacao-biomedica}
 
-### {#scripts-sinais .unlisted .unnumbered}
-### **`r library(fontawesome); fa("chart-line", margin_right = "0.1em")` Processamento de sinais biomédicos**
-<p>*Eletromiografia de superfície | Eletrogoniometria | Cinemetria | Revisão/sugestão de códigos em R | Criação de códigos em R *</p>
+<br>
 
-### {.unlisted .unnumbered}
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eletromiografia de superfície </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eletrogoniometria </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Posturografia </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Cinemetria </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Criação de códigos em R </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão de códigos em R </span>
+</center></div>
+
+<br>
+
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
 <p>*Orientação*</p>
 
@@ -103,17 +142,16 @@ body {
 
 
 
-## **Manuscrito** {#manuscrito}
+## **Redação de manuscritos** {#manuscrito-redacao}
 
-### {#assessoria-manuscrito .unlisted .unnumbered}
+<br>
+
 ### **`r library(fontawesome); fa("magnifying-glass", margin_right = "0.1em")` Assessoria para manuscrito**
 <p>*Revisão de estilo científico | Revisão de referências | Formatação de referências com software gerenciador*</p>
 
-### {#analise .unlisted .unnumbered}
 ### **`r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Análise estatística**
 <p>*Tabela descritiva | Tabela/gráfico inferencial | R Script*</p>
 
-### {.unlisted .unnumbered}
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
 <p>*Orientação*</p>
 
@@ -122,13 +160,13 @@ body {
 
 
 
-## **Submissão** {#submissao}
+## **Submissão de manuscritos** {#manuscrito-submissao}
 
-### {#revisao .unlisted .unnumbered}
-### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Revisão por pares**
+<br>
+
+### **`r library(fontawesome); fa("paper-plane", margin_right = "0.1em")` Revisão por pares**
 <p>*Revisão de carta-resposta | Revisão/sugestão de referências | Formatação de referências com software gerenciador*</p>
 
-### {.unlisted .unnumbered}
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
 <p>*Orientação*</p>
 
