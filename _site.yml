@@ -25,16 +25,6 @@ navbar:
     - text: ""
       icon: "fa-home"
       href: [index.html]
-    - text: "Meus scripts"
-      menu:
-        - text: "Tabela 2x2"
-          href: [https://github.com/FerreiraAS/CT]
-        - text: "ICC"
-          href: [https://github.com/FerreiraAS/ICC]
-        - text: "RCT"
-          href: [https://github.com/FerreiraAS/RCT]
-        - text: "ROC"
-          href: [https://github.com/FerreiraAS/ROC]
     - text: "Assessoria"
       href: [assessoria.html]
       menu:
@@ -50,6 +40,16 @@ navbar:
           href: [assessoria.html#manuscrito-redacao]
         - text: "Submissão de manuscritos"
           href: [assessoria.html#manuscrito-submissao]
+    - text: "Meus scripts"
+      menu:
+        - text: "Tabela 2x2"
+          href: [https://github.com/FerreiraAS/CT]
+        - text: "ICC"
+          href: [https://github.com/FerreiraAS/ICC]
+        - text: "RCT"
+          href: [https://github.com/FerreiraAS/RCT]
+        - text: "ROC"
+          href: [https://github.com/FerreiraAS/ROC]
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]
       menu:
