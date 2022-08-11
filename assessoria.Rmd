@@ -2,7 +2,6 @@
 title: "**Assessoria**"
 bibliography:
   - references.bib
-  - grateful-refs.bib
 link-citations: yes
 output:
   html_document:
@@ -102,8 +101,11 @@ div.main-container {
 ### **`r library(fontawesome); fa("users", margin_right = "0.1em")` Estimativa de tamanho amostral**
 <p>*Texto editável | R Script*</p>
 
-### **`r library(fontawesome); fa("shuffle", margin_right = "0.1em")` Aleatorização em grupos**
+### **`r library(fontawesome); fa("shuffle", margin_right = "0.1em")` Tabela de aleatorização em grupos**
 <p>*Texto editável | R Script*</p>
+
+### **`r library(fontawesome); fa("table", margin_right = "0.1em")` Modelagem de banco de dados**
+<p>*Tabela editável | Formatação de tipos de variáveis | Validação de entrada de dados | Cálculo de variáveis secundárias *</p>
 
 ### **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise estatística**
 <p>*Revisão de objetivos geral/específicos | Plano de análise em texto editável*</p>

@@ -2,7 +2,6 @@
 title: "**Ciência com R**"
 bibliography:
   - references.bib
-  - grateful-refs.bib
 link-citations: yes
 output:
   html_document:
@@ -32,21 +31,25 @@ Este projeto é direcionado a alunos de todo os níveis - graduação e pós-gra
 
 <table style="width=100%;">
   <colgroup>
-       <col span="1" style="width: 50%;">
-       <col span="1" style="width: 50%;">
+       <col span="1" style="width: 33%;">
+       <col span="1" style="width: 33%;">
+       <col span="1" style="width: 33%;">
     </colgroup>
   <tr>
+    <th style="background-color:#2C3E50;"><font color="white">FAQ</th>
+    <th style="background-color:#2C3E50;"><font color="white">Reutilize R scripts</th>
     <th style="background-color:#2C3E50"><font color="white">Assessoria científica</th> 
-    <th style="background-color:#2C3E50;"><font color="white">Reutilize meus scripts</th>
   </tr>
   <tr style="vertical-align:top">
-    <td><br>*Proposta customizada para auxílio em todas as etapas da elaboração do trabalho, em acordo com seu tema, objetivo e prazo*<br><br></td> 
+    <td><br>*Perguntas e respostas para dúvidas mais comuns em estatística e processamento de sinais*<br><br></td>
     <td><br>*Analise dados reutilizando scripts implementados e publicados em pesquisas anteriores*<br><br></td>
+    <td><br>*Proposta customizada para auxílio em todas as etapas da elaboração do trabalho, em acordo com seu tema, objetivo e prazo*<br><br></td> 
   </tr>
   <tr style="vertical-align:top">
-    <td>Em acordo com o seu tema, prazos e objetivo do projeto, o orçamento será feito discriminando as etapas do trabalho a serem fornecidas, para completo atendimento do seu interesse e a viabilidade de execução da assessoria *<a href="mailto:arthur_sf@icloud.com?subject=Cotação">Clique aqui</a>*</td>
+    <td>Tire suas dúvidas a respeito de tópicos controversos em análise estatística e processamento digital de sinais. </td>
     <td>Roteiros para download dos scripts em R para você rodar com seus próprios dados, com links para os artigos em que foram utilizados.
 </td>
+    <td>Em acordo com o seu tema, prazos e objetivo do projeto, o orçamento será feito discriminando as etapas do trabalho, para completo atendimento do seu interesse.</td>
   </tr>
 </table>
 

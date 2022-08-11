@@ -1,0 +1,119 @@
+---
+title: "**FAQ**"
+link-citations: yes
+output:
+  html_document:
+    toc: false
+bibliography: references.bib
+---
+
+```{css, echo = FALSE}
+body {
+  font-size: 2em;
+}
+
+div.main-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+# **Variáveis, fatores e parâmetros** {#variaveis-fatores-parametros}
+
+<br>
+
+## *Variáveis* {#variaveis}
+
+<br>
+
+### O que são variáveis?
+
+-   Variáveis são informações que podem variar entre medidas em diferentes indivíduos ou repetições [@Altman1999].
+
+<br>
+
+### Quais são os tipos de variáveis?
+
+-   [@Altman1999].
+
+<br>
+
+## *Fatores* {#fatores}
+
+<br>
+
+### O que são fatores?
+
+-   [REF].
+
+<br>
+
+## *Parâmetros* {#parametros}
+
+<br>
+
+### O que são parâmetros?
+
+-   Parâmetros são informações que definem um modelo teórico, como propriedades de uma coleção de indivíduos [@Altman1999].
+
+<br>
+
+### Quais são os parâmetros mais comuns?
+
+-   Parâmetros de tendência central: médial, mediana, moda [@kanji2006].
+
+-   Parâmetros de dispersão: variância, desvio-padrão, amplitude, intervalo interquartil [@kanji2006].
+
+-   Parâmetos de proporção: frequência absoluta, frequência relativa [@kanji2006].
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+# **Ensaios clínicos aleatorizados** {#ensaios-clínicos-aleatorizados}
+
+<br>
+
+## *Ajuste de covariáveis* {#ajuste-de-covariaveis}
+
+<br>
+
+### Quais os benefícios do ajuste de covariáveis?
+
+-   Incluir a variável de desfecho medida na linha de base como covariável - independentemente da análise ser realizada com a medida pós-tratamento da mesma variável ou a diferença para a linha de base - pode aumentar o poder estatístico do estudo [@Kahan2014].
+
+-   Incluir outras variáveis medidas na linha de base, com potencial para serem desbalanceadas entre grupos após a randomização, diminui a chance de afetar as estimativas de efeito dos tratamentos [@Kahan2014].
+
+<br>
+
+### Quais os riscos do ajuste de covariáveis?
+
+-   Incluir covariáveis que não são prognósticas do desfecho pode reduzir o poder estatístico do estudo [@Kahan2014].
+
+-   Incluir covariáveis com dados perdidos pode reduzir o tamanho amostral e consequentemente o poder estatístico do estudo (análise de casos completos) ou levar a desvios do plano de análise por exclusão de covariáveis prognósticas [@Kahan2014].
+
+<br>
+
+### Como lidar com os dados perdidos em covariáveis?
+
+-   Imputação de dados perdidos de uma variável pela média dos dados observada permite estimativas não enviesadas dos efeitos do tratamento, preserva o erro tipo I e aumenta o poder estatístico comparado à análise de dados completos [@Kahan2014].
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
+# **Referências**
+

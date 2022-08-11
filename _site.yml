@@ -18,29 +18,30 @@ exclude:
   - /docs/SJR
 bibliography:
   - references.bib
-  - grateful-refs.bib
 link-citations: yes
 navbar:
   left:
     - text: ""
       icon: "fa-home"
       href: [index.html]
-    - text: "Assessoria"
-      href: [assessoria.html]
+    - text: "FAQ"
+      href: [faq.html]
       menu:
-        - text: "Contato"
-          href: [assessoria.html#contato]
-        - text: "Elaboração de projetos"
-          href: [assessoria.html#projeto-de-pesquisa]
-        - text: "Computação estatística"
-          href: [assessoria.html#computacao-estatistica]
-        - text: "Computação biomédica"
-          href: [assessoria.html#computacao-biomedica]
-        - text: "Redação de manuscrito"
-          href: [assessoria.html#manuscrito-redacao]
-        - text: "Submissão de manuscritos"
-          href: [assessoria.html#manuscrito-submissao]
-    - text: "Meus scripts"
+        - text: "Variáveis, fatores e parâmetros"
+          href: [faq.html#variaveis-fatores-parametros]
+          menu:
+            - text: "Variáveis"
+              href: [faq.html#variaveis]
+            - text: "Fatores"
+              href: [faq.html#fatores]
+            - text: "Parâmetros"
+              href: [faq.html#parametros]
+        - text: "Ensaios clínicos aleatorizados"
+          href: [faq.html#ensaios-clínicos-aleatorizados]
+          menu:
+            - text: "Ajuste de covariáveis"
+              href: [faq.html#ajuste-de-covariaveis]
+    - text: "Reutilize R scripts"
       menu:
         - text: "Tabela 2x2"
           href: [https://github.com/FerreiraAS/CT]
@@ -50,6 +51,22 @@ navbar:
           href: [https://github.com/FerreiraAS/RCT]
         - text: "ROC"
           href: [https://github.com/FerreiraAS/ROC]
+    - text: "Assessoria"
+      href: [assessoria.html]
+      menu:
+        - text: "Contato"
+          href: [assessoria.html]
+        - text: "Elaboração de projetos"
+          href: [assessoria.html]
+        - text: "Computação estatística"
+          href: [assessoria.html]
+        - text: "Computação biomédica"
+          href: [assessoria.html]
+        - text: "Redação de manuscrito"
+          href: [assessoria.html]
+        - text: "Submissão de manuscritos"
+          href: [assessoria.html]
+  right:
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]
       menu:
@@ -59,7 +76,6 @@ navbar:
           href: [sobre.html#revisor]
         - text: "Autoria em Publicações"
           href: [sobre.html#artigos]
-  right:
     - text: ""
       icon: "fa-envelope"
       href: [mailto:arthur_sf@icloud.com]
