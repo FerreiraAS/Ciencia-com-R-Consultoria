@@ -1,5 +1,4 @@
 ---
-title: "**Ciência com R**"
 bibliography:
   - references.bib
 link-citations: yes
@@ -21,11 +20,14 @@ div.main-container {
 ```
 
 <br>
+<br>
 
-**Ciência com R** tem por objetivo dar maior independência na elaboração de seus projetos, auxiliar no desenvolvimento das habilidades de elaboração de trabalhos científicos, acadêmicos ou profissionais.
+<span style="font-size: 1.4em;">**Ciência com** `r library(fontawesome); fa("r-project", fill = "steelblue")` tem por objetivo dar maior independência na elaboração de seus projetos, auxiliando no desenvolvimento das habilidades de elaboração de trabalhos científicos, acadêmicos ou profissionais.</span>
+
 <br>
-<br>
+
 Este projeto é direcionado a alunos de todo os níveis - graduação e pós-graduação - e pesquisadores em todas as áreas, com ênfase na Área de Saúde, que pretendem elaborar uma análise estatística que embase e valide a conclusão do seu trabalho acadêmico – monografia, dissertação, tese ou artigo.
+
 <br>
 <br>
 

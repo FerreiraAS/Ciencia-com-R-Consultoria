@@ -41,9 +41,17 @@ div.main-container {
 .nav-pills>li.active>a:focus{
    background-color: #2C3E50;
    }
+.nav-pills > li {
+    float:none;
+    display:inline-block;
+    zoom:1;
+}
+.nav-pills {
+    text-align:center;
+}
 ```
 
-# {.tabset .tabset-fade .tabset-pills .tabset}
+# {.tabset .tabset-fade .tabset-pills .tabset .justify-center}
 
 ## **Elaboração de projetos** {#projeto-de-pesquisa}
 
@@ -92,8 +100,7 @@ div.main-container {
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Desempenho diagnóstico </span>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Meta-análise </span>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Análise de redes </span>
-<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Criação de códigos em R </span>
-<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão de códigos em R </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Códigos em R </span>
 </center></div>
 
 <br>
@@ -130,29 +137,10 @@ div.main-container {
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eletrogoniometria </span>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Posturografia </span>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Cinemetria </span>
-<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Criação de códigos em R </span>
-<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão de códigos em R </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Códigos em R </span>
 </center></div>
 
 <br>
-
-### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
-<p>*Orientação*</p>
-
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-
-
-## **Redação de manuscritos** {#manuscrito-redacao}
-
-<br>
-
-### **`r library(fontawesome); fa("magnifying-glass", margin_right = "0.1em")` Assessoria para manuscrito**
-<p>*Revisão de estilo científico | Revisão de referências | Formatação de referências com software gerenciador*</p>
-
-### **`r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Análise estatística**
-<p>*Tabela descritiva | Tabela/gráfico inferencial | R Script*</p>
 
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
 <p>*Orientação*</p>
@@ -166,8 +154,25 @@ div.main-container {
 
 <br>
 
-### **`r library(fontawesome); fa("paper-plane", margin_right = "0.1em")` Revisão por pares**
-<p>*Revisão de carta-resposta | Revisão/sugestão de referências | Formatação de referências com software gerenciador*</p>
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Artigo original </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão de escopo </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão sistemática </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Meta-análise</span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão externa por pares </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Carta-resposta </span>
+</center></div>
+
+<br>
+
+### **`r library(fontawesome); fa("clipboard-list", margin_right = "0.1em")` Revisão de métodos**
+<p>*Texto editável | Referências sugeridas*</p>
+
+### **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**
+<p>*Texto editável | Referências sugeridas*</p>
+
+### **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Formatação de referências**
+<p>*Texto editável | Biblioteca de software gerenciador*</p>
 
 ### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
 <p>*Orientação*</p>

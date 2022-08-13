@@ -54,15 +54,11 @@ navbar:
     - text: "Assessoria"
       href: [assessoria.html]
       menu:
-        - text: "Contato"
-          href: [assessoria.html]
         - text: "Elaboração de projetos"
           href: [assessoria.html]
         - text: "Computação estatística"
           href: [assessoria.html]
         - text: "Computação biomédica"
-          href: [assessoria.html]
-        - text: "Redação de manuscrito"
           href: [assessoria.html]
         - text: "Submissão de manuscritos"
           href: [assessoria.html]
@@ -76,6 +72,9 @@ navbar:
           href: [sobre.html#revisor]
         - text: "Autoria em Publicações"
           href: [sobre.html#artigos]
+    - text: "☕️"
+      icon: "fa-mug-saucer"
+      href: [https://www.buymeacoffee.com/Arthur.Sa.Ferreira]
     - text: ""
       icon: "fa-envelope"
       href: [mailto:arthur_sf@icloud.com]
