@@ -53,6 +53,8 @@ navbar:
           menu:
             - text: "Ajuste de covariáveis"
               href: [faq.html#ajuste-de-covariaveis]
+        - text: "Referências"
+          href: [faq.html#referencias]
     - text: "Reutilize R scripts"
       menu:
         - text: "Tabela 2x2"
