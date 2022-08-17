@@ -25,7 +25,43 @@ div.main-container {
 
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-# **Variáveis, fatores e parâmetros** {#variaveis-fatores-parametros}
+# **Dados, variáveis, fatores e parâmetros** {#dados-variaveis-fatores}
+
+<br>
+
+## *Dados* {#dados}
+
+<br>
+
+### O que são dados?
+
+-   XX [XX].
+
+<br>
+
+### O que são dados perdidos?
+
+-   Dados perdidos são dados não coletados de um ou mais participantes, para uma ou mais variáveis [@Altman2007].
+
+<br>
+
+### Qual o problema de um estudo ter dados perdidos?
+
+-   Uma grande quantidade de dados perdidos pode comprometer a integridade científica do estudo, considerando-se que o tamanho da amostra foi estimado para observar um determinado tamanho de efeito mínimo [@Altman2007].
+
+-   Perda de participantes no estudo por dados perdidos pode reduzir o poder estatístico (erro tipo II) [@Altman2007].
+
+<br>
+
+### Que estratégias podem ser utilizadas quando há expectativa ou ocorrência de dados perdidos?
+
+-   Não existe solução globalmente satisfatória para o problema de dados perdidos [@Altman2007].
+
+-   Na expectativa de ocorrência de dados perdidos, recomenda-se ampliar o tamanho da amostra com um % correspondente à tal estimativa - embora ainda não corriga potenciais vieses pela perda [@Altman2007].
+
+- Na ocorrência de dados perdidos, a análise mais comum compreende apenas os 'casos completos', com exclusào de participantes com algum dado perdido nas variáveis do estudo. Em casos de grande quantidade de dados perdidos, pode-se perder muito poder estatístico (erro tipo II elevado) [@Altman2007].
+
+- Na ocorrência de dados perdidos, a imputação de dados (substituição por dados simulados plausíveis preditos pelos dados presentes) pode ser uma alternativa para manter o erro tipo II estipulado no plano de análise [@Altman2007].
 
 <br>
 
@@ -55,6 +91,24 @@ div.main-container {
 
 <br>
 
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+# **Distribuições e parâmetros** {#distribuicoes-parametros}
+
+<br>
+
+## *Distribuições* {#distribuicoes}
+
+<br>
+
+### O que são distribuições?
+
+-   XX [XX].
+
+<br>
+
 ## *Parâmetros* {#parametros}
 
 <br>
@@ -78,6 +132,32 @@ div.main-container {
 <!--script for generating HORIZONTAL LINE-->
 
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+# **Delineamento de estudos** {#delineamento-estudos}
+
+<br>
+
+## *Pareamento* {#pareamento}
+
+<br>
+
+### O que é pareamento?
+
+-   Pareamento significa que para cada participante de um grupo (por exemplo, com alguma condição clínica), existe um (ou mais) participantes (por exemplo, grupo controle) que possui características iguais ou similares relativas a algumas variáveis de interesse [@Bland1994].
+
+-   As variáveis escolhidas para pareamento devem ter relação com as variáveis de desfecho, mas não são de interesse elas mesmas [@Bland1994].
+
+-   O ajuste por pareamento deve ser incluído nas análises estatísticas mesmo que as variáveis de pareamento não sejam consideradas prognósticas ou confundidores na amostra estudada [@Bland1994].
+
+-   A ausência de evidência estatística de diferença entre grupos não é considerada pareamento [@Bland1994].
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
 
 # **Ensaios clínicos aleatorizados** {#ensaios-clínicos-aleatorizados}
 
@@ -116,4 +196,3 @@ div.main-container {
 <br>
 
 # **Referências**
-

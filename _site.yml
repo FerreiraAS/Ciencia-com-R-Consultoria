@@ -27,15 +27,27 @@ navbar:
     - text: "FAQ"
       href: [faq.html]
       menu:
-        - text: "Variáveis, fatores e parâmetros"
-          href: [faq.html#variaveis-fatores-parametros]
+        - text: "Dados, variáveis e fatores"
+          href: [faq.html#dados-variaveis-fatores]
           menu:
+            - text: "Dados"
+              href: [faq.html#dados]
             - text: "Variáveis"
               href: [faq.html#variaveis]
             - text: "Fatores"
               href: [faq.html#fatores]
+        - text: "Distribuições e parâmetros"
+          href: [faq.html#distribuicoes-parametros]
+          menu:
+            - text: "Distribuições"
+              href: [faq.html#distribuicoes]
             - text: "Parâmetros"
               href: [faq.html#parametros]
+        - text: "Delineamento de estudos"
+          href: [faq.html#delineamento-estudos]
+          menu:
+            - text: "Pareamento"
+              href: [faq.html#pareamento]
         - text: "Ensaios clínicos aleatorizados"
           href: [faq.html#ensaios-clínicos-aleatorizados]
           menu:

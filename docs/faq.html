@@ -13,7 +13,7 @@
 
 <title>FAQ</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.15/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -166,11 +166,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -285,16 +289,35 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Variáveis, fatores e parâmetros</a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dados, variáveis e fatores</a>
       <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="faq.html#dados">Dados</a>
+        </li>
         <li>
           <a href="faq.html#variaveis">Variáveis</a>
         </li>
         <li>
           <a href="faq.html#fatores">Fatores</a>
         </li>
+      </ul>
+    </li>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Distribuições e parâmetros</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="faq.html#distribuicoes">Distribuições</a>
+        </li>
         <li>
           <a href="faq.html#parametros">Parâmetros</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Delineamento de estudos</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="faq.html#pareamento">Pareamento</a>
         </li>
       </ul>
     </li>
@@ -419,9 +442,78 @@ div.main-container {
 <p><br></p>
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-<div id="variaveis-fatores-parametros" class="section level1">
-<h1><strong>Variáveis, fatores e parâmetros</strong></h1>
+<div id="dados-variaveis-fatores" class="section level1">
+<h1><strong>Dados, variáveis, fatores e parâmetros</strong></h1>
 <p><br></p>
+<div id="dados" class="section level2">
+<h2><em>Dados</em></h2>
+<p><br></p>
+<div id="o-que-são-dados" class="section level3">
+<h3>O que são dados?</h3>
+<ul>
+<li>XX [XX].</li>
+</ul>
+<p><br></p>
+</div>
+<div id="o-que-são-dados-perdidos" class="section level3">
+<h3>O que são dados perdidos?</h3>
+<ul>
+<li>Dados perdidos são dados não coletados de um ou mais participantes,
+para uma ou mais variáveis <span class="citation">(<a
+href="#ref-Altman2007" role="doc-biblioref">Douglas G. Altman and Bland
+2007</a>)</span>.</li>
+</ul>
+<p><br></p>
+</div>
+<div id="qual-o-problema-de-um-estudo-ter-dados-perdidos"
+class="section level3">
+<h3>Qual o problema de um estudo ter dados perdidos?</h3>
+<ul>
+<li><p>Uma grande quantidade de dados perdidos pode comprometer a
+integridade científica do estudo, considerando-se que o tamanho da
+amostra foi estimado para observar um determinado tamanho de efeito
+mínimo <span class="citation">(<a href="#ref-Altman2007"
+role="doc-biblioref">Douglas G. Altman and Bland
+2007</a>)</span>.</p></li>
+<li><p>Perda de participantes no estudo por dados perdidos pode reduzir
+o poder estatístico (erro tipo II) <span class="citation">(<a
+href="#ref-Altman2007" role="doc-biblioref">Douglas G. Altman and Bland
+2007</a>)</span>.</p></li>
+</ul>
+<p><br></p>
+</div>
+<div
+id="que-estratégias-podem-ser-utilizadas-quando-há-expectativa-ou-ocorrência-de-dados-perdidos"
+class="section level3">
+<h3>Que estratégias podem ser utilizadas quando há expectativa ou
+ocorrência de dados perdidos?</h3>
+<ul>
+<li><p>Não existe solução globalmente satisfatória para o problema de
+dados perdidos <span class="citation">(<a href="#ref-Altman2007"
+role="doc-biblioref">Douglas G. Altman and Bland
+2007</a>)</span>.</p></li>
+<li><p>Na expectativa de ocorrência de dados perdidos, recomenda-se
+ampliar o tamanho da amostra com um % correspondente à tal estimativa -
+embora ainda não corriga potenciais vieses pela perda <span
+class="citation">(<a href="#ref-Altman2007" role="doc-biblioref">Douglas
+G. Altman and Bland 2007</a>)</span>.</p></li>
+<li><p>Na ocorrência de dados perdidos, a análise mais comum compreende
+apenas os ‘casos completos’, com exclusào de participantes com algum
+dado perdido nas variáveis do estudo. Em casos de grande quantidade de
+dados perdidos, pode-se perder muito poder estatístico (erro tipo II
+elevado) <span class="citation">(<a href="#ref-Altman2007"
+role="doc-biblioref">Douglas G. Altman and Bland
+2007</a>)</span>.</p></li>
+<li><p>Na ocorrência de dados perdidos, a imputação de dados
+(substituição por dados simulados plausíveis preditos pelos dados
+presentes) pode ser uma alternativa para manter o erro tipo II
+estipulado no plano de análise <span class="citation">(<a
+href="#ref-Altman2007" role="doc-biblioref">Douglas G. Altman and Bland
+2007</a>)</span>.</p></li>
+</ul>
+<p><br></p>
+</div>
+</div>
 <div id="variaveis" class="section level2">
 <h2><em>Variáveis</em></h2>
 <p><br></p>
@@ -430,7 +522,7 @@ div.main-container {
 <ul>
 <li>Variáveis são informações que podem variar entre medidas em
 diferentes indivíduos ou repetições <span class="citation">(<a
-href="#ref-Altman1999" role="doc-biblioref">Altman and Bland
+href="#ref-Altman1999" role="doc-biblioref">D. G. Altman and Bland
 1999</a>)</span>.</li>
 </ul>
 <p><br></p>
@@ -439,7 +531,7 @@ href="#ref-Altman1999" role="doc-biblioref">Altman and Bland
 <h3>Quais são os tipos de variáveis?</h3>
 <ul>
 <li><span class="citation">(<a href="#ref-Altman1999"
-role="doc-biblioref">Altman and Bland 1999</a>)</span>.</li>
+role="doc-biblioref">D. G. Altman and Bland 1999</a>)</span>.</li>
 </ul>
 <p><br></p>
 </div>
@@ -453,6 +545,23 @@ role="doc-biblioref">Altman and Bland 1999</a>)</span>.</li>
 <li>[REF].</li>
 </ul>
 <p><br></p>
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+</div>
+</div>
+</div>
+<div id="distribuicoes-parametros" class="section level1">
+<h1><strong>Distribuições e parâmetros</strong></h1>
+<p><br></p>
+<div id="distribuicoes" class="section level2">
+<h2><em>Distribuições</em></h2>
+<p><br></p>
+<div id="o-que-são-distribuições" class="section level3">
+<h3>O que são distribuições?</h3>
+<ul>
+<li>XX [XX].</li>
+</ul>
+<p><br></p>
 </div>
 </div>
 <div id="parametros" class="section level2">
@@ -463,7 +572,7 @@ role="doc-biblioref">Altman and Bland 1999</a>)</span>.</li>
 <ul>
 <li>Parâmetros são informações que definem um modelo teórico, como
 propriedades de uma coleção de indivíduos <span class="citation">(<a
-href="#ref-Altman1999" role="doc-biblioref">Altman and Bland
+href="#ref-Altman1999" role="doc-biblioref">D. G. Altman and Bland
 1999</a>)</span>.</li>
 </ul>
 <p><br></p>
@@ -484,6 +593,42 @@ role="doc-biblioref">Kanji 2006</a>)</span>.</p></li>
 <p><br></p>
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+</div>
+</div>
+</div>
+<div id="delineamento-estudos" class="section level1">
+<h1><strong>Delineamento de estudos</strong></h1>
+<p><br></p>
+<div id="pareamento" class="section level2">
+<h2><em>Pareamento</em></h2>
+<p><br></p>
+<div id="o-que-é-pareamento" class="section level3">
+<h3>O que é pareamento?</h3>
+<ul>
+<li><p>Pareamento significa que para cada participante de um grupo (por
+exemplo, com alguma condição clínica), existe um (ou mais) participantes
+(por exemplo, grupo controle) que possui características iguais ou
+similares relativas a algumas variáveis de interesse <span
+class="citation">(<a href="#ref-Bland1994" role="doc-biblioref">Bland
+and Altman 1994</a>)</span>.</p></li>
+<li><p>As variáveis escolhidas para pareamento devem ter relação com as
+variáveis de desfecho, mas não são de interesse elas mesmas <span
+class="citation">(<a href="#ref-Bland1994" role="doc-biblioref">Bland
+and Altman 1994</a>)</span>.</p></li>
+<li><p>O ajuste por pareamento deve ser incluído nas análises
+estatísticas mesmo que as variáveis de pareamento não sejam consideradas
+prognósticas ou confundidores na amostra estudada <span
+class="citation">(<a href="#ref-Bland1994" role="doc-biblioref">Bland
+and Altman 1994</a>)</span>.</p></li>
+<li><p>A ausência de evidência estatística de diferença entre grupos não
+é considerada pareamento <span class="citation">(<a
+href="#ref-Bland1994" role="doc-biblioref">Bland and Altman
+1994</a>)</span>.</p></li>
+</ul>
+<p><br></p>
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+<p><br></p>
 </div>
 </div>
 </div>
@@ -552,6 +697,16 @@ role="doc-biblioref">Kahan et al. 2014</a>)</span>.</li>
 Altman, D. G, and J M. Bland. 1999. <span>“Statistics Notes Variables
 and Parameters.”</span> <em>BMJ</em> 318 (7199): 1667–67. <a
 href="https://doi.org/10.1136/bmj.318.7199.1667">https://doi.org/10.1136/bmj.318.7199.1667</a>.
+</div>
+<div id="ref-Altman2007" class="csl-entry">
+Altman, Douglas G, and J Martin Bland. 2007. <span>“Missing
+Data.”</span> <em>BMJ</em> 334 (7590): 424–24. <a
+href="https://doi.org/10.1136/bmj.38977.682025.2c">https://doi.org/10.1136/bmj.38977.682025.2c</a>.
+</div>
+<div id="ref-Bland1994" class="csl-entry">
+Bland, J M, and D G Altman. 1994. <span>“Statistics Notes:
+Matching.”</span> <em>BMJ</em> 309 (6962): 1128–28. <a
+href="https://doi.org/10.1136/bmj.309.6962.1128">https://doi.org/10.1136/bmj.309.6962.1128</a>.
 </div>
 <div id="ref-Kahan2014" class="csl-entry">
 Kahan, Brennan C, Vipul Jairath, Caroline J Doré, and Tim P Morris.

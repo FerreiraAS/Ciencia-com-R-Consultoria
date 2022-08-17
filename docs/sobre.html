@@ -13,7 +13,7 @@
 
 <title>Sobre</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.15/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -144,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -263,16 +267,35 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Variáveis, fatores e parâmetros</a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dados, variáveis e fatores</a>
       <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="faq.html#dados">Dados</a>
+        </li>
         <li>
           <a href="faq.html#variaveis">Variáveis</a>
         </li>
         <li>
           <a href="faq.html#fatores">Fatores</a>
         </li>
+      </ul>
+    </li>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Distribuições e parâmetros</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="faq.html#distribuicoes">Distribuições</a>
+        </li>
         <li>
           <a href="faq.html#parametros">Parâmetros</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Delineamento de estudos</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="faq.html#pareamento">Pareamento</a>
         </li>
       </ul>
     </li>
@@ -3516,7 +3539,8 @@ Qualis <br>?</a></nobr>
 </tr>
 <tr>
 <td valign=top;>
-<br> <a href="http://dx.doi.org/10.15602/1983-9480/cm.v23n48p99-109"
+<br><a style="display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;" href="http://dx.doi.org/10.15602/1983-9480/cm.v23n48p99-109" target="_blank"><img height="18px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png"></a>
+<a href="http://dx.doi.org/10.15602/1983-9480/cm.v23n48p99-109"
 target="_blank"><strong>Reabilitação de pessoas com amputação de membros
 inferiores: uma revisão sistematizada</strong></a><br>Caroline Lacerda
 Oliveira, Arthur Sá Ferreira<br>2021  -  <em>Ciência em
@@ -8412,6 +8436,101 @@ Qualis <br>A1</a></nobr>
 </div>
 </tr>
 <tr>
+<td valign=top;>
+<br><a style="display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;" href="http://dx.doi.org/10.1016/j.rppneu.2012.04.006" target="_blank"><img height="18px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png"></a>
+<a href="http://dx.doi.org/10.1016/j.rppneu.2012.04.006"
+target="_blank"><strong>Silicose em jateadores de areia de estaleiro
+versus silicose em escultores de pedra no Brasil: uma comparação dos
+achados de imagem, função pulmonar e teste de exercício
+cardiopulmonar</strong></a><br>A.J. Lopes, W. Costa, T. Thomaz Mafort,
+A. de Sá Ferreira, S.L. Silveira de Menezes, F. Silva Guimarães<br>2012 
+-  <em>Revista Portuguesa de Pneumologia</em><br>
+<div style="vertical-align: middle; display: inline-block;">
+<nobr><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" class="altmetric-embed" data-badge-type="donut" data-badge-popover="right" data-doi="10.1016/j.rppneu.2012.04.006"></a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" data-legend="hover-right" class="__dimensions_badge_embed__" data-doi="10.1016/j.rppneu.2012.04.006" data-style="small_circle"></a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; padding:0.5em 0.3em 0.5em 0.3em;" class="plumx-plum-print-popup" href="https://plu.mx/plum/a/?doi=10.1016/j.rppneu.2012.04.006" data-popup="right" data-size="medium" data-site="plum"></a><a href="https://www.scopus.com/sourceid/19067?dgcid=sc_widget_citescore" style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050">
+<div
+style="height:64px;width:160px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block">
+<div style="padding: 0px 16px;">
+<div style="padding-top:3px;line-height:1;">
+<div style="float:left;font-size:28px">
+<span id="citescoreVal"
+style="letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;">?</span>
+</div>
+<div
+style="float:right;font-size:14px;padding-top:3px;text-align: right;">
+<span id="citescoreYearVal" style="display:block;">2017</span>CiteScore
+</div>
+</div>
+<div style="clear:both;">
+
+</div>
+<div style="padding-top:3px;">
+<div style="height:4px;background-color:#DCDCDC;">
+<div id="percentActBar"
+style="height: 4px; background-color: rgb(0, 115, 152); width:?%;">
+ 
+</div>
+</div>
+<div style="font-size:11px;">
+<span id="citescorePerVal">?</span>
+</div>
+</div>
+<div style="font-size:12px;text-align:right;">
+
+</div>
+</div>
+</div>
+</a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" href="https://www.scimagojr.com/journalsearch.php?q=0?&amp;tip=sid&amp;exact=no" target="_blank" title="SCImago Journal &amp; Country Rank"><img border="0" height="64px;" src="https://www.scimagojr.com/journal_img.php?id=0" alt="SCImago Journal &amp; Country Rank"  /></a><a style="border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:black;">
+Qualis <br>B2</a></nobr>
+</div>
+</tr>
+<tr>
+<td valign=top;>
+<br> <a href="http://dx.doi.org/10.1016/j.rppnen.2012.06.002"
+target="_blank"><strong>Silicosis in sandblasters of shipyard versus
+silicosis in stone carvers in Brazil: A comparison of imaging findings,
+lung function variables and cardiopulmonary exercise testing
+parameters</strong></a><br>A.J. Lopes, W. Costa, T. Thomaz Mafort, A. de
+Sá Ferreira, S.L. Silveira de Menezes, F. Silva Guimarães<br>2012  -
+ <em>Revista Portuguesa de Pneumologia (English Edition)</em><br>
+<div style="vertical-align: middle; display: inline-block;">
+<nobr><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" class="altmetric-embed" data-badge-type="donut" data-badge-popover="right" data-doi="10.1016/j.rppnen.2012.06.002"></a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" data-legend="hover-right" class="__dimensions_badge_embed__" data-doi="10.1016/j.rppnen.2012.06.002" data-style="small_circle"></a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; padding:0.5em 0.3em 0.5em 0.3em;" class="plumx-plum-print-popup" href="https://plu.mx/plum/a/?doi=10.1016/j.rppnen.2012.06.002" data-popup="right" data-size="medium" data-site="plum"></a><a href="https://www.scopus.com/sourceid/?dgcid=sc_widget_citescore" style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050">
+<div
+style="height:64px;width:160px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block">
+<div style="padding: 0px 16px;">
+<div style="padding-top:3px;line-height:1;">
+<div style="float:left;font-size:28px">
+<span id="citescoreVal"
+style="letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;">?</span>
+</div>
+<div
+style="float:right;font-size:14px;padding-top:3px;text-align: right;">
+<span id="citescoreYearVal" style="display:block;">?</span>CiteScore
+</div>
+</div>
+<div style="clear:both;">
+
+</div>
+<div style="padding-top:3px;">
+<div style="height:4px;background-color:#DCDCDC;">
+<div id="percentActBar"
+style="height: 4px; background-color: rgb(0, 115, 152); width:?%;">
+ 
+</div>
+</div>
+<div style="font-size:11px;">
+<span id="citescorePerVal">?</span>
+</div>
+</div>
+<div style="font-size:12px;text-align:right;">
+
+</div>
+</div>
+</div>
+</a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" href="https://www.scimagojr.com/journalsearch.php?q=0?&amp;tip=sid&amp;exact=no" target="_blank" title="SCImago Journal &amp; Country Rank"><img border="0" height="64px;" src="https://www.scimagojr.com/journal_img.php?id=0" alt="SCImago Journal &amp; Country Rank"  /></a><a style="border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:black;">
+Qualis <br>?</a></nobr>
+</div>
+</tr>
+<tr>
 <td valign="top;">
 <br><a style="display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;" href="http://dx.doi.org/10.5772/27703" target="_blank"><img height="18px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png"></a>
 <a href="https://doi.org/10.3736/jcim20120309"
@@ -8462,104 +8581,7 @@ Qualis <br>?</a></nobr>
 <tr>
 <td valign="top;">
 <br><a style="display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;" href="http://dx.doi.org/10.1590/s1809-29502012000400016" target="_blank"><img height="18px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png"></a>
-<a href="https://doi.org/10.1016/j.rppneu.2012.04.006"
-target="_blank"><strong>Silicose em jateadores de areia de estaleiro
-versus silicose em escultores de pedra no Brasil: uma comparação dos
-achados de imagem, função pulmonar e teste de exercício
-cardiopulmonar</strong></a><br>A.J. Lopes, W. Costa, T. Thomaz Mafort,
-A. de Sá Ferreira, S.L. Silveira de Menezes, F. Silva Guimarães<br>2012 
--  <em>Revista Portuguesa de Pneumologia</em><br>
-<div style="vertical-align: middle; display: inline-block;">
-<nobr><img style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" src="https://badges.altmetric.com/?score=?&types=????????"><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" data-legend="hover-right" class="__dimensions_badge_embed__" data-doi="10.1016/j.rppneu.2012.04.006" data-style="small_circle"></a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em;" class="plumx-plum-print-popup" href="https://plu.mx/plum/a/?doi=10.1016/j.rppneu.2012.04.006" data-popup="right" data-size="medium" data-site="plum"></a><a href="https://www.scopus.com/sourceid/19067?dgcid=sc_widget_citescore" style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050">
-<div
-style="height:64px;width:160px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block">
-<div style="padding: 0px 16px;">
-<div style="padding-top:3px;line-height:1;">
-<div style="float:left;font-size:28px">
-<span id="citescoreVal"
-style="letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;">?</span>
-</div>
-<div
-style="float:right;font-size:14px;padding-top:3px;text-align: right;">
-<span id="citescoreYearVal" style="display:block;">2017</span>CiteScore
-</div>
-</div>
-<div style="clear:both;">
-
-</div>
-<div style="padding-top:3px;">
-<div style="height:4px;background-color:#DCDCDC;">
-<div id="percentActBar"
-style="height: 4px; background-color: rgb(0, 115, 152); width:?%;">
- 
-</div>
-</div>
-<div style="font-size:11px;">
-<span id="citescorePerVal">?</span>
-</div>
-</div>
-<div style="font-size:12px;text-align:right;">
-
-</div>
-</div>
-</div>
-</a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" href="https://www.scimagojr.com/journalsearch.php?q=0?&amp;tip=sid&amp;exact=no" target="_blank" title="SCImago Journal &amp; Country Rank"><img border="0" height="64px;" src="https://www.scimagojr.com/journal_img.php?id=0" alt="SCImago Journal &amp; Country Rank"  /></a><a style="border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:black;">
-Qualis <br>B2</a></nobr>
-</div>
-</td>
-</tr>
-<tr>
-<td valign="top;">
-<br><a style="display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;" href="http://dx.doi.org/10.1186/1749-8546-7-7" target="_blank"><img height="18px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png"></a>
-<a href="https://doi.org/10.1016/j.rppnen.2012.06.002"
-target="_blank"><strong>Silicosis in sandblasters of shipyard versus
-silicosis in stone carvers in Brazil: A comparison of imaging findings,
-lung function variables and cardiopulmonary exercise testing
-parameters</strong></a><br>A.J. Lopes, W. Costa, T. Thomaz Mafort, A. de
-Sá Ferreira, S.L. Silveira de Menezes, F. Silva Guimarães<br>2012  -
- <em>Revista Portuguesa de Pneumologia (English Edition)</em><br>
-<div style="vertical-align: middle; display: inline-block;">
-<nobr><img style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" src="https://badges.altmetric.com/?score=?&types=????????"><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" data-legend="hover-right" class="__dimensions_badge_embed__" data-doi="10.1016/j.rppnen.2012.06.002" data-style="small_circle"></a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em;" class="plumx-plum-print-popup" href="https://plu.mx/plum/a/?doi=10.1016/j.rppnen.2012.06.002" data-popup="right" data-size="medium" data-site="plum"></a><a href="https://www.scopus.com/sourceid/?dgcid=sc_widget_citescore" style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050">
-<div
-style="height:64px;width:160px;font-family:Arial, Verdana, helvetica, sans-serif;background-color:#ffffff;display:inline-block">
-<div style="padding: 0px 16px;">
-<div style="padding-top:3px;line-height:1;">
-<div style="float:left;font-size:28px">
-<span id="citescoreVal"
-style="letter-spacing: -2px;display: inline-block;padding-top: 7px;line-height: .75;">?</span>
-</div>
-<div
-style="float:right;font-size:14px;padding-top:3px;text-align: right;">
-<span id="citescoreYearVal" style="display:block;">?</span>CiteScore
-</div>
-</div>
-<div style="clear:both;">
-
-</div>
-<div style="padding-top:3px;">
-<div style="height:4px;background-color:#DCDCDC;">
-<div id="percentActBar"
-style="height: 4px; background-color: rgb(0, 115, 152); width:?%;">
- 
-</div>
-</div>
-<div style="font-size:11px;">
-<span id="citescorePerVal">?</span>
-</div>
-</div>
-<div style="font-size:12px;text-align:right;">
-
-</div>
-</div>
-</div>
-</a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" href="https://www.scimagojr.com/journalsearch.php?q=0?&amp;tip=sid&amp;exact=no" target="_blank" title="SCImago Journal &amp; Country Rank"><img border="0" height="64px;" src="https://www.scimagojr.com/journal_img.php?id=0" alt="SCImago Journal &amp; Country Rank"  /></a><a style="border-radius:10%; border-style: solid; margin:0.1em 0.3em 0.1em 0.3em; padding:0.4em 0.3em 0.4em 0.3em; text-decoration:none; text-align: center; display:inline-block; float:left; color:black;">
-Qualis <br>?</a></nobr>
-</div>
-</td>
-</tr>
-<tr>
-<td valign="top;">
-<br> <a href="https://doi.org/10.1007/s11655-012-1245-1"
+<a href="https://doi.org/10.1007/s11655-012-1245-1"
 target="_blank"><strong>Statistical distribution of acupoint
 prescriptions for sensory-motor impairments in post-stroke
 subjects</strong></a><br>Ana Paula de Sousa Fragoso, Arthur de Sá
