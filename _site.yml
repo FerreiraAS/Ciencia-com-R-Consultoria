@@ -24,38 +24,49 @@ navbar:
     - text: ""
       icon: "fa-home"
       href: [index.html]
-    - text: "FAQ"
-      href: [faq.html]
+    - text: "Consultoria"
+      href: [consultoria.html]
+      menu:
+        - text: "Elaboração de projetos"
+          href: [consultoria.html]
+        - text: "Computação estatística"
+          href: [consultoria.html]
+        - text: "Computação biomédica"
+          href: [consultoria.html]
+        - text: "Submissão de manuscritos"
+          href: [consultoria.html]
+    - text: "Central de Auto Estudos"
+      href: [central.html]
       menu:
         - text: "Dados, variáveis e fatores"
-          href: [faq.html#dados-variaveis-fatores]
+          href: [central.html#dados-variaveis-fatores]
           menu:
             - text: "Dados"
-              href: [faq.html#dados]
+              href: [central.html#dados]
             - text: "Variáveis"
-              href: [faq.html#variaveis]
+              href: [central.html#variaveis]
             - text: "Fatores"
-              href: [faq.html#fatores]
+              href: [central.html#fatores]
         - text: "Distribuições e parâmetros"
-          href: [faq.html#distribuicoes-parametros]
+          href: [central.html#distribuicoes-parametros]
           menu:
             - text: "Distribuições"
-              href: [faq.html#distribuicoes]
+              href: [central.html#distribuicoes]
             - text: "Parâmetros"
-              href: [faq.html#parametros]
+              href: [central.html#parametros]
         - text: "Delineamento de estudos"
-          href: [faq.html#delineamento-estudos]
+          href: [central.html#delineamento-estudos]
           menu:
             - text: "Pareamento"
-              href: [faq.html#pareamento]
+              href: [central.html#pareamento]
         - text: "Ensaios clínicos aleatorizados"
-          href: [faq.html#ensaios-clínicos-aleatorizados]
+          href: [central.html#ensaios-clínicos-aleatorizados]
           menu:
             - text: "Ajuste de covariáveis"
-              href: [faq.html#ajuste-de-covariaveis]
+              href: [central.html#ajuste-de-covariaveis]
         - text: "Referências"
-          href: [faq.html#referencias]
-    - text: "Reutilize R scripts"
+          href: [central.html#referencias]
+    - text: "R scripts"
       menu:
         - text: "Tabela 2x2"
           href: [https://github.com/FerreiraAS/CT]
@@ -65,17 +76,6 @@ navbar:
           href: [https://github.com/FerreiraAS/RCT]
         - text: "ROC"
           href: [https://github.com/FerreiraAS/ROC]
-    - text: "Assessoria"
-      href: [assessoria.html]
-      menu:
-        - text: "Elaboração de projetos"
-          href: [assessoria.html]
-        - text: "Computação estatística"
-          href: [assessoria.html]
-        - text: "Computação biomédica"
-          href: [assessoria.html]
-        - text: "Submissão de manuscritos"
-          href: [assessoria.html]
   right:
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]

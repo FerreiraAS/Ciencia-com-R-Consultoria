@@ -1,5 +1,5 @@
 ---
-title: "**FAQ**"
+title: "**Central de Auto Estudos**"
 link-citations: yes
 output:
   html_document:
@@ -22,10 +22,10 @@ div.main-container {
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
-
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-# **Dados, variáveis, fatores e parâmetros** {#dados-variaveis-fatores}
+# **Dados, variáveis e fatores** {#dados-variaveis-fatores}
 
 <br>
 
@@ -92,8 +92,8 @@ div.main-container {
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
-
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 # **Distribuições e parâmetros** {#distribuicoes-parametros}
 
@@ -130,8 +130,8 @@ div.main-container {
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
-
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 # **Delineamento de estudos** {#delineamento-estudos}
 
@@ -154,10 +154,8 @@ div.main-container {
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
-
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-<br>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 # **Ensaios clínicos aleatorizados** {#ensaios-clínicos-aleatorizados}
 
@@ -190,9 +188,9 @@ div.main-container {
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
-
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-<br>
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 # **Referências** {#referencias}
+
+<br>

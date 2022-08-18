@@ -22,11 +22,11 @@ div.main-container {
 <br>
 <br>
 
-<span style="font-size: 1.4em;">**Ciência com** `r library(fontawesome); fa("r-project", fill = "steelblue")` tem por objetivo dar maior independência na elaboração de seus projetos, auxiliando no desenvolvimento das habilidades de elaboração de trabalhos científicos, acadêmicos ou profissionais.</span>
+<span style="font-size: 1.4em;">**Ciência com** `r library(fontawesome); fa("r-project", fill = "steelblue")` é direcionado a pesquisadores e alunos de todos os níveis de graduação e pós-graduação da Área de Saúde, com o objetivo de:</span>
 
-<br>
+* Oferecer uma consultoria completa na elaboração da modelagem e análise estatística que embase e valide a conclusão do seu projeto de pesquisa seja ele uma monografia, dissertação, tese ou artigo;
 
-Este projeto é direcionado a alunos de todo os níveis - graduação e pós-graduação - e pesquisadores em todas as áreas, com ênfase na Área de Saúde, que pretendem elaborar uma análise estatística que embase e valide a conclusão do seu trabalho acadêmico – monografia, dissertação, tese ou artigo.
+* Auxiliar o visitante no auto desenvolvimento de suas habilidades na elaboração de trabalhos científicos, acadêmicos ou profissionais, disponibilizando recursos acadêmicos na Central de Auto Estudos e R scripts prontos.
 
 <br>
 <br>
@@ -38,20 +38,19 @@ Este projeto é direcionado a alunos de todo os níveis - graduação e pós-gra
        <col span="1" style="width: 33%;">
     </colgroup>
   <tr>
-    <th style="background-color:#2C3E50;"><font color="white">FAQ</th>
-    <th style="background-color:#2C3E50;"><font color="white">Reutilize R scripts</th>
-    <th style="background-color:#2C3E50"><font color="white">Assessoria científica</th> 
+    <th style="background-color:#2C3E50;padding:0.5em"><font color="white">Solicite consultoria</th>
+    <th style="background-color:#3f5973;padding:0.5em"><font color="white">Central de Auto Estudos</th>
+    <th style="background-color:#5b80a4;padding:0.5em"><font color="white">R scripts disponíveis para uso</th>
   </tr>
   <tr style="vertical-align:top">
-    <td><br>*Perguntas e respostas para dúvidas mais comuns em estatística e processamento de sinais*<br><br></td>
-    <td><br>*Analise dados reutilizando scripts implementados e publicados em pesquisas anteriores*<br><br></td>
-    <td><br>*Proposta customizada para auxílio em todas as etapas da elaboração do trabalho, em acordo com seu tema, objetivo e prazo*<br><br></td> 
+    <td><br>*Consultoria customizada para auxílio a todas as etapas necessárias para a elaboração do seu trabalho.*<br><br></td> 
+    <td><br>*Tire suas dúvidas a respeito de tópicos controversos em análise estatística e processamento digital de sinais.*<br><br></td>
+    <td><br>*Analise dados reutilizando scripts implementados e publicados em pesquisas anteriores.*<br><br></td>
   </tr>
   <tr style="vertical-align:top">
-    <td>Tire suas dúvidas a respeito de tópicos controversos em análise estatística e processamento digital de sinais. </td>
-    <td>Roteiros para download dos scripts em R para você rodar com seus próprios dados, com links para os artigos em que foram utilizados.
-</td>
-    <td>Em acordo com o seu tema, prazos e objetivo do projeto, o orçamento será feito discriminando as etapas do trabalho, para completo atendimento do seu interesse.</td>
+    <td>O orçamento apresentará todas as etapas para completo atendimento do prazo e objetivo do seu projeto.</td>
+    <td>Perguntas e respostas para dúvidas mais comuns e recomendações de aplicações de técnicas estatísticas.</td>
+    <td>Roteiros para download dos scripts em R para você rodar com seus próprios dados, com links para os artigos que os utilizaram.</td>
   </tr>
 </table>
 
