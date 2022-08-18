@@ -75,6 +75,9 @@ div.main-container {
 ### **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**
 <p>*Texto editável | Referências sugeridas*</p>
 
+### **`r library(fontawesome); fa("book-medical", margin_right = "0.1em")` Revisão de aspectos éticos**
+<p>*Texto editável*</p>
+
 ### **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Formatação de referências**
 <p>*Texto editável | Biblioteca de software gerenciador*</p>
 
