@@ -1,5 +1,5 @@
 ---
-title: "Ciência com R | Ferreira AS"
+title: "**Ciência com R | Ferreira AS**"
 bibliography:
   - references.bib
 link-citations: yes
@@ -22,7 +22,7 @@ div.main-container {
 
 <br>
 
-<span style="font-size: 1.4em;">**Ciência com** `r library(fontawesome); fa("r-project", fill = "steelblue")` é direcionado a pesquisadores e alunos de todos os níveis de graduação e pós-graduação da Área de Saúde, com o objetivo de:</span>
+<span style="font-size: 1.2em;">**Ciência com** `r library(fontawesome); fa("r-project", fill = "steelblue")` é direcionado a pesquisadores e alunos de todos os níveis de graduação e pós-graduação da Área de Saúde, com o objetivo de:</span>
 
 * Oferecer uma consultoria completa na elaboração da modelagem e análise estatística que embase e valide a conclusão do seu projeto de pesquisa seja ele uma monografia, dissertação, tese ou artigo;
 
