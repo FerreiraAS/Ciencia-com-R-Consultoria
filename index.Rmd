@@ -1,5 +1,5 @@
 ---
-title: "**Ciência com R | Ferreira AS**"
+title: Ciência com R | Ferreira AS
 bibliography:
   - references.bib
 link-citations: yes
