@@ -1,4 +1,5 @@
 ---
+name: "Ciência com R | Ferreira AS"
 bibliography:
   - references.bib
 link-citations: yes
