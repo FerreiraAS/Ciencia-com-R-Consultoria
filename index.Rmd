@@ -1,5 +1,5 @@
 ---
-name: "Ciência com R | Ferreira AS"
+title: "Ciência com R | Ferreira AS"
 bibliography:
   - references.bib
 link-citations: yes
@@ -21,7 +21,6 @@ div.main-container {
 ```
 
 <br>
-<br>
 
 <span style="font-size: 1.4em;">**Ciência com** `r library(fontawesome); fa("r-project", fill = "steelblue")` é direcionado a pesquisadores e alunos de todos os níveis de graduação e pós-graduação da Área de Saúde, com o objetivo de:</span>
 
@@ -29,7 +28,6 @@ div.main-container {
 
 * Auxiliar o visitante no auto desenvolvimento de suas habilidades na elaboração de trabalhos científicos, acadêmicos ou profissionais, disponibilizando recursos acadêmicos na Central de Auto Estudos e R scripts prontos.
 
-<br>
 <br>
 
 <table style="width=100%;">
