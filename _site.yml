@@ -1,6 +1,5 @@
 ---
 title: Ciência com R | Ferreira AS
-name: Ciência com R | Ferreira AS
 date: '`r format(Sys.Date())`'
 author:
   - name: Arthur de Sá Ferreira
