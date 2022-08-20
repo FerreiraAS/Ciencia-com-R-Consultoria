@@ -1,8 +1,8 @@
 ---
-title: Ciência com R | Ferreira AS
+title: Ciência com R
 date: '`r format(Sys.Date())`'
 author:
-  - name: Arthur de Sá Ferreira
+  - name: Arthur de Sá Ferreira, DSc
   - email: arthur_sf@icloud.com
 repository_url: https://github.com/FerreiraAS/codes
 creative_commons: CC BY-NC-SA
