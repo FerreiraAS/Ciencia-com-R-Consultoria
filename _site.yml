@@ -1,13 +1,13 @@
 ---
-title: "Ciência com R | Ferreira AS"
+title: Ciência com R | Ferreira AS
+name: Ciência com R | Ferreira AS
 date: '`r format(Sys.Date())`'
-name: "ASF-R"
 author:
-  - name: "Arthur de Sá Ferreira"
-  - email: "arthur_sf@icloud.com"
-repository_url: "https://github.com/FerreiraAS/codes"
-creative_commons: "CC BY-NC-SA"
-output_dir: "docs"
+  - name: Arthur de Sá Ferreira
+  - email: arthur_sf@icloud.com
+repository_url: https://github.com/FerreiraAS/codes
+creative_commons: CC BY-NC-SA
+output_dir: docs
 include:
   - header.html
   - google-translate.html
