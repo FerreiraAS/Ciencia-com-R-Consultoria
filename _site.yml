@@ -9,12 +9,15 @@ creative_commons: CC BY-NC-SA
 output_dir: docs
 include:
   - header.html
-  - google-translate.html
+  - footer.html
   - /Scripts
+  - /favicon.ico
 exclude:
   - /docs/CiteScore
   - /docs/Qualis
   - /docs/SJR
+favicon:
+  - /favicon_ico/favicon.ico
 bibliography:
   - references.bib
 link-citations: yes
@@ -26,6 +29,8 @@ navbar:
     - text: "Consultoria"
       href: [consultoria.html]
       menu:
+        - text: "Serviços"
+          href: [consultoria.html]
         - text: "Elaboração de projetos"
           href: [consultoria.html]
         - text: "Computação estatística"
@@ -37,6 +42,8 @@ navbar:
     - text: "Central de Auto Estudos"
       href: [central.html]
       menu:
+        - text: "Início"
+          href: [central.html]
         - text: "Dados, variáveis e fatores"
           href: [central.html#dados-variaveis-fatores]
           menu:

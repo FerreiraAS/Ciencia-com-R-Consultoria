@@ -25,6 +25,15 @@ div.main-container {
 }
 ```
 
+```{r, echo = FALSE}
+# place R logo on top-right corner
+htmltools::img(
+  src = knitr::image_uri(file.path(R.home("doc"), "html", "logo.jpg")),
+  alt = 'logo',
+  style = 'position:absolute; top:65px; right:0; padding:10px;'
+)
+```
+
 <br>
 
 **Este ambiente é direcionado a pesquisadores e alunos de todos os níveis de graduação e pós-graduação da Área de Saúde, com o objetivo de:**
@@ -47,14 +56,14 @@ div.main-container {
     <th style="background-color:#5b80a4;padding:0.5em"><font color="white">R scripts disponíveis para uso</th>
   </tr>
   <tr style="vertical-align:top">
-    <td><br>*Consultoria customizada para auxílio a todas as etapas necessárias para a elaboração do seu trabalho.*<br><br></td> 
-    <td><br>*Tire suas dúvidas a respeito de tópicos controversos em análise estatística e processamento digital de sinais.*<br><br></td>
-    <td><br>*Analise dados reutilizando scripts implementados e publicados em pesquisas anteriores.*<br><br></td>
+    <td style="padding-right:10px;padding-left:10px;"><br>*Consultoria customizada para auxílio a todas as etapas necessárias para a elaboração do seu trabalho.*<br><br></td> 
+    <td style="padding-right:10px;padding-left:10px;"><br>*Tire suas dúvidas a respeito de tópicos controversos em análise estatística e processamento digital de sinais.*<br><br></td>
+    <td style="padding-right:10px;padding-left:10px;"><br>*Analise dados reutilizando scripts implementados e publicados em pesquisas anteriores.*<br><br></td>
   </tr>
   <tr style="vertical-align:top">
-    <td>O orçamento apresentará todas as etapas para completo atendimento do prazo e objetivo do seu projeto.</td>
-    <td>Perguntas e respostas para dúvidas mais comuns e recomendações de aplicações de técnicas estatísticas.</td>
-    <td>Roteiros para download dos scripts em R para você rodar com seus próprios dados, com links para os artigos que os utilizaram.</td>
+    <td style="padding-right:10px;padding-left:10px;">O orçamento apresentará todas as etapas para completo atendimento do prazo e objetivo do seu projeto.</td>
+    <td style="padding-right:10px;padding-left:10px;">Perguntas e respostas para dúvidas mais comuns e recomendações de aplicações de técnicas estatísticas.</td>
+    <td style="padding-right:10px;padding-left:10px;">Roteiros para download dos scripts em R para você rodar com seus próprios dados, com links para os artigos que os utilizaram.</td>
   </tr>
 </table>
 
