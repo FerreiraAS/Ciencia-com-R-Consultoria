@@ -51,7 +51,7 @@ htmltools::img(
        <col span="1" style="width: 30%;">
     </colgroup>
   <tr>
-    <th style="background-color:#2C3E50;padding:0.5em"><font color="white">Solicite consultoria</th>
+    <th style="background-color:#2C3E50;padding:0.5em"><font color="white">Consultoria</th>
     <th style="background-color:#3f5973;padding:0.5em"><font color="white">Central de Auto Estudos</th>
     <th style="background-color:#5b80a4;padding:0.5em"><font color="white">R scripts disponíveis</th>
   </tr>
@@ -63,7 +63,7 @@ htmltools::img(
   <tr style="vertical-align:top">
     <td style="padding-right:10px;padding-left:10px;">O orçamento apresentará todas as etapas para completo atendimento do prazo e objetivo do seu projeto.</td>
     <td style="padding-right:10px;padding-left:10px;">Perguntas e respostas para dúvidas mais comuns e recomendações de aplicações de técnicas estatísticas.</td>
-    <td style="padding-right:10px;padding-left:10px;">Faça o download de R scripts e rode com seus próprios dados, com links para os artigos que os utilizaram.</td>
+    <td style="padding-right:10px;padding-left:10px;">Faça o download gratuito de R scripts e rode com seus próprios dados, com links para os artigos que os utilizaram.</td>
   </tr>
 </table>
 
