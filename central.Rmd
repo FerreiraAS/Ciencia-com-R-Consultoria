@@ -1,16 +1,16 @@
 ---
 title: "**Central de Auto Estudos**"
-bibliography:
-  - references.bib
 link-citations: yes
 output:
   html_document:
-    toc: false
+    toc: true
+    toc_depth: 2
+bibliography: references.bib
 ---
 
 ```{css, echo = FALSE}
 body {
-  font-size: 2em;
+  font-size: 1.75em;
 }
 
 div.main-container {
@@ -28,7 +28,9 @@ div.main-container {
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
+
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 # **Dados, variáveis e fatores** {#dados-variaveis-fatores}
@@ -41,7 +43,9 @@ div.main-container {
 
 ### O que são dados?
 
--   XX [XX].
+-   Fatos ou informações, especialmente quando examinados e usados para entender as coisas ou tomar decisões (<https://www.oxfordlearnersdictionaries.com/definition/english/data>).
+
+-   "Tudo são dados" [@Olson2021].
 
 <br>
 
@@ -65,9 +69,9 @@ div.main-container {
 
 -   Na expectativa de ocorrência de dados perdidos, recomenda-se ampliar o tamanho da amostra com um % correspondente à tal estimativa - embora ainda não corriga potenciais vieses pela perda [@Altman2007].
 
-- Na ocorrência de dados perdidos, a análise mais comum compreende apenas os 'casos completos', com exclusào de participantes com algum dado perdido nas variáveis do estudo. Em casos de grande quantidade de dados perdidos, pode-se perder muito poder estatístico (erro tipo II elevado) [@Altman2007].
+-   Na ocorrência de dados perdidos, a análise mais comum compreende apenas os 'casos completos', com exclusào de participantes com algum dado perdido nas variáveis do estudo. Em casos de grande quantidade de dados perdidos, pode-se perder muito poder estatístico (erro tipo II elevado) [@Altman2007].
 
-- Na ocorrência de dados perdidos, a imputação de dados (substituição por dados simulados plausíveis preditos pelos dados presentes) pode ser uma alternativa para manter o erro tipo II estipulado no plano de análise [@Altman2007].
+-   Na ocorrência de dados perdidos, a imputação de dados (substituição por dados simulados plausíveis preditos pelos dados presentes) pode ser uma alternativa para manter o erro tipo II estipulado no plano de análise [@Altman2007].
 
 <br>
 
@@ -87,6 +91,24 @@ div.main-container {
 
 <br>
 
+### É recomendado categorizar ou dicotomizar variáveis contínuas?
+
+-   Categorizar variáveis não é necessário para conduzir análises estatísticas. Ao invés de categorizar (ou dicotomizar), priorize as variáveis contínuas [@Altman2006; @Royston2006; @Collins2016].
+
+-   Em geral, não existe uma justificativa racional (plausibilidade biológica) para assumir que as categorias artificiais subjacentes existam [@Altman2006; @Royston2006; @Collins2016].
+
+-   Dicotomização causa perda de informação e consequentemente à perda de poder estatístico para detectar efeitos [@Altman2006].
+
+-   Dicotomização também classifica indivíduos com valores próximos na variável contínua como indivíduos em pontos opostos e extremos, artificialmente sugerindo que são muito diferentes [@Altman2006].
+
+-   Dicotomização pode diminuir a variabilidade das variáveis [@Altman2006].
+
+-   Dicotomização pode ocultar não-linearidades presentes na variável contínua [@Altman2006].
+
+-   A mediana, embora amplamente utilizada, não é um bom parâmetro para dicotomizar variáveis [@Altman2006].
+
+<br>
+
 ## *Fatores* {#fatores}
 
 <br>
@@ -98,7 +120,9 @@ div.main-container {
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
+
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 # **Distribuições e parâmetros** {#distribuicoes-parametros}
@@ -136,7 +160,59 @@ div.main-container {
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
+
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Tabelas e Figuras** {#tabelas-figuras}
+
+<br>
+
+## *Tabelas* {#tabelas}
+
+<br>
+
+### Por que usar tabelas?
+
+-   Tabelas complementam o texto (e vice-versa), e podem apresentar os dados de modo mais acessível e informativo [@Inskip2017].
+
+<br>
+
+### Como construir a Tabela 1?
+
+-   A Tabela 1 geralmente é utilizada para descrever as características da amostra estudada, possibilitando a análise de ameaças à validade interna e/ou externa ao estudo [@Hayes-Larson2019].
+
+-   Inclua na tabela: título ou legenda, uma síntese descritiva (geralmente por meio de parâmetros descritivos), intervalos de confiança e/ou p-valores conforme necessário para adequada interpretação [@Inskip2017; @Kwak2021].
+
+<br>
+
+### Como construir a Tabela 2?
+
+-   A Tabela 2 pode ser utilizada para apresentar estimativas de mutiplos efeitos ajustados de um mesmo modelo estatístico [@Westreich2013].
+
+<br>
+
+## *Figuras* {#figuras}
+
+<br>
+
+### O que são figuras?
+
+- Figuras são utilizadas para apresentar dados (geralmente em grande quantidade) de modo mais intuitivoe fácil de compreender [@Park2022].
+
+<br>
+
+### Como construir uma figura?
+
+-   Inclua na figura: título, eixos com respectivas unidades, escalas em intervalos representativos das variáveis, legenda com símbolos, síntese descritiva dos valores e respectiva margem de erro, conforme necessário para adequada interpretação [@Park2022].
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 # **Delineamento de estudos** {#delineamento-estudos}
@@ -160,7 +236,9 @@ div.main-container {
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
+
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 # **Ensaios clínicos aleatorizados** {#ensaios-clínicos-aleatorizados}
@@ -194,7 +272,59 @@ div.main-container {
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
+
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Redação de análises** {#redacao}
+
+<br>
+
+## *Diretrizes* {#diretrizes}
+
+<br>
+
+### Quais diretrizes estão disponíveis?
+
+-   *Principles and recommendations for incorporating estimands into clinical study protocol templates* [@Lynggaard2022].
+
+-   *Guidelines for the Content of Statistical Analysis Plans in Clinical Trials* [@Gamble2017].
+
+-   *Basic statistical reporting for articles published in Biomedical Journals: The ''Statistical Analyses and Methods in the Published Literature'' or the SAMPL Guidelines* [@Lang2015].
+
+-   *Who is in this study, anyway? Guidelines for a useful Table 1* [@Hayes-Larson2019].
+
+<br>
+
+## *Checklists* {#checklists}
+
+<br>
+
+### O que são *checklists*?
+
+-   *Checklists* são listas que podem ser utilizadas por autores, revisores ou editores, durante as fases de planejamento ou apresentação, para redação ou revisão de textos que relatam anaálises estatísticas.
+
+<br>
+
+### Por que usar *checklists*?
+
+-   *Checklists* têm sido recomendados para melhorar o relato das análses realizadas, aumentar a transparência do estudo e reprodutibilidade dos achados [@Gardner1986].
+
+<br>
+
+### Quais *checklists* estão disponíveis?
+
+-   *A CHecklist for statistical Assessment of Medical Papers (the CHAMP statement): explanation and elaboration* [@Mansournia2021].
+
+-   *Checklist for clinical applicability of subgroup analysis* [@Gil-Sierra2020].
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 # **Referências** {#referencias}

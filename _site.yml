@@ -60,6 +60,13 @@ navbar:
               href: [central.html#distribuicoes]
             - text: "Parâmetros"
               href: [central.html#parametros]
+        - text: "Tabelas e figuras"
+          href: [central.html#tabelas-figuras]
+          menu:
+            - text: "Tabelas"
+              href: [central.html#tabelas]
+            - text: "Figuras"
+              href: [central.html#figuras]
         - text: "Delineamento de estudos"
           href: [central.html#delineamento-estudos]
           menu:
@@ -70,6 +77,13 @@ navbar:
           menu:
             - text: "Ajuste de covariáveis"
               href: [central.html#ajuste-de-covariaveis]
+        - text: "Redação de análises"
+          href: [central.html#redacao]
+          menu:
+            - text: "Diretrizes"
+              href: [central.html#diretrizes]
+            - text: "Checklists"
+              href: [central.html#chacklists]
         - text: "Referências"
           href: [central.html#referencias]
     - text: "R scripts"

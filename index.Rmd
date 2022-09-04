@@ -1,16 +1,15 @@
 ---
 title: "**Ciência com R**"
-bibliography:
-  - references.bib
 link-citations: yes
 output:
   html_document:
     toc: false
+bibliography: references.bib
 ---
 
 ```{css, echo = FALSE}
 body {
-  font-size: 2em;
+  font-size: 1.75em;
 }
 
 div.main-container {

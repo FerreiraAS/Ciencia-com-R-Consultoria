@@ -1,11 +1,10 @@
 ---
 title: "**Consultoria**"
-bibliography:
-  - references.bib
 link-citations: yes
 output:
   html_document:
     toc: false
+bibliography: references.bib
 ---
 
 ```{css, echo = FALSE}
