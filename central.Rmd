@@ -153,9 +153,11 @@ div.main-container {
 
 -   Parâmetros de tendência central: médial, mediana, moda [@kanji2006].
 
--   Parâmetros de dispersão: variância, desvio-padrão, amplitude, intervalo interquartil [@kanji2006].
+-   Parâmetros de dispersão: variância, desvio-padrão, amplitude, intervalo interquartil, intervalo de confiança [@kanji2006].
 
 -   Parâmetos de proporção: frequência absoluta, frequência relativa [@kanji2006].
+
+-   Parâmetros de distribuição: assimetria, curtose [@kanji2006].
 
 <br>
 
