@@ -27,6 +27,11 @@ div.main-container {
 
 <br>
 
+<div><center><img width="10%" height="10%" src="https://github.com/rstudio/hex-stickers/blob/master/thumbs/RStudio.png?raw=true"> Esta página foi desenvolvida em [**`r R.version$version.string`**](https://www.rstudio.com) usando [**R markdown**](https://rmarkdown.rstudio.com)
+</center></div>
+
+<br>
+
 <!--script for generating HORIZONTAL LINE-->
 
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
