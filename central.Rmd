@@ -33,6 +33,32 @@ div.main-container {
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
+# **Computação estatística** {#computacao-estatistica}
+
+<br>
+
+## *Scripts abertos* {#scripts-abertos}
+
+<br>
+
+### O que são scripts?
+
+-   [REF].
+
+<br>
+
+### Quais os potenciais benefícios do compartilhamento de scripts?
+
+-   [REF].
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
 # **Dados, variáveis e fatores** {#dados-variaveis-fatores}
 
 <br>
@@ -201,7 +227,7 @@ div.main-container {
 
 ### O que são figuras?
 
-- Figuras são utilizadas para apresentar dados (geralmente em grande quantidade) de modo mais intuitivoe fácil de compreender [@Park2022].
+-   Figuras são utilizadas para apresentar dados (geralmente em grande quantidade) de modo mais intuitivoe fácil de compreender [@Park2022].
 
 <br>
 
@@ -312,6 +338,10 @@ div.main-container {
 ### Por que usar *checklists*?
 
 -   *Checklists* têm sido recomendados para melhorar o relato das análses realizadas, aumentar a transparência do estudo e reprodutibilidade dos achados [@Gardner1986].
+
+- Trabalhos acadêmicos que relatam análises de dados devem ser passar por revisão por pares que inclua apreciação da análise estatóstica, e sua adequaçào ao delineamento do estudo e instrumentos utilizados [@Mascha2017].
+
+-   *Checklists* não são suficientes para garantir a qualidade técnica da pesquisa, mas podem conitribuir para a revisão por pares [@Mascha2017].
 
 <br>
 
