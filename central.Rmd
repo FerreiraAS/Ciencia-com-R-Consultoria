@@ -27,8 +27,11 @@ div.main-container {
 
 <br>
 
-<div><center><img width="10%" height="10%" src="https://github.com/rstudio/hex-stickers/blob/master/thumbs/RStudio.png?raw=true"> Esta página foi desenvolvida em [**`r R.version$version.string`**](https://www.rstudio.com) usando [**R markdown**](https://rmarkdown.rstudio.com)
-</center></div>
+<div>
+
+<center><img src="https://github.com/rstudio/hex-stickers/blob/master/thumbs/RStudio.png?raw=true" width="10%" height="10%"/> Esta página foi desenvolvida em [**`r R.version$version.string`**](https://www.rstudio.com) usando [**R markdown**](https://rmarkdown.rstudio.com)</center>
+
+</div>
 
 <br>
 
@@ -119,6 +122,14 @@ div.main-container {
 ### Quais são os tipos de variáveis?
 
 -   [@Altman1999].
+
+<br>
+
+### O que é transformação de variáveis contínuas?
+
+-   Transformação significa aplicar uma função matemática à variável medida em sua unidade original [@Bland1996].
+
+-   A transformação visa atender aos pressupostos dos modelos estatísticos quanto à distribuição da variável, em geral a distribuição Gaussiana [@Bland1996].
 
 <br>
 
@@ -344,7 +355,7 @@ div.main-container {
 
 -   *Checklists* têm sido recomendados para melhorar o relato das análses realizadas, aumentar a transparência do estudo e reprodutibilidade dos achados [@Gardner1986].
 
-- Trabalhos acadêmicos que relatam análises de dados devem ser passar por revisão por pares que inclua apreciação da análise estatóstica, e sua adequaçào ao delineamento do estudo e instrumentos utilizados [@Mascha2017].
+-   Trabalhos acadêmicos que relatam análises de dados devem ser passar por revisão por pares que inclua apreciação da análise estatóstica, e sua adequaçào ao delineamento do estudo e instrumentos utilizados [@Mascha2017].
 
 -   *Checklists* não são suficientes para garantir a qualidade técnica da pesquisa, mas podem conitribuir para a revisão por pares [@Mascha2017].
 
