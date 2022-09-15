@@ -1,7 +1,15 @@
+# load list of Sucupira files to read
+files.to.read <- list.files(
+  file.path(getwd(), "SJR"),
+  pattern = "csv",
+  full.names = TRUE,
+  recursive = FALSE
+)
+
 # read SCImago csv file (download from https://www.scimagojr.com)
 scimago <-
   read.csv(
-    "SJR/scimagojr 2021.csv",
+    files.to.read,
     header = TRUE,
     sep = ";",
     quote = "\"",

@@ -1,16 +1,26 @@
-# read SCImago csv file (download from https://www.scimagojr.com)
+# load list of Sucupira files to read
+files.to.read <- list.files(
+  file.path(getwd(), "CiteScore"),
+  pattern = "xlsx",
+  full.names = TRUE,
+  recursive = FALSE
+)
+
+# read CiteScore csv file (download from https://www.scimagojr.com)
 citescore <-
-  read_excel("CiteScore/extlistJuly2022.xlsx", sheet = 1)
+  read_excel(files.to.read, sheet = 1)
 citescore <- janitor::clean_names(citescore)
 
 # get columns
 columns_to_grab <-
-  c("sourcerecord_id",
+  c(
+    "sourcerecord_id",
     "source_title_medline_sourced_journals_are_indicated_in_green",
     "print_issn",
     "e_issn",
     "x2021_cite_score",
-    "coverage")
+    "coverage"
+  )
 
 # initialize dataframe
 citescore <- citescore %>% dplyr::select(all_of(columns_to_grab))
@@ -41,9 +51,11 @@ if (length(citescore$print_issn) != 0) {
 citescore$issn <- issns
 
 # replace 'ongoing' by current year
-citescore$coverage <- gsub("ongoing", format(Sys.time(), "%Y"), citescore$coverage)
+citescore$coverage <-
+  gsub("ongoing", format(Sys.time(), "%Y"), citescore$coverage)
 # get last year of the last coverage period
 citescore$last_coverage <- substr(citescore$coverage, 6, 9)
 
-# if coverage is ongoing, last update was last year 
-citescore$last_coverage[citescore$last_coverage == format(Sys.time(), "%Y")] <- as.character(as.numeric(format(Sys.time(), "%Y")) - 1)
+# if coverage is ongoing, last update was last year
+citescore$last_coverage[citescore$last_coverage == format(Sys.time(), "%Y")] <-
+  as.character(as.numeric(format(Sys.time(), "%Y")) - 1)
