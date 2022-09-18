@@ -6,6 +6,7 @@ output:
     toc: true
     toc_depth: 2
 bibliography: references.bib
+csl: american-medical-association-10th-edition.csl
 ---
 
 ```{css, echo = FALSE}
@@ -76,8 +77,6 @@ div.main-container {
 <br>
 
 ### O que são dados?
-
--   Fatos ou informações, especialmente quando examinados e usados para entender as coisas ou tomar decisões (<https://www.oxfordlearnersdictionaries.com/definition/english/data>).
 
 -   "Tudo são dados" [@Olson2021].
 
