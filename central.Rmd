@@ -78,33 +78,33 @@ div.main-container {
 
 ### O que são dados?
 
--   "Tudo são dados" [@Olson2021].
+-   "Tudo são dados".[@Olson2021]
 
 <br>
 
 ### O que são dados perdidos?
 
--   Dados perdidos são dados não coletados de um ou mais participantes, para uma ou mais variáveis [@Altman2007].
+-   Dados perdidos são dados não coletados de um ou mais participantes, para uma ou mais variáveis.[@Altman2007]
 
 <br>
 
 ### Qual o problema de um estudo ter dados perdidos?
 
--   Uma grande quantidade de dados perdidos pode comprometer a integridade científica do estudo, considerando-se que o tamanho da amostra foi estimado para observar um determinado tamanho de efeito mínimo [@Altman2007].
+-   Uma grande quantidade de dados perdidos pode comprometer a integridade científica do estudo, considerando-se que o tamanho da amostra foi estimado para observar um determinado tamanho de efeito mínimo.[@Altman2007]
 
--   Perda de participantes no estudo por dados perdidos pode reduzir o poder estatístico (erro tipo II) [@Altman2007].
+-   Perda de participantes no estudo por dados perdidos pode reduzir o poder estatístico (erro tipo II).[@Altman2007]
 
 <br>
 
 ### Que estratégias podem ser utilizadas quando há expectativa ou ocorrência de dados perdidos?
 
--   Não existe solução globalmente satisfatória para o problema de dados perdidos [@Altman2007].
+-   Não existe solução globalmente satisfatória para o problema de dados perdidos.[@Altman2007]
 
--   Na expectativa de ocorrência de dados perdidos, recomenda-se ampliar o tamanho da amostra com um % correspondente à tal estimativa - embora ainda não corriga potenciais vieses pela perda [@Altman2007].
+-   Na expectativa de ocorrência de dados perdidos, recomenda-se ampliar o tamanho da amostra com um % correspondente à tal estimativa - embora ainda não corriga potenciais vieses pela perda.[@Altman2007]
 
--   Na ocorrência de dados perdidos, a análise mais comum compreende apenas os 'casos completos', com exclusào de participantes com algum dado perdido nas variáveis do estudo. Em casos de grande quantidade de dados perdidos, pode-se perder muito poder estatístico (erro tipo II elevado) [@Altman2007].
+-   Na ocorrência de dados perdidos, a análise mais comum compreende apenas os 'casos completos', com exclusào de participantes com algum dado perdido nas variáveis do estudo. Em casos de grande quantidade de dados perdidos, pode-se perder muito poder estatístico (erro tipo II elevado).[@Altman2007]
 
--   Na ocorrência de dados perdidos, a imputação de dados (substituição por dados simulados plausíveis preditos pelos dados presentes) pode ser uma alternativa para manter o erro tipo II estipulado no plano de análise [@Altman2007].
+-   Na ocorrência de dados perdidos, a imputação de dados (substituição por dados simulados plausíveis preditos pelos dados presentes) pode ser uma alternativa para manter o erro tipo II estipulado no plano de análise.[@Altman2007]
 
 <br>
 
@@ -114,39 +114,39 @@ div.main-container {
 
 ### O que são variáveis?
 
--   Variáveis são informações que podem variar entre medidas em diferentes indivíduos ou repetições [@Altman1999].
+-   Variáveis são informações que podem variar entre medidas em diferentes indivíduos ou repetições.[@Altman1999]
 
 <br>
 
 ### Quais são os tipos de variáveis?
 
--   [@Altman1999].
+-   [REF]
 
 <br>
 
 ### O que é transformação de variáveis contínuas?
 
--   Transformação significa aplicar uma função matemática à variável medida em sua unidade original [@Bland1996].
+-   Transformação significa aplicar uma função matemática à variável medida em sua unidade original.[@Bland1996]
 
--   A transformação visa atender aos pressupostos dos modelos estatísticos quanto à distribuição da variável, em geral a distribuição Gaussiana [@Bland1996].
+-   A transformação visa atender aos pressupostos dos modelos estatísticos quanto à distribuição da variável, em geral a distribuição Gaussiana.[@Bland1996]
 
 <br>
 
 ### É recomendado categorizar ou dicotomizar variáveis contínuas?
 
--   Categorizar variáveis não é necessário para conduzir análises estatísticas. Ao invés de categorizar (ou dicotomizar), priorize as variáveis contínuas [@Altman2006; @Royston2006; @Collins2016].
+-   Categorizar variáveis não é necessário para conduzir análises estatísticas. Ao invés de categorizar (ou dicotomizar), priorize as variáveis contínuas.[@Altman2006; @Royston2006; @Collins2016]
 
--   Em geral, não existe uma justificativa racional (plausibilidade biológica) para assumir que as categorias artificiais subjacentes existam [@Altman2006; @Royston2006; @Collins2016].
+-   Em geral, não existe uma justificativa racional (plausibilidade biológica) para assumir que as categorias artificiais subjacentes existam.[@Altman2006; @Royston2006; @Collins2016]
 
--   Dicotomização causa perda de informação e consequentemente à perda de poder estatístico para detectar efeitos [@Altman2006].
+-   Dicotomização causa perda de informação e consequentemente à perda de poder estatístico para detectar efeitos.[@Altman2006]
 
--   Dicotomização também classifica indivíduos com valores próximos na variável contínua como indivíduos em pontos opostos e extremos, artificialmente sugerindo que são muito diferentes [@Altman2006].
+-   Dicotomização também classifica indivíduos com valores próximos na variável contínua como indivíduos em pontos opostos e extremos, artificialmente sugerindo que são muito diferentes.[@Altman2006]
 
--   Dicotomização pode diminuir a variabilidade das variáveis [@Altman2006].
+-   Dicotomização pode diminuir a variabilidade das variáveis.[@Altman2006]
 
--   Dicotomização pode ocultar não-linearidades presentes na variável contínua [@Altman2006].
+-   Dicotomização pode ocultar não-linearidades presentes na variável contínua.[@Altman2006]
 
--   A mediana, embora amplamente utilizada, não é um bom parâmetro para dicotomizar variáveis [@Altman2006].
+-   A mediana, embora amplamente utilizada, não é um bom parâmetro para dicotomizar variáveis.[@Altman2006]
 
 <br>
 
@@ -176,7 +176,7 @@ div.main-container {
 
 ### O que são distribuições?
 
--   XX [XX].
+-   [REF].
 
 <br>
 
@@ -186,19 +186,19 @@ div.main-container {
 
 ### O que são parâmetros?
 
--   Parâmetros são informações que definem um modelo teórico, como propriedades de uma coleção de indivíduos [@Altman1999].
+-   Parâmetros são informações que definem um modelo teórico, como propriedades de uma coleção de indivíduos.[@Altman1999]
 
 <br>
 
 ### Quais são os parâmetros mais comuns?
 
--   Parâmetros de tendência central: médial, mediana, moda [@kanji2006].
+-   Parâmetros de tendência central: médial, mediana, moda.[@kanji2006]
 
--   Parâmetros de dispersão: variância, desvio-padrão, amplitude, intervalo interquartil, intervalo de confiança [@kanji2006].
+-   Parâmetros de dispersão: variância, desvio-padrão, amplitude, intervalo interquartil, intervalo de confiança.[@kanji2006]
 
--   Parâmetos de proporção: frequência absoluta, frequência relativa [@kanji2006].
+-   Parâmetos de proporção: frequência absoluta, frequência relativa.[@kanji2006]
 
--   Parâmetros de distribuição: assimetria, curtose [@kanji2006].
+-   Parâmetros de distribuição: assimetria, curtose.[@kanji2006]
 
 <br>
 
@@ -218,21 +218,21 @@ div.main-container {
 
 ### Por que usar tabelas?
 
--   Tabelas complementam o texto (e vice-versa), e podem apresentar os dados de modo mais acessível e informativo [@Inskip2017].
+-   Tabelas complementam o texto (e vice-versa), e podem apresentar os dados de modo mais acessível e informativo.[@Inskip2017]
 
 <br>
 
 ### Como construir a Tabela 1?
 
--   A Tabela 1 geralmente é utilizada para descrever as características da amostra estudada, possibilitando a análise de ameaças à validade interna e/ou externa ao estudo [@Hayes-Larson2019].
+-   A Tabela 1 geralmente é utilizada para descrever as características da amostra estudada, possibilitando a análise de ameaças à validade interna e/ou externa ao estudo.[@Hayes-Larson2019]
 
--   Inclua na tabela: título ou legenda, uma síntese descritiva (geralmente por meio de parâmetros descritivos), intervalos de confiança e/ou p-valores conforme necessário para adequada interpretação [@Inskip2017; @Kwak2021].
+-   Inclua na tabela: título ou legenda, uma síntese descritiva (geralmente por meio de parâmetros descritivos), intervalos de confiança e/ou p-valores conforme necessário para adequada interpretação.[@Inskip2017; @Kwak2021]
 
 <br>
 
 ### Como construir a Tabela 2?
 
--   A Tabela 2 pode ser utilizada para apresentar estimativas de mutiplos efeitos ajustados de um mesmo modelo estatístico [@Westreich2013].
+-   A Tabela 2 pode ser utilizada para apresentar estimativas de mutiplos efeitos ajustados de um mesmo modelo estatístico.[@Westreich2013]
 
 <br>
 
@@ -242,13 +242,13 @@ div.main-container {
 
 ### O que são figuras?
 
--   Figuras são utilizadas para apresentar dados (geralmente em grande quantidade) de modo mais intuitivoe fácil de compreender [@Park2022].
+-   Figuras são utilizadas para apresentar dados (geralmente em grande quantidade) de modo mais intuitivoe fácil de compreender.[@Park2022]
 
 <br>
 
 ### Como construir uma figura?
 
--   Inclua na figura: título, eixos com respectivas unidades, escalas em intervalos representativos das variáveis, legenda com símbolos, síntese descritiva dos valores e respectiva margem de erro, conforme necessário para adequada interpretação [@Park2022].
+-   Inclua na figura: título, eixos com respectivas unidades, escalas em intervalos representativos das variáveis, legenda com símbolos, síntese descritiva dos valores e respectiva margem de erro, conforme necessário para adequada interpretação.[@Park2022]
 
 <br>
 
@@ -268,13 +268,13 @@ div.main-container {
 
 ### O que é pareamento?
 
--   Pareamento significa que para cada participante de um grupo (por exemplo, com alguma condição clínica), existe um (ou mais) participantes (por exemplo, grupo controle) que possui características iguais ou similares relativas a algumas variáveis de interesse [@Bland1994].
+-   Pareamento significa que para cada participante de um grupo (por exemplo, com alguma condição clínica), existe um (ou mais) participantes (por exemplo, grupo controle) que possui características iguais ou similares relativas a algumas variáveis de interesse.[@Bland1994]
 
--   As variáveis escolhidas para pareamento devem ter relação com as variáveis de desfecho, mas não são de interesse elas mesmas [@Bland1994].
+-   As variáveis escolhidas para pareamento devem ter relação com as variáveis de desfecho, mas não são de interesse elas mesmas.[@Bland1994]
 
--   O ajuste por pareamento deve ser incluído nas análises estatísticas mesmo que as variáveis de pareamento não sejam consideradas prognósticas ou confundidores na amostra estudada [@Bland1994].
+-   O ajuste por pareamento deve ser incluído nas análises estatísticas mesmo que as variáveis de pareamento não sejam consideradas prognósticas ou confundidores na amostra estudada.[@Bland1994]
 
--   A ausência de evidência estatística de diferença entre grupos não é considerada pareamento [@Bland1994].
+-   A ausência de evidência estatística de diferença entre grupos não é considerada pareamento.[@Bland1994]
 
 <br>
 
@@ -294,23 +294,23 @@ div.main-container {
 
 ### Quais os benefícios do ajuste de covariáveis?
 
--   Incluir a variável de desfecho medida na linha de base como covariável - independentemente da análise ser realizada com a medida pós-tratamento da mesma variável ou a diferença para a linha de base - pode aumentar o poder estatístico do estudo [@Kahan2014].
+-   Incluir a variável de desfecho medida na linha de base como covariável - independentemente da análise ser realizada com a medida pós-tratamento da mesma variável ou a diferença para a linha de base - pode aumentar o poder estatístico do estudo.[@Kahan2014]
 
--   Incluir outras variáveis medidas na linha de base, com potencial para serem desbalanceadas entre grupos após a randomização, diminui a chance de afetar as estimativas de efeito dos tratamentos [@Kahan2014].
+-   Incluir outras variáveis medidas na linha de base, com potencial para serem desbalanceadas entre grupos após a randomização, diminui a chance de afetar as estimativas de efeito dos tratamentos.[@Kahan2014]
 
 <br>
 
 ### Quais os riscos do ajuste de covariáveis?
 
--   Incluir covariáveis que não são prognósticas do desfecho pode reduzir o poder estatístico do estudo [@Kahan2014].
+-   Incluir covariáveis que não são prognósticas do desfecho pode reduzir o poder estatístico do estudo.[@Kahan2014]
 
--   Incluir covariáveis com dados perdidos pode reduzir o tamanho amostral e consequentemente o poder estatístico do estudo (análise de casos completos) ou levar a desvios do plano de análise por exclusão de covariáveis prognósticas [@Kahan2014].
+-   Incluir covariáveis com dados perdidos pode reduzir o tamanho amostral e consequentemente o poder estatístico do estudo (análise de casos completos) ou levar a desvios do plano de análise por exclusão de covariáveis prognósticas.[@Kahan2014]
 
 <br>
 
 ### Como lidar com os dados perdidos em covariáveis?
 
--   Imputação de dados perdidos de uma variável pela média dos dados observada permite estimativas não enviesadas dos efeitos do tratamento, preserva o erro tipo I e aumenta o poder estatístico comparado à análise de dados completos [@Kahan2014].
+-   Imputação de dados perdidos de uma variável pela média dos dados observada permite estimativas não enviesadas dos efeitos do tratamento, preserva o erro tipo I e aumenta o poder estatístico comparado à análise de dados completos.[@Kahan2014]
 
 <br>
 
@@ -330,13 +330,13 @@ div.main-container {
 
 ### Quais diretrizes estão disponíveis?
 
--   *Principles and recommendations for incorporating estimands into clinical study protocol templates* [@Lynggaard2022].
+-   *Principles and recommendations for incorporating estimands into clinical study protocol templates*.[@Lynggaard2022]
 
--   *Guidelines for the Content of Statistical Analysis Plans in Clinical Trials* [@Gamble2017].
+-   *Guidelines for the Content of Statistical Analysis Plans in Clinical Trials*.[@Gamble2017]
 
--   *Basic statistical reporting for articles published in Biomedical Journals: The ''Statistical Analyses and Methods in the Published Literature'' or the SAMPL Guidelines* [@Lang2015].
+-   *Basic statistical reporting for articles published in Biomedical Journals: The ''Statistical Analyses and Methods in the Published Literature'' or the SAMPL Guidelines*.[@Lang2015]
 
--   *Who is in this study, anyway? Guidelines for a useful Table 1* [@Hayes-Larson2019].
+-   *Who is in this study, anyway? Guidelines for a useful Table 1*.[@Hayes-Larson2019]
 
 <br>
 
@@ -352,19 +352,19 @@ div.main-container {
 
 ### Por que usar *checklists*?
 
--   *Checklists* têm sido recomendados para melhorar o relato das análses realizadas, aumentar a transparência do estudo e reprodutibilidade dos achados [@Gardner1986].
+-   *Checklists* têm sido recomendados para melhorar o relato das análses realizadas, aumentar a transparência do estudo e reprodutibilidade dos achados.[@Gardner1986]
 
--   Trabalhos acadêmicos que relatam análises de dados devem ser passar por revisão por pares que inclua apreciação da análise estatóstica, e sua adequaçào ao delineamento do estudo e instrumentos utilizados [@Mascha2017].
+-   Trabalhos acadêmicos que relatam análises de dados devem ser passar por revisão por pares que inclua apreciação da análise estatóstica, e sua adequaçào ao delineamento do estudo e instrumentos utilizados.[@Mascha2017]
 
--   *Checklists* não são suficientes para garantir a qualidade técnica da pesquisa, mas podem conitribuir para a revisão por pares [@Mascha2017].
+-   *Checklists* não são suficientes para garantir a qualidade técnica da pesquisa, mas podem conitribuir para a revisão por pares.[@Mascha2017]
 
 <br>
 
 ### Quais *checklists* estão disponíveis?
 
--   *A CHecklist for statistical Assessment of Medical Papers (the CHAMP statement): explanation and elaboration* [@Mansournia2021].
+-   *A CHecklist for statistical Assessment of Medical Papers (the CHAMP statement): explanation and elaboration*.[@Mansournia2021]
 
--   *Checklist for clinical applicability of subgroup analysis* [@Gil-Sierra2020].
+-   *Checklist for clinical applicability of subgroup analysis*.[@Gil-Sierra2020]
 
 <br>
 
