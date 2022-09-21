@@ -11,13 +11,10 @@ include:
   - header.html
   - footer.html
   - /Scripts
-  - /favicon.ico
 exclude:
   - /docs/CiteScore
   - /docs/Qualis
   - /docs/SJR
-favicon:
-  - /favicon_ico/favicon.ico
 bibliography:
   - references.bib
 link-citations: yes

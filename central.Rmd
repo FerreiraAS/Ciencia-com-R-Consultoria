@@ -120,7 +120,7 @@ div.main-container {
 
 ### Quais são os tipos de variáveis?
 
--   [REF]
+-. []
 
 <br>
 
