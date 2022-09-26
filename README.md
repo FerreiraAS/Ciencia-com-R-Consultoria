@@ -1,4 +1,4 @@
-<h1> Ciência com <im> src="https://cran.r-project.org/logo.html" width=lin</im> </h1>
+<h1> Ciência com <i> src="https://cran.r-project.org/logo.html" </i> </h1>
 
 Este ambiente é direcionado a pesquisadores e alunos de graduação e pós-graduação da Área de Saúde, com o objetivo de:
 m
