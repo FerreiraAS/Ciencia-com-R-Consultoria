@@ -1,4 +1,4 @@
-<h1> Ciência com <i class="fa-brands fa-r-project" style="color:white;"></i> </h1>
+<h1> Ciência com <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/fa-r-project.svg" width="50" height="50"> </h1>
 
 Este ambiente é direcionado a pesquisadores e alunos de graduação e pós-graduação da Área de Saúde, com o objetivo de:
 m
