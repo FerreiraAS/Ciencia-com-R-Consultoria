@@ -41,7 +41,7 @@ navbar:
       menu:
         - text: "Início"
           href: [central.html]
-        - text: "Computação estatísticas"
+        - text: "Computação estatística"
           href: [central.html#computacao-estatistica]
           menu:
             - text: "Scripts abertos"
