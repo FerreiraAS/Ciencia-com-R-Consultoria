@@ -1,4 +1,4 @@
-<h1> **Ciência com R** </h1>
+<h1> Ciência com R </h1>
 
 Este ambiente é direcionado a pesquisadores e alunos de graduação e pós-graduação da Área de Saúde, com o objetivo de:
 
