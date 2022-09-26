@@ -1,4 +1,4 @@
-<h1> Ciência com <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/r-project.svg" width="50" height="50"> </h1>
+<h1> Ciência com <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/d3a7818c253fcbafff9ebd1d4abb2866c192e1d7/svgs/brands/r-project.svg" width="50" height="50"> </h1>
 
 Este ambiente é direcionado a pesquisadores e alunos de graduação e pós-graduação da Área de Saúde, com o objetivo de:
 m
