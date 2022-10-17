@@ -13,7 +13,7 @@
 
 <title>Sobre</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -181,8 +181,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -190,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -306,6 +299,9 @@ $(document).ready(function () {
       <ul class="dropdown-menu" role="menu">
         <li>
           <a href="central.html#dados">Dados</a>
+        </li>
+        <li>
+          <a href="central.html#dados-perdidos">Dados perdidos</a>
         </li>
         <li>
           <a href="central.html#variaveis">Variáveis</a>
@@ -2892,11 +2888,11 @@ Qualis <br>A1</a></nobr>
 <br> <a href="http://dx.doi.org/10.1007/s00421-022-05061-8"
 target="_blank"><strong>Mixed circuit training acutely reduces arterial
 stiffness in patients with chronic stroke: a crossover randomized
-controlled trial</strong></a><br>Michalski, André C., Ferreira, Arthur
-S., Midgley, Adrian W., Costa, Victor A. B., Fonseca, Guilherme F., da
-Silva, Nádia S. L., Borges, Juliana, Billinger, Sandra A., Cunha, Felipe
-A.<br>2022  -  <em>European Journal of Applied Physiology and
-Occupational Physiology</em><br>
+controlled trial</strong></a><br>André C. Michalski, Arthur S. Ferreira,
+Adrian W. Midgley, Victor A. B. Costa, Guilherme F. Fonseca, Nádia S. L.
+da Silva, Juliana Borges, Sandra A. Billinger, Felipe A. Cunha<br>2022 
+-  <em>European Journal of Applied Physiology and Occupational
+Physiology</em><br>
 <div style="vertical-align: middle; display: inline-block;">
 <nobr><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" class="altmetric-embed" data-badge-type="donut" data-badge-popover="right" data-doi="10.1007/s00421-022-05061-8"></a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em;" data-legend="hover-right" class="__dimensions_badge_embed__" data-doi="10.1007/s00421-022-05061-8" data-style="small_circle"></a><a style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; padding:0.5em 0.3em 0.5em 0.3em;" class="plumx-plum-print-popup" href="https://plu.mx/plum/a/?doi=10.1007/s00421-022-05061-8" data-popup="right" data-size="medium" data-site="plum"></a><a href="https://www.scopus.com/sourceid/23402?dgcid=sc_widget_citescore" style="display: inline-block; float: left; margin:0.1em 0.3em 0.1em 0.3em; text-decoration:none;color:#505050">
 <div

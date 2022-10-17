@@ -51,6 +51,8 @@ navbar:
           menu:
             - text: "Dados"
               href: [central.html#dados]
+            - text: "Dados perdidos"
+              href: [central.html#dados-perdidos]
             - text: "Variáveis"
               href: [central.html#variaveis]
             - text: "Fatores"

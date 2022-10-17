@@ -82,6 +82,10 @@ div.main-container {
 
 <br>
 
+## *Dados perdidos* {#dados-perdidos}
+
+<br>
+
 ### O que são dados perdidos?
 
 -   Dados perdidos são dados não coletados de um ou mais participantes, para uma ou mais variáveis.[@Altman2007]
@@ -94,17 +98,41 @@ div.main-container {
 
 -   Perda de participantes no estudo por dados perdidos pode reduzir o poder estatístico (erro tipo II).[@Altman2007]
 
+-   Não existe solução globalmente satisfatória para o problema de dados perdidos.[@Altman2007]
+
 <br>
 
-### Que estratégias podem ser utilizadas quando há expectativa ou ocorrência de dados perdidos?
+### Quais os mecanismos geradores de dados perdidos?
 
--   Não existe solução globalmente satisfatória para o problema de dados perdidos.[@Altman2007]
+-   Dados perdidos completamente ao acaso (MCAR), em que os dados perdidos estão distribuídos aleatoriamente nos dados da amostra.[@Heymans2022]
+
+-   Dados perdidos ao acaso (MAR), em que a probabilidade de ocorrência de dados perdidos é relacionada a outras variáveis medidas.[@Heymans2022]
+
+-   Dados perdidos não ao acaso (MNAR), em que a probabilidade da ocorrência de dados perdidos é relacionada com a própria variável.[@Heymans2022]
+
+<br>
+
+### Como identificar o mecanismo gerador de dados perdidos?
+
+-   Por definição, não é possível avaliar se os dados foram perdidos ao acaso (MAR) ou não (MNAR).[@Heymans2022]
+
+- Testes t e regressões logísticas podem ser aplicados para indeitifiar relações entre variáveis com e sem dados perdidos, criando um fator de análise ('dado perdido' = 1, 'dado observado' = 0).[@Heymans2022]
+
+<br>
+
+### Que estratégias podem ser utilizadas quando há expectativa de dados perdidos?
 
 -   Na expectativa de ocorrência de dados perdidos, recomenda-se ampliar o tamanho da amostra com um % correspondente à tal estimativa - embora ainda não corriga potenciais vieses pela perda.[@Altman2007]
 
--   Na ocorrência de dados perdidos, a análise mais comum compreende apenas os 'casos completos', com exclusào de participantes com algum dado perdido nas variáveis do estudo. Em casos de grande quantidade de dados perdidos, pode-se perder muito poder estatístico (erro tipo II elevado).[@Altman2007]
+<br>
+
+### Que estratégias podem ser utilizadas quando há dados perdidos?
+
+-   Na ocorrência de dados perdidos, a análise mais comum compreende apenas os 'casos completos', com exclusão de participantes com algum dado perdido nas variáveis do estudo. Em casos de grande quantidade de dados perdidos, pode-se perder muito poder estatístico (erro tipo II elevado).[@Altman2007]
 
 -   Na ocorrência de dados perdidos, a imputação de dados (substituição por dados simulados plausíveis preditos pelos dados presentes) pode ser uma alternativa para manter o erro tipo II estipulado no plano de análise.[@Altman2007]
+
+-   Em dados longitudinais co um pequeno número de 'ondas' (medidas repetidas) e poucas variáveis, para análise com modelos de regressão univariados, a imputação via especificação condicional completa - também conhecido como imputação multivariada por equações encadeadas (*multivaraite imputation by chained equations*, MICE)- é eficiente do ponto de vista computacional e possui acurácia e precisão para estimação de parâmetros.[@Cao2022; @Heymans2022]
 
 <br>
 
