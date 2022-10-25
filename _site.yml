@@ -110,6 +110,8 @@ navbar:
           href: [sobre.html#revisor]
         - text: "Autoria em Publicações"
           href: [sobre.html#artigos]
+        - text: "Documentos"
+          href: [documentos.html]
     - text: "☕️"
       icon: "fa-mug-saucer"
       href: [https://www.buymeacoffee.com/Arthur.Sa.Ferreira]

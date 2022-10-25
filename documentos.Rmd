@@ -1,0 +1,133 @@
+---
+title: "**Documentos**"
+link-citations: yes
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+bibliography: references.bib
+---
+
+```{css, echo = FALSE}
+body {
+  font-size: 1.75em;
+}
+
+div.main-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+
+```{r setup, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', out.width = "100%", results = "hide"}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.align = 'center',
+  results = "asis",
+  include = TRUE,
+  out.width = "100%",
+  knitr.kable.NA = '--',
+  knitr.table.format = "html"
+)
+
+# library
+library(readxl)
+library(fontawesome)
+library(dplyr)
+library(kableExtra)
+```
+
+<br>
+
+## **Currículos** {.tabset}
+
+```{r qualificacao}
+# read separate sheets
+data <-
+  read_excel("Links.xlsx",
+             sheet = "curriculo",
+             col_types = c("text"))
+
+for (i in 1:dim(data[1])) {
+  cat('\n\n<!-- -->\n\n')
+  cat("### **", paste(data$Item[i], sep = ""), "**", "\n", sep = "")
+  cat('<center>\n')
+  if (!is.na(data$Item[i])) {
+    cat(
+      paste0(
+        '<iframe src="',
+        data$Link[i],
+        '/preview" style="width:100%; height:600px; border:0;"></iframe>'
+      )
+    )
+  } else {
+    cat("<br>No data available<br>")
+  }
+  cat('\n</center>')
+  cat('\n\n<!-- -->\n\n')
+  cat(paste('<a style="float:right" href="#top"><b>Início', fa("circle-up"), '</b></a>'))
+}
+```
+
+<br>
+
+## **Qualificação acadêmica** {.tabset}
+
+```{r diplomas}
+# read separate sheets
+data <-
+  read_excel("Links.xlsx",
+             sheet = "qualificacao-academica",
+             col_types = c("text"))
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat("### **Síntese**", "\n", sep = "")
+summ.table <- table(data[, 1])
+summ.table <- cbind(names(summ.table), as.matrix(unlist(summ.table))[1,])
+colnames(summ.table) <- c("Item", "No.")
+# print table
+print(
+  kable(summ.table, align = c("l", rep(
+    "c", ncol(summ.table) - 2
+  ), "r")) %>% kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  )
+)
+
+cat('\n\n<!-- -->\n\n')
+cat(paste('<a style="float:right" href="#top"><b>Início', fa("circle-up"), '</b></a>'))
+
+for (i in 1:dim(data[1])) {
+  cat('\n\n<!-- -->\n\n')
+  cat("### **", paste(data$Item[i], sep = ""), "**", "\n", sep = "")
+  cat('<center>\n')
+  if (!is.na(data$Item[i])) {
+    cat(
+      paste0(
+        '<iframe src="',
+        data$Link[i],
+        '/preview" style="width:100%; height:600px; border:0;"></iframe>'
+      )
+    )
+  } else {
+    cat("<br>No data available<br>")
+  }
+  cat('\n</center>')
+  cat('\n\n<!-- -->\n\n')
+  cat(paste('<a style="float:right" href="#top"><b>Início', fa("circle-up"), '</b></a>'))
+}
+```
+
+<br>
