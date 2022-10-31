@@ -116,7 +116,7 @@ div.main-container {
 
 -   Por definição, não é possível avaliar se os dados foram perdidos ao acaso (MAR) ou não (MNAR).[@Heymans2022]
 
-- Testes t e regressões logísticas podem ser aplicados para indeitifiar relações entre variáveis com e sem dados perdidos, criando um fator de análise ('dado perdido' = 1, 'dado observado' = 0).[@Heymans2022]
+-   Testes t e regressões logísticas podem ser aplicados para indeitifiar relações entre variáveis com e sem dados perdidos, criando um fator de análise ('dado perdido' = 1, 'dado observado' = 0).[@Heymans2022]
 
 <br>
 
@@ -339,6 +339,36 @@ div.main-container {
 ### Como lidar com os dados perdidos em covariáveis?
 
 -   Imputação de dados perdidos de uma variável pela média dos dados observada permite estimativas não enviesadas dos efeitos do tratamento, preserva o erro tipo I e aumenta o poder estatístico comparado à análise de dados completos.[@Kahan2014]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Meta-análises** {#meta-analises}
+
+<br>
+
+## *Interpretação* {#interpretacao}
+
+<br>
+
+### Como avaliar a variação do tamanho do efeito?
+
+- O interlalo de predição contém informação sobre a variação do tamanho do efeito.[@Borenstein2022]
+
+- Se o intervalo de predição não contém a hipótese nula ($H_{0}$), podemos concluir que (a) o tratamento funciona igualmente bem em todas as populações, ou que ele funciona melhor em algumas populações do que em outras.[@Borenstein2022]
+
+- Se o intervalo de predição contém a hipótese nula ($H_{0}$), podemos concluir que o tratamento pode ser benéfico em algumas populações mas prejudicial em outras, de modo que a estimativa pontual (geralmente a média) torna-se amplamente irrelevante. Nesse caso, é recomendado investigar em que populações o tratamento seria benéfico e onde causaria danos.[@Borenstein2022]
+
+<br>
+
+### Como avaliar a heterogeneidade entre os estudos?
+
+- $I^{2}$ representa qual proporção da variância observada reflete a variância nos efeitos verdadeiros em vez do erro de amostragem.[@Borenstein2022]
 
 <br>
 

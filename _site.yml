@@ -81,6 +81,11 @@ navbar:
           menu:
             - text: "Ajuste de covariáveis"
               href: [central.html#ajuste-de-covariaveis]
+        - text: "Meta-analises"
+          href: [central.html#meta-analises]
+          menu:
+            - text: "Interpretação"
+              href: [central.html#interpretacao]
         - text: "Redação de análises"
           href: [central.html#redacao]
           menu:
