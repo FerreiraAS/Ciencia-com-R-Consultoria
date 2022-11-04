@@ -6,9 +6,10 @@ grDevices
 graphics
 stats
 fontawesome
-readxl
 dplyr
 kableExtra
+readxl
+roadoi
 anytime
 gridExtra
 hrbrthemes
@@ -18,7 +19,6 @@ knitr
 lubridate
 magrittr
 plyr
-roadoi
 rorcid
 tidyverse
 ggplot2

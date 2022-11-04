@@ -4,7 +4,7 @@ link-citations: yes
 output:
   html_document:
     toc: true
-    toc_depth: 2
+    toc_depth: 3
 bibliography: references.bib
 ---
 
@@ -40,15 +40,18 @@ knitr::opts_chunk$set(
 )
 
 # library
-library(readxl)
-library(fontawesome)
 library(dplyr)
+library(fontawesome)
 library(kableExtra)
+library(readxl)
+library(roadoi)
 ```
 
 <br>
 
 ## **Currículos** {.tabset}
+
+<br>
 
 ```{r qualificacao}
 # read separate sheets
@@ -58,6 +61,7 @@ data <-
              col_types = c("text"))
 
 for (i in 1:dim(data[1])) {
+  cat('\n\n<!-- -->\n\n')
   cat('\n\n<!-- -->\n\n')
   cat("### **", paste(data$Item[i], sep = ""), "**", "\n", sep = "")
   cat('<center>\n')
@@ -74,13 +78,22 @@ for (i in 1:dim(data[1])) {
   }
   cat('\n</center>')
   cat('\n\n<!-- -->\n\n')
-  cat(paste('<a style="float:right" href="#top"><b>Início', fa("circle-up"), '</b></a>'))
+  cat('\n\n<!-- -->\n\n')
+  cat(paste(
+    '<a style="float:right" href="#top"><b>Início',
+    fa("circle-up"),
+    '</b></a>'
+  ))
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
 }
 ```
 
 <br>
 
 ## **Qualificação acadêmica** {.tabset}
+
+<br>
 
 ```{r diplomas}
 # read separate sheets
@@ -91,9 +104,11 @@ data <-
 
 # síntese quantitativa
 cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
 cat("### **Síntese**", "\n", sep = "")
 summ.table <- table(data[, 1])
-summ.table <- cbind(names(summ.table), as.matrix(unlist(summ.table))[1,])
+summ.table <-
+  cbind(names(summ.table), as.matrix(unlist(summ.table))[1, ])
 colnames(summ.table) <- c("Item", "No.")
 # print table
 print(
@@ -107,9 +122,17 @@ print(
 )
 
 cat('\n\n<!-- -->\n\n')
-cat(paste('<a style="float:right" href="#top"><b>Início', fa("circle-up"), '</b></a>'))
+cat('\n\n<!-- -->\n\n')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
 
 for (i in 1:dim(data[1])) {
+  cat('\n\n<!-- -->\n\n')
   cat('\n\n<!-- -->\n\n')
   cat("### **", paste(data$Item[i], sep = ""), "**", "\n", sep = "")
   cat('<center>\n')
@@ -124,9 +147,184 @@ for (i in 1:dim(data[1])) {
   } else {
     cat("<br>No data available<br>")
   }
-  cat('\n</center>')
   cat('\n\n<!-- -->\n\n')
-  cat(paste('<a style="float:right" href="#top"><b>Início', fa("circle-up"), '</b></a>'))
+  cat('\n\n<!-- -->\n\n')
+  cat('\n</center>')
+  cat(paste(
+    '<a style="float:right" href="#top"><b>Início',
+    fa("circle-up"),
+    '</b></a>'
+  ))
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+}
+```
+
+<br>
+
+## **Publicações e produção**
+
+<br>
+
+### **Artigos publicados em periódicos** {.tabset}
+
+<br>
+
+```{r artigos-em-periodicos}
+# read separate sheets
+data <-
+  read_excel("Links.xlsx",
+             sheet = "artigos-em-periodicos",
+             col_types = c("text"))
+table <- data
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Síntese**", "\n", sep = "")
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Artigos**", "\n", sep = "")
+
+# verifica se é open acess ou subscription
+for (i in 1:dim(data)[1]) {
+  # add OPEN ACESS badge
+  tryCatch(
+    expr = {
+      my_doi_oa <-
+        roadoi::oadoi_fetch(dois = data[i, 3], email = "cienciasdareabilitacao@souunisuam.com.br")
+      if (my_doi_oa$is_oa) {
+        # usa a imagem do OA e o link pelo DOI
+        table[i, 3] <- 
+          paste0(
+            "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
+            data[i, 3],
+            "\" target=\"_blank\">",
+            "<img height=\"18px;\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png\">",
+            "</a>"
+          )
+      } else {
+        # usa o link do DRIVE
+        table[i, 3] <- paste0(
+            "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
+            data[i, 2],
+            "\" target=\"_blank\">Restrito",
+            "</a>"
+          )
+      }
+    },
+    error = function(e) {
+      
+    }
+  )
+}
+
+# drop link column
+summ.table <- table [, -2]
+colnames(summ.table) <- c("Produção", "Acesso")
+
+# print table
+print(
+  kable(summ.table, align = c("l", rep(
+    "c", ncol(summ.table) - 2
+  ), "r"), escape = F) %>% kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>% scroll_box(width = "100%", height = "600px")
+)
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+```
+
+<br>
+
+### **Aplicativos com registro** {.tabset}
+
+<br>
+
+```{r aplicativos-com-registro}
+# read separate sheets
+data <-
+  read_excel("Links.xlsx",
+             sheet = "aplicativos-com-registro",
+             col_types = c("text"))
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Síntese**", "\n", sep = "")
+summ.table <- table(data[, 1])
+summ.table <-
+  cbind(names(summ.table), as.matrix(unlist(summ.table))[1, ])
+colnames(summ.table) <- c("Item", "No.")
+# print table
+print(
+  kable(summ.table, align = c("l", rep(
+    "c", ncol(summ.table) - 2
+  ), "r")) %>% kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  )
+)
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+for (i in 1:dim(data[1])) {
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+  cat("#### **", paste(data$Item[i], sep = ""), "**", "\n", sep = "")
+  cat('<center>\n')
+  if (!is.na(data$Item[i])) {
+    cat(
+      paste0(
+        '<iframe src="',
+        data$Link[i],
+        '/preview" style="width:100%; height:600px; border:0;"></iframe>'
+      )
+    )
+  } else {
+    cat("<br>No data available<br>")
+  }
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+  cat('\n</center>')
+  cat(paste(
+    '<a style="float:right" href="#top"><b>Início',
+    fa("circle-up"),
+    '</b></a>'
+  ))
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
 }
 ```
 
