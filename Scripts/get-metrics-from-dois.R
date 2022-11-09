@@ -19,7 +19,7 @@ if (is_empty(dois)) {
     # sort columns by title
     if (length(my_dois_works) != 0) {
       my_dois_works <-
-        my_dois_works[order(as.vector(my_dois_works$title)),]
+        my_dois_works[order(as.vector(my_dois_works$title)), ]
     }
   }
   # add issued (created) year of publication
@@ -27,12 +27,13 @@ if (is_empty(dois)) {
     expr = {
       # get year from issued
       my_dois_works$published_on <-
-      str_sub(as.character(my_dois_works$issued), 1, 4)
+        str_sub(as.character(my_dois_works$issued), 1, 4)
       # get year from created if not issued
       my_dois_works$published_on[is.na(my_dois_works$published_on)] <-
-      str_sub(as.character(my_dois_works$created[is.na(my_dois_works$published_on)]), 1, 4)
+        str_sub(as.character(my_dois_works$created[is.na(my_dois_works$published_on)]), 1, 4)
     },
     error = function(e) {
+      
     }
   )
 }

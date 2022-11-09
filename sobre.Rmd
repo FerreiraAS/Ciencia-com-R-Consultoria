@@ -33,7 +33,10 @@ div.main-container {
 packs.cran <-
   c(
     "anytime",
+    # plyr first, then dplyr
+    "plyr",
     "dplyr",
+    "fontawesome",
     "gridExtra",
     "hrbrthemes",
     "httpuv",
@@ -42,7 +45,6 @@ packs.cran <-
     "kableExtra",
     "lubridate",
     "magrittr",
-    "plyr",
     "readxl",
     "roadoi",
     "rorcid",
@@ -79,9 +81,9 @@ for (i in 1:length(packs)) {
 
 <!--read additional files-->
 ```{r metrics, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
-source("Scripts/sjr.R", local = knitr::knit_global())
-source("Scripts/citescore.R", local = knitr::knit_global())
-source("Scripts/webqualis.R", local = knitr::knit_global())
+source(file.path("Scripts", "sjr.R"), local = knitr::knit_global())
+source(file.path("Scripts", "citescore.R"), local = knitr::knit_global())
+source(file.path("Scripts", "webqualis.R"), local = knitr::knit_global())
 ```
 
 ### **Bio** {#autor}

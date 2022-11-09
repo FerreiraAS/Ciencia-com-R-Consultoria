@@ -5,7 +5,7 @@ res <- orcid_peer_reviews(my_orcid)
 
 if (is.null(res[[1]]$group$`external-ids.external-id`)) {
   # do nothing
-  } else {
+} else {
   # list of ISSN
   issn <-
     sapply(strsplit(sapply(
@@ -27,46 +27,58 @@ if (is.null(res[[1]]$group$`external-ids.external-id`)) {
   peer.review <-
     data.frame(matrix(unname(journals), ncol = 1), matrix(SJR, ncol = 1))
   peer.review <-
-    peer.review[order(as.numeric(SJR), decreasing = TRUE),]
+    peer.review[order(as.numeric(SJR), decreasing = TRUE), ]
   
   # remove rows with incomplete data
-  peer.review <- peer.review[complete.cases(peer.review),]
+  peer.review <- peer.review[complete.cases(peer.review), ]
   colnames(peer.review) <-
     c(paste("Periódicos (", dim(peer.review)[1], ")", sep = ""), "SJR")
   rownames(peer.review) <- c()
-
+  
   # print table (reviewer name)
-  print(kable(paste0("**", reviewer.name, "** <br><br>"),
-              align = "l",
-              format = "html",
-              escape = FALSE,
-              col.names = NULL) %>%
-          kable_styling(
-            bootstrap_options = c("striped", "hover", "condensed", "responsive"),
-            full_width = T,
-            position = "center"
-          ) %>%
-          row_spec(1,
-                   background = "#2C3E50",
-                   bold = TRUE,
-                   color = "white"),
-        row.names = FALSE, col.names = FALSE
+  print(
+    kable(
+      paste0("**", reviewer.name, "** <br><br>"),
+      align = "l",
+      format = "html",
+      escape = FALSE,
+      col.names = NULL
+    ) %>%
+      kable_styling(
+        bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+        full_width = T,
+        position = "center"
+      ) %>%
+      row_spec(
+        1,
+        background = "#2C3E50",
+        bold = TRUE,
+        color = "white"
+      ),
+    row.names = FALSE,
+    col.names = FALSE
   )
   # print table (reviewed journals)
-  print(kable(peer.review,
-        align = "l",
-        format = "html",
-        escape = FALSE) %>%
-    kable_styling(
-      bootstrap_options = c("striped", "hover", "condensed", "responsive"),
-      full_width = T,
-      position = "center"
+  print(
+    kable(
+      peer.review,
+      align = "l",
+      format = "html",
+      escape = FALSE
     ) %>%
-    row_spec(0,
-             background = "#2C3E50",
-             bold = TRUE,
-             color = "white"),
-    row.names = FALSE, col.names = FALSE
+      kable_styling(
+        bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+        full_width = T,
+        position = "center"
+      ) %>%
+      row_spec(
+        0,
+        background = "#2C3E50",
+        bold = TRUE,
+        color = "white"
+      ),
+    row.names = FALSE,
+    col.names = FALSE
   )
   cat('<br>')
 }

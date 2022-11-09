@@ -84,7 +84,7 @@ table.with.badges <-
         
         # initialize the DIV element for the badges
         cat("<div style=\"vertical-align: middle; display: inline-block;\">")
-
+        
         # initialize the NOBR element for the badges
         cat("<nobr>")
         
@@ -416,11 +416,15 @@ table.with.badges <-
     cat(', ', sep = "")
     cat('^3^ [**PlumX**](https://plu.mx)', sep = "")
     cat(', ', sep = "")
-    cat('^4^ [**CiteScore**](https://www.scopus.com/sources)', sep = "")
+    cat('^4^ [**CiteScore**](https://www.scopus.com/sources)',
+        sep = "")
     cat(', ', sep = "")
     cat('^5^ [**SCImago**](https://www.scimagojr.com)', sep = "")
     cat(', ', sep = "")
-    cat('^6^ [**WebQualis**](https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf)', sep = "")
+    cat(
+      '^6^ [**WebQualis**](https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf)',
+      sep = ""
+    )
     cat(', ', sep = "")
     cat('^7^ [**DOAJ**](https://doaj.org)', sep = "")
     cat('<br>')

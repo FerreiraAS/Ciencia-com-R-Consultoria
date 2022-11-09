@@ -41,4 +41,7 @@ cat(
     width = "2em"
   )
 )
-cat('](https://www.linkedin.com/shareArticle?mini=true&amp;url=', home, ') ', sep = "")
+cat('](https://www.linkedin.com/shareArticle?mini=true&amp;url=',
+    home,
+    ') ',
+    sep = "")

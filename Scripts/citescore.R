@@ -1,6 +1,6 @@
 # load list of Sucupira files to read
 files.to.read <- list.files(
-  file.path(getwd(), "CiteScore"),
+  file.path(getwd(), "Metrics", "CiteScore"),
   pattern = "xlsx",
   full.names = TRUE,
   recursive = FALSE

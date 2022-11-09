@@ -1,6 +1,6 @@
 # load list of Sucupira files to read
 files.to.read <- list.files(
-  file.path(getwd(), "SJR"),
+  file.path(getwd(), "Metrics", "SJR"),
   pattern = "csv",
   full.names = TRUE,
   recursive = FALSE
