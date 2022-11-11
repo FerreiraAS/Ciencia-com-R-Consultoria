@@ -37,9 +37,9 @@ htmltools::img(
 
 **Este ambiente é direcionado a pesquisadores e alunos de todos os níveis de graduação e pós-graduação da Área de Saúde, com o objetivo de:**
 
-* Oferecer uma consultoria completa na elaboração da modelagem e análise estatística que embase e valide a conclusão do seu projeto de pesquisa seja ele uma monografia, dissertação, tese ou artigo;
-
 * Auxiliar o visitante no auto desenvolvimento de suas habilidades na elaboração de trabalhos científicos, acadêmicos ou profissionais, disponibilizando recursos acadêmicos na Central de Auto Estudos e R scripts prontos.
+
+* Oferecer uma consultoria completa na elaboração da modelagem e análise estatística que embase e valide a conclusão do seu projeto de pesquisa seja ele uma monografia, dissertação, tese ou artigo;
 
 <br>
 
@@ -62,7 +62,7 @@ htmltools::img(
   <tr style="vertical-align:top">
     <td style="padding-right:10px;padding-left:10px;">Perguntas e respostas para dúvidas mais comuns e recomendações de aplicações de técnicas estatísticas.</td>
     <td style="padding-right:10px;padding-left:10px;">Faça o download gratuito de R scripts e rode com seus próprios dados, com links para os artigos que os utilizaram.</td>
-    <td style="padding-right:10px;padding-left:10px;">O orçamento apresentará todas as etapas para completo atendimento do prazo e objetivo do seu projeto.</td>
+    <td style="padding-right:10px;padding-left:10px;">Orçamento com todas as etapas para completo atendimento do prazo e objetivo do seu projeto.</td>
   </tr>
 </table>
 
