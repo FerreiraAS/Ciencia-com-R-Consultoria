@@ -209,7 +209,7 @@ for (i in 1:dim(data)[1]) {
         # usa a imagem do OA e o link pelo DOI
         table[i, 3] <- 
           paste0(
-            "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
+            "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"https://doi.org/",
             data[i, 3],
             "\" target=\"_blank\">",
             "<img height=\"18px;\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png\">",
@@ -220,7 +220,7 @@ for (i in 1:dim(data)[1]) {
         table[i, 3] <- paste0(
             "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
             data[i, 2],
-            "\" target=\"_blank\">Restrito",
+            "\" target=\"_blank\">Solicitar acesso",
             "</a>"
           )
       }

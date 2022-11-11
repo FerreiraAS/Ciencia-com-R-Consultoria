@@ -23,19 +23,6 @@ navbar:
     - text: ""
       icon: "fa-home"
       href: [index.html]
-    - text: "Consultoria"
-      href: [consultoria.html]
-      menu:
-        - text: "Serviços"
-          href: [consultoria.html]
-        - text: "Elaboração de projetos"
-          href: [consultoria.html]
-        - text: "Computação estatística"
-          href: [consultoria.html]
-        - text: "Computação biomédica"
-          href: [consultoria.html]
-        - text: "Submissão de manuscritos"
-          href: [consultoria.html]
     - text: "Central de Auto Estudos"
       href: [central.html]
       menu:
@@ -105,6 +92,19 @@ navbar:
           href: [https://github.com/FerreiraAS/RCT]
         - text: "ROC"
           href: [https://github.com/FerreiraAS/ROC]
+    - text: "Consultoria"
+      href: [consultoria.html]
+      menu:
+        - text: "Serviços"
+          href: [consultoria.html]
+        - text: "Elaboração de projetos"
+          href: [consultoria.html]
+        - text: "Computação estatística"
+          href: [consultoria.html]
+        - text: "Computação biomédica"
+          href: [consultoria.html]
+        - text: "Submissão de manuscritos"
+          href: [consultoria.html]
   right:
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]
