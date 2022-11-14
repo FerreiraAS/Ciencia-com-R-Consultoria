@@ -286,6 +286,40 @@ div.main-container {
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
+# **Análise multivariável** {#analise-multivariavel}
+
+<br>
+
+## *Seleção de variáveis* {#selecao}
+
+<br>
+
+### Correlação bivariada pode ser usada para seleção de variáveis?
+
+- Seleção bivariada de variáveis - isto é, aplicação de testes de correlação em pares de variáveis candidatas e variável de desfecho afim de selecionar quais serão incluídas no modelo multivariável - é um dos erros mais comuns na literatura.[@Sun1996]
+
+- A seleção bivariada de variáveis torna o modelo mais suscetível a otimismo no ajuste se as variáveis de confundimento não são adequadamente controladas.[@Sun1996]
+
+<br>
+
+### O que pode ser feito para reduzir o número de variáveis candidatas a um modelo multivariável?
+
+- Verifique a existência de multicolinearidade entre as variáveis candidatas.[@Sun1996]
+
+- Em caso de uma proporção baixa entre o número de participantes e de variáves, use o conhecimento prévio da literatura para selecionar um pequeno conjunto de variáveis candidatas.[@Sun1996]
+
+- Colapse categorias com contagem nula (células com valor igual a 0) de variáveis candidatas.[@Sun1996]
+
+- Use simulações de dados para identificar qual(is) variável(is) está(ão) causando problemas de convergência do ajuste do modelo.[@Sun1996]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
 # **Delineamento de estudos** {#delineamento-estudos}
 
 <br>

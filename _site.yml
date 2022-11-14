@@ -58,6 +58,11 @@ navbar:
               href: [central.html#tabelas]
             - text: "Figuras"
               href: [central.html#figuras]
+        - text: "Análise multivariável"
+          href: [central.html#analise-multivariavel]
+          menu:
+            - text: "Seleção de variáveis"
+              href: [central.html#selecao]
         - text: "Delineamento de estudos"
           href: [central.html#delineamento-estudos]
           menu:
