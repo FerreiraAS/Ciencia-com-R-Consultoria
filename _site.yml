@@ -26,11 +26,13 @@ navbar:
     - text: "Central de Auto Estudos"
       href: [central.html]
       menu:
-        - text: "Início"
+        - text: "Central"
           href: [central.html]
         - text: "Computação estatística"
           href: [central.html#computacao-estatistica]
           menu:
+            - text: "Por onde começar"
+              href: [central.html#inicio]
             - text: "Scripts abertos"
               href: [central.html#scripts-abertos]
         - text: "Dados, variáveis e fatores"
@@ -120,8 +122,8 @@ navbar:
           href: [sobre.html#revisor]
         - text: "Autoria em Publicações"
           href: [sobre.html#artigos]
-        - text: "Documentos"
-          href: [documentos.html]
+        - text: "Portfolio"
+          href: [portfolio.html]
     - text: "☕️"
       icon: "fa-mug-saucer"
       href: [https://www.buymeacoffee.com/Arthur.Sa.Ferreira]

@@ -46,6 +46,28 @@ div.main-container {
 
 <br>
 
+## *Por onde começar* {#inicio}
+
+<br>
+
+### Instale o R e o R Studio
+
+<div class="sizer" text-align:"center">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://posit.co/download/rstudio-desktop/">
+    </iframe>
+  </div>
+</div>
+
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
 ## *Scripts abertos* {#scripts-abertos}
 
 <br>
