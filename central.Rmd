@@ -30,7 +30,7 @@ div.main-container {
 
 <div>
 
-<center><img src="https://github.com/rstudio/hex-stickers/blob/master/thumbs/RStudio.png?raw=true" width="10%" height="10%"/> Esta página foi desenvolvida em [**`r R.version$version.string`**](https://www.rstudio.com) usando [**R markdown**](https://rmarkdown.rstudio.com)</center>
+<center><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/main/thumbs/RStudio.png" width="10%" height="10%"/> Esta página foi desenvolvida em [**`r R.version$version.string`**](https://www.rstudio.com) usando [**R markdown**](https://rmarkdown.rstudio.com)</center>
 
 </div>
 
