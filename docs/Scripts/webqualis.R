@@ -4,7 +4,7 @@ qualis <-
     file.path(
       "Metrics",
       "Qualis",
-      "relatorio_producao_intelectual_Qualis_Periódicos.xlsx"
+      "WebQualis_Compilada_2021.xlsx"
     ),
     sheet = 1,
     col_types = c("text")
