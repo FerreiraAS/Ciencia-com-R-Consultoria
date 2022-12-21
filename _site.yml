@@ -91,6 +91,8 @@ navbar:
           href: [central.html#referencias]
     - text: "R scripts"
       menu:
+        - text: "Observatório"
+          href: [https://github.com/FerreiraAS/observatorio]
         - text: "Tabela 2x2"
           href: [https://github.com/FerreiraAS/CT]
         - text: "ICC"
