@@ -38,8 +38,8 @@ navbar:
         - text: "Tabulação de dados"
           href: [central.html#tabulacao-dados]
           menu:
-            - text: "Tabelas"
-              href: [central.html#tabelas]
+            - text: "Tabulação"
+              href: [central.html#tabulacao]
         - text: "Dados, variáveis e fatores"
           href: [central.html#dados-variaveis-fatores]
           menu:
@@ -75,6 +75,11 @@ navbar:
           menu:
             - text: "Pareamento"
               href: [central.html#pareamento]
+        - text: "Desempenho diagnóstico"
+          href: [central.html#desempenho-diagnostico]
+          menu:
+            - text: "Curvas ROC"
+              href: [central.html#curvas-roc]
         - text: "Ensaios clínicos aleatorizados"
           href: [central.html#ensaios-clínicos-aleatorizados]
           menu:

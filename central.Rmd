@@ -94,7 +94,7 @@ div.main-container {
 
 <br>
 
-## *Tabelas* {#dados}
+## *Tabulação em planilhas* {#tabulacao}
 
 <br>
 
@@ -401,6 +401,26 @@ div.main-container {
 -   O ajuste por pareamento deve ser incluído nas análises estatísticas mesmo que as variáveis de pareamento não sejam consideradas prognósticas ou confundidores na amostra estudada.[@Bland1994]
 
 -   A ausência de evidência estatística de diferença entre grupos não é considerada pareamento.[@Bland1994]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Desempenho diagnóstico** {#desempenho-diagnostico}
+
+<br>
+
+## *Curvas ROC* {#curvas-roc}
+
+<br>
+
+### Como analisar o desempenho diagnóstico em resfechos com distribuição trimodal na população?
+
+-   Limiares duplos podem ser utilizados para análise de desempenho diagnóstico de testes com distribuição trimodal.[@ferreira2021]
 
 <br>
 
