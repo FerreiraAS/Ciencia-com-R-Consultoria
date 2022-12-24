@@ -52,14 +52,14 @@ div.main-container {
 
 ### Instale o R e o R Studio
 
+```{=html}
 <div class="sizer" text-align:"center">
   <div class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" src="https://posit.co/download/rstudio-desktop/">
     </iframe>
   </div>
 </div>
-
-
+```
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
@@ -90,11 +90,53 @@ div.main-container {
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
+# **Tabulação de dados** {#tabulacao-dados}
+
+<br>
+
+## *Tabelas* {#dados}
+
+<br>
+
+### Qual a estrutura básica de uma tabela para análise estatística?
+
+-   Use apenas uma planilha para conter todas as informações coletadas. Evite múltiplas abas no mesmo arquivo, assim como múltiplos arquivos quando possível.[@broman2018]
+
+-   Use apenas 1 (uma) linha de cabeçalho para nomear os fatores e variáveis do seu estudo.[@broman2018]
+
+-   Tipicamente, cada linha representa um participante e cada coluna representa uma variável ou fator do estudo. Ertudos com medidas repetidas dos participantes podem conter múltiplas linhas para o mesmo participante (repetindo os dados na mesma coluna, conhecido como *formato curto*) ou só uma linha para o participante (repetindo os dados em colunas separadas, conhecido como *formato longo* ).[@Juluru2015]
+
+<br>
+
+### O que usar para organizar tabelas para análise computadorizada?
+
+-   Seja consistente em: códigos para as variáveis categóricas; códigos para dados perdidos; nomes das variáveis; identificadores de participantes; nome dos arquivos; formato de datas; uso de caracteres de espaço.[@broman2018],[@Juluru2015]
+
+-   Use recursos para validação de dados antes e durante a digitação de dados.[@broman2018],[@Juluru2015]
+
+<br>
+
+### O que *não* usar para organizar tabelas para análise computadorizada?
+
+-   Não deixe células em branco: substitua dados perdidos por um código sistemático (ex.: NA [*not available*]).[@broman2018]
+
+-   Não inclua análises estatísticas ou gráficos nas tabelas de dados brutos.[@broman2018]
+
+-   Não utilize cores como informação. Se necessário, crie colunas adicionais - variáveis instrumentais ou auxiliares - para identificar a infomação de modo que possa ser analisada.[@broman2018]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
 # **Dados, variáveis e fatores** {#dados-variaveis-fatores}
 
 <br>
 
-## *Dados* {#dados}
+## *Dados*
 
 <br>
 
@@ -318,21 +360,21 @@ div.main-container {
 
 ### Correlação bivariada pode ser usada para seleção de variáveis?
 
-- Seleção bivariada de variáveis - isto é, aplicação de testes de correlação em pares de variáveis candidatas e variável de desfecho afim de selecionar quais serão incluídas no modelo multivariável - é um dos erros mais comuns na literatura.[@Sun1996]
+-   Seleção bivariada de variáveis - isto é, aplicação de testes de correlação em pares de variáveis candidatas e variável de desfecho afim de selecionar quais serão incluídas no modelo multivariável - é um dos erros mais comuns na literatura.[@Sun1996]
 
-- A seleção bivariada de variáveis torna o modelo mais suscetível a otimismo no ajuste se as variáveis de confundimento não são adequadamente controladas.[@Sun1996]
+-   A seleção bivariada de variáveis torna o modelo mais suscetível a otimismo no ajuste se as variáveis de confundimento não são adequadamente controladas.[@Sun1996]
 
 <br>
 
 ### O que pode ser feito para reduzir o número de variáveis candidatas a um modelo multivariável?
 
-- Verifique a existência de multicolinearidade entre as variáveis candidatas.[@Sun1996]
+-   Verifique a existência de multicolinearidade entre as variáveis candidatas.[@Sun1996]
 
-- Em caso de uma proporção baixa entre o número de participantes e de variáves, use o conhecimento prévio da literatura para selecionar um pequeno conjunto de variáveis candidatas.[@Sun1996]
+-   Em caso de uma proporção baixa entre o número de participantes e de variáves, use o conhecimento prévio da literatura para selecionar um pequeno conjunto de variáveis candidatas.[@Sun1996]
 
-- Colapse categorias com contagem nula (células com valor igual a 0) de variáveis candidatas.[@Sun1996]
+-   Colapse categorias com contagem nula (células com valor igual a 0) de variáveis candidatas.[@Sun1996]
 
-- Use simulações de dados para identificar qual(is) variável(is) está(ão) causando problemas de convergência do ajuste do modelo.[@Sun1996]
+-   Use simulações de dados para identificar qual(is) variável(is) está(ão) causando problemas de convergência do ajuste do modelo.[@Sun1996]
 
 <br>
 
@@ -448,11 +490,17 @@ div.main-container {
 
 -   *Principles and recommendations for incorporating estimands into clinical study protocol templates*.[@Lynggaard2022]
 
+-   *Who is in this study, anyway? Guidelines for a useful Table 1*.[@Hayes-Larson2019]
+
+-   *Guidelines for Reporting of Statistics for Clinical Research in Urology*.[@assel2019]
+
 -   *Guidelines for the Content of Statistical Analysis Plans in Clinical Trials*.[@Gamble2017]
 
 -   *Basic statistical reporting for articles published in Biomedical Journals: The ''Statistical Analyses and Methods in the Published Literature'' or the SAMPL Guidelines*.[@Lang2015]
 
--   *Who is in this study, anyway? Guidelines for a useful Table 1*.[@Hayes-Larson2019]
+-   *Research methods and reporting*.[@groves2008]
+
+-   *How to ensure your paper is rejected by the statistical reviewer*.[@stratton2005]
 
 <br>
 

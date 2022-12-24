@@ -10,11 +10,11 @@ output_dir: docs
 include:
   - header.html
   - footer.html
-  - /Scripts
+  - Scripts
 exclude:
-  - /docs/CiteScore
-  - /docs/Qualis
-  - /docs/SJR
+  - docs/CiteScore
+  - docs/Qualis
+  - docs/SJR
 bibliography:
   - references.bib
 link-citations: yes
@@ -35,6 +35,11 @@ navbar:
               href: [central.html#inicio]
             - text: "Scripts abertos"
               href: [central.html#scripts-abertos]
+        - text: "Tabulação de dados"
+          href: [central.html#tabulacao-dados]
+          menu:
+            - text: "Tabelas"
+              href: [central.html#tabelas]
         - text: "Dados, variáveis e fatores"
           href: [central.html#dados-variaveis-fatores]
           menu:
