@@ -35,11 +35,13 @@ navbar:
               href: [central.html#inicio]
             - text: "Scripts abertos"
               href: [central.html#scripts-abertos]
+        - text: "Unidade de análise"
+          href: [central.html#unidade-analise]
         - text: "Tabulação de dados"
           href: [central.html#tabulacao-dados]
           menu:
-            - text: "Tabulação"
-              href: [central.html#tabulacao]
+            - text: "Planilhas eletrônicas"
+              href: [central.html#planilhas]
         - text: "Dados, variáveis e fatores"
           href: [central.html#dados-variaveis-fatores]
           menu:
@@ -97,6 +99,8 @@ navbar:
               href: [central.html#diretrizes]
             - text: "Checklists"
               href: [central.html#chacklists]
+        - text: "Pacotes"
+          href: [central.html#pacotes]
         - text: "Referências"
           href: [central.html#referencias]
     - text: "R scripts"
