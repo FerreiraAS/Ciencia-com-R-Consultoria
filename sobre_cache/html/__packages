@@ -6,8 +6,11 @@ grDevices
 graphics
 stats
 fontawesome
-dplyr
 kableExtra
+remotes
+grateful
+emo
+dplyr
 readxl
 roadoi
 anytime
@@ -33,4 +36,3 @@ tools
 usethis
 packup
 rcrossref
-emo

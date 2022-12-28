@@ -55,7 +55,7 @@ div.main-container {
 ```{=html}
 <div class="sizer" text-align:"center">
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://posit.co/download/rstudio-desktop/">
+    <iframe class="embed-responsive-item" src="https://posit.co/download/rstudio-desktop/" style="border:2px solid black;">
     </iframe>
   </div>
 </div>
@@ -74,7 +74,7 @@ div.main-container {
 
 ### O que são scripts?
 
--   [REF].
+-   Um **R script** é um arquivo de texto contendo (quase) os mesmos comandos que você digitaria na linha de comando do R. (Quase) refere-se ao fato de que se você estiver usando sink() para enviar a saída para um arquivo, você terá que incluir alguns comandos em print() para obter a mesma saída da linha de comando ([CRAN](https://cran.r-project.org/doc/contrib/Lemon-kickstart/kr_scrpt.html)).
 
 <br>
 
@@ -96,15 +96,15 @@ div.main-container {
 
 ### O que é uma unidade de análise?
 
-- A unidade de análise de pesquisas na área de saúde geralmente é o indivíduo. Outras possibilidades são instituições em estudos multicêntricos (ex.: hospitais, clínicas) ou estudos publicados em meta-análises (ex.: ensaios clínicos).[@Altman1997]
+-   A unidade de análise de pesquisas na área de saúde geralmente é o indivíduo. Outras possibilidades são instituições em estudos multicêntricos (ex.: hospitais, clínicas) ou estudos publicados em meta-análises (ex.: ensaios clínicos).[@Altman1997]
 
-- É fundamental identificar corretamente a unidade de análise para evitar inflação do tamanho da amostra (ex.: medidas bilaterais resultando em o dobro de participantes), violações de suposições dos testes de hipótese (ex.: independência entre medidas e/ou unidade de análise) e resultados espúrios em testes de hipótese (ex.: p-valores menores que aqueles observados se a amostra não estivesse inflada).[@Altman1997; @Matthews1990]
+-   É fundamental identificar corretamente a unidade de análise para evitar inflação do tamanho da amostra (ex.: medidas bilaterais resultando em o dobro de participantes), violações de suposições dos testes de hipótese (ex.: independência entre medidas e/ou unidade de análise) e resultados espúrios em testes de hipótese (ex.: p-valores menores que aqueles observados se a amostra não estivesse inflada).[@Altman1997; @Matthews1990]
 
 <br>
 
 ### Como podem ser coletadas as informações da unidade de análise? {.tabset}
 
-- Da unidade de análise podem ser coletadas informações em medidas únicas, repetidas, seriadas ou múltiplas.
+-   Da unidade de análise podem ser coletadas informações em medidas únicas, repetidas, seriadas ou múltiplas.
 
 <br>
 
@@ -159,7 +159,7 @@ kable(head(table.1, n = 10L), align = "c", format = "html") %>%
   row_spec(k1, background = "#E6E6E6", bold = TRUE)
 ```
 
-- A medida única da pressão arterial sistólica no braço esquerdo resulta em um valor pontual. O valor pontual será considerado representativo da variável para a unidade de análise (ex.: **`r VAR.1[k1]` mmHg** para o participante **\#`r k1`**). Medidas únicas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.
+-   A medida única da pressão arterial sistólica no braço esquerdo resulta em um valor pontual. O valor pontual será considerado representativo da variável para a unidade de análise (ex.: **`r VAR.1[k1]` mmHg** para o participante **\#`r k1`**). Medidas únicas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.
 
 ```{r medidas-unicas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
 ```
@@ -233,7 +233,7 @@ kable(head(table.2, n = 10L), align = "c", format = "html") %>%
   row_spec(k2, background = "#E6E6E6", bold = TRUE)
 ```
 
-- A medida repetida da pressão arterial no braço esquerdo, resultando em um conjunto de valores pontuais (ex.: **`r VAR.1[k2]` mmHg**, **`r VAR.2[k2]` mmHg** e **`r VAR.3[k2]` mmHg** para o participante **\#`r k2`**). As medidas repetidas podem ser tabuladas separadamente, por exemplo para análise da confiabilidade de obtenção dessa medida.
+-   A medida repetida da pressão arterial no braço esquerdo, resultando em um conjunto de valores pontuais (ex.: **`r VAR.1[k2]` mmHg**, **`r VAR.2[k2]` mmHg** e **`r VAR.3[k2]` mmHg** para o participante **\#`r k2`**). As medidas repetidas podem ser tabuladas separadamente, por exemplo para análise da confiabilidade de obtenção dessa medida.
 
 ```{r medidas-repetidas-separadas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
 ```
@@ -296,7 +296,7 @@ kable(head(table.3, n = 10L), align = "c", format = "html") %>%
   row_spec(k2, background = "#E6E6E6", bold = TRUE)
 ```
 
-- As medidas repetidas podem ser agregadas por algum parâmetro --- ex.: média, mediana, máximo, mínimo, entre outros---, observando-se a relevância biológica, clínica e/ou metodológica desta escolha. O valor agregado será considerado representativo da variável para a unidade de análise (ex.: média = **`r round(VAR.aggr[k2], digits = 0)` mmHg** para o participante **\#`r k2`**). Medidas agregadas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.
+-   As medidas repetidas podem ser agregadas por algum parâmetro --- ex.: média, mediana, máximo, mínimo, entre outros---, observando-se a relevância biológica, clínica e/ou metodológica desta escolha. O valor agregado será considerado representativo da variável para a unidade de análise (ex.: média = **`r round(VAR.aggr[k2], digits = 0)` mmHg** para o participante **\#`r k2`**). Medidas agregadas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.
 
 ```{r medidas-repetidas-agregadas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
 ```
@@ -405,7 +405,7 @@ kable(head(table.4, n = 10L), align = "c", format = "html") %>%
   row_spec(1:3, background = "#E6E6E6", bold = TRUE)
 ```
 
-- Medidas seriadas são possivelmente relacionadas e, portanto, dependentes na mesma unidade de análise. Por exemplo, a medida seriada da pressão arterial no braço esquerdo, em intervalos tipicamente regulares (ex.: **`r table.4[1,3]` mmHg**, **`r table.4[2,3]` mmHg** e **`r table.4[3,3]` mmHg** em **`r 1` min**, **`r 2` min** e **`r 3` min**, respectivamente, para o participante **#1**).
+-   Medidas seriadas são possivelmente relacionadas e, portanto, dependentes na mesma unidade de análise. Por exemplo, a medida seriada da pressão arterial no braço esquerdo, em intervalos tipicamente regulares (ex.: **`r table.4[1,3]` mmHg**, **`r table.4[2,3]` mmHg** e **`r table.4[3,3]` mmHg** em **`r 1` min**, **`r 2` min** e **`r 3` min**, respectivamente, para o participante **#1**).
 
 ```{r medidas-seriadas-separadas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
 ```
@@ -503,7 +503,7 @@ kable(head(table.5, n = 10L), align = "c", format = "html") %>%
   row_spec(1, background = "#E6E6E6", bold = TRUE)
 ```
 
-- Medidas seriadas também agregadas por parâmetros --- ex.: máximo, mínimo, amplitude --- são consideradas representativas da variação temporal ou de uma característica de interesse (ex.: amplitude = **`r table.5[1,2]` mmHg** para o participante **#1**).
+-   Medidas seriadas também agregadas por parâmetros --- ex.: máximo, mínimo, amplitude --- são consideradas representativas da variação temporal ou de uma característica de interesse (ex.: amplitude = **`r table.5[1,2]` mmHg** para o participante **#1**).
 
 ```{r medidas-seriadas-agregadas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
 ```
@@ -575,7 +575,7 @@ kable(head(table.6, n = 10L), align = "c", format = "html") %>%
   row_spec(k4, background = "#E6E6E6", bold = TRUE)
 ```
 
-- A medida de pressão arterial bilateral resulta em um conjunto de valores pontuais (ex.: braço esquerdo = **`r round(VAR.1[k4], digits = 0)` mmHg**, braço direito = **`r round(VAR.2[k4], digits = 0)` mmHg** para o participante **\#`r k4`**). Neste caso, ambos os valores pontuais são considerados representativos daquela unidade de análise. Medidas múltiplas também são possivelmente relacionadas e portanto são dependentes na mesma unidade de análise. Medidas múltiplas podem ser obtidas de modo repetido para análise agregada ou seriada.
+-   A medida de pressão arterial bilateral resulta em um conjunto de valores pontuais (ex.: braço esquerdo = **`r round(VAR.1[k4], digits = 0)` mmHg**, braço direito = **`r round(VAR.2[k4], digits = 0)` mmHg** para o participante **\#`r k4`**). Neste caso, ambos os valores pontuais são considerados representativos daquela unidade de análise. Medidas múltiplas também são possivelmente relacionadas e portanto são dependentes na mesma unidade de análise. Medidas múltiplas podem ser obtidas de modo repetido para análise agregada ou seriada.
 
 ```{r medidas-multiplas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
 ```
@@ -811,13 +811,15 @@ kable(table.final,
   )
 ```
 
+<br>
+
 <!--script for generating HORIZONTAL LINE-->
 
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-# **Dados, variáveis e fatores** {#dados-variaveis-fatores}
+# **Dados** {#dados}
 
 <br>
 
@@ -853,11 +855,11 @@ kable(table.final,
 
 ### Quais os mecanismos geradores de dados perdidos?
 
--   Dados perdidos completamente ao acaso (MCAR), em que os dados perdidos estão distribuídos aleatoriamente nos dados da amostra.[@Heymans2022]
+-   Dados perdidos completamente ao acaso (MCAR), em que os dados perdidos estão distribuídos aleatoriamente nos dados da amostra.[@Heymans2022; @carpenter2021]
 
--   Dados perdidos ao acaso (MAR), em que a probabilidade de ocorrência de dados perdidos é relacionada a outras variáveis medidas.[@Heymans2022]
+-   Dados perdidos ao acaso (MAR), em que a probabilidade de ocorrência de dados perdidos é relacionada a outras variáveis medidas.[@Heymans2022; @carpenter2021]
 
--   Dados perdidos não ao acaso (MNAR), em que a probabilidade da ocorrência de dados perdidos é relacionada com a própria variável.[@Heymans2022]
+-   Dados perdidos não ao acaso (MNAR), em que a probabilidade da ocorrência de dados perdidos é relacionada com a própria variável.[@Heymans2022; @carpenter2021]
 
 <br>
 
@@ -869,19 +871,35 @@ kable(table.final,
 
 <br>
 
-### Que estratégias podem ser utilizadas quando há expectativa de dados perdidos?
+### Que estratégias podem ser utilizadas na coleta de dados quando há expectativa de perda amostral?
 
 -   Na expectativa de ocorrência de dados perdidos, recomenda-se ampliar o tamanho da amostra com um % correspondente à tal estimativa - embora ainda não corriga potenciais vieses pela perda.[@Altman2007]
 
 <br>
 
-### Que estratégias podem ser utilizadas quando há dados perdidos?
+### Que estratégias podem ser utilizadas na análise de dados quando há dados perdidos?
 
 -   Na ocorrência de dados perdidos, a análise mais comum compreende apenas os 'casos completos', com exclusão de participantes com algum dado perdido nas variáveis do estudo. Em casos de grande quantidade de dados perdidos, pode-se perder muito poder estatístico (erro tipo II elevado).[@Altman2007]
 
+-   A análise de dados completos é válida quando pode se argumentar que que a probabiidade de o participante ter dados completos depende apenas das covariáveis e não dos desfechos.[@carpenter2021]
+
+-   A análise de dados completos é eficiente quando todos os dados perdidos estão no desfecho, ou quando cada participante com dados perdidos nas covariáveis também possui dados perdidos nos desfechos.[@carpenter2021]
+
 -   Na ocorrência de dados perdidos, a imputação de dados (substituição por dados simulados plausíveis preditos pelos dados presentes) pode ser uma alternativa para manter o erro tipo II estipulado no plano de análise.[@Altman2007]
 
+-   A análise com imputação de dados pode ser útil quando pode-se argumentar que os dados foram perdidos ao acaso (MAR); quando o desfecho foi observado e os dados perdidos estão nas covariáveis; e variáveis auxiliares - preditoras do desfecho e não dos dados perdidos - estão disponíveis.[@carpenter2021]
+
 -   Em dados longitudinais co um pequeno número de 'ondas' (medidas repetidas) e poucas variáveis, para análise com modelos de regressão univariados, a imputação via especificação condicional completa - também conhecido como imputação multivariada por equações encadeadas (*multivaraite imputation by chained equations*, MICE)- é eficiente do ponto de vista computacional e possui acurácia e precisão para estimação de parâmetros.[@Cao2022; @Heymans2022]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Variáveis e fatores** {#variaveis-fatores}
 
 <br>
 
@@ -895,9 +913,13 @@ kable(table.final,
 
 <br>
 
-### Quais são os tipos de variáveis?
+### Como são classificadas as variáveis?
 
--. []
+-   Quanto à informação: Quantitativa ou qualitativa.[@kaliyadan2019; @vetter2017; @Ali2016]
+
+-   Quanto ao conteúdo: contínua (intervalo ou razão; discreta ou contínua), categórica ordinal (numérica discreta ou nominal) ou categórica nominal (multinominal ou dicotômica).[@kaliyadan2019; @vetter2017; @Ali2016]
+
+-   Quanto à interpretação: dependente (desfecho), independente (preditora, covariável, confundidora, controle), mediadora, moderadora, modificadora ou auxiliar.[@kaliyadan2019; @vetter2017; @Ali2016]
 
 <br>
 

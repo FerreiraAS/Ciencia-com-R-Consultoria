@@ -42,13 +42,16 @@ navbar:
           menu:
             - text: "Planilhas eletrônicas"
               href: [central.html#planilhas]
-        - text: "Dados, variáveis e fatores"
-          href: [central.html#dados-variaveis-fatores]
+        - text: "Dados"
+          href: [central.html#dados]
           menu:
             - text: "Dados"
               href: [central.html#dados]
             - text: "Dados perdidos"
               href: [central.html#dados-perdidos]
+        - text: "Variáveis e fatores"
+          href: [central.html#variaveis-fatores]
+          menu:
             - text: "Variáveis"
               href: [central.html#variaveis]
             - text: "Fatores"
@@ -140,6 +143,8 @@ navbar:
           href: [sobre.html#artigos]
         - text: "Portfolio"
           href: [portfolio.html]
+    - text: "Sympla"
+      href: [https://www.sympla.com.br/produtor/arthursaferreira]
     - text: "☕️"
       icon: "fa-mug-saucer"
       href: [https://www.buymeacoffee.com/Arthur.Sa.Ferreira]
