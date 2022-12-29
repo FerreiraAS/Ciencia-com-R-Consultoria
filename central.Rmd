@@ -1217,6 +1217,8 @@ kable(table.final,
 
 -   *Principles and recommendations for incorporating estimands into clinical study protocol templates*.[@Lynggaard2022]
 
+-   *Framework for the treatment and reporting of missing data in observational studies: The Treatment And Reporting of Missing data in Observational Studies framework*.[@Lee2021]
+
 -   *Who is in this study, anyway? Guidelines for a useful Table 1*.[@Hayes-Larson2019]
 
 -   *Guidelines for Reporting of Statistics for Clinical Research in Urology*.[@assel2019]
