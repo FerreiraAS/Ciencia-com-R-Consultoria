@@ -893,6 +893,12 @@ kable(table.final,
 
 <br>
 
+### Que estratégias podem ser utilizadas na redação de estudos em que há dados perdidos?
+
+- Informar: o número de participantes com dados perdidos; diferenças nas taxas de dados perdidos entre os braços do estudo; os motivos dos dados perdidos; o fluxo de participantes; quaisquer diferenças entre os participantes com e sem dados perdidos; o padrão de ausência (por exemplo, se é aleatória); os métodos para tratamento de dados perdidos das variáveis em análise; os resultados de quaisquer análises de sensibilidade; as implicações dos dados perdidos na interpretação do resultados.[@Akl2015]
+
+<br>
+
 <!--script for generating HORIZONTAL LINE-->
 
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
