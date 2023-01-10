@@ -39,6 +39,11 @@ navbar:
               href: [central.html#compartilhando-scripts]
         - text: "Unidade de análise"
           href: [central.html#unidade-analise]
+          menu:
+            - text: "Definição"
+              href: [central.html#definicao]
+            - text: "Medidas únicas ou múltiplas"
+              href: [central.html#medidas]
         - text: "Tabulação de dados"
           href: [central.html#tabulacao-dados]
           menu:

@@ -112,7 +112,15 @@ div.main-container {
 
 ### Como preparar os scripts para compartilhamento?
 
--   O pacote *formatR*[@formatR] fornece funções para formatar um ou mais scripts.
+<br>
+
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
+</style>
+
+<div class = "blue">
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *formatR*[@formatR] fornece funções para formatar um ou mais scripts. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/formatR/index.html)
+</div>
 
 <!--script for generating HORIZONTAL LINE-->
 
@@ -124,11 +132,22 @@ div.main-container {
 
 <br>
 
+## *Definição* {#definicao}
+
+<br>
+
 ### O que é uma unidade de análise?
 
 -   A unidade de análise de pesquisas na área de saúde geralmente é o indivíduo. Outras possibilidades são instituições em estudos multicêntricos (ex.: hospitais, clínicas) ou estudos publicados em meta-análises (ex.: ensaios clínicos).[@Altman1997]
 
 -   É fundamental identificar corretamente a unidade de análise para evitar inflação do tamanho da amostra (ex.: medidas bilaterais resultando em o dobro de participantes), violações de suposições dos testes de hipótese (ex.: independência entre medidas e/ou unidade de análise) e resultados espúrios em testes de hipótese (ex.: p-valores menores que aqueles observados se a amostra não estivesse inflada).[@Altman1997; @Matthews1990]
+
+<br>
+
+
+<br>
+
+## *Medidas únicas ou múltiplas* {#medidas}
 
 <br>
 
@@ -800,6 +819,8 @@ kable(table.final,
     color = "white"
   )
 ```
+
+<br>
 
 <!--script for generating HORIZONTAL LINE-->
 

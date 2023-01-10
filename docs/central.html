@@ -376,8 +376,16 @@ div.tocify {
         </li>
       </ul>
     </li>
-    <li>
-      <a href="central.html#unidade-analise">Unidade de análise</a>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Unidade de análise</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="central.html#definicao">Definição</a>
+        </li>
+        <li>
+          <a href="central.html#medidas">Medidas únicas ou múltiplas</a>
+        </li>
+      </ul>
     </li>
     <li class="dropdown-submenu">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tabulação de dados</a>
@@ -715,11 +723,17 @@ role="doc-biblioref">1</a></sup></span></p></li>
 <div id="como-preparar-os-scripts-para-compartilhamento"
 class="section level3">
 <h3>Como preparar os scripts para compartilhamento?</h3>
-<ul>
-<li>O pacote <em>formatR</em><span class="citation"><sup><a
+<p><br></p>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
+</style>
+<div class="blue">
+<p><svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+O pacote <em>formatR</em><span class="citation"><sup><a
 href="#ref-formatR" role="doc-biblioref">2</a></sup></span> fornece
-funções para formatar um ou mais scripts.</li>
-</ul>
+funções para formatar um ou mais scripts. <a
+href="https://cran.r-project.org/web/packages/formatR/index.html"><svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M288 32c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L306.7 128 169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L352 173.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144V400c0 44.2 35.8 80 80 80H336c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a></p>
+</div>
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 <p><a style="float:right" href="#top"><b>Início
@@ -729,6 +743,9 @@ funções para formatar um ou mais scripts.</li>
 </div>
 <div id="unidade-analise" class="section level1">
 <h1><strong>Unidade de análise</strong></h1>
+<p><br></p>
+<div id="definicao" class="section level2">
+<h2><em>Definição</em></h2>
 <p><br></p>
 <div id="o-que-é-uma-unidade-de-análise" class="section level3">
 <h3>O que é uma unidade de análise?</h3>
@@ -749,7 +766,12 @@ role="doc-biblioref">3</a>,<a href="#ref-Matthews1990"
 role="doc-biblioref">4</a></sup></span></p></li>
 </ul>
 <p><br></p>
+<p><br></p>
 </div>
+</div>
+<div id="medidas" class="section level2">
+<h2><em>Medidas únicas ou múltiplas</em></h2>
+<p><br></p>
 <div id="como-podem-ser-coletadas-as-informações-da-unidade-de-análise"
 class="section level3 tabset">
 <h3 class="tabset">Como podem ser coletadas as informações da unidade de
@@ -1542,6 +1564,7 @@ Pressão arterial, braço direito (mmHg)
 </div>
 </div>
 </div>
+</div>
 <div id="tabulacao-dados" class="section level1">
 <h1><strong>Tabulação de dados</strong></h1>
 <p><br></p>
@@ -1868,6 +1891,7 @@ NA
 </tr>
 </tbody>
 </table>
+<p><br></p>
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 <p><a style="float:right" href="#top"><b>Início
