@@ -9,6 +9,13 @@ bibliography: references.bib
 csl: american-medical-association-10th-edition.csl
 ---
 
+<!--script for blue text blocks of R code tips-->
+
+```{=html}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
+</style>
+```
 ```{css, echo = FALSE}
 body {
   font-size: 1.75em;
@@ -90,23 +97,23 @@ div.main-container {
 
 ### Quais práticas são recomendadas na redação de scripts?
 
-- Use nomes consistentes para as variáveis.[@SchwabSimon2021]
+-   Use nomes consistentes para as variáveis.[@SchwabSimon2021]
 
-- Defina os tipos de variáveis adequatamente no banco de dados.[@SchwabSimon2021]
+-   Defina os tipos de variáveis adequatamente no banco de dados.[@SchwabSimon2021]
 
-- Defina constantes - isto é, variáveis de valor fixo - ao invés de digitar valores.[@SchwabSimon2021]
+-   Defina constantes - isto é, variáveis de valor fixo - ao invés de digitar valores.[@SchwabSimon2021]
 
-- Use e cite os pacotes disponíveis para suas análises.[@SchwabSimon2021]
+-   Use e cite os pacotes disponíveis para suas análises.[@SchwabSimon2021]
 
-- Controle as versões do script.[@SchwabSimon2021]
+-   Controle as versões do script.[@SchwabSimon2021]
 
-- Teste o script antes de sua utilização.[@SchwabSimon2021]
+-   Teste o script antes de sua utilização.[@SchwabSimon2021]
 
-- Conduza revisão por pares do código durante a redacão (digitação em dupla).[@SchwabSimon2021]
+-   Conduza revisão por pares do código durante a redacão (digitação em dupla).[@SchwabSimon2021]
 
 <br>
 
-## *Compartilhando scripts* {#compartilhando-scripts}
+## *Compartilhando scripts*
 
 <br>
 
@@ -114,13 +121,9 @@ div.main-container {
 
 <br>
 
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
-</style>
-
-<div class = "blue">
+::: blue
 `r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *formatR*[@formatR] fornece funções para formatar um ou mais scripts. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/formatR/index.html)
-</div>
+:::
 
 <!--script for generating HORIZONTAL LINE-->
 
@@ -143,7 +146,6 @@ div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
 -   É fundamental identificar corretamente a unidade de análise para evitar inflação do tamanho da amostra (ex.: medidas bilaterais resultando em o dobro de participantes), violações de suposições dos testes de hipótese (ex.: independência entre medidas e/ou unidade de análise) e resultados espúrios em testes de hipótese (ex.: p-valores menores que aqueles observados se a amostra não estivesse inflada).[@Altman1997; @Matthews1990]
 
 <br>
-
 
 <br>
 
@@ -914,7 +916,11 @@ kable(table.final,
 
 -   Por definição, não é possível avaliar se os dados foram perdidos ao acaso (MAR) ou não (MNAR).[@Heymans2022]
 
--   Testes t e regressões logísticas podem ser aplicados para indeitifiar relações entre variáveis com e sem dados perdidos, criando um fator de análise ('dado perdido' = 1, 'dado observado' = 0).[@Heymans2022]
+-   Testes t e regressões logísticas podem ser aplicados para identificaar relações entre variáveis com e sem dados perdidos, criando um fator de análise ('dado perdido' = 1, 'dado observado' = 0).[@Heymans2022]
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *misty*[@misty] fornece a função *na.test* para executar o Little's Missing Completely at Random (MCAR) test. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/misty/index.html)
+:::
 
 <br>
 
