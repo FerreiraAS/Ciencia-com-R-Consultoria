@@ -1200,7 +1200,23 @@ kable(table.final,
 
 <br>
 
+## *Comparaçào na linha de base* {#comparacao-linha-de-base}
+
+<br>
+
+### Por quê não se deve comparar grupos na linha de base em ensaios clínicos randomizados?
+
+-   Testes de significância estatística na linha de base avaliam a probabilidade de que as diferenças observadas possam ter ocorrido por acaso; no entanto, já sabemos - pelo delineamento do experimento - que quaisquer diferenças são causadas pelo acaso.[@gruijters2020]
+
+<br>
+
 ## *Ajuste de covariáveis* {#ajuste-de-covariaveis}
+
+<br>
+
+### Quais variáveis devem ser utilizadas no ajuste de covariáveis?
+
+-   A escolha das características de linha de base pelas quais uma análise é ajustada deve ser determinada pelo conhecimento prévio de uma possível influência no resultado, em vez da evidência de desequilíbrio entre os grupos de tratamento no estudo.[@roberts1999]
 
 <br>
 

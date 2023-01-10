@@ -95,6 +95,8 @@ navbar:
         - text: "Ensaios clínicos aleatorizados"
           href: [central.html#ensaios-clínicos-aleatorizados]
           menu:
+            - text: "Comparação na linha de base"
+              href: [central.html#comparacao-linha-de-base]
             - text: "Ajuste de covariáveis"
               href: [central.html#ajuste-de-covariaveis]
         - text: "Meta-analises"
