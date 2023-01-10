@@ -916,7 +916,7 @@ kable(table.final,
 
 -   Por definição, não é possível avaliar se os dados foram perdidos ao acaso (MAR) ou não (MNAR).[@Heymans2022]
 
--   Testes t e regressões logísticas podem ser aplicados para identificaar relações entre variáveis com e sem dados perdidos, criando um fator de análise ('dado perdido' = 1, 'dado observado' = 0).[@Heymans2022]
+-   Testes t e regressões logísticas podem ser aplicados para identificar relações entre variáveis com e sem dados perdidos, criando um fator de análise ('dado perdido' = 1, 'dado observado' = 0).[@Heymans2022]
 
 ::: blue
 `r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *misty*[@misty] fornece a função *na.test* para executar o Little's Missing Completely at Random (MCAR) test[@little1988]. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/misty/index.html)
