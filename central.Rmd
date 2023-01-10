@@ -942,7 +942,7 @@ kable(table.final,
 
 -   A análise com imputação de dados pode ser útil quando pode-se argumentar que os dados foram perdidos ao acaso (MAR); quando o desfecho foi observado e os dados perdidos estão nas covariáveis; e variáveis auxiliares - preditoras do desfecho e não dos dados perdidos - estão disponíveis.[@carpenter2021]
 
--   Em dados longitudinais co um pequeno número de 'ondas' (medidas repetidas) e poucas variáveis, para análise com modelos de regressão univariados, a imputação via especificação condicional completa - também conhecido como imputação multivariada por equações encadeadas (*multivaraite imputation by chained equations*, MICE)- é eficiente do ponto de vista computacional e possui acurácia e precisão para estimação de parâmetros.[@Cao2022; @Heymans2022]
+-   Em dados longitudinais co um pequeno número de 'ondas' (medidas repetidas) e poucas variáveis, para análise com modelos de regressão univariados, a imputação via especificação condicional completa - também conhecido como imputação multivariada por equações encadeadas (*multivaraite imputation by chained equations*, MICE) - é eficiente do ponto de vista computacional e possui acurácia e precisão para estimação de parâmetros.[@Cao2022; @Heymans2022]
 
 <br>
 
