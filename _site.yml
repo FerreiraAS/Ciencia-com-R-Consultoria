@@ -35,6 +35,8 @@ navbar:
               href: [central.html#inicio]
             - text: "Scripts abertos"
               href: [central.html#scripts-abertos]
+            - text: "Compartilhabdo scripts"
+              href: [central.html#compartilhando-scripts]
         - text: "Unidade de análise"
           href: [central.html#unidade-analise]
         - text: "Tabulação de dados"

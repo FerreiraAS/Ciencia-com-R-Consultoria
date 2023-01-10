@@ -178,33 +178,15 @@ data <-
              col_types = c("text"))
 table <- data
 
-# síntese quantitativa
-cat('\n\n<!-- -->\n\n')
-cat('\n\n<!-- -->\n\n')
-cat("#### **Síntese**", "\n", sep = "")
-
-cat('\n\n<!-- -->\n\n')
-cat('\n\n<!-- -->\n\n')
-cat('\n</center>')
-cat(paste(
-  '<a style="float:right" href="#top"><b>Início',
-  fa("circle-up"),
-  '</b></a>'
-))
-cat('\n\n<!-- -->\n\n')
-cat('\n\n<!-- -->\n\n')
-
-cat('\n\n<!-- -->\n\n')
-cat('\n\n<!-- -->\n\n')
-cat("#### **Artigos**", "\n", sep = "")
-
 # verifica se é open acess ou subscription
+paper.year <- c()
 for (i in 1:dim(data)[1]) {
   # add OPEN ACESS badge
   tryCatch(
     expr = {
       my_doi_oa <-
-        roadoi::oadoi_fetch(dois = data[i, 3], email = "cienciasdareabilitacao@souunisuam.com.br")
+        roadoi::oadoi_fetch(dois = data[i, 3], email = "arthur_sf@icloud.com")
+      paper.year <- c(paper.year, as.numeric(my_doi_oa$year))
       if (my_doi_oa$is_oa) {
         # usa a imagem do OA e o link pelo DOI
         table[i, 3] <- 
@@ -234,6 +216,33 @@ for (i in 1:dim(data)[1]) {
 # drop link column
 summ.table <- table [, -2]
 colnames(summ.table) <- c("Produção", "Acesso")
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Síntese**", "\n", sep = "")
+
+freq.table <- table(seq(min(paper.year), max(paper.year)))
+freq.table[freq.table == 1] <- 0
+freq.paper <- table(paper.year)
+freq.table[match(names(freq.paper), names(freq.table))] <- freq.paper
+
+barplot(freq.table, main = "Distribuição de publicações por ano", xlab = "Ano", ylab = "Frequência, n")
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Artigos**", "\n", sep = "")
 
 # print table
 print(

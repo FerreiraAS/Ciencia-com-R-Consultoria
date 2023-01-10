@@ -84,6 +84,36 @@ div.main-container {
 
 <br>
 
+## *Redigindo scripts* {#compartilhando-scripts}
+
+<br>
+
+### Quais práticas são recomendadas na redação de scripts?
+
+- Use nomes consistentes para as variáveis.[@SchwabSimon2021]
+
+- Defina os tipos de variáveis adequatamente no banco de dados.[@SchwabSimon2021]
+
+- Defina constantes - isto é, variáveis de valor fixo - ao invés de digitar valores.[@SchwabSimon2021]
+
+- Use e cite os pacotes disponíveis para suas análises.[@SchwabSimon2021]
+
+- Controle as versões do script.[@SchwabSimon2021]
+
+- Teste o script antes de sua utilização.[@SchwabSimon2021]
+
+- Conduza revisão por pares do código durante a redacão (digitação em dupla).[@SchwabSimon2021]
+
+<br>
+
+## *Compartilhando scripts* {#compartilhando-scripts}
+
+<br>
+
+### Como preparar os scripts para compartilhamento?
+
+-   O pacote *formatR*[@formatR] fornece funções para formatar um ou mais scripts.
+
 <!--script for generating HORIZONTAL LINE-->
 
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
@@ -582,13 +612,9 @@ kable(head(table.6, n = 10L), align = "c", format = "html") %>%
 
 <br>
 
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
-
-<br>
-
-<!--script for generating HORIZONTAL LINE-->
-
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 # **Tabulação de dados** {#tabulacao-dados}
 
@@ -895,7 +921,7 @@ kable(table.final,
 
 ### Que estratégias podem ser utilizadas na redação de estudos em que há dados perdidos?
 
-- Informar: o número de participantes com dados perdidos; diferenças nas taxas de dados perdidos entre os braços do estudo; os motivos dos dados perdidos; o fluxo de participantes; quaisquer diferenças entre os participantes com e sem dados perdidos; o padrão de ausência (por exemplo, se é aleatória); os métodos para tratamento de dados perdidos das variáveis em análise; os resultados de quaisquer análises de sensibilidade; as implicações dos dados perdidos na interpretação do resultados.[@Akl2015]
+-   Informar: o número de participantes com dados perdidos; diferenças nas taxas de dados perdidos entre os braços do estudo; os motivos dos dados perdidos; o fluxo de participantes; quaisquer diferenças entre os participantes com e sem dados perdidos; o padrão de ausência (por exemplo, se é aleatória); os métodos para tratamento de dados perdidos das variáveis em análise; os resultados de quaisquer análises de sensibilidade; as implicações dos dados perdidos na interpretação do resultados.[@Akl2015]
 
 <br>
 
@@ -1296,6 +1322,10 @@ cite_packages(output = "paragraph", dependencies = FALSE)
 ```
 
 <br>
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
 # **Referências** {#referencias}
 
