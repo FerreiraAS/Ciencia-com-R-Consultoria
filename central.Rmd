@@ -934,6 +934,10 @@ kable(table.final,
 
 -   Na ocorrência de dados perdidos, a análise mais comum compreende apenas os 'casos completos', com exclusão de participantes com algum dado perdido nas variáveis do estudo. Em casos de grande quantidade de dados perdidos, pode-se perder muito poder estatístico (erro tipo II elevado).[@Altman2007]
 
+-   A análise de dados completos é válida quando pode se argumentar que que a probabiidade de o participante ter dados completos depende apenas das covariáveis e não dos desfechos.[@carpenter2021]
+
+-   A análise de dados completos é eficiente quando todos os dados perdidos estão no desfecho, ou quando cada participante com dados perdidos nas covariáveis também possui dados perdidos nos desfechos.[@carpenter2021]
+
 <br>
 
 ::: blue
@@ -941,10 +945,6 @@ kable(table.final,
 :::
 
 <br>
-
--   A análise de dados completos é válida quando pode se argumentar que que a probabiidade de o participante ter dados completos depende apenas das covariáveis e não dos desfechos.[@carpenter2021]
-
--   A análise de dados completos é eficiente quando todos os dados perdidos estão no desfecho, ou quando cada participante com dados perdidos nas covariáveis também possui dados perdidos nos desfechos.[@carpenter2021]
 
 -   Na ocorrência de dados perdidos, a imputação de dados (substituição por dados simulados plausíveis preditos pelos dados presentes) pode ser uma alternativa para manter o erro tipo II estipulado no plano de análise.[@Altman2007]
 
@@ -1129,7 +1129,7 @@ kable(table.final,
 -   Inclua na figura: título, eixos com respectivas unidades, escalas em intervalos representativos das variáveis, legenda com símbolos, síntese descritiva dos valores e respectiva margem de erro, conforme necessário para adequada interpretação.[@Park2022]
 
 ::: blue
-`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *ggplot2*[@ggplot2] fornece funções para construção de gráficos [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/ggplot2/index.html)
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` Os pacotes *ggplot2*[@ggplot2], *plotly*[@plotly] e *corrplot*[@corrplot] fornecem funções para construção de gráficos [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/ggplot2/index.html) [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/plotly/index.html) [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/corrplot/index.html)
 :::
 
 <br>
