@@ -227,6 +227,36 @@ freq.table[freq.table == 1] <- 0
 freq.paper <- table(paper.year)
 freq.table[match(names(freq.paper), names(freq.table))] <- freq.paper
 
+summ.prod <- rbind(sum(freq.table), t(t(rev(freq.table))))
+rownames(summ.prod) <- c("Total", seq(min(paper.year), max(paper.year)))
+
+# print table
+print(
+  kable(summ.prod, align = c("l", rep(
+    "c", ncol(summ.prod) - 1
+  ), "r")) %>% kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  )
+)
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Produção anual**", "\n", sep = "")
+
 barplot(freq.table, main = "Distribuição de publicações por ano", xlab = "Ano", ylab = "Frequência, n")
 
 cat('\n\n<!-- -->\n\n')
