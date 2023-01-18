@@ -1,4 +1,4 @@
-# load list of Sucupira files to read
+# load list of SJR files to read
 files.to.read <- list.files(
   file.path(getwd(), "Metrics", "SJR"),
   pattern = "csv",
