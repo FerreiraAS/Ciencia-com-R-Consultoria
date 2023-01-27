@@ -1,12 +1,21 @@
 ---
-title: "**Ciência com R**"
+title: '**Ciência com `r library(fontawesome); fa("r-project", height = "1.5em", width = "1.5em", fill = "steelblue", margin_right = "0.1em")`**'
 link-citations: yes
 output:
   html_document:
-    toc: false
+    toc: true
+    toc_depth: 3
 bibliography: references.bib
+csl: american-medical-association-10th-edition.csl
 ---
 
+<!--script for blue text blocks of R code tips-->
+
+```{=html}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
+</style>
+```
 ```{css, echo = FALSE}
 body {
   font-size: 1.75em;
@@ -24,14 +33,7 @@ div.main-container {
 }
 ```
 
-```{r, echo = FALSE}
-# place R logo on top-right corner
-htmltools::img(
-  src = knitr::image_uri(file.path(R.home("doc"), "html", "logo.jpg")),
-  alt = 'logo',
-  style = 'position:absolute; top:65px; right:0; padding:10px;'
-)
-```
+<br>
 
 <br>
 
@@ -43,28 +45,1365 @@ htmltools::img(
 
 <br>
 
-<table class="center" style="width=90%;">
-  <colgroup>
-       <col span="1" style="width: 30%;">
-       <col span="1" style="width: 30%;">
-       <col span="1" style="width: 30%;">
-    </colgroup>
-  <tr>
-    <th style="background-color:#3f5973;padding:0.5em"><font color="white">Central de Auto Estudos</th>
-    <th style="background-color:#5b80a4;padding:0.5em"><font color="white">R scripts disponíveis</th>
-    <th style="background-color:#2C3E50;padding:0.5em"><font color="white">Consultoria</th>
-  </tr>
-  <tr style="vertical-align:top">
-    <td style="padding-right:10px;padding-left:10px;"><br>*Tire suas dúvidas a respeito de tópicos controversos em análise estatística e processamento digital de sinais.*<br><br></td>
-    <td style="padding-right:10px;padding-left:10px;"><br>*Analise dados reutilizando scripts publicados em artigos científicos.*<br><br></td>
-    <td style="padding-right:10px;padding-left:10px;"><br>*Consultoria personalizada para auxílio a todas as etapas necessárias para a elaboração do seu trabalho.*<br><br></td> 
-  </tr>
-  <tr style="vertical-align:top">
-    <td style="padding-right:10px;padding-left:10px;">Perguntas e respostas para dúvidas mais comuns e recomendações de aplicações de técnicas estatísticas.</td>
-    <td style="padding-right:10px;padding-left:10px;">Faça o download gratuito de R scripts e rode com seus próprios dados, com links para os artigos que os utilizaram.</td>
-    <td style="padding-right:10px;padding-left:10px;">Orçamento com todas as etapas para completo atendimento do prazo e objetivo do seu projeto.</td>
-  </tr>
-</table>
+<div>
+
+<center><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/main/thumbs/RStudio.png" width="10%" height="10%"/> Esta página foi desenvolvida em [**`r R.version$version.string`**](https://www.rstudio.com) usando [**R markdown**](https://rmarkdown.rstudio.com)</center>
+
+</div>
+
+<br>
 
 <!--script for generating HORIZONTAL LINE-->
+
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Computação estatística** {#computacao-estatistica}
+
+<br>
+
+## *Por onde começar* {#inicio}
+
+<br>
+
+### Instale o *R* e o *R Studio*
+
+```{=html}
+<div class="sizer" text-align:"center">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://posit.co/download/rstudio-desktop/" style="border:2px solid black;">
+    </iframe>
+  </div>
+</div>
+```
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+## *Scripts abertos* {#scripts-abertos}
+
+<br>
+
+### O que são scripts?
+
+-   Um **R script** é um arquivo de texto contendo (quase) os mesmos comandos que você digitaria na linha de comando do R. (Quase) refere-se ao fato de que se você estiver usando sink() para enviar a saída para um arquivo, você terá que incluir alguns comandos em print() para obter a mesma saída da linha de comando ([CRAN](https://cran.r-project.org/doc/contrib/Lemon-kickstart/kr_scrpt.html)).
+
+<br>
+
+### Quais os potenciais benefícios do compartilhamento de scripts?
+
+-   [REF].
+
+<br>
+
+## *Redigindo scripts* {#compartilhando-scripts}
+
+<br>
+
+### Quais práticas são recomendadas na redação de scripts?
+
+-   Use nomes consistentes para as variáveis.[@SchwabSimon2021]
+
+-   Defina os tipos de variáveis adequatamente no banco de dados.[@SchwabSimon2021]
+
+-   Defina constantes - isto é, variáveis de valor fixo - ao invés de digitar valores.[@SchwabSimon2021]
+
+-   Use e cite os pacotes disponíveis para suas análises.[@SchwabSimon2021]
+
+-   Controle as versões do script.[@SchwabSimon2021]
+
+-   Teste o script antes de sua utilização.[@SchwabSimon2021]
+
+-   Conduza revisão por pares do código durante a redacão (digitação em dupla).[@SchwabSimon2021]
+
+<br>
+
+## *Compartilhando scripts*
+
+<br>
+
+### Como preparar os scripts para compartilhamento?
+
+<br>
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *formatR*[@formatR] fornece funções para formatar um ou mais scripts. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/formatR/index.html)
+:::
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Unidade de análise** {#unidade-analise}
+
+<br>
+
+## *Definição* {#definicao}
+
+<br>
+
+### O que é uma unidade de análise?
+
+-   A unidade de análise de pesquisas na área de saúde geralmente é o indivíduo. Outras possibilidades são instituições em estudos multicêntricos (ex.: hospitais, clínicas) ou estudos publicados em meta-análises (ex.: ensaios clínicos).[@Altman1997]
+
+-   É fundamental identificar corretamente a unidade de análise para evitar inflação do tamanho da amostra (ex.: medidas bilaterais resultando em o dobro de participantes), violações de suposições dos testes de hipótese (ex.: independência entre medidas e/ou unidade de análise) e resultados espúrios em testes de hipótese (ex.: p-valores menores que aqueles observados se a amostra não estivesse inflada).[@Altman1997; @Matthews1990]
+
+<br>
+
+<br>
+
+## *Medidas únicas ou múltiplas* {#medidas}
+
+<br>
+
+### Como podem ser coletadas as informações da unidade de análise? {.tabset}
+
+-   Da unidade de análise podem ser coletadas informações em medidas únicas, repetidas, seriadas ou múltiplas.
+
+<br>
+
+#### *Medidas únicas*
+
+```{r k1, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "hide"}
+# sorteia participante para relatar no texto
+set.seed(1)
+k1 <- sample(1:10, 1)
+```
+
+```{r medidas-unicas, include = FALSE, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(1)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# sorteia n dados no intervalo min-max, com reposição para cada variável
+VAR.1 <- sample(inferior:superior, n, replace = TRUE)
+
+# organiza as informações de unidade de análise e dados
+table.1 <- data.frame(ID, VAR.1)
+
+# atribui rótulos para a tabela de dados
+colnames(table.1) <-
+  c("Unidade de análise", "Pressão arterial, braço esquerdo (mmHg)")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados
+kable(head(table.1, n = 10L), align = "c", format = "html") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>%
+  row_spec(
+    0,
+    background = "#2C3E50",
+    bold = TRUE,
+    color = "white"
+  ) %>%
+  row_spec(k1, background = "#E6E6E6", bold = TRUE)
+```
+
+-   A medida única da pressão arterial sistólica no braço esquerdo resulta em um valor pontual. O valor pontual será considerado representativo da variável para a unidade de análise (ex.: **`r VAR.1[k1]` mmHg** para o participante **\#`r k1`**). Medidas únicas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.
+
+```{r medidas-unicas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+#### *Medidas repetidas*
+
+```{r k2, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "hide"}
+# sorteia participante para relatar no texto
+set.seed(2)
+k2 <- sample(1:10, 1)
+```
+
+```{r medidas-repetidas-separadas, include = FALSE, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(2)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# sorteia n dados no intervalo min-max, com reposição para cada variável
+VAR.1 <- sample(inferior:superior, n, replace = TRUE)
+VAR.2 <- sample(inferior:superior, n, replace = TRUE)
+VAR.3 <- sample(inferior:superior, n, replace = TRUE)
+
+# organiza as informações de unidade de análise e dados
+VAR <- data.frame(VAR.1, VAR.2, VAR.3)
+table.2 <- data.frame(ID, VAR)
+
+# atribui rótulos para a tabela de dados
+colnames(table.2) <-
+  c(
+    "Unidade de análise",
+    "Pressão arterial, braço esquerdo (mmHg) #1",
+    "Pressão arterial, braço esquerdo (mmHg) #2",
+    "Pressão arterial, braço esquerdo (mmHg) #3"
+  )
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados
+kable(head(table.2, n = 10L), align = "c", format = "html") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>%
+  row_spec(
+    0,
+    background = "#2C3E50",
+    bold = TRUE,
+    color = "white"
+  ) %>%
+  row_spec(k2, background = "#E6E6E6", bold = TRUE)
+```
+
+-   A medida repetida da pressão arterial no braço esquerdo, resultando em um conjunto de valores pontuais (ex.: **`r VAR.1[k2]` mmHg**, **`r VAR.2[k2]` mmHg** e **`r VAR.3[k2]` mmHg** para o participante **\#`r k2`**). As medidas repetidas podem ser tabuladas separadamente, por exemplo para análise da confiabilidade de obtenção dessa medida.
+
+```{r medidas-repetidas-separadas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+```{r medidas-repetidas-agregadas, include = FALSE, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(2)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# sorteia n dados no intervalo min-max, com reposição para cada variável
+VAR.1 <- sample(inferior:superior, n, replace = TRUE)
+VAR.2 <- sample(inferior:superior, n, replace = TRUE)
+VAR.3 <- sample(inferior:superior, n, replace = TRUE)
+
+# organiza as informações de unidade de análise e dados
+VAR <- data.frame(VAR.1, VAR.2, VAR.3)
+
+# converte dados para variável numérica contínua
+VAR <- sapply(VAR, as.numeric)
+
+# agrega os valores repetidos em linhas com a média
+VAR.aggr <- apply(VAR, 1, FUN = mean)
+
+# organiza as informações de unidade de análise e dados
+table.3 <- data.frame(ID, VAR.aggr)
+
+# formata a visualzaçào de casas decimais das variáveis numéricas
+table.3 <- format(table.3, nsmall = 0)
+
+# atribui rótulos para a tabela de dados
+colnames(table.3) <-
+  c("Unidade de análise",
+    "Pressão arterial, braço esquerdo (mmHg) média")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados
+kable(head(table.3, n = 10L), align = "c", format = "html") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>%
+  row_spec(
+    0,
+    background = "#2C3E50",
+    bold = TRUE,
+    color = "white"
+  ) %>%
+  row_spec(k2, background = "#E6E6E6", bold = TRUE)
+```
+
+-   As medidas repetidas podem ser agregadas por algum parâmetro --- ex.: média, mediana, máximo, mínimo, entre outros---, observando-se a relevância biológica, clínica e/ou metodológica desta escolha. O valor agregado será considerado representativo da variável para a unidade de análise (ex.: média = **`r round(VAR.aggr[k2], digits = 0)` mmHg** para o participante **\#`r k2`**). Medidas agregadas obtidas de diferentes unidades de análise podem ser consideradas independentes se observadas outras condições na coleta de dados.
+
+```{r medidas-repetidas-agregadas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+#### *Medidas seriadas*
+
+```{r k3, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "hide"}
+# sorteia participante para relatar no texto
+set.seed(2)
+k2 <- sample(1:10, 1)
+```
+
+```{r medidas-seriadas-separadas, include = FALSE, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(3)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# número de medidas seriadas
+k <- 3
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# prepara a tabela de resultados
+table.4 <-
+  data.frame(matrix(
+    vector(),
+    nrow = 0,
+    ncol = 3,
+    dimnames = list(
+      c(),
+      c(
+        "Unidade de análise",
+        "Tempo (min)",
+        "Pressão arterial, braço esquerdo (mmHg)"
+      )
+    )
+  ))
+
+# para cada série
+for (i in 1:k) {
+  # cria o fator de repetição seriada
+  TIME <- rep(i, n)
+  
+  # sorteia n dados no intervalo min-max, com reposição para cada variável
+  VAR <- sample(inferior:superior, n, replace = TRUE)
+  
+  # organiza as informações de unidade de análise e dados
+  serie <- data.frame(ID, TIME, VAR)
+  
+  # atribui rótulos para a tabela de dados
+  colnames(serie) <-
+    c("Unidade de análise",
+      "Tempo (min)",
+      "Pressão arterial, braço esquerdo (mmHg)")
+  
+  # concatena as informações de unidade de análise e dados para cada série de coleta
+  table.4 <- rbind(table.4, serie)
+}
+
+# reordena a tabela de dados
+table.4 <-
+  table.4[order(table.4[, 1], table.4[, 2], decreasing = FALSE),]
+
+# atribui rótulos para a tabela de dados
+colnames(table.4) <-
+  c("Unidade de análise",
+    "Tempo (min)",
+    "Pressão arterial, braço esquerdo (mmHg)")
+
+# remove rótulos para as linhas
+row.names(table.4) <- NULL
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados
+kable(head(table.4, n = 10L), align = "c", format = "html") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>%
+  row_spec(
+    0,
+    background = "#2C3E50",
+    bold = TRUE,
+    color = "white"
+  ) %>%
+  row_spec(1:3, background = "#E6E6E6", bold = TRUE)
+```
+
+-   Medidas seriadas são possivelmente relacionadas e, portanto, dependentes na mesma unidade de análise. Por exemplo, a medida seriada da pressão arterial no braço esquerdo, em intervalos tipicamente regulares (ex.: **`r table.4[1,3]` mmHg**, **`r table.4[2,3]` mmHg** e **`r table.4[3,3]` mmHg** em **`r 1` min**, **`r 2` min** e **`r 3` min**, respectivamente, para o participante **#1**).
+
+```{r medidas-seriadas-separadas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+```{r medidas-seriadas-agregadas, include = FALSE, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(3)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# número de medidas seriadas
+k <- 3
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# prepara a tabela de resultados
+table.5 <-
+  data.frame(matrix(
+    vector(),
+    nrow = 0,
+    ncol = 3,
+    dimnames = list(
+      c(),
+      c(
+        "Unidade de análise",
+        "Tempo (min)",
+        "Pressão arterial, braço esquerdo (mmHg)"
+      )
+    )
+  ))
+
+# para cada série
+for (i in 1:k) {
+  # cria o fator de repetição seriada
+  TIME <- rep(i, n)
+  
+  # sorteia n dados no intervalo min-max, com reposição para cada variável
+  VAR <- sample(inferior:superior, n, replace = TRUE)
+  
+  # organiza as informações de unidade de análise e dados
+  serie <- data.frame(ID, TIME, VAR)
+  
+  # atribui rótulos para a tabela de dados
+  colnames(serie) <-
+    c("Unidade de análise",
+      "Tempo (min)",
+      "Pressão arterial, braço esquerdo (mmHg)")
+  
+  # concatena as informações de unidade de análise e dados para cada série de coleta
+  table.5 <- rbind(table.5, serie)
+}
+
+# converte dados para variável numérica contínua
+table.5[, 3] <- sapply(table.5[, 3], as.numeric)
+
+# agrega os valores seriados em linhas com a amplitude
+table.5 <-
+  aggregate(
+    table.5[, 3] ~ table.5[, 1],
+    FUN = function(x) {
+      range(x)[2] - range(x)[1]
+    }
+  )
+
+# formata a visualzaçào de casas decimais das variáveis numéricas
+table.5 <- format(table.5, nsmall = 0)
+
+# atribui rótulos para a tabela de dados
+colnames(table.5) <-
+  c("Unidade de análise",
+    "Pressão arterial, braço esquerdo (mmHg) amplitude")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados
+kable(head(table.5, n = 10L), align = "c", format = "html") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>%
+  row_spec(
+    0,
+    background = "#2C3E50",
+    bold = TRUE,
+    color = "white"
+  ) %>%
+  row_spec(1, background = "#E6E6E6", bold = TRUE)
+```
+
+-   Medidas seriadas também agregadas por parâmetros --- ex.: máximo, mínimo, amplitude --- são consideradas representativas da variação temporal ou de uma característica de interesse (ex.: amplitude = **`r table.5[1,2]` mmHg** para o participante **#1**).
+
+```{r medidas-seriadas-agregadas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+<br>
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+#### *Medidas múltiplas*
+
+```{r k4, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "hide"}
+# sorteia participante para relatar no texto
+set.seed(4)
+k4 <- sample(1:10, 1)
+```
+
+```{r medidas-multiplas, include = FALSE, echo = FALSE, results = "hide"}
+# para reprodutibilidade das simulações
+set.seed(4)
+
+# tamanho do grupo
+n <- 100
+
+# cria o fator unidade de análise, sem reposição
+ID <- seq(1:n)
+
+# determina os limites do espaço amostral para sorteio
+inferior <- 110
+superior <- 120
+
+# sorteia n dados no intervalo min-max, com reposição para cada variável
+VAR.1 <- sample(inferior:superior, n, replace = TRUE)
+VAR.2 <- sample(inferior:superior, n, replace = TRUE)
+
+# organiza as informações de unidade de análise e dados
+VAR <- data.frame(VAR.1, VAR.2)
+table.6 <- data.frame(ID, VAR)
+
+# atribui rótulos para a tabela de dados
+colnames(table.6) <-
+  c(
+    "Unidade de análise",
+    "Pressão arterial, braço esquerdo (mmHg)",
+    "Pressão arterial, braço direito (mmHg)"
+  )
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe as 10 linhas iniciais da tabela de dados
+kable(head(table.6, n = 10L), align = "c", format = "html") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>%
+  row_spec(
+    0,
+    background = "#2C3E50",
+    bold = TRUE,
+    color = "white"
+  ) %>%
+  row_spec(k4, background = "#E6E6E6", bold = TRUE)
+```
+
+-   A medida de pressão arterial bilateral resulta em um conjunto de valores pontuais (ex.: braço esquerdo = **`r round(VAR.1[k4], digits = 0)` mmHg**, braço direito = **`r round(VAR.2[k4], digits = 0)` mmHg** para o participante **\#`r k4`**). Neste caso, ambos os valores pontuais são considerados representativos daquela unidade de análise. Medidas múltiplas também são possivelmente relacionadas e portanto são dependentes na mesma unidade de análise. Medidas múltiplas podem ser obtidas de modo repetido para análise agregada ou seriada.
+
+```{r medidas-multiplas, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+```
+
+<br>
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Tabulação de dados** {#tabulacao-dados}
+
+<br>
+
+## *Planilhas eletrônicas* {#planilhas}
+
+<br>
+
+### Qual a estrutura básica de uma tabela para análise estatística? {.tabset}
+
+-   Use apenas uma planilha para conter todas as informações coletadas. Evite múltiplas abas no mesmo arquivo, assim como múltiplos arquivos quando possível.[@broman2018]
+
+-   Use apenas 1 (uma) linha de cabeçalho para nomear os fatores e variáveis do seu estudo.[@broman2018]
+
+-   Tipicamente, cada linha representa um participante e cada coluna representa uma variável ou fator do estudo. Estudos com medidas repetidas dos participantes podem conter múltiplas linhas para o mesmo participante (repetindo os dados na mesma coluna, conhecido como *formato curto*) ou só uma linha para o participante (repetindo os dados em colunas separadas, conhecido como *formato longo* ).[@Juluru2015]
+
+<br>
+
+#### `r library(fontawesome); fa("square-check", fill = "green", margin_right = "0.1em")` *Recomendado*
+
+```{r tabela.0, include = TRUE, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# atribui rótulos para a tabela de dados
+N <- 5
+M <- 4
+
+# cria a tabela de exemplos
+table.0 <- matrix("dado", nrow = N, ncol = M)
+
+colnames(table.0) <- paste0("V", seq(1:M))
+for (i in 1:N) {
+  for (j in 1:M) {
+    table.0[i, j] <-
+      paste0("$$X", "_{", as.character(i), ",", as.character(j), "}$$")
+  }
+}
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela
+kable(table.0,
+      align = "c",
+      format = "html",
+      escape = FALSE) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>%
+  row_spec(
+    0,
+    background = "#2C3E50",
+    bold = TRUE,
+    color = "white"
+  )
+```
+
+<br>
+
+### O que usar para organizar tabelas para análise computadorizada?
+
+-   Seja consistente em: códigos para as variáveis categóricas; códigos para dados perdidos; nomes das variáveis; identificadores de participantes; nome dos arquivos; formato de datas; uso de caracteres de espaço.[@broman2018],[@Juluru2015]
+
+-   Use recursos para validação de dados antes e durante a digitação de dados.[@broman2018],[@Juluru2015]
+
+<br>
+
+### O que *não* usar para organizar tabelas para análise computadorizada? {.tabset}
+
+-   Não deixe células em branco: substitua dados perdidos por um código sistemático (ex.: NA [*not available*]).[@broman2018]
+
+-   Não inclua análises estatísticas ou gráficos nas tabelas de dados brutos.[@broman2018]
+
+-   Não utilize cores como informação. Se necessário, crie colunas adicionais - variáveis instrumentais ou auxiliares - para identificar a infomação de modo que possa ser analisada.[@broman2018]
+
+-   Não use células mescladas.
+
+-   Delete linhas e/ou colunas totalmente em branco (sem unidades de análise e/ou sem variáveis).
+
+<br>
+
+```{r tabela.1, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# cria a tabela de exemplos
+table.1 <- matrix(NA, nrow = 10, ncol = 2)
+
+# atribui rótulos para a tabela de dados
+colnames(table.1) <- c("ID", "Data.Coleta")
+
+# preenche a tabela com identificação da unidade de análise
+table.1[, 1] <- seq(1:10)
+
+# preenche a tabela com maus exemplos
+table.1[, 2] <- as.character(Sys.Date() + seq(1:10))
+
+# preenche a tabela com melhores exemplos
+table.1[, 2] <-
+  format(as.Date(table.1[, 2], origin = "1950-01-01"), "%d-%m-%Y")
+```
+
+```{r tabela.2, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# cria a tabela de exemplos
+table.2 <- matrix(NA, nrow = 10, ncol = 4)
+
+# atribui rótulos para a tabela de dados
+colnames(table.2) <-
+  c("ID", "Estado Civil", "Estado.Civil", "Estado.Civil.Cod")
+
+# preenche a tabela com identificação da unidade de análise
+table.2[, 1] <- seq(1:10)
+
+# preenche a tabela com maus exemplos (&nbsp; representa o caracter " " em HTML)
+table.2[, 2] <-
+  c(
+    "casado",
+    "Casado",
+    "&nbsp;casado",
+    "Solteiro",
+    "&nbsp;Casado",
+    "&nbsp;solteiro",
+    "solteiro",
+    "Solteiro&nbsp;",
+    "&nbsp;casado",
+    "&nbsp;Solteiro&nbsp;"
+  )
+
+# preenche a tabela com melhores exemplos
+# altera para caixa baixa
+table.2[, 3] <- tolower(table.2[, 2])
+# remove espaços em branco
+table.2[, 3] <-
+  trimws(table.2[, 3], which = "both", whitespace = "[\t\r\n]")
+# remove espaço em branco de HTML
+table.2[, 3] <- gsub("&nbsp;", "", table.2[, 3])
+# converte em fator codificado
+table.2[, 4] <- factor(table.2[, 3])
+```
+
+```{r tabela.3, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# cria a tabela de exemplos
+table.3 <- matrix(NA, nrow = 10, ncol = 3)
+
+# preenche a tabela com identificação da unidade de análise
+table.3[, 1] <- seq(1:10)
+
+# atribui rótulos para a tabela de dados
+colnames(table.3) <- c("ID", "Filhos", "Filhos")
+
+# preenche a tabela com maus exemplos
+table.3[, 2] <-
+  c("NA", 1, "NaN", "N/A", "N.A.", 0, "", "na", "n.a.", "999")
+
+# preenche a tabela com código único
+table.3[, 3] <-
+  gsub("NA|NaN|N/A|N.A.|na|n.a.|\t\r\n|^$|\\d{3}", NA, table.3[, 2])
+```
+
+#### `r library(fontawesome); fa("square-check", fill = "green", margin_right = "0.1em")` *Recomendado*
+
+```{r tabela.recomendada, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# cria a tabela de exemplos
+table.final <-
+  data.frame(table.1[, 1], table.1[, 2], table.2[, 3], table.3[, 3])
+colnames(table.final) <-
+  c("ID", "Data.Coleta", "Estado.Civil", "Numero.Filhos")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela
+kable(table.final,
+      align = "l",
+      format = "html",
+      escape = FALSE) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>%
+  row_spec(
+    0,
+    background = "#2C3E50",
+    bold = TRUE,
+    color = "white"
+  )
+```
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+#### `r library(fontawesome); fa("xmark", fill = "red", margin_right = "0.1em")` *Evite*
+
+```{r tabela.evite, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+# cria a tabela de exemplos
+table.final <-
+  data.frame(table.1[, 1], table.1[, 2], table.2[, 2], table.3[, 2])
+colnames(table.final) <-
+  c("ID", "Data de Coleta", "Estado Civil", "Número de Filhos")
+
+# carrega a biblioteca
+library(kableExtra)
+
+# exibe a tabela
+kable(table.final,
+      align = "l",
+      format = "html",
+      escape = FALSE) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>%
+  row_spec(
+    0,
+    background = "#2C3E50",
+    bold = TRUE,
+    color = "white"
+  )
+```
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Dados** {#dados}
+
+<br>
+
+## *Dados*
+
+<br>
+
+### O que são dados?
+
+-   "Tudo são dados".[@Olson2021]
+
+<br>
+
+## *Dados perdidos* {#dados-perdidos}
+
+<br>
+
+### O que são dados perdidos?
+
+-   Dados perdidos são dados não coletados de um ou mais participantes, para uma ou mais variáveis.[@Altman2007]
+
+<br>
+
+### Qual o problema de um estudo ter dados perdidos?
+
+-   Uma grande quantidade de dados perdidos pode comprometer a integridade científica do estudo, considerando-se que o tamanho da amostra foi estimado para observar um determinado tamanho de efeito mínimo.[@Altman2007]
+
+-   Perda de participantes no estudo por dados perdidos pode reduzir o poder estatístico (erro tipo II).[@Altman2007]
+
+-   Não existe solução globalmente satisfatória para o problema de dados perdidos.[@Altman2007]
+
+<br>
+
+### Quais os mecanismos geradores de dados perdidos?
+
+-   Dados perdidos completamente ao acaso (MCAR), em que os dados perdidos estão distribuídos aleatoriamente nos dados da amostra.[@Heymans2022; @carpenter2021]
+
+-   Dados perdidos ao acaso (MAR), em que a probabilidade de ocorrência de dados perdidos é relacionada a outras variáveis medidas.[@Heymans2022; @carpenter2021]
+
+-   Dados perdidos não ao acaso (MNAR), em que a probabilidade da ocorrência de dados perdidos é relacionada com a própria variável.[@Heymans2022; @carpenter2021]
+
+<br>
+
+### Como identificar o mecanismo gerador de dados perdidos?
+
+-   Por definição, não é possível avaliar se os dados foram perdidos ao acaso (MAR) ou não (MNAR).[@Heymans2022]
+
+-   Testes t e regressões logísticas podem ser aplicados para identificar relações entre variáveis com e sem dados perdidos, criando um fator de análise ('dado perdido' = 1, 'dado observado' = 0).[@Heymans2022]
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *misty*[@misty] fornece a função *na.test* para executar o Little's Missing Completely at Random (MCAR) test[@little1988]. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/misty/index.html)
+:::
+
+<br>
+
+### Que estratégias podem ser utilizadas na coleta de dados quando há expectativa de perda amostral?
+
+-   Na expectativa de ocorrência de dados perdidos, recomenda-se ampliar o tamanho da amostra com um % correspondente à tal estimativa - embora ainda não corriga potenciais vieses pela perda.[@Altman2007]
+
+<br>
+
+### Que estratégias podem ser utilizadas na análise de dados quando há dados perdidos?
+
+-   Na ocorrência de dados perdidos, a análise mais comum compreende apenas os 'casos completos', com exclusão de participantes com algum dado perdido nas variáveis do estudo. Em casos de grande quantidade de dados perdidos, pode-se perder muito poder estatístico (erro tipo II elevado).[@Altman2007]
+
+-   A análise de dados completos é válida quando pode se argumentar que que a probabiidade de o participante ter dados completos depende apenas das covariáveis e não dos desfechos.[@carpenter2021]
+
+-   A análise de dados completos é eficiente quando todos os dados perdidos estão no desfecho, ou quando cada participante com dados perdidos nas covariáveis também possui dados perdidos nos desfechos.[@carpenter2021]
+
+<br>
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *stats*[@stats] fornece a função *complete.cases* para identificar os casos completos - isto é, sem dados perdidos - em um banco de dados. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/stats-package.html)
+:::
+
+<br>
+
+-   Na ocorrência de dados perdidos, a imputação de dados (substituição por dados simulados plausíveis preditos pelos dados presentes) pode ser uma alternativa para manter o erro tipo II estipulado no plano de análise.[@Altman2007]
+
+-   A análise com imputação de dados pode ser útil quando pode-se argumentar que os dados foram perdidos ao acaso (MAR); quando o desfecho foi observado e os dados perdidos estão nas covariáveis; e variáveis auxiliares - preditoras do desfecho e não dos dados perdidos - estão disponíveis.[@carpenter2021]
+
+-   Em dados longitudinais co um pequeno número de 'ondas' (medidas repetidas) e poucas variáveis, para análise com modelos de regressão univariados, a imputação via especificação condicional completa - também conhecido como imputação multivariada por equações encadeadas (*multivaraite imputation by chained equations*, MICE) - é eficiente do ponto de vista computacional e possui acurácia e precisão para estimação de parâmetros.[@Cao2022; @Heymans2022]
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` Os pacotes *mice*[@mice] e *miceadds*[@miceadds] fornecem funções para imputação de dados [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/mice/index.html) [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/miceadds/index.html)
+:::
+
+<br>
+
+### Que estratégias podem ser utilizadas na redação de estudos em que há dados perdidos?
+
+-   Informar: o número de participantes com dados perdidos; diferenças nas taxas de dados perdidos entre os braços do estudo; os motivos dos dados perdidos; o fluxo de participantes; quaisquer diferenças entre os participantes com e sem dados perdidos; o padrão de ausência (por exemplo, se é aleatória); os métodos para tratamento de dados perdidos das variáveis em análise; os resultados de quaisquer análises de sensibilidade; as implicações dos dados perdidos na interpretação do resultados.[@Akl2015]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Variáveis e fatores** {#variaveis-fatores}
+
+<br>
+
+## *Variáveis* {#variaveis}
+
+<br>
+
+### O que são variáveis?
+
+-   Variáveis são informações que podem variar entre medidas em diferentes indivíduos ou repetições.[@Altman1999]
+
+<br>
+
+### Como são classificadas as variáveis?
+
+-   Quanto à informação: Quantitativa ou qualitativa.[@kaliyadan2019; @vetter2017; @Ali2016]
+
+-   Quanto ao conteúdo: contínua (intervalo ou razão; discreta ou contínua), categórica ordinal (numérica discreta ou nominal) ou categórica nominal (multinominal ou dicotômica).[@kaliyadan2019; @vetter2017; @Ali2016]
+
+-   Quanto à interpretação: dependente (desfecho), independente (preditora, covariável, confundidora, controle), mediadora, moderadora, modificadora ou auxiliar.[@kaliyadan2019; @vetter2017; @Ali2016]
+
+<br>
+
+### O que é transformação de variáveis contínuas?
+
+-   Transformação significa aplicar uma função matemática à variável medida em sua unidade original.[@Bland1996]
+
+-   A transformação visa atender aos pressupostos dos modelos estatísticos quanto à distribuição da variável, em geral a distribuição Gaussiana.[@Bland1996]
+
+<br>
+
+### É recomendado categorizar ou dicotomizar variáveis contínuas?
+
+-   Categorizar variáveis não é necessário para conduzir análises estatísticas. Ao invés de categorizar (ou dicotomizar), priorize as variáveis contínuas.[@Altman2006; @Royston2006; @Collins2016]
+
+-   Em geral, não existe uma justificativa racional (plausibilidade biológica) para assumir que as categorias artificiais subjacentes existam.[@Altman2006; @Royston2006; @Collins2016]
+
+-   Dicotomização causa perda de informação e consequentemente à perda de poder estatístico para detectar efeitos.[@Altman2006]
+
+-   Dicotomização também classifica indivíduos com valores próximos na variável contínua como indivíduos em pontos opostos e extremos, artificialmente sugerindo que são muito diferentes.[@Altman2006]
+
+-   Dicotomização pode diminuir a variabilidade das variáveis.[@Altman2006]
+
+-   Dicotomização pode ocultar não-linearidades presentes na variável contínua.[@Altman2006]
+
+-   A mediana, embora amplamente utilizada, não é um bom parâmetro para dicotomizar variáveis.[@Altman2006]
+
+<br>
+
+## *Fatores* {#fatores}
+
+<br>
+
+### O que são fatores?
+
+-   [REF].
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Distribuições e parâmetros** {#distribuicoes-parametros}
+
+<br>
+
+## *Distribuições* {#distribuicoes}
+
+<br>
+
+### O que são distribuições?
+
+-   [REF].
+
+<br>
+
+## *Parâmetros* {#parametros}
+
+<br>
+
+### O que são parâmetros?
+
+-   Parâmetros são informações que definem um modelo teórico, como propriedades de uma coleção de indivíduos.[@Altman1999]
+
+<br>
+
+### Quais são os parâmetros mais comuns?
+
+-   Parâmetros de tendência central: médial, mediana, moda.[@kanji2006]
+
+-   Parâmetros de dispersão: variância, desvio-padrão, amplitude, intervalo interquartil, intervalo de confiança.[@kanji2006]
+
+-   Parâmetos de proporção: frequência absoluta, frequência relativa.[@kanji2006]
+
+-   Parâmetros de distribuição: assimetria, curtose.[@kanji2006]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Tabelas e Figuras** {#tabelas-figuras}
+
+<br>
+
+## *Tabelas* {#tabelas}
+
+<br>
+
+### Por que usar tabelas?
+
+-   Tabelas complementam o texto (e vice-versa), e podem apresentar os dados de modo mais acessível e informativo.[@Inskip2017]
+
+<br>
+
+### Como construir a Tabela 1?
+
+-   A Tabela 1 geralmente é utilizada para descrever as características da amostra estudada, possibilitando a análise de ameaças à validade interna e/ou externa ao estudo.[@Hayes-Larson2019]
+
+-   Inclua na tabela: título ou legenda, uma síntese descritiva (geralmente por meio de parâmetros descritivos), intervalos de confiança e/ou p-valores conforme necessário para adequada interpretação.[@Inskip2017; @Kwak2021]
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *table1*[@table1] fornece funções para construção da 'Tabela 1' [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/table1/index.html)
+:::
+
+<br>
+
+### Como construir a Tabela 2?
+
+-   A Tabela 2 pode ser utilizada para apresentar estimativas de mutiplos efeitos ajustados de um mesmo modelo estatístico.[@Westreich2013]
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *table1*[@table1] fornece funções para construção da 'Tabela 2' [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/table1/index.html)
+:::
+
+<br>
+
+## *Figuras* {#figuras}
+
+<br>
+
+### O que são figuras?
+
+-   Figuras são utilizadas para apresentar dados (geralmente em grande quantidade) de modo mais intuitivoe fácil de compreender.[@Park2022]
+
+<br>
+
+### Como construir uma figura?
+
+-   Inclua na figura: título, eixos com respectivas unidades, escalas em intervalos representativos das variáveis, legenda com símbolos, síntese descritiva dos valores e respectiva margem de erro, conforme necessário para adequada interpretação.[@Park2022]
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` Os pacotes *ggplot2*[@ggplot2], *plotly*[@plotly] e *corrplot*[@corrplot] fornecem funções para construção de gráficos [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/ggplot2/index.html) [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/plotly/index.html) [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/corrplot/index.html)
+:::
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Análise multivariável** {#analise-multivariavel}
+
+<br>
+
+## *Seleção de variáveis* {#selecao}
+
+<br>
+
+### Correlação bivariada pode ser usada para seleção de variáveis?
+
+-   Seleção bivariada de variáveis - isto é, aplicação de testes de correlação em pares de variáveis candidatas e variável de desfecho afim de selecionar quais serão incluídas no modelo multivariável - é um dos erros mais comuns na literatura.[@Sun1996]
+
+-   A seleção bivariada de variáveis torna o modelo mais suscetível a otimismo no ajuste se as variáveis de confundimento não são adequadamente controladas.[@Sun1996]
+
+<br>
+
+### O que pode ser feito para reduzir o número de variáveis candidatas a um modelo multivariável?
+
+-   Verifique a existência de multicolinearidade entre as variáveis candidatas.[@Sun1996]
+
+-   Em caso de uma proporção baixa entre o número de participantes e de variáves, use o conhecimento prévio da literatura para selecionar um pequeno conjunto de variáveis candidatas.[@Sun1996]
+
+-   Colapse categorias com contagem nula (células com valor igual a 0) de variáveis candidatas.[@Sun1996]
+
+-   Use simulações de dados para identificar qual(is) variável(is) está(ão) causando problemas de convergência do ajuste do modelo.[@Sun1996]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Delineamento de estudos** {#delineamento-estudos}
+
+<br>
+
+## *Pareamento* {#pareamento}
+
+<br>
+
+### O que é pareamento?
+
+-   Pareamento significa que para cada participante de um grupo (por exemplo, com alguma condição clínica), existe um (ou mais) participantes (por exemplo, grupo controle) que possui características iguais ou similares relativas a algumas variáveis de interesse.[@Bland1994]
+
+-   As variáveis escolhidas para pareamento devem ter relação com as variáveis de desfecho, mas não são de interesse elas mesmas.[@Bland1994]
+
+-   O ajuste por pareamento deve ser incluído nas análises estatísticas mesmo que as variáveis de pareamento não sejam consideradas prognósticas ou confundidores na amostra estudada.[@Bland1994]
+
+-   A ausência de evidência estatística de diferença entre grupos não é considerada pareamento.[@Bland1994]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Desempenho diagnóstico** {#desempenho-diagnostico}
+
+<br>
+
+## *Curvas ROC* {#curvas-roc}
+
+<br>
+
+### Como analisar o desempenho diagnóstico em resfechos com distribuição trimodal na população?
+
+-   Limiares duplos podem ser utilizados para análise de desempenho diagnóstico de testes com distribuição trimodal.[@ferreira2021]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Ensaios clínicos aleatorizados** {#ensaios-clínicos-aleatorizados}
+
+<br>
+
+## *Comparaçào na linha de base* {#comparacao-linha-de-base}
+
+<br>
+
+### Por quê não se deve comparar grupos na linha de base em ensaios clínicos randomizados?
+
+-   Testes de significância estatística na linha de base avaliam a probabilidade de que as diferenças observadas possam ter ocorrido por acaso; no entanto, já sabemos - pelo delineamento do experimento - que quaisquer diferenças são causadas pelo acaso.[@gruijters2020]
+
+<br>
+
+## *Ajuste de covariáveis* {#ajuste-de-covariaveis}
+
+<br>
+
+### Quais variáveis devem ser utilizadas no ajuste de covariáveis?
+
+-   A escolha das características de linha de base pelas quais uma análise é ajustada deve ser determinada pelo conhecimento prévio de uma possível influência no resultado, em vez da evidência de desequilíbrio entre os grupos de tratamento no estudo.[@roberts1999]
+
+<br>
+
+### Quais os benefícios do ajuste de covariáveis?
+
+-   Incluir a variável de desfecho medida na linha de base como covariável - independentemente da análise ser realizada com a medida pós-tratamento da mesma variável ou a diferença para a linha de base - pode aumentar o poder estatístico do estudo.[@Kahan2014]
+
+-   Incluir outras variáveis medidas na linha de base, com potencial para serem desbalanceadas entre grupos após a randomização, diminui a chance de afetar as estimativas de efeito dos tratamentos.[@Kahan2014]
+
+<br>
+
+### Quais os riscos do ajuste de covariáveis?
+
+-   Incluir covariáveis que não são prognósticas do desfecho pode reduzir o poder estatístico do estudo.[@Kahan2014]
+
+-   Incluir covariáveis com dados perdidos pode reduzir o tamanho amostral e consequentemente o poder estatístico do estudo (análise de casos completos) ou levar a desvios do plano de análise por exclusão de covariáveis prognósticas.[@Kahan2014]
+
+<br>
+
+### Como lidar com os dados perdidos em covariáveis?
+
+-   Imputação de dados perdidos de uma variável pela média dos dados observada permite estimativas não enviesadas dos efeitos do tratamento, preserva o erro tipo I e aumenta o poder estatístico comparado à análise de dados completos.[@Kahan2014]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Meta-análises** {#meta-analises}
+
+<br>
+
+## *Interpretação* {#interpretacao}
+
+<br>
+
+### Como avaliar a variação do tamanho do efeito?
+
+-   O interlalo de predição contém informação sobre a variação do tamanho do efeito.[@Borenstein2022]
+
+-   Se o intervalo de predição não contém a hipótese nula ($H_{0}$), podemos concluir que (a) o tratamento funciona igualmente bem em todas as populações, ou que ele funciona melhor em algumas populações do que em outras.[@Borenstein2022]
+
+-   Se o intervalo de predição contém a hipótese nula ($H_{0}$), podemos concluir que o tratamento pode ser benéfico em algumas populações mas prejudicial em outras, de modo que a estimativa pontual (geralmente a média) torna-se amplamente irrelevante. Nesse caso, é recomendado investigar em que populações o tratamento seria benéfico e onde causaria danos.[@Borenstein2022]
+
+<br>
+
+### Como avaliar a heterogeneidade entre os estudos?
+
+-   $I^{2}$ representa qual proporção da variância observada reflete a variância nos efeitos verdadeiros em vez do erro de amostragem.[@Borenstein2022]
+
+-   $I^{2}$ não depende da quantidade de estudos incluídos na meta-análise. Entretanto, $I^{2}$ aumenta com a quantidade de participantes incluídos nos estudos meta-analisados.[@Rücker2008]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Redação de análises** {#redacao}
+
+<br>
+
+## *Diretrizes* {#diretrizes}
+
+<br>
+
+### Quais diretrizes estão disponíveis?
+
+-   *Principles and recommendations for incorporating estimands into clinical study protocol templates*.[@Lynggaard2022]
+
+-   *Framework for the treatment and reporting of missing data in observational studies: The Treatment And Reporting of Missing data in Observational Studies framework*.[@Lee2021]
+
+-   *Who is in this study, anyway? Guidelines for a useful Table 1*.[@Hayes-Larson2019]
+
+-   *Guidelines for Reporting of Statistics for Clinical Research in Urology*.[@assel2019]
+
+-   *Guidelines for the Content of Statistical Analysis Plans in Clinical Trials*.[@Gamble2017]
+
+-   *Basic statistical reporting for articles published in Biomedical Journals: The ''Statistical Analyses and Methods in the Published Literature'' or the SAMPL Guidelines*.[@Lang2015]
+
+-   *Research methods and reporting*.[@groves2008]
+
+-   *How to ensure your paper is rejected by the statistical reviewer*.[@stratton2005]
+
+<br>
+
+## *Checklists* {#checklists}
+
+<br>
+
+### O que são *checklists*?
+
+-   *Checklists* são listas que podem ser utilizadas por autores, revisores ou editores, durante as fases de planejamento ou apresentação, para redação ou revisão de textos que relatam anaálises estatísticas.
+
+<br>
+
+### Por que usar *checklists*?
+
+-   *Checklists* têm sido recomendados para melhorar o relato das análses realizadas, aumentar a transparência do estudo e reprodutibilidade dos achados.[@Gardner1986]
+
+-   Trabalhos acadêmicos que relatam análises de dados devem ser passar por revisão por pares que inclua apreciação da análise estatóstica, e sua adequaçào ao delineamento do estudo e instrumentos utilizados.[@Mascha2017]
+
+-   *Checklists* não são suficientes para garantir a qualidade técnica da pesquisa, mas podem conitribuir para a revisão por pares.[@Mascha2017]
+
+<br>
+
+### Quais *checklists* estão disponíveis?
+
+-   *A CHecklist for statistical Assessment of Medical Papers (the CHAMP statement): explanation and elaboration*.[@Mansournia2021]
+
+-   *Checklist for clinical applicability of subgroup analysis*.[@Gil-Sierra2020]
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Pacotes** {#pacotes}
+
+<br>
+
+```{r pacotes-instalador, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "hide"}
+if (!require("remotes", character.only = TRUE, quietly = TRUE))
+  install.packages("remotes", character.only = TRUE)
+library("remotes", character.only = TRUE)
+
+if (!require("grateful", character.only = TRUE, quietly = TRUE))
+  remotes::install_github("Pakillo/grateful")
+library("grateful", character.only = TRUE)
+
+if (!require("emo", character.only = TRUE, quietly = TRUE))
+  devtools::install_github("hadley/emo"
+  )
+```
+
+```{r pacotes-ciraca, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
+cite_packages(output = "paragraph", dependencies = FALSE)
+```
+
+<br>
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Referências** {#referencias}
+
+<br>

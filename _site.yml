@@ -23,98 +23,96 @@ navbar:
     - text: ""
       icon: "fa-home"
       href: [index.html]
-    - text: "Central de Auto Estudos"
-      href: [central.html]
       menu:
-        - text: "Central"
-          href: [central.html]
+        - text: "Ciência com R"
+          href: [index.html]
         - text: "Computação estatística"
-          href: [central.html#computacao-estatistica]
+          href: [index.html#computacao-estatistica]
           menu:
             - text: "Por onde começar"
-              href: [central.html#inicio]
+              href: [index.html#inicio]
             - text: "Scripts abertos"
-              href: [central.html#scripts-abertos]
+              href: [index.html#scripts-abertos]
             - text: "Compartilhabdo scripts"
-              href: [central.html#compartilhando-scripts]
+              href: [index.html#compartilhando-scripts]
         - text: "Unidade de análise"
-          href: [central.html#unidade-analise]
+          href: [index.html#unidade-analise]
           menu:
             - text: "Definição"
-              href: [central.html#definicao]
+              href: [index.html#definicao]
             - text: "Medidas únicas ou múltiplas"
-              href: [central.html#medidas]
+              href: [index.html#medidas]
         - text: "Tabulação de dados"
-          href: [central.html#tabulacao-dados]
+          href: [index.html#tabulacao-dados]
           menu:
             - text: "Planilhas eletrônicas"
-              href: [central.html#planilhas]
+              href: [index.html#planilhas]
         - text: "Dados"
-          href: [central.html#dados]
+          href: [index.html#dados]
           menu:
             - text: "Dados"
-              href: [central.html#dados]
+              href: [index.html#dados]
             - text: "Dados perdidos"
-              href: [central.html#dados-perdidos]
+              href: [index.html#dados-perdidos]
         - text: "Variáveis e fatores"
-          href: [central.html#variaveis-fatores]
+          href: [index.html#variaveis-fatores]
           menu:
             - text: "Variáveis"
-              href: [central.html#variaveis]
+              href: [index.html#variaveis]
             - text: "Fatores"
-              href: [central.html#fatores]
+              href: [index.html#fatores]
         - text: "Distribuições e parâmetros"
-          href: [central.html#distribuicoes-parametros]
+          href: [index.html#distribuicoes-parametros]
           menu:
             - text: "Distribuições"
-              href: [central.html#distribuicoes]
+              href: [index.html#distribuicoes]
             - text: "Parâmetros"
-              href: [central.html#parametros]
+              href: [index.html#parametros]
         - text: "Tabelas e figuras"
-          href: [central.html#tabelas-figuras]
+          href: [index.html#tabelas-figuras]
           menu:
             - text: "Tabelas"
-              href: [central.html#tabelas]
+              href: [index.html#tabelas]
             - text: "Figuras"
-              href: [central.html#figuras]
+              href: [index.html#figuras]
         - text: "Análise multivariável"
-          href: [central.html#analise-multivariavel]
+          href: [index.html#analise-multivariavel]
           menu:
             - text: "Seleção de variáveis"
-              href: [central.html#selecao]
+              href: [index.html#selecao]
         - text: "Delineamento de estudos"
-          href: [central.html#delineamento-estudos]
+          href: [index.html#delineamento-estudos]
           menu:
             - text: "Pareamento"
-              href: [central.html#pareamento]
+              href: [index.html#pareamento]
         - text: "Desempenho diagnóstico"
-          href: [central.html#desempenho-diagnostico]
+          href: [index.html#desempenho-diagnostico]
           menu:
             - text: "Curvas ROC"
-              href: [central.html#curvas-roc]
+              href: [index.html#curvas-roc]
         - text: "Ensaios clínicos aleatorizados"
-          href: [central.html#ensaios-clínicos-aleatorizados]
+          href: [index.html#ensaios-clínicos-aleatorizados]
           menu:
             - text: "Comparação na linha de base"
-              href: [central.html#comparacao-linha-de-base]
+              href: [index.html#comparacao-linha-de-base]
             - text: "Ajuste de covariáveis"
-              href: [central.html#ajuste-de-covariaveis]
+              href: [index.html#ajuste-de-covariaveis]
         - text: "Meta-analises"
-          href: [central.html#meta-analises]
+          href: [index.html#meta-analises]
           menu:
             - text: "Interpretação"
-              href: [central.html#interpretacao]
+              href: [index.html#interpretacao]
         - text: "Redação de análises"
-          href: [central.html#redacao]
+          href: [index.html#redacao]
           menu:
             - text: "Diretrizes"
-              href: [central.html#diretrizes]
+              href: [index.html#diretrizes]
             - text: "Checklists"
-              href: [central.html#chacklists]
+              href: [index.html#chacklists]
         - text: "Pacotes"
-          href: [central.html#pacotes]
+          href: [index.html#pacotes]
         - text: "Referências"
-          href: [central.html#referencias]
+          href: [index.html#referencias]
     - text: "R scripts"
       menu:
         - text: "Observatório"
@@ -140,7 +138,6 @@ navbar:
           href: [consultoria.html]
         - text: "Submissão de manuscritos"
           href: [consultoria.html]
-  right:
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]
       menu:
@@ -152,6 +149,7 @@ navbar:
           href: [sobre.html#artigos]
         - text: "Portfolio"
           href: [portfolio.html]
+  right:
     - text: "Sympla"
       href: [https://www.sympla.com.br/produtor/arthursaferreira]
     - text: "☕️"

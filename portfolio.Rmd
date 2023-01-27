@@ -228,7 +228,7 @@ freq.paper <- table(paper.year)
 freq.table[match(names(freq.paper), names(freq.table))] <- freq.paper
 
 summ.prod <- rbind(sum(freq.table), t(t(rev(freq.table))))
-rownames(summ.prod) <- c("Total", seq(min(paper.year), max(paper.year)))
+rownames(summ.prod) <- c("Total", seq(max(paper.year), min(paper.year)))
 
 # print table
 print(

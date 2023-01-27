@@ -100,7 +100,7 @@ source(file.path("Scripts", "webqualis.R"), local = knitr::knit_global())
 <div class="col-sm-8"><right>
 
 ### **Arthur de Sá Ferreira**
-#### *PT, Biomed Eng, PhD*
+#### *PT, Biomed Eng, MSc, PhD*
 ##### `r library(emo); flag("Brazil")` Rio de Janeiro
 
 <br>
