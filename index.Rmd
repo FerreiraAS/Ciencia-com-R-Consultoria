@@ -3,7 +3,7 @@ title: '**Ciência com `r library(fontawesome); fa("r-project", height = "1.5em"
 link-citations: yes
 output:
   html_document:
-    toc: true
+    toc: false
     toc_depth: 3
 bibliography: references.bib
 csl: american-medical-association-10th-edition.csl
