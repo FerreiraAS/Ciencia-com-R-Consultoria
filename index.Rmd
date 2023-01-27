@@ -35,8 +35,6 @@ div.main-container {
 
 <br>
 
-<br>
-
 **Este ambiente é direcionado a pesquisadores e alunos de todos os níveis de graduação e pós-graduação da Área de Saúde, com o objetivo de:**
 
 * Auxiliar o visitante no auto desenvolvimento de suas habilidades na elaboração de trabalhos científicos, acadêmicos ou profissionais, disponibilizando recursos acadêmicos na Central de Auto Estudos e R scripts prontos.
@@ -67,28 +65,6 @@ div.main-container {
 
 <br>
 
-### Instale o *R* e o *R Studio*
-
-```{=html}
-<div class="sizer" text-align:"center">
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://posit.co/download/rstudio-desktop/" style="border:2px solid black;">
-    </iframe>
-  </div>
-</div>
-```
-<br>
-
-<!--script for generating HORIZONTAL LINE-->
-
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
-
-## *Scripts abertos* {#scripts-abertos}
-
-<br>
-
 ### O que são scripts?
 
 -   Um **R script** é um arquivo de texto contendo (quase) os mesmos comandos que você digitaria na linha de comando do R. (Quase) refere-se ao fato de que se você estiver usando sink() para enviar a saída para um arquivo, você terá que incluir alguns comandos em print() para obter a mesma saída da linha de comando ([CRAN](https://cran.r-project.org/doc/contrib/Lemon-kickstart/kr_scrpt.html)).
@@ -98,10 +74,6 @@ div.main-container {
 ### Quais os potenciais benefícios do compartilhamento de scripts?
 
 -   [REF].
-
-<br>
-
-## *Redigindo scripts* {#compartilhando-scripts}
 
 <br>
 
@@ -123,10 +95,6 @@ div.main-container {
 
 <br>
 
-## *Compartilhando scripts*
-
-<br>
-
 ### Como preparar os scripts para compartilhamento?
 
 <br>
@@ -134,6 +102,23 @@ div.main-container {
 ::: blue
 `r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *formatR*[@formatR] fornece funções para formatar um ou mais scripts. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/formatR/index.html)
 :::
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+<br>
+
+## *Instale R e R Studio* {#instale}
+
+```{=html}
+<div class="sizer" text-align:"center">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://posit.co/download/rstudio-desktop/" style="border:2px solid black;">
+    </iframe>
+  </div>
+</div>
+```
+
+<br>
 
 <!--script for generating HORIZONTAL LINE-->
 

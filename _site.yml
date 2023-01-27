@@ -31,10 +31,8 @@ navbar:
           menu:
             - text: "Por onde começar"
               href: [index.html#inicio]
-            - text: "Scripts abertos"
-              href: [index.html#scripts-abertos]
-            - text: "Compartilhabdo scripts"
-              href: [index.html#compartilhando-scripts]
+            - text: "Instale R e R Studio"
+              href: [index.html#instale]
         - text: "Unidade de análise"
           href: [index.html#unidade-analise]
           menu:
