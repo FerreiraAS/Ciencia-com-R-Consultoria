@@ -10,11 +10,10 @@ output_dir: docs
 include:
   - header.html
   - footer.html
-  - Scripts
 exclude:
-  - docs/CiteScore
-  - docs/Qualis
-  - docs/SJR
+  - cache
+  - Metrics
+  - Scripts
 bibliography:
   - references.bib
 link-citations: yes

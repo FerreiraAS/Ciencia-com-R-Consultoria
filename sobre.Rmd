@@ -210,7 +210,7 @@ source("Scripts/reviewer-board.R")
 
 ### **Autoria em Publicações** {#artigos .tabset}
 
-```{r read-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE}
+```{r read-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
 # baixa todos os artigos (com repetições)
 my_works <- rorcid::works(my_orcid) %>%
   as_tibble() %>%
