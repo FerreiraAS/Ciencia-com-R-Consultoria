@@ -72,6 +72,11 @@ navbar:
               href: [index.html#tabelas]
             - text: "Figuras"
               href: [index.html#figuras]
+        - text: "Análise exploratória"
+          href: [index.html#analise-exploratoria]
+          menu:
+            - text: "Análise descritiva"
+              href: [index.html#descritiva]
         - text: "Análise multivariável"
           href: [index.html#analise-multivariavel]
           menu:

@@ -37,9 +37,9 @@ div.main-container {
 
 **Este ambiente é direcionado a pesquisadores e alunos de todos os níveis de graduação e pós-graduação da Área de Saúde, com o objetivo de:**
 
-* Auxiliar o visitante no auto desenvolvimento de suas habilidades na elaboração de trabalhos científicos, acadêmicos ou profissionais, disponibilizando recursos acadêmicos na Central de Auto Estudos e R scripts prontos.
+-   Auxiliar o visitante no auto desenvolvimento de suas habilidades na elaboração de trabalhos científicos, acadêmicos ou profissionais, disponibilizando recursos acadêmicos na Central de Auto Estudos e R scripts prontos.
 
-* Oferecer uma consultoria completa na elaboração da modelagem e análise estatística que embase e valide a conclusão do seu projeto de pesquisa seja ele uma monografia, dissertação, tese ou artigo;
+-   Oferecer uma consultoria completa na elaboração da modelagem e análise estatística que embase e valide a conclusão do seu projeto de pesquisa seja ele uma monografia, dissertação, tese ou artigo;
 
 <br>
 
@@ -117,7 +117,6 @@ div.main-container {
   </div>
 </div>
 ```
-
 <br>
 
 <!--script for generating HORIZONTAL LINE-->
@@ -1125,6 +1124,30 @@ kable(table.final,
 
 ::: blue
 `r library(fontawesome); fa("r-project", margin_right = "0.1em")` Os pacotes *ggplot2*[@ggplot2], *plotly*[@plotly] e *corrplot*[@corrplot] fornecem funções para construção de gráficos [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/ggplot2/index.html) [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/plotly/index.html) [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/corrplot/index.html)
+:::
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+# **Análise exploratória** {#analise-exploratoria}
+
+<br>
+
+## *Análise descritiva* {#descritiva}
+
+<br>
+
+### O que é análise descritiva?
+
+-   .[REF]
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *dataExplorer*[@DataExplorer] fornece a função *create_report* para executar análise explotarória. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/DataExplorer/index.html)
 :::
 
 <br>
