@@ -77,9 +77,11 @@ navbar:
           menu:
             - text: "Análise descritiva"
               href: [index.html#descritiva]
-        - text: "Análise multivariável"
-          href: [index.html#analise-multivariavel]
+        - text: "Análise de regressão"
+          href: [index.html#analise-regressao]
           menu:
+            - text: "Multivariável vs. multivariada"
+              href: [index.html#multivariavel-multivariada]
             - text: "Seleção de variáveis"
               href: [index.html#selecao]
         - text: "Delineamento de estudos"

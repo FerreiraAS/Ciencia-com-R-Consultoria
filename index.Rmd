@@ -1158,7 +1158,19 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-# **Análise multivariável** {#analise-multivariavel}
+# **Análise de regressão** {#analise-regresaao}
+
+<br>
+
+## *Multivariável vs. Multivariada* {#multivariavel-multivariada}
+
+<br>
+
+### O que são as análises de regressão multivariável e multivariada?
+
+-   a análise multivariável consiste em 1 variável dependente e múltiplas variáveis dependentes.[@Hidalgo2013]
+
+-   A análise multivariada consiste em múltiplas variáveis dependentes.[@Hidalgo2013]
 
 <br>
 
