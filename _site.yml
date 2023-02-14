@@ -147,6 +147,8 @@ navbar:
       menu:
         - text: "Bio"
           href: [sobre.html#autor]
+        - text: "Membro de associações"
+          href: [sobre.html#associacoes]
         - text: "Corpo editorial"
           href: [sobre.html#corpo-editorial]
         - text: "Revisor de periódicos"

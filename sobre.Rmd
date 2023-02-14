@@ -188,6 +188,26 @@ Compõe o corpo editoral dos periódicos internacionais e nacionais:
 my_orcid <- c("0000-0001-7014-2002")
 ```
 
+### **Membro de associações** {#associacoes}
+
+<br>
+
+```{r memberships-services, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
+reviewer.name <- "Arthur de Sá Ferreira"
+source("Scripts/memberships-services.R")
+```
+
+<br>
+
+<a style="float:right" href="#top"><b>Início</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
 ### **Corpo editorial** {#corpo-editorial}
 
 <br>
