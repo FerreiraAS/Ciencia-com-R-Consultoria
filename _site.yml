@@ -119,12 +119,16 @@ navbar:
           href: [index.html#referencias]
     - text: "R scripts"
       menu:
+        - text: "Crossover"
+          href: [https://github.com/FerreiraAS/Crossover]
         - text: "Observatório"
           href: [https://github.com/FerreiraAS/observatorio]
         - text: "Tabela 2x2"
           href: [https://github.com/FerreiraAS/CT]
         - text: "ICC"
           href: [https://github.com/FerreiraAS/ICC]
+        - text: "Mediação"
+          href: [https://github.com/FerreiraAS/Mediation]
         - text: "RCT"
           href: [https://github.com/FerreiraAS/RCT]
         - text: "ROC"
