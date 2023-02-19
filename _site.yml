@@ -121,8 +121,6 @@ navbar:
       menu:
         - text: "Crossover"
           href: [https://github.com/FerreiraAS/Crossover]
-        - text: "Observatório"
-          href: [https://github.com/FerreiraAS/observatorio]
         - text: "Tabela 2x2"
           href: [https://github.com/FerreiraAS/CT]
         - text: "ICC"
@@ -133,19 +131,16 @@ navbar:
           href: [https://github.com/FerreiraAS/RCT]
         - text: "ROC"
           href: [https://github.com/FerreiraAS/ROC]
-    - text: "Consultoria"
-      href: [consultoria.html]
+    - text: "Observatórios"
       menu:
-        - text: "Serviços"
-          href: [consultoria.html]
-        - text: "Elaboração de projetos"
-          href: [consultoria.html]
-        - text: "Computação estatística"
-          href: [consultoria.html]
-        - text: "Computação biomédica"
-          href: [consultoria.html]
-        - text: "Submissão de manuscritos"
-          href: [consultoria.html]
+        - text: Template para Observatório
+          href: [https://github.com/FerreiraAS/observatorio]
+        - text: Observatório
+          href: [https://ferreiraas.github.io/observatorio/]
+        - text: Observatório CR
+          href: [https://ppgcr-unisuam.github.io/observatoriocr]
+        - text: Observatório DL
+          href: [https://ppgdl-unisuam.github.io/observatoriodl]
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]
       menu:
@@ -161,18 +156,31 @@ navbar:
           href: [sobre.html#artigos]
         - text: "Portfolio"
           href: [portfolio.html]
-  right:
-    - text: "Sympla"
-      href: [https://www.sympla.com.br/produtor/arthursaferreira]
-    - text: "☕️"
-      icon: "fa-mug-saucer"
-      href: [https://www.buymeacoffee.com/Arthur.Sa.Ferreira]
     - text: ""
       icon: "fa-envelope"
       href: [mailto:arthur_sf@icloud.com]
     - text: ""
       icon: "fa-github"
       href: [https://github.com/FerreiraAS]
+  right:
+    - text: "Consultoria"
+      href: [consultoria.html]
+      menu:
+        - text: "Serviços"
+          href: [consultoria.html]
+        - text: "Elaboração de projetos"
+          href: [consultoria.html]
+        - text: "Computação estatística"
+          href: [consultoria.html]
+        - text: "Computação biomédica"
+          href: [consultoria.html]
+        - text: "Submissão de manuscritos"
+          href: [consultoria.html]
+    - text: "☕️"
+      icon: "fa-mug-saucer"
+      href: [https://www.buymeacoffee.com/Arthur.Sa.Ferreira]
+    - text: "Sympla"
+      href: [https://www.sympla.com.br/produtor/arthursaferreira]
 
 output:
   html_document:
