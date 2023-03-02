@@ -87,7 +87,7 @@ div.main-container {
 
 -   Use e cite os pacotes disponíveis para suas análises.[@SchwabSimon2021]
 
--   Controle as versões do script.[@SchwabSimon2021]
+-   Controle as versões do script.[@Eglen2017;@SchwabSimon2021]
 
 -   Teste o script antes de sua utilização.[@SchwabSimon2021]
 
@@ -95,7 +95,21 @@ div.main-container {
 
 <br>
 
+### O que pode ser compartilhado?
+
+- Idealmente, todos os scripts e dados necessários para outros reproduzirem seus dados.[@Eglen2017]
+
+- Minimamente, partes importantes incluindo implementações de novos algoritmos e dados que permitam reproduzir um resultado importante.[@Eglen2017]
+
+<br>
+
 ### Como preparar os scripts para compartilhamento?
+
+-   Crie links persistentes para versões do seu script.[@Eglen2017]
+
+-   Escolha uma licença apropriada para garantir como outros usarào seus scripts.[@Eglen2017]
+
+-   Providencie a documentação sobre seu script (ex.: arquivos *README*).[@Eglen2017]
 
 <br>
 
@@ -1200,9 +1214,9 @@ kable(table.final,
 
 ### Correlação bivariada pode ser usada para seleção de variáveis?
 
--   Seleção bivariada de variáveis - isto é, aplicação de testes de correlação em pares de variáveis candidatas e variável de desfecho afim de selecionar quais serão incluídas no modelo multivariável - é um dos erros mais comuns na literatura.[@Sun1996]
+-   Seleção bivariada de variáveis - isto é, aplicação de testes de correlação em pares de variáveis candidatas e variável de desfecho afim de selecionar quais serão incluídas no modelo multivariável - é um dos erros mais comuns na literatura.[@Dales1978; @Sun1996]
 
--   A seleção bivariada de variáveis torna o modelo mais suscetível a otimismo no ajuste se as variáveis de confundimento não são adequadamente controladas.[@Sun1996]
+-   A seleção bivariada de variáveis torna o modelo mais suscetível a otimismo no ajuste se as variáveis de confundimento não são adequadamente controladas.[@Dales1978; \@Sun1996]
 
 <br>
 
@@ -1210,7 +1224,7 @@ kable(table.final,
 
 -   Verifique a existência de multicolinearidade entre as variáveis candidatas.[@Sun1996]
 
--   Em caso de uma proporção baixa entre o número de participantes e de variáves, use o conhecimento prévio da literatura para selecionar um pequeno conjunto de variáveis candidatas.[@Sun1996]
+-   Em caso de uma proporção baixa entre o número de participantes e de variáveis, use o conhecimento prévio da literatura para selecionar um pequeno conjunto de variáveis candidatas.[@Sun1996]
 
 -   Colapse categorias com contagem nula (células com valor igual a 0) de variáveis candidatas.[@Sun1996]
 
@@ -1274,7 +1288,25 @@ kable(table.final,
 
 <br>
 
-## *Comparaçào na linha de base* {#comparacao-linha-de-base}
+## *Características* {#caracteristicas}
+
+<br>
+
+### Quais são as características dos ensaios clínnicos randomizados?
+
+-   Quanto à unidade de alocação: *individual* vs. *agrupado*.[@Bruce2022]
+
+-   Quanto ao número de braços: *único* vs. *multiplos*.[@Bruce2022]
+
+-   Quanto ao número de centros: *único* vs. *multiplos*.[@Bruce2022]
+
+-   Quanto ao cegamento: *aberto* vs. *simples-cego* vs. *duplo-cego* vs. *tripo-cego* vs. *quádruplo-cego*.[@Bruce2022]
+
+-   Quanto à alocação: *sem sorteio* vs. *estratificada (centro apenas)* vs. *estratificada* vs. *minimizada* vs. *estratificada e minimisada*.[@Bruce2022]
+
+<br>
+
+## *Comparação na linha de base* {#comparacao-linha-de-base}
 
 <br>
 
