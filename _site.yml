@@ -101,6 +101,8 @@ navbar:
               href: [index.html#caracteristicas]
             - text: "Comparação na linha de base"
               href: [index.html#comparacao-linha-de-base]
+            - text: "Análises de comparação"
+              href: [index.html#comparacao-pre-pos]
             - text: "Ajuste de covariáveis"
               href: [index.html#ajuste-de-covariaveis]
         - text: "Meta-analises"
