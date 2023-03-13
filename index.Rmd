@@ -1310,7 +1310,17 @@ kable(table.final,
 
 <br>
 
+### Quais estratégias podem ser adotadas sobre comparação entre grupos na linha de base em ensaios clínicos randomizados?
+
+-   Na fase de projeto: identifique as variáveis prognósticas do desfecho de acordo com a literatura.[@roberts1999]
+
+-   Na fase de análise: inclua as variáveis prognósticas nos modelos para ajuste.[@roberts1999]
+
+<br>
+
 ### Por quê não se deve comparar grupos na linha de base em ensaios clínicos randomizados?
+
+-   Quando a randomização é bem-sucedida, a hipótese nula de difença entre grupos na linha de base é verdadeira.[@roberts1999]
 
 -   Testes de significância estatística na linha de base avaliam a probabilidade de que as diferenças observadas possam ter ocorrido por acaso; no entanto, já sabemos - pelo delineamento do experimento - que quaisquer diferenças são causadas pelo acaso.[@gruijters2020]
 
@@ -1326,7 +1336,7 @@ kable(table.final,
 
 -   Se a média da variável é igual entre grupos no início do acompanhamento, ambas abordagens estimam o mesmo efeito. Caso contrário, o efeito será influenciado pela correlação entre as medidas antes e depois. A análise da mudança não controla para desbalanços no início do estudo. [@Vickers2001]
 
-- Uma abordagem recomendada é a análise de covariância (ANCOVA), pois ajusta os valores pós-intervenção aos valores pré-intervenção para cada participante, e não é afetada pelas diferenças entr grupos no início do estudo.[@Vickers2001]
+-   Uma abordagem recomendada é a análise de covariância (ANCOVA), pois ajusta os valores pós-intervenção aos valores pré-intervenção para cada participante, e não é afetada pelas diferenças entr grupos no início do estudo.[@Vickers2001]
 
 <br>
 
