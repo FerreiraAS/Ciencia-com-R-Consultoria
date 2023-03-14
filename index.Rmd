@@ -1352,6 +1352,8 @@ kable(table.final,
 
 ### Quais os benefícios do ajuste de covariáveis?
 
+-   Ajustar por covariáveis ajuda a estimar os efeitos do tratamento para o indívíduo, assim como aumenta a eficiência dos testes para hipótese nula e a validade externa do estudo.[@Hauck1998]
+
 -   Incluir a variável de desfecho medida na linha de base como covariável - independentemente da análise ser realizada com a medida pós-tratamento da mesma variável ou a diferença para a linha de base - pode aumentar o poder estatístico do estudo.[@Kahan2014]
 
 -   Incluir outras variáveis medidas na linha de base, com potencial para serem desbalanceadas entre grupos após a randomização, diminui a chance de afetar as estimativas de efeito dos tratamentos.[@Kahan2014]
