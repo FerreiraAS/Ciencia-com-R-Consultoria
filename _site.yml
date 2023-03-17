@@ -137,9 +137,7 @@ navbar:
           href: [https://github.com/FerreiraAS/ROC]
     - text: "Observatórios"
       menu:
-        - text: Template para Observatório
-          href: [https://github.com/FerreiraAS/observatorio]
-        - text: Observatório
+        - text: Observatório (modelo)
           href: [https://ferreiraas.github.io/observatorio/]
         - text: Observatório CR
           href: [https://ppgcr-unisuam.github.io/observatoriocr]
