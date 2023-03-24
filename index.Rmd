@@ -97,7 +97,7 @@ div.main-container {
 
 ### O que pode ser compartilhado?
 
--   Idealmente, todos os scripts e dados necessários para outros reproduzirem seus dados.[@Eglen2017]
+-   Idealmente, todos os scripts, pacotes/biliotecas e dados necessários para outros reproduzirem seus dados.[@Eglen2017]
 
 -   Minimamente, partes importantes incluindo implementações de novos algoritmos e dados que permitam reproduzir um resultado importante.[@Eglen2017]
 
@@ -107,15 +107,21 @@ div.main-container {
 
 -   Crie links persistentes para versões do seu script.[@Eglen2017]
 
--   Escolha uma licença apropriada para garantir como outros usarào seus scripts.[@Eglen2017]
+-   Escolha uma licença apropriada para garantir como outros usarão seus scripts.[@Eglen2017]
 
 -   Providencie a documentação sobre seu script (ex.: arquivos *README*).[@Eglen2017]
 
-<br>
+-   Compartilhar todos os pacotes relacionados à sua análise.[@Zhao2023]
 
 ::: blue
 `r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *formatR*[@formatR] fornece funções para formatar um ou mais scripts. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/formatR/index.html)
 :::
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *pkglite*[@pkglite] permite submeter documentos eletrônicos com todos os pacotes necessários. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.rstudio.com/web/packages/pkglite/index.html)
+:::
+
+<br>
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
@@ -1216,7 +1222,7 @@ kable(table.final,
 
 -   Seleção bivariada de variáveis - isto é, aplicação de testes de correlação em pares de variáveis candidatas e variável de desfecho afim de selecionar quais serão incluídas no modelo multivariável - é um dos erros mais comuns na literatura.[@Dales1978; @Sun1996]
 
--   A seleção bivariada de variáveis torna o modelo mais suscetível a otimismo no ajuste se as variáveis de confundimento não são adequadamente controladas.[@Dales1978; \@Sun1996]
+-   A seleção bivariada de variáveis torna o modelo mais suscetível a otimismo no ajuste se as variáveis de confundimento não são adequadamente controladas.[@Dales1978; @Sun1996]
 
 <br>
 
@@ -1337,6 +1343,10 @@ kable(table.final,
 -   Se a média da variável é igual entre grupos no início do acompanhamento, ambas abordagens estimam o mesmo efeito. Caso contrário, o efeito será influenciado pela correlação entre as medidas antes e depois. A análise da mudança não controla para desbalanços no início do estudo. [@Vickers2001]
 
 -   Uma abordagem recomendada é a análise de covariância (ANCOVA), pois ajusta os valores pós-intervenção aos valores pré-intervenção para cada participante, e não é afetada pelas diferenças entr grupos no início do estudo.[@Vickers2001]
+
+-   A análise de covariância (ANCOVA) modelando seja a mudança (pré - pós) quando o desfecho no pós-tratamento parece ser o método mais efetivo considerando-se o viés de estimação dos parâmetros, a precisão das estimativas, a cobertura nominal (isto é, intervalo de confiança) e o poder do teste.[@OConnell2017]
+
+-   Análise de variância (ANOVA) e modelos lineares mistos (MLM) são outras opções de métodos, embora apresentem maior variância, menor poder, e cobertura nominal comparados à ANCOVA.[@OConnell2017]
 
 <br>
 
