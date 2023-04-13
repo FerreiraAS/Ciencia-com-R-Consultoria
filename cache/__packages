@@ -1,10 +1,3 @@
-base
-methods
-datasets
-utils
-grDevices
-graphics
-stats
 fontawesome
 kableExtra
 remotes
@@ -32,7 +25,6 @@ readr
 purrr
 stringr
 forcats
-tools
 usethis
 packup
 rcrossref

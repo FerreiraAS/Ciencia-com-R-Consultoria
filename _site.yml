@@ -16,6 +16,7 @@ exclude:
   - Scripts
 bibliography:
   - references.bib
+  - grateful-refs.bib
 link-citations: yes
 navbar:
   left:
@@ -116,7 +117,7 @@ navbar:
             - text: "Diretrizes"
               href: [index.html#diretrizes]
             - text: "Checklists"
-              href: [index.html#chacklists]
+              href: [index.html#checklists]
         - text: "Pacotes"
           href: [index.html#pacotes]
         - text: "Referências"
