@@ -7,8 +7,8 @@ output:
     toc_depth: 3
 csl: american-medical-association-10th-edition.csl
 bibliography:
-  - references.bib
   - grateful-refs.bib
+  - references.bib
 ---
 
 <!--script for blue text blocks of R code tips-->
@@ -1435,6 +1435,8 @@ kable(table.final,
 ### Quais diretrizes estão disponíveis?
 
 -   *Principles and recommendations for incorporating estimands into clinical study protocol templates*.[@Lynggaard2022]
+
+-   *How to write statistical analysis section in medical research*.[@Dwivedi2022]
 
 -   *Framework for the treatment and reporting of missing data in observational studies: The Treatment And Reporting of Missing data in Observational Studies framework*.[@Lee2021]
 
