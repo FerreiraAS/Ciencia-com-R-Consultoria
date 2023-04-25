@@ -7,7 +7,6 @@ dplyr
 readxl
 roadoi
 anytime
-cssparser
 plyr
 gridExtra
 hrbrthemes
@@ -16,6 +15,7 @@ janitor
 knitr
 lubridate
 magrittr
+packup
 rorcid
 tidyverse
 ggplot2
@@ -26,5 +26,5 @@ purrr
 stringr
 forcats
 usethis
-packup
+cssparser
 rcrossref

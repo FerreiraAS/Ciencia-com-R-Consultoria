@@ -170,7 +170,7 @@ for (i in 1:dim(data[1])) {
 
 <br>
 
-```{r artigos-em-periodicos}
+```{r artigos-em-periodicos, cache = TRUE, cache.path = "cache/"}
 # read separate sheets
 data <-
   read_excel("Links.xlsx",
@@ -312,7 +312,7 @@ cat('\n\n<!-- -->\n\n')
 
 <br>
 
-```{r capitulos}
+```{r capitulos, cache = TRUE, cache.path = "cache/"}
 # read separate sheets
 data <-
   read_excel("Links.xlsx",

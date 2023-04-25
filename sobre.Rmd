@@ -35,7 +35,6 @@ div.main-container {
 packs.cran <-
   c(
     "anytime",
-    "cssparser",
     # plyr first, then dplyr
     "plyr",
     "dplyr",
@@ -48,6 +47,7 @@ packs.cran <-
     "kableExtra",
     "lubridate",
     "magrittr",
+    "packup",
     "readxl",
     "roadoi",
     "rorcid",
@@ -63,10 +63,13 @@ for (i in 1:length(packs.cran)) {
 
 # other packages work better if installed from github
 packs.git <-
-  c(
+  c("cssparser",
     "packup",
     "rcrossref"
     )
+
+if (!require("cssparser", character.only = TRUE, quietly = TRUE))
+  remotes::install_github('coolbutuseless/cssparser')
 
 if (!require("packup", character.only = TRUE, quietly = TRUE))
   devtools::install_github("milesmcbain/packup")
@@ -81,7 +84,6 @@ for (i in 1:length(packs)) {
   library(packs[i], character.only = TRUE)
 }
 ```
-
 
 ```{r main-color, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
 # read CSS color for this page

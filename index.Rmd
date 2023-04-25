@@ -7,8 +7,8 @@ output:
     toc_depth: 3
 csl: american-medical-association-10th-edition.csl
 bibliography:
-  - grateful-refs.bib
   - references.bib
+  - grateful-refs.bib
 ---
 
 <!--script for blue text blocks of R code tips-->
@@ -716,6 +716,10 @@ kable(table.0,
 -   Seja consistente em: códigos para as variáveis categóricas; códigos para dados perdidos; nomes das variáveis; identificadores de participantes; nome dos arquivos; formato de datas; uso de caracteres de espaço.[@broman2018],[@Juluru2015]
 
 -   Use recursos para validação de dados antes e durante a digitação de dados.[@broman2018],[@Juluru2015]
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *data.table*[@data.table] fornece a função *melt* para reorganizar a tabela em diferentes formatos. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/data.table/index.html)
+:::
 
 <br>
 
@@ -1511,7 +1515,7 @@ if (!require("emo", character.only = TRUE, quietly = TRUE))
 ```
 
 ```{r pacotes-citacao, echo = FALSE, warning = FALSE, message = FALSE, fig.align='center', results = "asis"}
-cite_packages(output = "paragraph", citation.style = "american-medical-association-10th-edition.csl", bib.file = "grateful-refs.bib", dependencies = FALSE)
+cite_packages(output = "paragraph", citation.style = "american-medical-association-10th-edition.csl", bib.file = "grateful-refs.bib", dependencies = FALSE, out.dir = getwd())
 ```
 
 <br>
