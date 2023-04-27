@@ -1218,6 +1218,10 @@ kable(table.final,
 
 -   A análise multivariada consiste em múltiplas variáveis dependentes.[@Hidalgo2013]
 
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *modelsummary*[@modelsummary] fornece as funç˜es *modelsummary* e *modelplot*  para gerar tabelas e gráficos de coeficientes de regressão. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cloud.r-project.org/web/packages/modelsummary/index.html)
+:::
+
 <br>
 
 ## *Seleção de variáveis* {#selecao}
