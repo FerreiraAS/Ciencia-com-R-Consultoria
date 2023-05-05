@@ -57,6 +57,10 @@ navbar:
           menu:
             - text: "Variáveis"
               href: [index.html#variaveis]
+            - text: "Transformação de variáveis"
+              href: [index.html#transformacao]
+            - text: "Dicotomização de variáveis"
+              href: [index.html#dicotomizacao]
             - text: "Fatores"
               href: [index.html#fatores]
         - text: "Distribuições e parâmetros"

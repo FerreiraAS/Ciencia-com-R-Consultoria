@@ -1014,11 +1014,25 @@ kable(table.final,
 
 <br>
 
+## *Transformação de variáveis* {#transformacao}
+
+<br>
+
 ### O que é transformação de variáveis contínuas?
 
 -   Transformação significa aplicar uma função matemática à variável medida em sua unidade original.[@Bland1996]
 
 -   A transformação visa atender aos pressupostos dos modelos estatísticos quanto à distribuição da variável, em geral a distribuição Gaussiana.[@Bland1996]
+
+<br>
+
+### Quais transformações podem ser aplicadas?
+
+- .[REF]
+
+<br>
+
+## *Dicotomização de variáveis* {#dicotomizacao}
 
 <br>
 
@@ -1037,6 +1051,12 @@ kable(table.final,
 -   Dicotomização pode ocultar não-linearidades presentes na variável contínua.[@Altman2006]
 
 -   A mediana, embora amplamente utilizada, não é um bom parâmetro para dicotomizar variáveis.[@Altman2006]
+
+<br>
+
+### Qual métodos podem ser usados para dicotomizar variáveis contínuas?
+
+- .[REF]
 
 <br>
 
