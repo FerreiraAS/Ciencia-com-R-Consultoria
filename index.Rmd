@@ -661,6 +661,16 @@ kable(head(table.6, n = 10L), align = "c", format = "html") %>%
 
 <br>
 
+### Qual a organização de uma tabela de dados?
+
+-   Cada variável possui sua própria coluna (vertical).[@tierney2023]
+
+-   Cada observação possui sua própria linha (horizontal).[@tierney2023]
+
+-   Cada valor possui sua própria célula (linha, coluna).[@tierney2023]
+
+<br>
+
 ### Qual a estrutura básica de uma tabela para análise estatística? {.tabset}
 
 -   Use apenas uma planilha para conter todas as informações coletadas. Evite múltiplas abas no mesmo arquivo, assim como múltiplos arquivos quando possível.[@broman2018]
@@ -713,9 +723,9 @@ kable(table.0,
 
 ### O que usar para organizar tabelas para análise computadorizada?
 
--   Seja consistente em: códigos para as variáveis categóricas; códigos para dados perdidos; nomes das variáveis; identificadores de participantes; nome dos arquivos; formato de datas; uso de caracteres de espaço.[@broman2018],[@Juluru2015]
+-   Seja consistente em: códigos para as variáveis categóricas; códigos para dados perdidos; nomes das variáveis; identificadores de participantes; nome dos arquivos; formato de datas; uso de caracteres de espaço.[@broman2018; @Juluru2015]
 
--   Use recursos para validação de dados antes e durante a digitação de dados.[@broman2018],[@Juluru2015]
+-   Use recursos para validação de dados antes e durante a digitação de dados.[@broman2018; @Juluru2015]
 
 ::: blue
 `r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *data.table*[@data.table] fornece a função *melt* para reorganizar a tabela em diferentes formatos. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/data.table/index.html)
@@ -1028,7 +1038,7 @@ kable(table.final,
 
 ### Quais transformações podem ser aplicadas?
 
-- .[REF]
+-   .[REF]
 
 <br>
 
@@ -1056,7 +1066,7 @@ kable(table.final,
 
 ### Qual métodos podem ser usados para dicotomizar variáveis contínuas?
 
-- .[REF]
+-   .[REF]
 
 <br>
 
@@ -1239,7 +1249,7 @@ kable(table.final,
 -   A análise multivariada consiste em múltiplas variáveis dependentes.[@Hidalgo2013]
 
 ::: blue
-`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *modelsummary*[@modelsummary] fornece as funç˜es *modelsummary* e *modelplot*  para gerar tabelas e gráficos de coeficientes de regressão. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cloud.r-project.org/web/packages/modelsummary/index.html)
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *modelsummary*[@modelsummary] fornece as funç˜es *modelsummary* e *modelplot* para gerar tabelas e gráficos de coeficientes de regressão. [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cloud.r-project.org/web/packages/modelsummary/index.html)
 :::
 
 <br>
