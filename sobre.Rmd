@@ -92,10 +92,18 @@ main.color <- css$`:root`$`--mybackgroundcolor`
 ```
 
 <!--read additional files-->
-```{r metrics, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
-source(file.path("Scripts", "sjr.R"), local = knitr::knit_global())
+```{r source-metrics-scripts, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
 source(file.path("Scripts", "citescore.R"), local = knitr::knit_global())
+source(file.path("Scripts", "sjr.R"), local = knitr::knit_global())
 source(file.path("Scripts", "webqualis.R"), local = knitr::knit_global())
+
+source(file.path("Scripts", "get_citescore.R"),
+       local = knitr::knit_global())
+source(file.path("Scripts", "get_sjr.R"), local = knitr::knit_global())
+source(file.path("Scripts", "get_webqualis.R"),
+       local = knitr::knit_global())
+# get metrics from Scopus, SCIMago and CAPES
+source(file.path("Scripts", "get-metrics-from-sources.R"), local = knitr::knit_global())
 ```
 
 ### **Bio** {#autor}
@@ -283,22 +291,29 @@ my_dois_works <-
   my_dois_works[!duplicated(my_dois_works[, "external_id_value"]), ]
 
 # cria metadados para rastreio pelo Altmetric
-dois <- as.data.frame(my_dois_works$external_id_value)
-colnames(dois) <- c("DOI")
+dois <- data.frame(DOI = my_dois_works$external_id_value)
+
+# Data cleaning
+dois <-data.frame(DOI = dois$DOI[!duplicated(dois)])
+dois <- data.frame(DOI = dois$DOI[!is.na(dois$DOI)])
 
 # cria metadados para rastreio pelo Altmetric
 source("Scripts/altmetric-meta-from-dois.R", local = knitr::knit_global())
-    
+
 # get metrics from Altmetric and CrossRef
 source("Scripts/get-metrics-from-dois.R", local = knitr::knit_global())
 
+# store to use downstream
+doi_with_altmetric <- get_metrics(doi_with_altmetric = doi_with_altmetric, doi_without_altmetric = NULL, citescore, scimago, qualis)
+doi_without_altmetric <- get_metrics(doi_with_altmetric = NULL, doi_without_altmetric = doi_without_altmetric, citescore, scimago, qualis)
+
 # available years of publication
-years <- na.omit(sort(unique(c(doi_unique$published_on, my_dois_works$published_on)), decreasing = TRUE))
+years <- na.omit(sort(unique(c(doi_with_altmetric$published_on, doi_without_altmetric$published_on)), decreasing = TRUE))
 ```
 
 ```{r print-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
 # Verifica se há DOIs
-if (max(dim(doi_unique)[1], 0) == 0 & max(dim(my_dois_works)[1], 0) == 0) {
+if (max(dim(doi_with_altmetric)[1], 0) == 0 & max(dim(doi_without_altmetric)[1], 0) == 0) {
   cat('\n')
   cat('*Sem produção para exibir*')
   cat('\n')
@@ -307,7 +322,7 @@ if (max(dim(doi_unique)[1], 0) == 0 & max(dim(my_dois_works)[1], 0) == 0) {
   cat('<br>')
   cat(paste(
     "*Produtos (n = ",
-    max(dim(doi_unique)[1], 0) + max(dim(my_dois_works)[1], 0),
+    max(dim(doi_with_altmetric)[1], 0) + max(dim(doi_without_altmetric)[1], 0),
     ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, CiteScore^4^, SJR^5^, Qualis^6^, Open Access^7^)* \n\n",
     sep = "")
   )
@@ -327,15 +342,15 @@ if (max(dim(doi_unique)[1], 0) == 0 & max(dim(my_dois_works)[1], 0) == 0) {
       show.CiteScore = TRUE,
       show.SJR = TRUE,
       show.Qualis = TRUE,
-      doi_unique = tryCatch(
-        doi_unique[doi_unique$published_on == years[year], ],
+      doi_with_altmetric = tryCatch(
+        doi_with_altmetric[doi_with_altmetric$published_on == years[year], ],
         error = function(e) {
-          return(doi_unique <- as.data.frame(matrix(nrow = 0, ncol = 0)))
+          return(doi_with_altmetric <- as.data.frame(matrix(nrow = 0, ncol = 0)))
         }
       ),
-      my_dois_works = tryCatch(my_dois_works[my_dois_works$published_on == years[year], ],
+      doi_without_altmetric = tryCatch(doi_without_altmetric[doi_without_altmetric$published_on == years[year], ],
         error = function(e) {
-          return(my_dois_works <- list())
+          return(doi_without <- data.frame())
         }
       ),
       citescore = citescore,
