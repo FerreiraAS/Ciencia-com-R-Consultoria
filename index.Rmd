@@ -59,7 +59,7 @@ div.main-container {
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Computação estatística** {#computacao-estatistica}
 
@@ -149,7 +149,7 @@ div.main-container {
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Unidade de análise** {#unidade-analise}
 
@@ -657,7 +657,7 @@ kable(head(table.6, n = 10L), align = "c", format = "html") %>%
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Tabulação de dados** {#tabulacao-dados}
 
@@ -904,7 +904,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Dados** {#dados}
 
@@ -1008,7 +1008,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Variáveis e fatores** {#variaveis-fatores}
 
@@ -1096,7 +1096,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Distribuições e parâmetros** {#distribuicoes-parametros}
 
@@ -1140,7 +1140,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Tabelas e Figuras** {#tabelas-figuras}
 
@@ -1204,7 +1204,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Análise exploratória** {#analise-exploratoria}
 
@@ -1250,7 +1250,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Análise de regressão** {#analise-regresaao}
 
@@ -1302,7 +1302,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Delineamento de estudos** {#delineamento-estudos}
 
@@ -1330,7 +1330,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Desempenho diagnóstico** {#desempenho-diagnostico}
 
@@ -1352,7 +1352,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Ensaios clínicos aleatorizados** {#ensaios-clínicos-aleatorizados}
 
@@ -1454,7 +1454,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Meta-análises** {#meta-analises}
 
@@ -1488,7 +1488,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Redação de análises** {#redacao}
 
@@ -1558,7 +1558,7 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Pacotes** {#pacotes}
 
@@ -1588,7 +1588,7 @@ cite_packages(output = "paragraph", citation.style = "american-medical-associati
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 # **Referências** {#referencias}
 
