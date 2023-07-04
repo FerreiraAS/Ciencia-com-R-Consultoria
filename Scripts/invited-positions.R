@@ -1,7 +1,7 @@
 invited.pos <- c()
 
 # get invited positions data
-res <- orcid_invited_positions(my_orcid)
+res <- rorcid::orcid_invited_positions(my_orcid)
 
 if (is.null(res[[1]]$`affiliation-group`$summaries)) {
   # do nothing
@@ -18,21 +18,21 @@ if (is.null(res[[1]]$`affiliation-group`$summaries)) {
       affiliations[[i]][['invited-position-summary.role-title']]
   }
   colnames(invited.pos) <- c("Periódico", "Atuação")
-
+  
   # print table (reviewed journals)
   print(
-    kable(
+    knitr::kable(
       invited.pos,
       align = "l",
       format = "html",
       escape = FALSE
     ) %>%
-      kable_styling(
+      kableExtra::kable_styling(
         bootstrap_options = c("striped", "hover", "condensed", "responsive"),
         full_width = T,
         position = "center"
       ) %>%
-      row_spec(
+      kableExtra::row_spec(
         0,
         background = main.color,
         bold = TRUE,

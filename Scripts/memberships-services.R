@@ -1,7 +1,7 @@
 member <- c()
 
 # get invited positions data
-res <- orcid_memberships(my_orcid)
+res <- rorcid::orcid_memberships(my_orcid)
 
 if (is.null(res[[1]]$`affiliation-group`$summaries)) {
   # do nothing
@@ -21,18 +21,18 @@ if (is.null(res[[1]]$`affiliation-group`$summaries)) {
   
   # print table (reviewed journals)
   print(
-    kable(
+    knitr::kable(
       member,
       align = "l",
       format = "html",
       escape = FALSE
     ) %>%
-      kable_styling(
+      kableExtra::kable_styling(
         bootstrap_options = c("striped", "hover", "condensed", "responsive"),
         full_width = T,
         position = "center"
       ) %>%
-      row_spec(
+      kableExtra::row_spec(
         0,
         background = main.color,
         bold = TRUE,
@@ -48,7 +48,7 @@ if (is.null(res[[1]]$`affiliation-group`$summaries)) {
 services <- c()
 
 # get invited positions data
-res <- orcid_services(my_orcid)
+res <- rorcid::orcid_services(my_orcid)
 
 if (is.null(res[[1]]$`affiliation-group`$summaries)) {
   # do nothing
@@ -68,18 +68,18 @@ if (is.null(res[[1]]$`affiliation-group`$summaries)) {
   
   # print table (reviewed journals)
   print(
-    kable(
+    knitr::kable(
       services,
       align = "l",
       format = "html",
       escape = FALSE
     ) %>%
-      kable_styling(
+      kableExtra::kable_styling(
         bootstrap_options = c("striped", "hover", "condensed", "responsive"),
         full_width = T,
         position = "center"
       ) %>%
-      row_spec(
+      kableExtra::row_spec(
         0,
         background = main.color,
         bold = TRUE,

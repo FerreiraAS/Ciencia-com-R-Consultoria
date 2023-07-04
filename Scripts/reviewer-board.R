@@ -1,7 +1,7 @@
 peer.review <- c()
 
 # get peer review data
-res <- orcid_peer_reviews(my_orcid)
+res <- rorcid::orcid_peer_reviews(my_orcid)
 
 if (is.null(res[[1]]$group$`external-ids.external-id`)) {
   # do nothing
@@ -37,18 +37,18 @@ if (is.null(res[[1]]$group$`external-ids.external-id`)) {
   
   # print table (reviewed journals)
   print(
-    kable(
+    knitr::kable(
       peer.review,
       align = "l",
       format = "html",
       escape = FALSE
     ) %>%
-      kable_styling(
+      kableExtra::kable_styling(
         bootstrap_options = c("striped", "hover", "condensed", "responsive"),
         full_width = T,
         position = "center"
       ) %>%
-      row_spec(
+      kableExtra::row_spec(
         0,
         background = main.color,
         bold = TRUE,

@@ -142,12 +142,8 @@ navbar:
           href: [https://github.com/FerreiraAS/ROC]
     - text: "Observatórios"
       menu:
-        - text: Observatório (modelo)
+        - text: Observatório
           href: [https://ferreiraas.github.io/observatorio/]
-        - text: Observatório CR
-          href: [https://ppgcr-unisuam.github.io/observatoriocr]
-        - text: Observatório DL
-          href: [https://ppgdl-unisuam.github.io/observatoriodl]
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]
       menu:

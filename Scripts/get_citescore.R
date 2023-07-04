@@ -9,7 +9,7 @@ get_citescore <-
     citescore_p <- NA
     
     # get CiteScore for "doi_with_altmetric" data
-    if (!is.null(doi_with_altmetric)) {
+    if (!is.null(doi_with_altmetric) & !sjmisc::is_empty(doi_with_altmetric$issns)) {
       citescore_id <-
         as.character(citescore$sourcerecord_id[grep(gsub("-", "", doi_with_altmetric$issn), citescore$print_issn)])
       if (sjmisc::is_empty(citescore_id)) {
@@ -30,10 +30,9 @@ get_citescore <-
     }
     # get CiteScore for "doi_without_altmetric" data
     if (!is.null(doi_without_altmetric)) {
-      if (sjmisc::is_empty(doi_without_altmetric$issn) |
-          length(doi_without_altmetric$issn) == 0) {
+      if (sjmisc::is_empty(doi_without_altmetric$issn) | sjmisc::is_empty(doi_without_altmetric$issn)) {
         citescore_id <- character(0)
-        citescore_value <- "-1"
+        citescore_value <- character(0)
         citescore_year <- character(0)
         citescore_p <- character(0)
       } else {
@@ -70,7 +69,7 @@ get_citescore <-
     }
     if (!sjmisc::is_empty(citescore_id)) {
       citescore_value <-
-        citescore$x2021_cite_score[match(citescore_id, citescore$sourcerecord_id)]
+        citescore$CiteScore[match(citescore_id, citescore$sourcerecord_id)]
       citescore_year <-
         as.numeric(citescore$last_coverage[match(citescore_id, citescore$sourcerecord_id)]) - 1
       citescore_p <-
