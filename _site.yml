@@ -110,6 +110,8 @@ navbar:
               href: [index.html#comparacao-pre-pos]
             - text: "Ajuste de covariáveis"
               href: [index.html#ajuste-de-covariaveis]
+            - text: "Interação"
+              href: [index.html#interacao]
         - text: "Meta-analises"
           href: [index.html#meta-analises]
           menu:
@@ -144,6 +146,20 @@ navbar:
       menu:
         - text: Observatório
           href: [https://ferreiraas.github.io/observatorio/]
+    - text: "Consultoria"
+      href: [consultoria.html]
+      menu:
+        - text: "Serviços"
+          href: [consultoria.html]
+        - text: "Elaboração de projetos"
+          href: [consultoria.html]
+        - text: "Computação estatística"
+          href: [consultoria.html]
+        - text: "Computação biomédica"
+          href: [consultoria.html]
+        - text: "Submissão de manuscritos"
+          href: [consultoria.html]
+  right:
     - text: "Arthur Sá Ferreira, DSc"
       href: [sobre.html]
       menu:
@@ -163,27 +179,17 @@ navbar:
       icon: "fa-envelope"
       href: [mailto:arthur_sf@icloud.com]
     - text: ""
+      icon: "fa-twitter"
+      href: [https://twitter.com/Arthur_SF_BR]
+    - text: ""
+      icon: "fa-linkedin"
+      href: [https://br.linkedin.com/in/arthur-sá-ferreira-13054037]
+    - text: ""
       icon: "fa-github"
       href: [https://github.com/FerreiraAS]
-  right:
-    - text: "Consultoria"
-      href: [consultoria.html]
-      menu:
-        - text: "Serviços"
-          href: [consultoria.html]
-        - text: "Elaboração de projetos"
-          href: [consultoria.html]
-        - text: "Computação estatística"
-          href: [consultoria.html]
-        - text: "Computação biomédica"
-          href: [consultoria.html]
-        - text: "Submissão de manuscritos"
-          href: [consultoria.html]
     - text: ""
       icon: "fa-mug-saucer"
       href: [https://www.buymeacoffee.com/Arthur.Sa.Ferreira]
-    - text: "Sympla"
-      href: [https://www.sympla.com.br/produtor/arthursaferreira]
 
 output:
   html_document:

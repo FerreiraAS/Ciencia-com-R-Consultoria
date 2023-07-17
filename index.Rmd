@@ -59,7 +59,8 @@ div.main-container {
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Computação estatística** {#computacao-estatistica}
 
@@ -149,7 +150,8 @@ div.main-container {
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Unidade de análise** {#unidade-analise}
 
@@ -657,7 +659,8 @@ kable(head(table.6, n = 10L), align = "c", format = "html") %>%
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Tabulação de dados** {#tabulacao-dados}
 
@@ -904,7 +907,8 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Dados** {#dados}
 
@@ -1008,7 +1012,8 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Variáveis e fatores** {#variaveis-fatores}
 
@@ -1026,11 +1031,17 @@ kable(table.final,
 
 ### Como são classificadas as variáveis?
 
--   Quanto à informação: Quantitativa ou qualitativa.[@kaliyadan2019; @vetter2017; @Ali2016]
+-   Quanto à informação: Quantitativa ou qualitativa.[@Ali2016; @vetter2017; @Dettori2018; @kaliyadan2019]
 
--   Quanto ao conteúdo: contínua (intervalo ou razão; discreta ou contínua), categórica ordinal (numérica discreta ou nominal) ou categórica nominal (multinominal ou dicotômica).[@kaliyadan2019; @vetter2017; @Ali2016]
+-   Quanto ao conteúdo: contínua (intervalo ou razão; discreta ou contínua), categórica ordinal (numérica discreta ou nominal) ou categórica nominal (multinominal ou dicotômica).[@Ali2016; @vetter2017; @Dettori2018; @kaliyadan2019]
 
--   Quanto à interpretação: dependente (desfecho), independente (preditora, covariável, confundidora, controle), mediadora, moderadora, modificadora ou auxiliar.[@kaliyadan2019; @vetter2017; @Ali2016]
+-   Quanto à interpretação: dependente (desfecho), independente (preditora, covariável, confundidora, controle), mediadora, moderadora, modificadora ou auxiliar.[@Ali2016; @vetter2017; @Dettori2018; @kaliyadan2019]
+
+<br>
+
+### Por que é importante classificar as variáveis corretamente?
+
+-   Identificar corrtamente os tipos de variáveis da pesquisa é uma das etapas da escolha dos métodos estatísticos adequados para as análises e reprentações no texto, tabelas e gráficos.[@Dettori2018]
 
 <br>
 
@@ -1096,7 +1107,8 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Distribuições e parâmetros** {#distribuicoes-parametros}
 
@@ -1140,7 +1152,8 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Tabelas e Figuras** {#tabelas-figuras}
 
@@ -1204,7 +1217,8 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Análise exploratória** {#analise-exploratoria}
 
@@ -1250,7 +1264,8 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Análise de regressão** {#analise-regresaao}
 
@@ -1302,7 +1317,8 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Delineamento de estudos** {#delineamento-estudos}
 
@@ -1330,7 +1346,8 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Desempenho diagnóstico** {#desempenho-diagnostico}
 
@@ -1352,7 +1369,8 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Ensaios clínicos aleatorizados** {#ensaios-clínicos-aleatorizados}
 
@@ -1448,13 +1466,40 @@ kable(table.final,
 
 <br>
 
+## *Interação* {#interacao}
+
+<br>
+
+### O que é efeito de interação?
+
+-   A interação - representada pelo símbolo '\*' - é o termo estatístico empregado para representar a heterogeneidade de um determinado efeito.[@Altman1996]
+
+<br>
+
+### Quando usar o termo de interação?
+
+-   Análise de efeito de interação pode ser usada para testar se o efeito de um tratamento varia entre dois ou mais subgrupos de indivíduos, ou seja, se um efeito é modificado pelo(s) outros(s) efeito(s).[@Altman1996]
+
+-   A interação entre duas (ou mais) variáveis pode ser utilizada para comparar efeitos do tratamento em subgrupos de ensaios clínicos.[@Altman2003]
+
+-   O poder estatístico para detectar efeitos de interação é limitado.[@Altman2003]
+
+<br>
+
+### Por que analisar o efeito de interação?
+
+-   A comparação de subgrupos por meio de testes de significância de hipótese nula separados é enganoso por não testar (comparar) diretamente os tamanhos dos efeitos dos tratamentos.[@Matthews1996]
+
+<br>
+
 <!--script for generating HORIZONTAL LINE-->
 
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Meta-análises** {#meta-analises}
 
@@ -1488,7 +1533,8 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Redação de análises** {#redacao}
 
@@ -1558,7 +1604,8 @@ kable(table.final,
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Pacotes** {#pacotes}
 
@@ -1588,7 +1635,8 @@ cite_packages(output = "paragraph", citation.style = "american-medical-associati
 
 <a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # **Referências** {#referencias}
 
