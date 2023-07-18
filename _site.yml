@@ -124,7 +124,9 @@ navbar:
               href: [index.html#diretrizes]
             - text: "Checklists"
               href: [index.html#checklists]
-        - text: "Pacotes"
+        - text: "Fontes externas"
+          href: [index.html#fontes-externas]
+        - text: "Pacotes R"
           href: [index.html#pacotes]
         - text: "Referências"
           href: [index.html#referencias]

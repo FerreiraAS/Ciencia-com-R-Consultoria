@@ -1546,9 +1546,13 @@ kable(table.final,
 
 ### Quais diretrizes estão disponíveis?
 
+-   *Review of guidance papers on regression modeling in statistical series of medical journals*.[@Wallisch2022]
+
 -   *Principles and recommendations for incorporating estimands into clinical study protocol templates*.[@Lynggaard2022]
 
 -   *How to write statistical analysis section in medical research*.[@Dwivedi2022]
+
+-   *Recommendations for Statistical Reporting in Cardiovascular Medicine: A Special Report From the American Heart Association*.[@Althouse2021]
 
 -   *Framework for the treatment and reporting of missing data in observational studies: The Treatment And Reporting of Missing data in Observational Studies framework*.[@Lee2021]
 
@@ -1607,7 +1611,34 @@ kable(table.final,
 ::: {style="page-break-after: always;"}
 :::
 
-# **Pacotes** {#pacotes}
+# **Fontes externas** {#fontes-externas}
+
+-   [*Statistics \| Latest from The BMJ*](https://www.bmj.com/specialties/statistics)
+
+-   [*Statistics notes \| Latest from The BMJ*](https://www.bmj.com/specialties/statistics-notes)
+
+-   [*Statistics and research methods \| Latest from The BMJ*](https://www.bmj.com/specialties/statistics-and-research-methods)
+
+-   [*JAMA Guide to Statistics and Methods \| JAMA*](https://jamanetwork.com/collections/44042/jama-guide-to-statistics-and-methods)
+
+-   [*Statistical Reporting Recommendations \| AHA/ASA journals*](https://www.ahajournals.org/statistical-recommendations)
+
+-   [*Statistical Inference in the 21st Century: A World Beyond p \< 0.05 \| The American Statistical Association*](https://www.tandfonline.com/toc/utas20/73/sup1?nav=tocList)
+
+-   [*Statistics for Biologists \| Nature Publising Group*](https://www.nature.com/collections/qghhqm)
+
+-   [*Tutorials in Biostatistics Papers \| Wiley Online Library*](https://onlinelibrary.wiley.com/page/journal/10970258/homepage/tutorials.htm)
+
+<br>
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<a style="float:right" href="#top"><b>Início `r library(fontawesome); fa("circle-up")`</b></a>
+
+::: {style="page-break-after: always;"}
+:::
+
+# **Pacotes R** {#pacotes}
 
 <br>
 
