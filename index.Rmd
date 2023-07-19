@@ -1556,13 +1556,19 @@ kable(table.final,
 
 -   *Framework for the treatment and reporting of missing data in observational studies: The Treatment And Reporting of Missing data in Observational Studies framework*.[@Lee2021]
 
+-   *Guidelines for reporting of figures and tables for clinical research in urology*.[@Vickers2020]
+
 -   *Who is in this study, anyway? Guidelines for a useful Table 1*.[@Hayes-Larson2019]
 
 -   *Guidelines for Reporting of Statistics for Clinical Research in Urology*.[@assel2019]
 
+-   *Reveal, Don't Conceal: Transforming Data Visualization to Improve Transparency*.[@Weissgerber2019]
+
 -   *Guidelines for the Content of Statistical Analysis Plans in Clinical Trials*.[@Gamble2017]
 
 -   *Basic statistical reporting for articles published in Biomedical Journals: The ''Statistical Analyses and Methods in the Published Literature'' or the SAMPL Guidelines*.[@Lang2015]
+
+-   *Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm*.[@Weissgerber2015]
 
 -   *STRengthening analytical thinking for observational studies: the STRATOS initiative*.[@Sauerbrei2014]
 
@@ -1612,6 +1618,8 @@ kable(table.final,
 :::
 
 # **Fontes externas** {#fontes-externas}
+
+<br>
 
 -   [*Statistics \| Latest from The BMJ*](https://www.bmj.com/specialties/statistics)
 
