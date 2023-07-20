@@ -20,7 +20,7 @@ div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
 ```
 ```{css, echo = FALSE}
 body {
-  font-size: 1.75em;
+  font-size: 1.5em;
 }
 
 div.main-container {
@@ -137,7 +137,7 @@ div.main-container {
 ```{=html}
 <div class="sizer" text-align:"center">
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://posit.co/download/rstudio-desktop/" style="border:2px solid black;">
+    <iframe class="embed-responsive-item" src="https://posit.co/download/rstudio-desktop" style="border:2px solid black;">
     </iframe>
   </div>
 </div>
@@ -1521,9 +1521,13 @@ kable(table.final,
 
 ### Como avaliar a heterogeneidade entre os estudos?
 
+-   A heterogeneidade - variação não-aleatória - no efeito do tratamento entre os estudos incluídos em uma meta-análise pode ser avalada pelo $I^{2}$.[@Rücker2008; @Borenstein2022]
+
 -   $I^{2}$ representa qual proporção da variância observada reflete a variância nos efeitos verdadeiros em vez do erro de amostragem.[@Borenstein2022]
 
 -   $I^{2}$ não depende da quantidade de estudos incluídos na meta-análise. Entretanto, $I^{2}$ aumenta com a quantidade de participantes incluídos nos estudos meta-analisados.[@Rücker2008]
+
+-   A heterogeneidade entre estudos é explicada de modo mais confiável utilizando dados de pacientes individuais, uma vez que a direção verdadeira da modificação de efeito não pode ser observado a partir de dados agregados no estudo.[@degrooth2023]
 
 <br>
 
