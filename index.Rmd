@@ -1641,6 +1641,8 @@ kable(table.final,
 
 -   [*Tutorials in Biostatistics Papers \| Wiley Online Library*](https://onlinelibrary.wiley.com/page/journal/10970258/homepage/tutorials.htm)
 
+- [*Best Practices for Data Visualisation \| Royal Statistical Society*](https://royal-statistical-society.github.io/datavisguide/)
+
 <br>
 
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">

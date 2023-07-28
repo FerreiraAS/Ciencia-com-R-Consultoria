@@ -144,10 +144,8 @@ navbar:
           href: [https://github.com/FerreiraAS/RCT]
         - text: "ROC"
           href: [https://github.com/FerreiraAS/ROC]
-    - text: "Observatórios"
-      menu:
-        - text: Observatório
-          href: [https://ferreiraas.github.io/observatorio/]
+        - text: "Observatório"
+          href: [https://github.com/FerreiraAS/observatorio/]
     - text: "Consultoria"
       href: [consultoria.html]
       menu:
