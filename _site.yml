@@ -20,12 +20,10 @@ bibliography:
 link-citations: yes
 navbar:
   left:
-    - text: ""
+    - text: "Ciência com R"
       icon: "fa-home"
       href: [index.html]
       menu:
-        - text: "Ciência com R"
-          href: [index.html]
         - text: "Computação estatística"
           href: [index.html#computacao-estatistica]
           menu:

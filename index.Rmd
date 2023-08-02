@@ -76,12 +76,6 @@ div.main-container {
 
 <br>
 
-### Quais os potenciais benefícios do compartilhamento de scripts?
-
--   [REF].
-
-<br>
-
 ### Quais práticas são recomendadas na redação de scripts?
 
 -   Use nomes consistentes para as variáveis.[@SchwabSimon2021]
@@ -1057,9 +1051,27 @@ kable(table.final,
 
 <br>
 
+### Por que transformar variáveis?
+
+-   Muitos procedimentos estatísticos supõem que as variáveis - ou seus termos de erro, mais especificamente - são normalmente distribuídas. A violação dessa suposição pode aumentar suas chances de cometer um erro do tipo I ou II.[@osborne2010]
+
+-   Mesmo quando se está usando análises consideradas "robustas" para violações dessas suposições ou testes não paramétricos (que não assumem explicitamente termos de erro normalmente distribuídos), atender a essas questões pode melhorar os resultados das análises (por exemplo, Zimmerman, 1995).[@osborne2010]
+
+<br>
+
 ### Quais transformações podem ser aplicadas?
 
--   .[REF]
+-   Distribuições com assimetria à direita: raiz quadrada, logaritmo natural, logaritmo base 10, transformação inversa.[@osborne2010]
+
+-   Distribuições com assimetria à esquerda: reflexão e raiz quadrada, reflexão e logaritmo natural, reflexão e logaritmo base 10, reflexão e transformação inversa.[@osborne2010]
+
+-   Transformação arco-seno.[@osborne2010]
+
+-   Transformação de Box-Cox.[@box1964]
+
+::: blue
+`r library(fontawesome); fa("r-project", margin_right = "0.1em")` O pacote *MASS*[@MASS] fornece a função *box.cox* para executar a transformação de Box-Cox.[@box1964] [`r library(fontawesome); fa("up-right-from-square", margin_right = "0.1em")`](https://cran.r-project.org/web/packages/MASS/index.html)
+:::
 
 <br>
 
@@ -1641,7 +1653,7 @@ kable(table.final,
 
 -   [*Tutorials in Biostatistics Papers \| Wiley Online Library*](https://onlinelibrary.wiley.com/page/journal/10970258/homepage/tutorials.htm)
 
-- [*Best Practices for Data Visualisation \| Royal Statistical Society*](https://royal-statistical-society.github.io/datavisguide/)
+-   [*Best Practices for Data Visualisation \| Royal Statistical Society*](https://royal-statistical-society.github.io/datavisguide/)
 
 <br>
 
