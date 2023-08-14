@@ -1095,11 +1095,13 @@ kable(table.final,
 
 -   A mediana, embora amplamente utilizada, não é um bom parâmetro para dicotomizar variáveis.[@Altman2006]
 
+-   Caso exista um ponto de corte ou limiar verdadeiro que discrimina dois ou mais grupos, identificá-lo ainda pode ser um desafio.[@Prince2017]
+
 <br>
 
-### Qual métodos podem ser usados para dicotomizar variáveis contínuas?
+### Quais métodos podem ser usados para dicotomizar variáveis contínuas?
 
--   .[REF]
+-   Em termos de tabelas de contingência 2x2, os seguints métodos permitem[@Prince2017] a identificação do limiar verdadeiro: Youden,[@YOUDEN1950] Gini Index,[@strobl2007] estatística qui-quadrado,[@pearson1900] risco relativo[@Greiner2000] e kappa[@fleiss1971].
 
 <br>
 
@@ -1369,7 +1371,7 @@ kable(table.final,
 
 <br>
 
-### Como analisar o desempenho diagnóstico em resfechos com distribuição trimodal na população?
+### Como analisar o desempenho diagnóstico em desfechos com distribuição trimodal na população?
 
 -   Limiares duplos podem ser utilizados para análise de desempenho diagnóstico de testes com distribuição trimodal.[@ferreira2021]
 
@@ -1637,25 +1639,51 @@ kable(table.final,
 
 <br>
 
+## *BMJ* {#bmj}
+
 -   [*Statistics \| Latest from The BMJ*](https://www.bmj.com/specialties/statistics)
 
 -   [*Statistics notes \| Latest from The BMJ*](https://www.bmj.com/specialties/statistics-notes)
 
 -   [*Statistics and research methods \| Latest from The BMJ*](https://www.bmj.com/specialties/statistics-and-research-methods)
 
+-   [*Research methods & reporting*](https://www.bmj.com/research/research-methods-and-reporting)
+
+<br>
+
+## *JAMA* {#jama}
+
 -   [*JAMA Guide to Statistics and Methods \| JAMA*](https://jamanetwork.com/collections/44042/jama-guide-to-statistics-and-methods)
+
+<br>
+
+## *AHA/ASA* {#aha-asa}
 
 -   [*Statistical Reporting Recommendations \| AHA/ASA journals*](https://www.ahajournals.org/statistical-recommendations)
 
 -   [*Statistical Inference in the 21st Century: A World Beyond p \< 0.05 \| The American Statistical Association*](https://www.tandfonline.com/toc/utas20/73/sup1?nav=tocList)
 
--   [*Statistics for Biologists \| Nature Publising Group*](https://www.nature.com/collections/qghhqm)
+<br>
 
--   [*Tutorials in Biostatistics Papers \| Wiley Online Library*](https://onlinelibrary.wiley.com/page/journal/10970258/homepage/tutorials.htm)
+## *AHA/ASA*
 
 -   [*Best Practices for Data Visualisation \| Royal Statistical Society*](https://royal-statistical-society.github.io/datavisguide/)
 
 <br>
+
+## *NPG* {#npg}
+
+-   [*Statistics for Biologists \| Nature Publising Group*](https://www.nature.com/collections/qghhqm)
+
+<br>
+
+## *Wiley* {#wiley}
+
+-   [*Tutorials in Biostatistics Papers \| Wiley Online Library*](https://onlinelibrary.wiley.com/page/journal/10970258/homepage/tutorials.htm)
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
 
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
