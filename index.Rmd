@@ -1338,7 +1338,68 @@ kable(table.final,
 
 <br>
 
-## *Pareamento* {#pareamento}
+## *Classificação* {#classificacao}
+
+<br>
+
+### Como podem ser classificados os estudos científicos?
+
+-   Estudos científicos podem ser classificados em *básicos*, *observacionais*, *experimentais*, *avaliação econômica* e *revisões de literatura*.[@Grant2009; @Süt2014; @Chidambaram2019]
+
+│── Estudos básicos <br>
+│ └── Esperimentos com animais <br>
+│ └── Desenvolvimento de métodos <br>
+│ └── Estudos genéticos <br>
+│ └── Estudos celulares <br>
+
+│── Estudos observacionais <br>
+│ └── Descritivos <br>
+│ └──── Estudo de caso <br>
+│ └──── Série de casos <br>
+│ └──── Transversal <br>
+│ └── Analíticos <br>
+│ └──── Transversal <br>
+│ └──── Caso-Controle <br>
+│ └────── Caso-Controle aninhado <br>
+│ └────── Caso-Cohorte <br>
+│ └──── Coorte (prospectica ou retrospectiva) <br>
+
+│── Estudos experimentais <br>
+│ └── Fases I a IV <br>
+│ └──── Aleatorizados controlados <br>
+│ └──── Não-aleatorizados controlados <br>
+│ └──── Autocontrolados <br>
+│ └──── Cruzados <br>
+│ └──── Fatorial <br>
+│ └── Campo <br>
+│ └── Comunitário <br>
+
+│── Avaliação econômica <br>
+│ └── Análise de custo <br>
+│ └── Análise de minimização de custo <br>
+│ └── Análise de custo-utilidade <br>
+│ └── Análise de custo-efetividade <br>
+│ └── Análise de custo-benefício <br>
+
+│── Revisão de literatura <br>
+│ └── Crítica <br>
+│ └── Narrativa <br>
+│ └── Mapeamento <br>
+│ └── Sistemática <br>
+│ └── Meta-análise <br>
+│ └── Mista <br>
+│ └── Visão geral <br>
+│ └── Sistemática qualitativa <br>
+│ └── Rápida <br>
+│ └── Escopo <br>
+│ └── Estado-da-arte <br>
+│ └── Busca e revisão sistemática <br>
+│ └── Sistematizada <br>
+│ └── Guarda-chuva <br>
+
+<br>
+
+## *Pareamento*
 
 <br>
 

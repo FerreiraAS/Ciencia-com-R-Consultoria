@@ -90,6 +90,8 @@ navbar:
         - text: "Delineamento de estudos"
           href: [index.html#delineamento-estudos]
           menu:
+            - text: "Classificação"
+              href: [index.html#classificacao]
             - text: "Pareamento"
               href: [index.html#pareamento]
         - text: "Desempenho diagnóstico"
