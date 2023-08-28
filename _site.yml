@@ -36,6 +36,8 @@ navbar:
           menu:
             - text: "Definição"
               href: [index.html#definicao]
+            - text: "Pareamento"
+              href: [index.html#pareamento]
             - text: "Medidas únicas ou múltiplas"
               href: [index.html#medidas]
         - text: "Tabulação de dados"
@@ -92,8 +94,6 @@ navbar:
           menu:
             - text: "Classificação"
               href: [index.html#classificacao]
-            - text: "Pareamento"
-              href: [index.html#pareamento]
         - text: "Desempenho diagnóstico"
           href: [index.html#desempenho-diagnostico]
           menu:

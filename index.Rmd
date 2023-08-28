@@ -165,6 +165,22 @@ div.main-container {
 
 <br>
 
+## *Pareamento* {#pareamento}
+
+<br>
+
+### O que é pareamento?
+
+-   Pareamento significa que para cada participante de um grupo (por exemplo, com alguma condição clínica), existe um (ou mais) participantes (por exemplo, grupo controle) que possui características iguais ou similares relativas a algumas variáveis de interesse.[@Bland1994]
+
+-   As variáveis escolhidas para pareamento devem ter relação com as variáveis de desfecho, mas não são de interesse elas mesmas.[@Bland1994]
+
+-   O ajuste por pareamento deve ser incluído nas análises estatísticas mesmo que as variáveis de pareamento não sejam consideradas prognósticas ou confundidores na amostra estudada.[@Bland1994]
+
+-   A ausência de evidência estatística de diferença entre grupos não é considerada pareamento.[@Bland1994]
+
+<br>
+
 ## *Medidas únicas ou múltiplas* {#medidas}
 
 <br>
@@ -1344,37 +1360,25 @@ kable(table.final,
 
 ### Como podem ser classificados os estudos científicos?
 
--   Estudos científicos podem ser classificados em *básicos*, *observacionais*, *experimentais*, *acurácia diagnóstica*, *propriedades psicométricas*, *avaliação econômica* e *revisões de literatura*:[@Grant2009;@Süt2014;@Souza2017;@echevarría-guanilo2019;@Chassé2019;@Chidambaram2019;@Yang2021]
+-   Estudos científicos podem ser classificados em *básicos*, *observacionais*, *experimentais*, *acurácia diagnóstica*, *propriedades psicométricas*, *avaliação econômica* e *revisões de literatura*:[@Grant2009; @Süt2014; @Souza2017; @reeves2017; @echevarría-guanilo2019; @Chassé2019; @Chidambaram2019; @Erdemir2020; @Yang2021; @chipman2022]
 
-│── Estudos básicos <br> │ └── Esperimentos com animais <br> │ └── Desenvolvimento de métodos <br> │ └── Estudos genéticos <br> │ └── Estudos celulares <br>
+│─ Estudos básicos[@Süt2014; @Chidambaram2019] <br> │ └─ Experimentos com animais <br> │ └─ Desenvolvimento de métodos <br> │ └─ Genéticos <br> │ └─ Celulares <br>
 
-│── Estudos observacionais <br> │ └── Descritivos <br> │ └──── Estudo de caso <br> │ └──── Série de casos <br> │ └──── Transversal <br> │ └── Analíticos <br> │ └──── Transversal <br> │ └──── Caso-Controle <br> │ └────── Caso-Controle aninhado <br> │ └────── Caso-Coorte <br> │ └──── Coorte (prospectiva ou retrospectiva) <br>
+│─ Estudos de simulação computacional[@Erdemir2020; @chipman2022] <br>
 
-│── Estudos de acurácia diagnóstica <br> │ └── Transversal <br> │ └── Caso-Controle <br> │ └── Comparativos <br> │ └── Totalmente pareado <br> │ └── Parcialmente pareado com subgrupo aleatório <br> │ └── Parcialmente pareado com subgrupo não aleatório <br> │ └── Não pareado aleatório <br> │ └── Não pareado não aleatório <br>
+│─ Estudos observacionais[@Süt2014; @Chidambaram2019] <br> │ └─ Descritivos <br> │ └─── Estudo de caso <br> │ └─── Série de casos <br> │ └─── Transversal <br> │ └─ Analíticos <br> │ └─── Transversal <br> │ └─── Caso-Controle <br> │ └───── Caso-Controle aninhado <br> │ └───── Caso-Coorte <br> │ └─── Coorte (prospectiva ou retrospectiva) <br>
 
-│── Estudos de propriedades psicométricas <br> │ └── Validade <br> │ └── Confiabilidade <br> │ └── Concordância <br>
+│─ Estudos de acurácia diagnóstica[@Chassé2019; @Yang2021] <br> │ └─ Transversal <br> │ └─ Caso-Controle <br> │ └─ Comparativos <br> │ └─ Totalmente pareado <br> │ └─ Parcialmente pareado com subgrupo aleatório <br> │ └─ Parcialmente pareado com subgrupo não aleatório <br> │ └─ Não pareado aleatório <br> │ └─ Não pareado não aleatório <br>
 
-│── Estudos experimentais <br> │ └── Fases I a IV <br> │ └──── Aleatorizados controlados <br> │ └──── Não-aleatorizados controlados <br> │ └──── Autocontrolados <br> │ └──── Cruzados <br> │ └──── Fatorial <br> │ └── Campo <br> │ └── Comunitário <br>
+│─ Estudos de propriedades psicométricas[@Souza2017; @echevarría-guanilo2019] <br> │ └─ Validade <br> │ └─ Confiabilidade <br> │ └─ Concordância <br>
 
-│── Avaliação econômica <br> │ └── Análise de custo <br> │ └── Análise de minimização de custo <br> │ └── Análise de custo-utilidade <br> │ └── Análise de custo-efetividade <br> │ └── Análise de custo-benefício <br>
+│─ Estudos quase-experimentais[@reeves2017] <br> │ └── Quase-aleatorizados controlados <br> │ └── Estimação de variávbel instrumental <br> │ └── Discontinnuidade de regressão <br> │ └── Série temporal interrompida controlada <br> │ └── Série temporal interrompida <br> │ └── Diferença <br>
 
-│── Revisão de literatura <br> │ └── Crítica <br> │ └── Narrativa <br> │ └── Mapeamento <br> │ └── Sistemática <br> │ └── Meta-análise <br> │ └── Mista <br> │ └── Visão geral <br> │ └── Sistemática qualitativa <br> │ └── Rápida <br> │ └── Escopo <br> │ └── Estado-da-arte <br> │ └── Busca e revisão sistemática <br> │ └── Sistematizada <br> │ └── Guarda-chuva <br>
+│─ Estudos experimentais[@Süt2014; @Chidambaram2019] <br> │ └─ Fases I a IV <br> │ └── Aleatorizados controlados <br> │ └── Não-aleatorizados controlados <br> │ └── Autocontrolados <br> │ └── Cruzados <br> │ └── Fatorial <br> │ └─ Campo <br> │ └─ Comunitário <br>
 
-<br>
+│─ Avaliação econômica[@Süt2014] <br> │ └─ Análise de custo <br> │ └─ Análise de minimização de custo <br> │ └─ Análise de custo-utilidade <br> │ └─ Análise de custo-efetividade <br> │ └─ Análise de custo-benefício <br>
 
-## *Pareamento*
-
-<br>
-
-### O que é pareamento?
-
--   Pareamento significa que para cada participante de um grupo (por exemplo, com alguma condição clínica), existe um (ou mais) participantes (por exemplo, grupo controle) que possui características iguais ou similares relativas a algumas variáveis de interesse.[@Bland1994]
-
--   As variáveis escolhidas para pareamento devem ter relação com as variáveis de desfecho, mas não são de interesse elas mesmas.[@Bland1994]
-
--   O ajuste por pareamento deve ser incluído nas análises estatísticas mesmo que as variáveis de pareamento não sejam consideradas prognósticas ou confundidores na amostra estudada.[@Bland1994]
-
--   A ausência de evidência estatística de diferença entre grupos não é considerada pareamento.[@Bland1994]
+│─ Revisão de literatura[@Grant2009] <br> │ └─ Crítica <br> │ └─ Narrativa <br> │ └─ Mapeamento <br> │ └─ Sistemática <br> │ └─ Meta-análise <br> │ └─ Mista <br> │ └─ Visão geral <br> │ └─ Sistemática qualitativa <br> │ └─ Rápida <br> │ └─ Escopo <br> │ └─ Estado-da-arte <br> │ └─ Busca e revisão sistemática <br> │ └─ Sistematizada <br> │ └─ Guarda-chuva <br>
 
 <br>
 
