@@ -1,25 +1,15 @@
 ---
 title: '**Ciência com `r library(fontawesome); fa("r-project", height = "1.5em", width = "1.5em", fill = "steelblue", margin_right = "0.1em")`**'
-author: Arthur de Sá Ferreira
-output:
-  html_document:
-    theme: flatly
-    highlight: textmate
-    include:
-      after_body: footer.html
-    css:
-      - style.css
-    toc: false
+author:
+  - name: Arthur de Sá Ferreira, DSc
+  - email: arthur_sf@icloud.com
 link-citations: yes
 csl: american-medical-association-10th-edition.csl
+output:
 bibliography:
   - references.bib
   - grateful-refs.bib
 ---
-
-```{r packages, echo = FALSE, results = 'hide', include = FALSE}
-library(dplyr)
-```
 
 <!--script for blue text blocks of R code tips-->
 
@@ -1761,3 +1751,1106 @@ cite_packages(output = "paragraph", citation.style = "american-medical-associati
 # **Referências** {#referencias}
 
 <br>
+
+<!--chapter:end:index.Rmd-->
+
+---
+title: "**Consultoria**"
+link-citations: yes
+output:
+  html_document:
+    toc: false
+bibliography: references.bib
+---
+
+```{css, echo = FALSE}
+body {
+  font-size: 1.75em;
+}
+
+div.main-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+<br>
+
+# {#contato .unlisted .unnumbered}
+
+<center>
+  <div class="d-grid gap-2"">
+    <button class="btn btn-secondary btn-lg" type="button" style="width:100%;font-size:1.1em">
+      <span href="mailto:arthur_sf@icloud.com?subject=Cotação">`r library(fontawesome); paste0("Entre em contato! &nbsp; ", fa("envelope", margin_right = "0.1em"))`
+      </span>
+    </button>
+  </div>
+</center>
+
+```{css, echo = FALSE}
+.nav-pills>li>a:hover,
+.nav-pills>li>a:focus,
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus{
+   background-color: #2C3E50;
+   }
+.nav-pills > li {
+    float:none;
+    display:inline-block;
+    zoom:1;
+}
+.nav-pills {
+    text-align:center;
+}
+```
+
+# {.tabset .tabset-fade .tabset-pills .tabset .justify-center}
+
+## **Elaboração de projetos** {#projeto-de-pesquisa}
+
+<br>
+
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Objetivo geral </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Objetivos específicos </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Hipóteses </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Delineamento </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Aspectos éticos </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Critérios de elegibilidade </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Formatação </span>
+</center></div>
+
+<br>
+
+### **`r library(fontawesome); fa("clipboard-list", margin_right = "0.1em")` Revisão de métodos**
+<p>*Texto editável | Referências sugeridas*</p>
+
+### **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**
+<p>*Texto editável | Referências sugeridas*</p>
+
+### **`r library(fontawesome); fa("book-medical", margin_right = "0.1em")` Revisão de aspectos éticos**
+<p>*Texto editável*</p>
+
+### **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Formatação de referências**
+<p>*Texto editável | Biblioteca de software gerenciador*</p>
+
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
+<p>*Orientação*</p>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+
+
+## **Computação estatística** {#computacao-estatistica}
+
+<br>
+
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eficácia </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Efetividade </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Confiabilidade </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Concordância </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Acurácia </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Validade </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Desempenho diagnóstico </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Meta-análise </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Análise de redes </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Códigos em R </span>
+</center></div>
+
+<br>
+
+### **`r library(fontawesome); fa("users", margin_right = "0.1em")` Estimativa de tamanho amostral**
+<p>*Texto editável | R Script*</p>
+
+### **`r library(fontawesome); fa("shuffle", margin_right = "0.1em")` Tabela de aleatorização em grupos**
+<p>*Texto editável | R Script*</p>
+
+### **`r library(fontawesome); fa("table", margin_right = "0.1em")` Modelagem de banco de dados**
+<p>*Tabela editável | Formatação de tipos de variáveis | Validação de entrada de dados | Cálculo de variáveis secundárias *</p>
+
+### **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise estatística**
+<p>*Revisão de objetivos geral/específicos | Plano de análise em texto editável*</p>
+
+### **`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação de estudos**
+<p>*Texto editável | Tabela descritiva | Tabela/gráfico inferencial | R Script*</p>
+
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
+<p>*Orientação*</p>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+
+
+## **Computação biomédica** {#computacao-biomedica}
+
+<br>
+
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eletromiografia de superfície </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eletrogoniometria </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Posturografia </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Cinemetria </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Códigos em R </span>
+</center></div>
+
+<br>
+
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
+<p>*Orientação*</p>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+
+
+## **Submissão de manuscritos** {#manuscrito-submissao}
+
+<br>
+
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Artigo original </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão de escopo </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão sistemática </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Meta-análise</span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão externa por pares </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Carta-resposta </span>
+</center></div>
+
+<br>
+
+### **`r library(fontawesome); fa("clipboard-list", margin_right = "0.1em")` Revisão de métodos**
+<p>*Texto editável | Referências sugeridas*</p>
+
+### **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**
+<p>*Texto editável | Referências sugeridas*</p>
+
+### **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Formatação de referências**
+<p>*Texto editável | Biblioteca de software gerenciador*</p>
+
+### **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**
+<p>*Orientação*</p>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<!--chapter:end:consultoria.Rmd-->
+
+---
+title: "**Portfolio**"
+link-citations: yes
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+bibliography: references.bib
+---
+
+```{css, echo = FALSE}
+body {
+  font-size: 1.75em;
+}
+
+div.main-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+
+```{r setup, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', out.width = "100%", results = "hide"}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.align = 'center',
+  results = "asis",
+  include = TRUE,
+  out.width = "100%",
+  knitr.kable.NA = '--',
+  knitr.table.format = "html"
+)
+
+# library
+library(dplyr)
+library(fontawesome)
+library(kableExtra)
+library(readxl)
+library(roadoi)
+```
+
+<br>
+
+## **Currículos** {.tabset}
+
+<br>
+
+```{r qualificacao}
+# read separate sheets
+data <-
+  read_excel("Links.xlsx",
+             sheet = "curriculo",
+             col_types = c("text"))
+
+for (i in 1:dim(data[1])) {
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+  cat("### **", paste(data$Item[i], sep = ""), "**", "\n", sep = "")
+  cat('<center>\n')
+  if (!is.na(data$Item[i])) {
+    cat(
+      paste0(
+        '<iframe src="',
+        data$Link[i],
+        '/preview" style="width:100%; height:600px; border:0;"></iframe>'
+      )
+    )
+  } else {
+    cat("<br>No data available<br>")
+  }
+  cat('\n</center>')
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+  cat(paste(
+    '<a style="float:right" href="#top"><b>Início',
+    fa("circle-up"),
+    '</b></a>'
+  ))
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+}
+```
+
+<br>
+
+## **Qualificação acadêmica** {.tabset}
+
+<br>
+
+```{r diplomas}
+# read separate sheets
+data <-
+  read_excel("Links.xlsx",
+             sheet = "qualificacao-academica",
+             col_types = c("text"))
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("### **Síntese**", "\n", sep = "")
+summ.table <- table(data[, 1])
+summ.table <-
+  cbind(names(summ.table), as.matrix(unlist(summ.table))[1, ])
+colnames(summ.table) <- c("Item", "No.")
+# print table
+print(
+  kable(summ.table, align = c("l", rep(
+    "c", ncol(summ.table) - 2
+  ), "r")) %>% kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  )
+)
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+for (i in 1:dim(data[1])) {
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+  cat("### **", paste(data$Item[i], sep = ""), "**", "\n", sep = "")
+  cat('<center>\n')
+  if (!is.na(data$Item[i])) {
+    cat(
+      paste0(
+        '<iframe src="',
+        data$Link[i],
+        '/preview" style="width:100%; height:600px; border:0;"></iframe>'
+      )
+    )
+  } else {
+    cat("<br>No data available<br>")
+  }
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+  cat('\n</center>')
+  cat(paste(
+    '<a style="float:right" href="#top"><b>Início',
+    fa("circle-up"),
+    '</b></a>'
+  ))
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+}
+```
+
+<br>
+
+## **Publicações e produção**
+
+<br>
+
+### **Artigos publicados em periódicos** {.tabset}
+
+<br>
+
+```{r artigos-em-periodicos, cache = TRUE, cache.path = "cache/"}
+# read separate sheets
+data <-
+  read_excel("Links.xlsx",
+             sheet = "artigos-em-periodicos",
+             col_types = c("text"))
+table <- data
+
+# verifica se é open acess ou subscription
+paper.year <- c()
+for (i in 1:dim(data)[1]) {
+  # check if DOI is missing and add link
+  if (is.na(data[i, 3])) {
+    # usa o link do DRIVE
+    table[i, 3] <- paste0(
+      "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
+      data[i, 2],
+      "\" target=\"_blank\">Solicitar acesso",
+      "</a>"
+    )
+  }
+  # add OPEN ACESS badge
+  tryCatch(
+    expr = {
+      my_doi_oa <-
+        roadoi::oadoi_fetch(dois = data[i, 3], email = "arthur_sf@icloud.com")
+      paper.year <- c(paper.year, as.numeric(my_doi_oa$year))
+      if (my_doi_oa$is_oa) {
+        # usa a imagem do OA e o link pelo DOI
+        table[i, 3] <- 
+          paste0(
+            "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"https://doi.org/",
+            data[i, 3],
+            "\" target=\"_blank\">",
+            "<img height=\"18px;\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png\">",
+            "</a>"
+          )
+      } else {
+        # usa o link do DRIVE
+        table[i, 3] <- paste0(
+            "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
+            data[i, 2],
+            "\" target=\"_blank\">Solicitar acesso",
+            "</a>"
+          )
+      }
+    },
+    error = function(e) {
+      
+    }
+  )
+}
+
+# drop link column
+summ.table <- table [, -2]
+colnames(summ.table) <- c("Produção", "Acesso")
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Síntese**", "\n", sep = "")
+
+freq.table <- table(seq(min(paper.year), max(paper.year)))
+freq.table[freq.table == 1] <- 0
+freq.paper <- table(paper.year)
+freq.table[match(names(freq.paper), names(freq.table))] <- freq.paper
+
+summ.prod <- rbind(sum(freq.table), t(t(rev(freq.table))))
+rownames(summ.prod) <- c("Total", seq(max(paper.year), min(paper.year)))
+
+# print table
+print(
+  kable(summ.prod, align = c("l", rep(
+    "c", ncol(summ.prod) - 1
+  ), "r")) %>% kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  )
+)
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Produção anual**", "\n", sep = "")
+
+barplot(freq.table, main = "Distribuição de publicações por ano", xlab = "Ano", ylab = "Frequência, n")
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Artigos**", "\n", sep = "")
+
+# print table
+print(
+  kable(summ.table, align = c("l", rep(
+    "c", ncol(summ.table) - 2
+  ), "r"), escape = F) %>% kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>% scroll_box(width = "100%", height = "600px")
+)
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+```
+
+<br>
+
+### **Capítiulos de livros** {.tabset}
+
+<br>
+
+```{r capitulos, cache = TRUE, cache.path = "cache/"}
+# read separate sheets
+data <-
+  read_excel("Links.xlsx",
+             sheet = "capitulos",
+             col_types = c("text"))
+table <- data
+
+# verifica se é open acess ou subscription
+paper.year <- c()
+for (i in 1:dim(data)[1]) {
+  # check if DOI is missing and add link
+  if (is.na(data[i, 3])) {
+    # usa o link do DRIVE
+    table[i, 3] <- paste0(
+      "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
+      data[i, 2],
+      "\" target=\"_blank\">Solicitar acesso",
+      "</a>"
+    )
+  }
+  # add OPEN ACESS badge
+  tryCatch(
+    expr = {
+      my_doi_oa <-
+        roadoi::oadoi_fetch(dois = data[i, 3], email = "arthur_sf@icloud.com")
+      paper.year <- c(paper.year, as.numeric(my_doi_oa$year))
+      if (my_doi_oa$is_oa) {
+        # usa a imagem do OA e o link pelo DOI
+        table[i, 3] <- 
+          paste0(
+            "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"https://doi.org/",
+            data[i, 3],
+            "\" target=\"_blank\">",
+            "<img height=\"18px;\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png\">",
+            "</a>"
+          )
+      } else {
+        # usa o link do DRIVE
+        table[i, 3] <- paste0(
+            "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
+            data[i, 2],
+            "\" target=\"_blank\">Solicitar acesso",
+            "</a>"
+          )
+      }
+    },
+    error = function(e) {
+    }
+  )
+}
+
+# drop link column
+summ.table <- table [, -2]
+colnames(summ.table) <- c("Produção", "Acesso")
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Síntese**", "\n", sep = "")
+
+freq.table <- table(seq(min(paper.year), max(paper.year)))
+freq.table[freq.table == 1] <- 0
+freq.paper <- table(paper.year)
+freq.table[match(names(freq.paper), names(freq.table))] <- freq.paper
+
+summ.prod <- rbind(sum(freq.table), t(t(rev(freq.table))))
+rownames(summ.prod) <- c("Total", seq(max(paper.year), min(paper.year)))
+
+# print table
+print(
+  kable(summ.prod, align = c("l", rep(
+    "c", ncol(summ.prod) - 1
+  ), "r")) %>% kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  )
+)
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Produção anual**", "\n", sep = "")
+
+barplot(freq.table, main = "Distribuição de publicações por ano", xlab = "Ano", ylab = "Frequência, n")
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Capítulos**", "\n", sep = "")
+
+# print table
+print(
+  kable(summ.table, align = c("l", rep(
+    "c", ncol(summ.table) - 2
+  ), "r"), escape = F) %>% kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>% scroll_box(width = "100%", height = "600px")
+)
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+```
+
+<br>
+
+### **Aplicativos com registro** {.tabset}
+
+<br>
+
+```{r aplicativos-com-registro}
+# read separate sheets
+data <-
+  read_excel("Links.xlsx",
+             sheet = "aplicativos-com-registro",
+             col_types = c("text"))
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Síntese**", "\n", sep = "")
+summ.table <- table(data[, 1])
+summ.table <-
+  cbind(names(summ.table), as.matrix(unlist(summ.table))[1, ])
+colnames(summ.table) <- c("Item", "No.")
+# print table
+print(
+  kable(summ.table, align = c("l", rep(
+    "c", ncol(summ.table) - 2
+  ), "r")) %>% kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  )
+)
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+for (i in 1:dim(data[1])) {
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+  cat("#### **", paste(data$Item[i], sep = ""), "**", "\n", sep = "")
+  cat('<center>\n')
+  if (!is.na(data$Item[i])) {
+    cat(
+      paste0(
+        '<iframe src="',
+        data$Link[i],
+        '/preview" style="width:100%; height:600px; border:0;"></iframe>'
+      )
+    )
+  } else {
+    cat("<br>No data available<br>")
+  }
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+  cat('\n</center>')
+  cat(paste(
+    '<a style="float:right" href="#top"><b>Início',
+    fa("circle-up"),
+    '</b></a>'
+  ))
+  cat('\n\n<!-- -->\n\n')
+  cat('\n\n<!-- -->\n\n')
+}
+```
+
+<br>
+
+<!--chapter:end:portfolio.Rmd-->
+
+---
+title: "**Sobre**"
+link-citations: yes
+output:
+  html_document:
+    toc: false
+    css:
+      - CSS/main-color.css
+bibliography:
+  - references.bib
+---
+
+```{css, echo = FALSE}
+body {
+  font-size: 1.75em;
+}
+
+div.main-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+<br>
+
+<!--read additional files-->
+```{r packages-sources, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
+# most packages work fine if installed from CRAN
+packs.cran <-
+  c(
+    "anytime",
+    # plyr first, then dplyr
+    "plyr",
+    "dplyr",
+    "fontawesome",
+    "gridExtra",
+    "hrbrthemes",
+    "httpuv",
+    "janitor",
+    "knitr",
+    "kableExtra",
+    "lubridate",
+    "magrittr",
+    "packup",
+    "readxl",
+    "roadoi",
+    "rorcid",
+    "tidyverse",
+    "tools",
+    "usethis"
+  )
+
+for (i in 1:length(packs.cran)) {
+  if (!require(packs.cran[i], character.only = TRUE, quietly = TRUE))
+    install.packages(packs.cran[i], character.only = TRUE)
+}
+
+# other packages work better if installed from github
+packs.git <-
+  c("cssparser",
+    "packup",
+    "rcrossref"
+    )
+
+if (!require("cssparser", character.only = TRUE, quietly = TRUE))
+  remotes::install_github('coolbutuseless/cssparser')
+
+if (!require("packup", character.only = TRUE, quietly = TRUE))
+  devtools::install_github("milesmcbain/packup")
+
+if (!require("rcrossref", character.only = TRUE, quietly = TRUE))
+  devtools::install_github("ropensci/rcrossref")
+
+# load all libraries
+packs <- c(packs.cran, packs.git)
+
+for (i in 1:length(packs)) {
+  library(packs[i], character.only = TRUE)
+}
+```
+
+```{r main-color, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
+# read CSS color for this page
+css <- read_css("CSS/main-color.css")
+main.color <- css$`:root`$`--mybackgroundcolor`
+```
+
+<!--read additional files-->
+```{r source-metrics-scripts, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
+source(file.path("Scripts", "citescore.R"), local = knitr::knit_global())
+source(file.path("Scripts", "sjr.R"), local = knitr::knit_global())
+source(file.path("Scripts", "webqualis.R"), local = knitr::knit_global())
+
+source(file.path("Scripts", "get_citescore.R"),
+       local = knitr::knit_global())
+source(file.path("Scripts", "get_sjr.R"), local = knitr::knit_global())
+source(file.path("Scripts", "get_webqualis.R"),
+       local = knitr::knit_global())
+# get metrics from Scopus, SCIMago and CAPES
+source(file.path("Scripts", "get-metrics-from-sources.R"), local = knitr::knit_global())
+```
+
+### **Bio** {#autor}
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<div class="row"><center>
+
+<div class="col-sm-4"><center>
+![](ASF.png)
+</center></div>
+
+<div class="col-sm-8"><right>
+
+### **Arthur de Sá Ferreira**
+#### *PT, Biomed Eng, MSc, PhD*
+##### `r library(emo); flag("Brazil")` Rio de Janeiro
+
+<br>
+
+<!--ORCID badge-->
+<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7014-2002" href="https://orcid.org/0000-0001-7014-2002" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">0000-0001-7014-2002</a></div>
+
+<!--LATTES badge-->
+<div> <img src="http://buscatextual.cnpq.br/buscatextual/images/v2/icone_lattes.png"> [&nbsp;5432142731317894](http://lattes.cnpq.br/5432142731317894) </div>
+
+<!--PUBLONS badge-->
+<div> <span id="badgeCont345"><script type="text/javascript" src="https://publons.com/mashlets?el=badgeCont345&rid=F-6831-2012&size=small"></script></span> [&nbsp;F-6831-2012](https://publons.com/researcher/F-6831-2012)</a></div>
+
+<!--TWITTER badge-->
+<!-- <div><a href="https://twitter.com/Arthur_SF_BR?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div> -->
+
+</right></div>
+
+</center></div>
+
+<br>
+
+Graduação em Fisioterapia pela Universidade Federal do Rio de Janeiro (1999), Mestrado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2002) e Doutorado em Engenharia Biomédica pela Universidade Federal do Rio de Janeiro (2006).
+
+<br>
+
+Professor adjunto do Centro Universitário Augusto Motta ([UNISUAM ](https://www.unisuam.edu.br)) e pesquisador no Laboratório de Simulação Computacional e Modelagem em Reabilitação dos Programas de Pós-graduação em Ciências da Reabilitação e de Desenvolvimento Local da UNISUAM.
+
+<br>
+
+Experiência na área de Fisioterapia e Terapia Ocupacional, atuando principalmente nos seguintes temas:
+
+`r library(fontawesome); fa("chart-bar", margin_right = "0.1em")` Bioestatística
+
+`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Modelagem e simulação computacional
+
+`r library(fontawesome); fa("wave-square", margin_right = "0.1em")` Processamento de sinais biomédicos
+
+`r library(fontawesome); fa("person-walking", margin_right = "0.1em")` Movimento funcional humano
+
+`r library(fontawesome); fa("user-injured", margin_right = "0.1em")` Distúrbios musculoesqueléticos
+
+`r library(fontawesome); fa("heart-pulse", margin_right = "0.1em")` Doenças cardiovasculares
+
+`r library(fontawesome); fa("user-doctor", margin_right = "0.1em")` Medicina tradicional (chinesa)
+
+<br>
+
+Membro efetivo das seguintes entidades:
+
+`r library(emo); flag("Brazil")` Associação Brasileira de Pesquisa e Pós-Graduação em Fisioterapia  (ABRAPG-FT) &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://abrapg-ft.org.br/portal/)
+
+`r library(emo); flag("United Kingdom")` Committee on Publication Ethics (COPE) &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://publicationethics.org)
+
+`r library(emo); flag("United Kingdom")` Royal Statistical Society (RSS) &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://rss.org.uk)
+
+<br>
+
+Compõe o corpo editoral dos periódicos internacionais e nacionais:
+
+`r library(emo); flag("Brazil")` Fisioterapia e Pesquisa &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.scielo.br/journal/fp/about/#editors)
+
+`r library(emo); flag("United Kingdom")` Scientific Reports &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.nature.com/srep/about/editors)
+
+`r library(emo); flag("Switzerland")` Frontiers in Rehabilitation Sciences &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.frontiersin.org/research-topics/26395/systemic-effects-and-disabilities-in-long-covid-syndrome-current-approaches-and-clinical-challenges)
+
+`r library(emo); flag("Egypt")` Evidence-Based Complementary and Alternative Medicine &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.hindawi.com/journals/ecam/editors/)
+
+`r library(emo); flag("Switzerland")` Chinese Journal of Integrative Medicine &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.springer.com/journal/11655/editors)
+
+`r library(emo); flag("Hong Kong")` Journal of Integrative Medicine &nbsp; [`r library(fontawesome); fa("up-right-from-square")`](https://www.journals.elsevier.com/journal-of-integrative-medicine/editorial-board)
+
+<br>
+
+<a style="float:right" href="#top"><b>Início</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
+```{r my-orcid, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
+my_orcid <- c("0000-0001-7014-2002")
+```
+
+### **Membro de associações** {#associacoes}
+
+<br>
+
+```{r memberships-services, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
+reviewer.name <- "Arthur de Sá Ferreira"
+source("Scripts/memberships-services.R")
+```
+
+<br>
+
+<a style="float:right" href="#top"><b>Início</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
+### **Corpo editorial** {#corpo-editorial}
+
+<br>
+
+```{r invited-positions, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
+reviewer.name <- "Arthur de Sá Ferreira"
+source("Scripts/invited-positions.R")
+```
+
+<br>
+
+<a style="float:right" href="#top"><b>Início</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
+### **Revisor de periódicos** {#revisor}
+
+<br>
+
+```{r peer-review, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
+reviewer.name <- "Arthur de Sá Ferreira"
+source("Scripts/reviewer-board.R")
+```
+
+<br>
+
+<a style="float:right" href="#top"><b>Início</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<br>
+
+### **Autoria em publicações** {#artigos .tabset}
+
+```{r read-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
+# baixa todos os artigos (com repetições)
+my_works <- rorcid::works(my_orcid) %>%
+  as_tibble() %>%
+  janitor::clean_names() %>%
+  dplyr::mutate(created_date_value = anytime::anydate(created_date_value / 1000))
+my_works_ids <- my_works %>%
+  tidyr::unnest(external_ids_external_id) %>%
+  janitor::clean_names()
+
+# seleciona os artigos com DOI
+my_dois_works <-
+  my_works_ids[my_works_ids$external_id_type == 'doi',]
+my_dois_works$external_id_value <-
+  tolower(my_dois_works$external_id_value)
+
+# remove as repetições pelo DOI
+my_dois_works <-
+  my_dois_works[!duplicated(my_dois_works[, "external_id_value"]), ]
+
+# cria metadados para rastreio pelo Altmetric
+dois <- data.frame(DOI = my_dois_works$external_id_value)
+
+# Data cleaning
+dois <-data.frame(DOI = dois$DOI[!duplicated(dois)])
+dois <- data.frame(DOI = dois$DOI[!is.na(dois$DOI)])
+
+# cria metadados para rastreio pelo Altmetric
+source("Scripts/altmetric-meta-from-dois.R", local = knitr::knit_global())
+
+# get metrics from Altmetric and CrossRef
+source("Scripts/get-metrics-from-dois.R", local = knitr::knit_global())
+
+# store to use downstream
+doi_with_altmetric <- get_metrics(doi_with_altmetric = doi_with_altmetric, doi_without_altmetric = NULL, citescore, scimago, qualis)
+doi_without_altmetric <- get_metrics(doi_with_altmetric = NULL, doi_without_altmetric = doi_without_altmetric, citescore, scimago, qualis)
+
+# available years of publication
+years <- na.omit(sort(unique(c(doi_with_altmetric$published_on, doi_without_altmetric$published_on)), decreasing = TRUE))
+```
+
+```{r print-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
+# Verifica se há DOIs
+if (max(dim(doi_with_altmetric)[1], 0) == 0 & max(dim(doi_without_altmetric)[1], 0) == 0) {
+  cat('\n')
+  cat('*Sem produção para exibir*')
+  cat('\n')
+} else {
+  # section header
+  cat('<br>')
+  cat(paste(
+    "*Produtos (n = ",
+    max(dim(doi_with_altmetric)[1], 0) + max(dim(doi_without_altmetric)[1], 0),
+    ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, CiteScore^4^, SJR^5^, Qualis^6^, Open Access^7^)* \n\n",
+    sep = "")
+  )
+  cat('<br>')
+  
+  # print table of papers with/without badges
+  for (year in 1:length(years)) {
+  # print tab header
+    cat('\n\n<!-- -->\n\n')
+    cat("#### **", as.character(years[year]), "**", "\n", sep = "")
+
+    source("Scripts/papers-with-badges.R", local = knitr::knit_global())
+    table.with.badges(
+      show.Altmetric = TRUE,
+      show.Dimensions = TRUE,
+      show.PlumX = TRUE,
+      show.CiteScore = TRUE,
+      show.SJR = TRUE,
+      show.Qualis = TRUE,
+      doi_with_altmetric = tryCatch(
+        doi_with_altmetric[doi_with_altmetric$published_on == years[year], ],
+        error = function(e) {
+          return(doi_with_altmetric <- as.data.frame(matrix(nrow = 0, ncol = 0)))
+        }
+      ),
+      doi_without_altmetric = tryCatch(doi_without_altmetric[doi_without_altmetric$published_on == years[year], ],
+        error = function(e) {
+          return(doi_without <- data.frame())
+        }
+      ),
+      citescore = citescore,
+      scimago = scimago,
+      qualis = qualis
+    )
+  }
+}
+```
+
+<br>
+
+<!--script for generating ALTMETRIC badges-->
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+<!--script for generating multiple DIMENSIONS badges-->
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+
+<!--script for generating multiple PLUMX badges-->
+<script type="text/javascript" src="//cdn.plu.mx/widget-all.js"></script>
+
+<br>
+
+<a style="float:right" href="#top"><b>Início</b></a>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<!--chapter:end:sobre.Rmd-->
+
