@@ -1674,6 +1674,12 @@ kableExtra::kable(table.final,
 
 <br>
 
+## *RSS* {#rss}
+
+-   [*Best Practices for Data Visualisation \| Royal Statistical Society*](https://royal-statistical-society.github.io/datavisguide/)
+
+<br>
+
 ## *BMJ* {#bmj}
 
 -   [*Statistics \| Latest from The BMJ*](https://www.bmj.com/specialties/statistics)
@@ -1697,12 +1703,6 @@ kableExtra::kable(table.final,
 -   [*Statistical Reporting Recommendations \| AHA/ASA journals*](https://www.ahajournals.org/statistical-recommendations)
 
 -   [*Statistical Inference in the 21st Century: A World Beyond p \< 0.05 \| The American Statistical Association*](https://www.tandfonline.com/toc/utas20/73/sup1?nav=tocList)
-
-<br>
-
-## *AHA/ASA*
-
--   [*Best Practices for Data Visualisation \| Royal Statistical Society*](https://royal-statistical-society.github.io/datavisguide/)
 
 <br>
 
