@@ -14,123 +14,28 @@ exclude:
   - cache
   - Metrics
   - Scripts
-bibliography:
-  - references.bib
-  - grateful-refs.bib
 link-citations: yes
 navbar:
   left:
     - text: "Ciência com R"
       icon: "fa-home"
       href: [index.html]
+    - text: "Consultoria"
+      icon: "fa-list-ul"
+      href: [consultoria.html]
       menu:
+        - text: "Serviços"
+          href: [consultoria.html]
+        - text: "Elaboração de projetos"
+          href: [consultoria.html]
         - text: "Computação estatística"
-          href: [index.html#computacao-estatistica]
-          menu:
-            - text: "Por onde começar"
-              href: [index.html#inicio]
-            - text: "Instale R e R Studio"
-              href: [index.html#instale]
-        - text: "Unidade de análise"
-          href: [index.html#unidade-analise]
-          menu:
-            - text: "Definição"
-              href: [index.html#definicao]
-            - text: "Pareamento"
-              href: [index.html#pareamento]
-            - text: "Medidas únicas ou múltiplas"
-              href: [index.html#medidas]
-        - text: "Tabulação de dados"
-          href: [index.html#tabulacao-dados]
-          menu:
-            - text: "Planilhas eletrônicas"
-              href: [index.html#planilhas]
-        - text: "Dados"
-          href: [index.html#dados]
-          menu:
-            - text: "Dados"
-              href: [index.html#dados]
-            - text: "Dados perdidos"
-              href: [index.html#dados-perdidos]
-        - text: "Variáveis e fatores"
-          href: [index.html#variaveis-fatores]
-          menu:
-            - text: "Variáveis"
-              href: [index.html#variaveis]
-            - text: "Transformação de variáveis"
-              href: [index.html#transformacao]
-            - text: "Dicotomização de variáveis"
-              href: [index.html#dicotomizacao]
-            - text: "Fatores"
-              href: [index.html#fatores]
-        - text: "Distribuições e parâmetros"
-          href: [index.html#distribuicoes-parametros]
-          menu:
-            - text: "Distribuições"
-              href: [index.html#distribuicoes]
-            - text: "Parâmetros"
-              href: [index.html#parametros]
-        - text: "Tabelas e figuras"
-          href: [index.html#tabelas-figuras]
-          menu:
-            - text: "Tabelas"
-              href: [index.html#tabelas]
-            - text: "Figuras"
-              href: [index.html#figuras]
-        - text: "Análise exploratória"
-          href: [index.html#analise-exploratoria]
-          menu:
-            - text: "Análise descritiva"
-              href: [index.html#descritiva]
-        - text: "Análise de regressão"
-          href: [index.html#analise-regressao]
-          menu:
-            - text: "Multivariável vs. multivariada"
-              href: [index.html#multivariavel-multivariada]
-            - text: "Seleção de variáveis"
-              href: [index.html#selecao]
-        - text: "Delineamento de estudos"
-          href: [index.html#delineamento-estudos]
-          menu:
-            - text: "Classificação"
-              href: [index.html#classificacao]
-        - text: "Desempenho diagnóstico"
-          href: [index.html#desempenho-diagnostico]
-          menu:
-            - text: "Curvas ROC"
-              href: [index.html#curvas-roc]
-        - text: "Ensaios clínicos aleatorizados"
-          href: [index.html#ensaios-clínicos-aleatorizados]
-          menu:
-            - text: "Características"
-              href: [index.html#caracteristicas]
-            - text: "Comparação na linha de base"
-              href: [index.html#comparacao-linha-de-base]
-            - text: "Análises de comparação"
-              href: [index.html#comparacao-pre-pos]
-            - text: "Ajuste de covariáveis"
-              href: [index.html#ajuste-de-covariaveis]
-            - text: "Interação"
-              href: [index.html#interacao]
-        - text: "Meta-analises"
-          href: [index.html#meta-analises]
-          menu:
-            - text: "Interpretação"
-              href: [index.html#interpretacao]
-        - text: "Redação de análises"
-          href: [index.html#redacao]
-          menu:
-            - text: "Diretrizes"
-              href: [index.html#diretrizes]
-            - text: "Checklists"
-              href: [index.html#checklists]
-        - text: "Fontes externas"
-          href: [index.html#fontes-externas]
-        - text: "Pacotes R"
-          href: [index.html#pacotes]
-        - text: "Referências"
-          href: [index.html#referencias]
+          href: [consultoria.html]
+        - text: "Computação biomédica"
+          href: [consultoria.html]
+        - text: "Submissão de manuscritos"
+          href: [consultoria.html]
     - text: "R scripts"
+      icon: "fa-computer"
       menu:
         - text: "Crossover"
           href: [https://github.com/FerreiraAS/Crossover]
@@ -146,21 +51,12 @@ navbar:
           href: [https://github.com/FerreiraAS/ROC]
         - text: "Observatório"
           href: [https://github.com/FerreiraAS/observatorio/]
-    - text: "Consultoria"
-      href: [consultoria.html]
-      menu:
-        - text: "Serviços"
-          href: [consultoria.html]
-        - text: "Elaboração de projetos"
-          href: [consultoria.html]
-        - text: "Computação estatística"
-          href: [consultoria.html]
-        - text: "Computação biomédica"
-          href: [consultoria.html]
-        - text: "Submissão de manuscritos"
-          href: [consultoria.html]
+    - text: "R Book"
+      icon: "fa-book"
+      href: [https://ferreiraas.github.io/R-Book/]
   right:
     - text: "Arthur Sá Ferreira, DSc"
+      icon: "fa-user-tie"
       href: [sobre.html]
       menu:
         - text: "Bio"
