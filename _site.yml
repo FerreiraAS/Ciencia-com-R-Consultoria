@@ -55,7 +55,7 @@ navbar:
       icon: "fa-book"
       href: [https://ferreiraas.github.io/R-Book/]
   right:
-    - text: "Arthur Sá Ferreira, DSc"
+    - text: ""
       icon: "fa-user-tie"
       href: [sobre.html]
       menu:
