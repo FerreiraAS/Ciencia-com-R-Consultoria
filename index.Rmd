@@ -17,21 +17,9 @@ bibliography:
   - grateful-refs.bib
 ---
 
-```{r packages, echo = FALSE, results = 'hide', include = FALSE}
-library(dplyr)
-```
-
-<!--script for blue text blocks of R code tips-->
-
-```{=html}
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
-</style>
-```
-
 ```{css, echo = FALSE}
 body {
-  font-size: 1.5em;
+  font-size: 1.75em;
 }
 
 div.main-container {
@@ -44,6 +32,18 @@ div.main-container {
   margin-left: auto;
   margin-right: auto;
 }
+```
+
+```{r packages, echo = FALSE, results = 'hide', include = FALSE}
+library(dplyr)
+```
+
+<!--script for blue text blocks of R code tips-->
+
+```{=html}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
+</style>
 ```
 
 <br>
