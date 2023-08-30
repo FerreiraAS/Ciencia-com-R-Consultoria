@@ -35,7 +35,7 @@ navbar:
         - text: "Submissão de manuscritos"
           href: [consultoria.html]
     - text: "R scripts"
-      icon: "fa-computer"
+      icon: "fa-desktop"
       menu:
         - text: "Crossover"
           href: [https://github.com/FerreiraAS/Crossover]
