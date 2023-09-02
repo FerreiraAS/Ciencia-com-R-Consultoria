@@ -1,6 +1,10 @@
 ---
 title: '**Ciência com `r library(fontawesome); fa("r-project", height = "1.5em", width = "1.5em", fill = "steelblue", margin_right = "0.1em")`**'
-author: Arthur de Sá Ferreira
+
+author: '<br>Arthur de Sá Ferreira<a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0000-0001-7014-2002" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top"><br><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.0em" alt="ORCID iD icon"/> https://orcid.org/0000-0001-7014-2002 </a> <br>'
+
+date: "`r Sys.Date()`"
+
 output:
   html_document:
     theme: flatly
