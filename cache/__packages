@@ -1,9 +1,6 @@
 fontawesome
-kableExtra
-remotes
-grateful
-emo
 dplyr
+kableExtra
 readxl
 roadoi
 anytime
@@ -28,3 +25,4 @@ forcats
 usethis
 cssparser
 rcrossref
+emo
