@@ -20,20 +20,20 @@ navbar:
     - text: "Ciência com R"
       icon: "fa-home"
       href: [index.html]
-    - text: "Consultoria"
+    - text: "Serviços"
       icon: "fa-list-ul"
-      href: [consultoria.html]
+      href: [servicos.html]
       menu:
         - text: "Serviços"
-          href: [consultoria.html]
+          href: [servicos.html]
         - text: "Elaboração de projetos"
-          href: [consultoria.html]
+          href: [servicos.html]
         - text: "Computação estatística"
           href: [consultoria.html]
         - text: "Computação biomédica"
-          href: [consultoria.html]
+          href: [servicos.html]
         - text: "Submissão de manuscritos"
-          href: [consultoria.html]
+          href: [servicos.html]
     - text: "R scripts"
       icon: "fa-desktop"
       menu:
@@ -72,9 +72,6 @@ navbar:
         - text: "Portfolio"
           href: [portfolio.html]
     - text: ""
-      icon: "fa-envelope"
-      href: [mailto:arthur_sf@icloud.com]
-    - text: ""
       icon: "fa-twitter"
       href: [https://twitter.com/Arthur_SF_BR]
     - text: ""
@@ -86,6 +83,9 @@ navbar:
     - text: ""
       icon: "fa-mug-saucer"
       href: [https://www.buymeacoffee.com/Arthur.Sa.Ferreira]
+    - text: "Entre em contato"
+      icon: ""
+      href: [mailto:arthur_sf@icloud.com]
 
 output:
   html_document:

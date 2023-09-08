@@ -1,5 +1,5 @@
 ---
-title: "**Consultoria**"
+title: "**Serviços**"
 link-citations: yes
 output:
   html_document:
@@ -25,17 +25,6 @@ div.main-container {
 ```
 
 <br>
-
-# {#contato .unlisted .unnumbered}
-
-<center>
-  <div class="d-grid gap-2"">
-    <button class="btn btn-secondary btn-lg" type="button" style="width:100%;font-size:1.1em">
-      <span href="mailto:arthur_sf@icloud.com?subject=Cotação">`r library(fontawesome); paste0("Entre em contato! &nbsp; ", fa("envelope", margin_right = "0.1em"))`
-      </span>
-    </button>
-  </div>
-</center>
 
 ```{css, echo = FALSE}
 .nav-pills>li>a:hover,
