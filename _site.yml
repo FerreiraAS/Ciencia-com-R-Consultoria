@@ -20,7 +20,7 @@ navbar:
     - text: "Ciência com R"
       icon: "fa-home"
       href: [index.html]
-    - text: "Serviços"
+    - text: "Consultoria"
       icon: "fa-list-ul"
       href: [servicos.html]
       menu:
@@ -51,7 +51,7 @@ navbar:
           href: [https://github.com/FerreiraAS/ROC]
         - text: "Observatório"
           href: [https://github.com/FerreiraAS/observatorio/]
-    - text: "R Book"
+    - text: "Ciência com R"
       icon: "fa-book"
       href: [https://ferreiraas.github.io/R-Book/]
   right:
