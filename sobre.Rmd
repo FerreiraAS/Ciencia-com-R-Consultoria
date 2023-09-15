@@ -3,7 +3,7 @@ title: "**Sobre**"
 link-citations: yes
 output:
   html_document:
-    toc: false
+    toc: true
     css:
       - CSS/main-color.css
 bibliography:
@@ -119,9 +119,11 @@ source(file.path("Scripts", "get-metrics-from-sources.R"), local = knitr::knit_g
 
 <div class="col-sm-8"><right>
 
-### **Arthur de Sá Ferreira**
-#### *PT, Biomed Eng, MSc, PhD*
-##### `r library(emo); flag("Brazil")` Rio de Janeiro
+#### **Arthur de Sá Ferreira**  {-}
+
+#### *FT, Eng Biomed, MSc, DSc*  {-}
+
+##### `r library(emo); flag("Brazil")` Rio de Janeiro  {-}
 
 <br>
 
@@ -208,9 +210,10 @@ Compõe o corpo editoral dos periódicos internacionais e nacionais:
 my_orcid <- c("0000-0001-7014-2002")
 ```
 
-### **Membro de associações** {#associacoes}
+### **Membro de Associações** {#associacoes}
 
-<br>
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
 ```{r memberships-services, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
 reviewer.name <- "Arthur de Sá Ferreira"
@@ -223,14 +226,10 @@ source("Scripts/memberships-services.R")
 
 <br>
 
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-<br>
-
 ### **Corpo editorial** {#corpo-editorial}
 
-<br>
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
 ```{r invited-positions, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
 reviewer.name <- "Arthur de Sá Ferreira"
@@ -243,14 +242,10 @@ source("Scripts/invited-positions.R")
 
 <br>
 
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-<br>
-
 ### **Revisor de periódicos** {#revisor}
 
-<br>
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
 ```{r peer-review, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
 reviewer.name <- "Arthur de Sá Ferreira"
@@ -263,12 +258,10 @@ source("Scripts/reviewer-board.R")
 
 <br>
 
+### **Autoria em publicações** {#artigos .tabset}
+
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-<br>
-
-### **Autoria em publicações** {#artigos .tabset}
 
 ```{r read-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
 # baixa todos os artigos (com repetições)
@@ -375,6 +368,12 @@ if (max(dim(doi_with_altmetric)[1], 0) == 0 & max(dim(doi_without_altmetric)[1],
 <br>
 
 <a style="float:right" href="#top"><b>Início</b></a>
+
+<br>
+
+<br>
+
+<br>
 
 <br>
 
