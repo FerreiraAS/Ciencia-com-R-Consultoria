@@ -52,11 +52,11 @@ div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
 
 <br>
 
-### **Ambiente direcionado a pesquisadores e alunos de todos os níveis de graduação e pós-graduação da Área de Saúde, com o objetivo de:**
+### **Ambiente direcionado a pesquisadores, professores, profissionais e alunos de todos os níveis de graduação e pós-graduação:**
 
 <br>
 
--   <a style="color:#5581B0;text-decoration:none;">GitBook **Ciência com R**</a>: Auxiliar o visitante no auto desenvolvimento de suas habilidades na elaboração de trabalhos científicos, acadêmicos ou profissionais, disponibilizando recursos acadêmicos na Central de Auto Estudos e R scripts prontos.
+-   <a style="color:#5581B0;text-decoration:none;">GitBook **Ciência com R**</a>: Auxílio ao visitante no auto desenvolvimento de suas habilidades na elaboração de trabalhos científicos, acadêmicos ou profissionais, disponibilizando recursos acadêmicos na Central de Auto Estudos e R scripts prontos.
 
 <center>
     <a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:#2C3E50; text-decoration:none" href="https://ferreiraas.github.io/Ciencia-com-R/"><b>GitBook gratuito</b></a>
@@ -64,9 +64,9 @@ div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
 
 <br>
 
--   <a style="color:#5581B0;text-decoration:none;white-space:pre-line;">Consultoria **Ciência com R**</a>: Oferecer uma consultoria completa na elaboração da modelagem e análise estatística que embase e valide a conclusão do seu projeto de pesquisa seja ele uma monografia, dissertação, tese ou artigo.
+-   <a style="color:#5581B0;text-decoration:none;">Consultoria **Ciência com R**</a>: Consultoria completa na elaboração da modelagem e análise estatística que embase e valide a conclusão do seu projeto de pesquisa, monografia, dissertação, tese ou artigo.
 
-- Escolha os serviços de acordo com as necessidades da etapa da sua pesquisa:
+- Escolha os serviços de acordo com as necessidades e etapas da sua pesquisa:
 
 <center>
     <a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:#2C3E50; text-decoration:none" href="servicos.html"><b>Consutoria</b></a>
