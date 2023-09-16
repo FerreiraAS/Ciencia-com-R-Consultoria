@@ -1579,7 +1579,7 @@ kableExtra::kable(table.final,
 ::: {style="page-break-after: always;"}
 :::
 
-# **Redação de análises** {#redacao}
+# **redação de análises** {#redacao}
 
 <br>
 

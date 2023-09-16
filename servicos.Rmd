@@ -81,7 +81,7 @@ div.main-container {
     
   <td style="text-align:right;vertical-align:top">
   
-    <a style="font-size:1.25em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:#2C3E50; text-decoration:none" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Elaboração de projetos&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
+    <a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Elaboração de projetos&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
     
   </td>
 </tr>
@@ -142,7 +142,7 @@ div.main-container {
     
   <td style="text-align:right;vertical-align:top">
   
-    <a style="font-size:1.25em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:#2C3E50; text-decoration:none" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Computação estatística&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
+    <a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Computação estatística&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
     
   </td>
 </tr>
@@ -183,7 +183,7 @@ div.main-container {
     
   <td style="text-align:right;vertical-align:top">
   
-    <a style="font-size:1.25em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:#2C3E50; text-decoration:none" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Computação biomédica&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
+    <a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Computação biomédica&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
     
   </td>
 </tr>
@@ -234,7 +234,7 @@ div.main-container {
   
   <td style="text-align:right;vertical-align:top">
   
-    <a style="font-size:1.25em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:#2C3E50; text-decoration:none" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Submissão de manuscritos&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
+    <a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Submissão de manuscritos&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
     
   </td>
 </tr>
