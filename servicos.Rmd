@@ -58,34 +58,26 @@ div.main-container {
 
 <br>
 
-<table style="width:100%">
-  <tr>
-    <td>
-    
-       <h3> **`r library(fontawesome); fa("clipboard-list", margin_right = "0.1em")` Revisão de métodos**</h3>
-       <p>*Texto editável | Referências sugeridas*</p>
-    
-       <h3> **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**</h3>
-       <p>*Texto editável | Referências sugeridas*</p>
-    
-       <h3> **`r library(fontawesome); fa("book-medical", margin_right = "0.1em")` Revisão de aspectos éticos**</h3>
-       <p>*Texto editável*</p>
-    
-       <h3> **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Formatação de referências**</h3>
-       <p>*Texto editável | Biblioteca de software gerenciador*</p>
-    
-       <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
-       <p>*Orientação*</p>
-       
-  </td>
-    
-  <td style="text-align:right;vertical-align:top">
-  
-    <a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Elaboração de projetos&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
-    
-  </td>
-</tr>
-</table>
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Elaboração de projetos&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+</center>
+
+<br>
+
+<h3> **`r library(fontawesome); fa("clipboard-list", margin_right = "0.1em")` Revisão de métodos**</h3>
+<p>*Texto editável | Referências sugeridas*</p>
+
+<h3> **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**</h3>
+<p>*Texto editável | Referências sugeridas*</p>
+
+<h3> **`r library(fontawesome); fa("book-medical", margin_right = "0.1em")` Revisão de aspectos éticos**</h3>
+<p>*Texto editável*</p>
+
+<h3> **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Formatação de referências**</h3>
+<p>*Texto editável | Biblioteca de software gerenciador*</p>
+
+<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
+<p>*Orientação*</p>
 
 <br>
 
@@ -116,37 +108,29 @@ div.main-container {
 
 <br>
 
-<table style="width:100%">
-  <tr>
-    <td>
-       
-       <h3> **`r library(fontawesome); fa("users", margin_right = "0.1em")` Estimativa de tamanho amostral**</h3>
-       <p>*Texto editável | R Script*</p>
-       
-       <h3> **`r library(fontawesome); fa("shuffle", margin_right = "0.1em")` Tabela de aleatorização em grupos**</h3>
-       <p>*Texto editável | R Script*</p>
-       
-       <h3> **`r library(fontawesome); fa("table", margin_right = "0.1em")` Modelagem de banco de dados**</h3>
-       <p>*Tabela editável | Formatação de tipos de variáveis | Validação de entrada de dados | Cálculo de variáveis secundárias *</p>
-       
-       <h3> **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise estatística**</h3>
-       <p>*Revisão de objetivos geral/específicos | Plano de análise em texto editável*</p></h3>
-       
-       <h3> **`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação de estudos**</h3>
-       <p>*Texto editável | Tabela descritiva | Tabela/gráfico inferencial | R Script*</p>
-       
-       <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
-       <p>*Orientação*</p>
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Computação estatística&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+</center>
 
-  </td>
-    
-  <td style="text-align:right;vertical-align:top">
-  
-    <a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Computação estatística&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
-    
-  </td>
-</tr>
-</table>
+<br>
+
+<h3> **`r library(fontawesome); fa("users", margin_right = "0.1em")` Estimativa de tamanho amostral**</h3>
+<p>*Texto editável | R Script*</p>
+
+<h3> **`r library(fontawesome); fa("shuffle", margin_right = "0.1em")` Tabela de aleatorização em grupos**</h3>
+<p>*Texto editável | R Script*</p>
+
+<h3> **`r library(fontawesome); fa("table", margin_right = "0.1em")` Modelagem de banco de dados**</h3>
+<p>*Tabela editável | Formatação de tipos de variáveis | Validação de entrada de dados | Cálculo de variáveis secundárias *</p>
+
+<h3> **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Plano de análise estatística**</h3>
+<p>*Revisão de objetivos geral/específicos | Plano de análise em texto editável*</p></h3>
+
+<h3> **`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação de estudos**</h3>
+<p>*Texto editável | Tabela descritiva | Tabela/gráfico inferencial | R Script*</p>
+
+<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
+<p>*Orientação*</p>
 
 <br>
 
@@ -172,22 +156,14 @@ div.main-container {
 
 <br>
 
-<table style="width:100%">
-  <tr>
-    <td>
-       
-       <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
-       <p>*Orientação*</p>
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Computação biomédica&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+</center>
 
-  </td>
-    
-  <td style="text-align:right;vertical-align:top">
-  
-    <a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Computação biomédica&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
-    
-  </td>
-</tr>
-</table>
+<br>
+
+<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
+<p>*Orientação*</p>
 
 <br>
 
@@ -214,31 +190,23 @@ div.main-container {
 
 <br>
 
-<table style="width:100%">
-  <tr>
-    <td>
-       
-       <h3> **`r library(fontawesome); fa("clipboard-list", margin_right = "0.1em")` Revisão de métodos** </h3>
-       <p>*Texto editável | Referências sugeridas*</p>
-       
-       <h3> **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico** </h3>
-       <p>*Texto editável | Referências sugeridas*</p>
-       
-       <h3> **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Formatação de referências** </h3>
-       <p>*Texto editável | Biblioteca de software gerenciador*</p>
-       
-       <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
-       <p>*Orientação*</p>
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Submissão de manuscritos&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+</center>
 
-  </td>
-  
-  <td style="text-align:right;vertical-align:top">
-  
-    <a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Submissão de manuscritos&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>Orçamento</b></a>
-    
-  </td>
-</tr>
-</table>
+<br>
+
+<h3> **`r library(fontawesome); fa("clipboard-list", margin_right = "0.1em")` Revisão de métodos** </h3>
+<p>*Texto editável | Referências sugeridas*</p>
+
+<h3> **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico** </h3>
+<p>*Texto editável | Referências sugeridas*</p>
+
+<h3> **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Formatação de referências** </h3>
+<p>*Texto editável | Biblioteca de software gerenciador*</p>
+
+<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
+<p>*Orientação*</p>
 
 <br>
 
