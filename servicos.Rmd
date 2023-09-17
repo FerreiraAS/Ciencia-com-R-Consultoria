@@ -42,9 +42,104 @@ div.main-container {
 }
 ```
 
-# {.tabset .tabset-fade .tabset-pills .tabset .justify-center}
+```{css, echo = FALSE}
+.acc-body{
+  display:none;
+}
 
-## **Elaboração de projetos** {#projeto-de-pesquisa}
+.content{
+    margin: 20px 0 20px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.acc-head{font-size:20px;}
+
+.acc-body{
+    padding:20px;
+    font-size:16px;
+    border-style:solid;
+    border-width: 0 1px 0 1px;
+    border-color: #ddd;
+}
+
+.acc-body.last{
+    border-width: 0 1px 1px 1px;
+}
+
+.panel-body{
+    font-size:18px;
+}
+```
+
+```{js, echo = FALSE}
+$(document).ready(function() {
+
+var $container = jQuery('.acc-body'), $acc_head = jQuery('.acc-head');
+
+		$acc_head.last().addClass('last');
+		
+		$acc_head.on('click', function(e) {
+			if( jQuery(this).next().is(':hidden') ) {
+			    //Comment or uncomment the line below to control other open accordions when acc-head is clicked.
+				$acc_head.removeClass('active').next().slideUp(300);
+				jQuery(this).toggleClass('active').next().slideDown(300);
+				
+			}
+          else{
+              //Comment or Uncomment out the line below to add or remove the toggle function from acc-head
+            jQuery(this).toggleClass('active').next().slideToggle(300);
+          }
+			e.preventDefault();
+		});
+
+  
+});
+```
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--script for COMMENT -->
+
+<div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Mentoria agendada</h2></div>
+
+<div class="acc-body">
+
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Busca de artigos</span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Sugestões de leitura </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Discussão de artigos </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Interpretação estatística </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Relação objetivos-métodos-conclusões </span>
+</center></div>
+
+<br>
+
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Solicito um orçamento: Mentoria agendada
+&body=
+Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A
+Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A
+Marque com [ x ] as opções que deseja incluir: %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+Opcional: Inclua arquivos em anexo %0D%0A
+"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+</center>
+
+<br>
+
+<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
+<p>*Orientação*</p>
+
+<br>
+
+</div>
+
+<!--script for COMMENT -->
+
+<div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Elaboração de projetos</h2></div>
+    
+<div class="acc-body">
 
 <div><center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Objetivo geral </span>
@@ -59,7 +154,19 @@ div.main-container {
 <br>
 
 <center>
-<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Elaboração de projetos&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Solicito um orçamento: Elaboração de projetos
+&body=
+Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A
+Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A
+Marque com [ x ] as opções que deseja incluir: %0D%0A
+[  ] Revisão de métodos %0D%0A
+[  ] Revisão de estilo científico %0D%0A
+[  ] Revisão de aspectos éticos %0D%0A
+[  ] Formatação de referências %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+Opcional: Inclua arquivos em anexo %0D%0A
+"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
 </center>
 
 <br>
@@ -81,17 +188,13 @@ div.main-container {
 
 <br>
 
-<br>
+</div>
 
-<br>
+<!--script for COMMENT -->
 
-<br>
-
-<!--script for generating HORIZONTAL LINE-->
-
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-## **Computação estatística** {#computacao-estatistica}
+<div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Computação estatística</h2></div>
+    
+<div class="acc-body">
 
 <div><center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eficácia </span>
@@ -134,17 +237,13 @@ div.main-container {
 
 <br>
 
-<br>
+</div>
 
-<br>
+<!--script for COMMENT -->
 
-<br>
-
-<!--script for generating HORIZONTAL LINE-->
-
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-## **Computação biomédica** {#computacao-biomedica}
+<div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Computação biomédica</h2></div>
+    
+<div class="acc-body">
 
 <div><center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eletromiografia de superfície </span>
@@ -167,17 +266,13 @@ div.main-container {
 
 <br>
 
-<br>
+</div>
 
-<br>
+<!--script for COMMENT -->
 
-<br>
-
-<!--script for generating HORIZONTAL LINE-->
-
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-## **Submissão de manuscritos** {#manuscrito-submissao}
+<div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Submissão de manuscritos</h2></div>
+    
+<div class="acc-body last">
 
 <div><center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Artigo original </span>
@@ -210,12 +305,4 @@ div.main-container {
 
 <br>
 
-<br>
-
-<br>
-
-<br>
-
-<!--script for generating HORIZONTAL LINE-->
-
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+</div>

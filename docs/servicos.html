@@ -61,6 +61,7 @@ if (window.hljs) {
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="CSS/main-color" type="text/css" />
 
 
 
@@ -276,15 +277,8 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://twitter.com/Arthur_SF_BR">
-    <span class="fa fa-twitter"></span>
-     
-    
-  </a>
-</li>
-<li>
-  <a href="https://br.linkedin.com/in/arthur-sá-ferreira-13054037">
-    <span class="fa fa-linkedin"></span>
+  <a href="https://www.buymeacoffee.com/Arthur.Sa.Ferreira">
+    <span class="fa fa-mug-saucer"></span>
      
     
   </a>
@@ -296,12 +290,30 @@ $(document).ready(function () {
     
   </a>
 </li>
-<li>
-  <a href="https://www.buymeacoffee.com/Arthur.Sa.Ferreira">
-    <span class="fa fa-mug-saucer"></span>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-share-nodes"></span>
      
     
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://twitter.com/Arthur_SF_BR">
+        <span class="fa fa-twitter"></span>
+         
+        
+      </a>
+    </li>
+    <li>
+      <a href="https://br.linkedin.com/in/arthur-sá-ferreira-13054037">
+        <span class="fa fa-linkedin"></span>
+         
+        
+      </a>
+    </li>
+  </ul>
 </li>
       </ul>
     </div><!--/.nav-collapse -->
@@ -350,11 +362,110 @@ div.main-container {
     text-align:center;
 }
 </style>
-<div id="section"
-class="section level1 tabset tabset-fade tabset-pills justify-center">
-<h1 class="tabset tabset-fade tabset-pills tabset justify-center"></h1>
-<div id="projeto-de-pesquisa" class="section level2">
-<h2><strong>Elaboração de projetos</strong></h2>
+<style type="text/css">
+.acc-body{
+  display:none;
+}
+
+.content{
+    margin: 20px 0 20px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.acc-head{font-size:20px;}
+
+.acc-body{
+    padding:20px;
+    font-size:16px;
+    border-style:solid;
+    border-width: 0 1px 0 1px;
+    border-color: #ddd;
+}
+
+.acc-body.last{
+    border-width: 0 1px 1px 1px;
+}
+
+.panel-body{
+    font-size:18px;
+}
+</style>
+<script>
+$(document).ready(function() {
+
+var $container = jQuery('.acc-body'), $acc_head = jQuery('.acc-head');
+
+        $acc_head.last().addClass('last');
+        
+        $acc_head.on('click', function(e) {
+            if( jQuery(this).next().is(':hidden') ) {
+                //Comment or uncomment the line below to control other open accordions when acc-head is clicked.
+                $acc_head.removeClass('active').next().slideUp(300);
+                jQuery(this).toggleClass('active').next().slideDown(300);
+                
+            }
+          else{
+              //Comment or Uncomment out the line below to add or remove the toggle function from acc-head
+            jQuery(this).toggleClass('active').next().slideToggle(300);
+          }
+            e.preventDefault();
+        });
+
+  
+});
+</script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--script for COMMENT -->
+<div class="acc-head list-group-item">
+<h2>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/></svg>
+Mentoria agendada
+</h2>
+</div>
+<div class="acc-body">
+<div>
+<center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Busca de artigos</span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Sugestões de leitura </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Discussão de artigos </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Interpretação estatística </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Relação
+objetivos-métodos-conclusões </span>
+</center>
+</div>
+<p><br></p>
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Solicito um orçamento: Mentoria agendada
+&body=
+Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A
+Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A
+Marque com [ x ] as opções que deseja incluir: %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+Opcional: Inclua arquivos em anexo %0D%0A
+"><b><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+Orçamento</b></a>
+</center>
+<p><br></p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384V320c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v32h64V64L224 64v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></svg>
+Mentoria</strong>
+</h3>
+<p>
+<em>Orientação</em>
+</p>
+<p><br></p>
+</div>
+<!--script for COMMENT -->
+<div class="acc-head list-group-item">
+<h2>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/></svg>
+Elaboração de projetos
+</h2>
+</div>
+<div class="acc-body">
 <div>
 <center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;">
@@ -372,7 +483,19 @@ Formatação </span>
 </div>
 <p><br></p>
 <center>
-<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Elaboração de projetos&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Solicito um orçamento: Elaboração de projetos
+&body=
+Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A
+Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A
+Marque com [ x ] as opções que deseja incluir: %0D%0A
+[  ] Revisão de métodos %0D%0A
+[  ] Revisão de estilo científico %0D%0A
+[  ] Revisão de aspectos éticos %0D%0A
+[  ] Formatação de referências %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+Opcional: Inclua arquivos em anexo %0D%0A
+"><b><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
 Orçamento</b></a>
 </center>
 <p><br></p>
@@ -412,14 +535,15 @@ Mentoria</strong>
 <em>Orientação</em>
 </p>
 <p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 </div>
-<div id="computacao-estatistica" class="section level2">
-<h2><strong>Computação estatística</strong></h2>
+<!--script for COMMENT -->
+<div class="acc-head list-group-item">
+<h2>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/></svg>
+Computação estatística
+</h2>
+</div>
+<div class="acc-body">
 <div>
 <center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;">
@@ -493,14 +617,15 @@ Mentoria</strong>
 <em>Orientação</em>
 </p>
 <p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 </div>
-<div id="computacao-biomedica" class="section level2">
-<h2><strong>Computação biomédica</strong></h2>
+<!--script for COMMENT -->
+<div class="acc-head list-group-item">
+<h2>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/></svg>
+Computação biomédica
+</h2>
+</div>
+<div class="acc-body">
 <div>
 <center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;">
@@ -527,14 +652,15 @@ Mentoria</strong>
 <em>Orientação</em>
 </p>
 <p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 </div>
-<div id="manuscrito-submissao" class="section level2">
-<h2><strong>Submissão de manuscritos</strong></h2>
+<!--script for COMMENT -->
+<div class="acc-head list-group-item">
+<h2>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/></svg>
+Submissão de manuscritos
+</h2>
+</div>
+<div class="acc-body last">
 <div>
 <center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;">
@@ -583,15 +709,19 @@ Mentoria</strong>
 <em>Orientação</em>
 </p>
 <p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<!--script for generating HORIZONTAL LINE-->
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-</div>
 </div>
 
 <footer class="footer"><center>
+
+<br>
+
+<br>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
 <!-- CREATIVE COMMONS BADGE-->
 

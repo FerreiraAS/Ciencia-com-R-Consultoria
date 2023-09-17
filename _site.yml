@@ -26,55 +26,26 @@ navbar:
     - text: "Consultoria"
       icon: "fa-list-ul"
       href: [servicos.html]
-    # - text: "R scripts"
-    #   icon: "fa-desktop"
-    #   menu:
-    #     - text: "Crossover"
-    #       href: [https://github.com/FerreiraAS/Crossover]
-    #     - text: "Tabela 2x2"
-    #       href: [https://github.com/FerreiraAS/CT]
-    #     - text: "ICC"
-    #       href: [https://github.com/FerreiraAS/ICC]
-    #     - text: "Mediação"
-    #       href: [https://github.com/FerreiraAS/Mediation]
-    #     - text: "RCT"
-    #       href: [https://github.com/FerreiraAS/RCT]
-    #     - text: "ROC"
-    #       href: [https://github.com/FerreiraAS/ROC]
-    #     - text: "Observatório"
-    #       href: [https://github.com/FerreiraAS/observatorio/]
     - text: "Arthur Ferreira"
       icon: "fa-user-tie"
       href: [sobre.html]
-      # menu:
-      #   - text: "Bio"
-      #     href: [sobre.html#autor]
-      #   - text: "Membro de associações"
-      #     href: [sobre.html#associacoes]
-      #   - text: "Corpo editorial"
-      #     href: [sobre.html#corpo-editorial]
-      #   - text: "Revisor de periódicos"
-      #     href: [sobre.html#revisor]
-      #   - text: "Autoria em publicações"
-      #     href: [sobre.html#artigos]
-      #   - text: "Portfolio"
-      #     href: [portfolio.html]
+
   right:
     - text: ""
-      icon: "fa-twitter"
-      href: [https://twitter.com/Arthur_SF_BR]
-    - text: ""
-      icon: "fa-linkedin"
-      href: [https://br.linkedin.com/in/arthur-sá-ferreira-13054037]
+      icon: "fa-mug-saucer"
+      href: [https://www.buymeacoffee.com/Arthur.Sa.Ferreira]
     - text: ""
       icon: "fa-github"
       href: [https://github.com/FerreiraAS]
     - text: ""
-      icon: "fa-mug-saucer"
-      href: [https://www.buymeacoffee.com/Arthur.Sa.Ferreira]
-    # - text: ""
-    #   icon: "fa-envelope"
-    #   href: [mailto:arthur_sf@icloud.com]
+      icon: "fa-share-nodes"
+      menu:
+        - text: ""
+          icon: "fa-twitter"
+          href: [https://twitter.com/Arthur_SF_BR]
+        - text: ""
+          icon: "fa-linkedin"
+          href: [https://br.linkedin.com/in/arthur-sá-ferreira-13054037]
 
 output:
   html_document:
@@ -84,6 +55,7 @@ output:
       after_body: footer.html
     css:
       - style.css
+      - CSS/main-color
     toc: true
     toc_depth: 3
     toc_float: true

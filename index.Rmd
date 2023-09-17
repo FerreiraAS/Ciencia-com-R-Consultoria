@@ -73,19 +73,3 @@ div.blue { background-color:#e6f0ff; border-radius: 10px; padding: 20px; }
 <center>
     <a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:15px; padding:10px; background-color:red; text-decoration:none; color:white" href="servicos.html"><b>Consultoria</b></a>
 </center>
-
-<br>
-
-<br>
-
-<br>
-
-<!--script for generating HORIZONTAL LINE-->
-
-<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
-
-<!-- <div> -->
-
-<!-- <center><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/main/thumbs/RStudio.png" width="3%" height="3%"/> Esta página foi desenvolvida em [**`r R.version$version.string`**](https://www.rstudio.com) usando [**R markdown**](https://rmarkdown.rstudio.com)</center> -->
-
-<!-- </div> -->
