@@ -102,7 +102,7 @@ var $container = jQuery('.acc-body'), $acc_head = jQuery('.acc-head');
 
 <div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Mentoria agendada</h2></div>
 
-<div class="acc-body">
+<div class="acc-body" style="background-color:lightgrey;">
 
 <div><center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Busca de artigos</span>
@@ -139,7 +139,7 @@ Opcional: Inclua arquivos em anexo %0D%0A
 
 <div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Elaboração de projetos</h2></div>
     
-<div class="acc-body">
+<div class="acc-body" style="background-color:lightgrey;">
 
 <div><center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Objetivo geral </span>
@@ -194,7 +194,7 @@ Opcional: Inclua arquivos em anexo %0D%0A
 
 <div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Computação estatística</h2></div>
     
-<div class="acc-body">
+<div class="acc-body" style="background-color:lightgrey;">
 
 <div><center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eficácia </span>
@@ -212,7 +212,20 @@ Opcional: Inclua arquivos em anexo %0D%0A
 <br>
 
 <center>
-<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Computação estatística&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Solicito um orçamento: Computação estatistica
+&body=
+Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A
+Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A
+Marque com [ x ] as opções que deseja incluir: %0D%0A
+[  ] Estimativa de tamanho amostral %0D%0A
+[  ] Tabela de aleatorização em grupos %0D%0A
+[  ] Modelagem de banco de dados %0D%0A
+[  ] Plano de análise estatística %0D%0A
+[  ] Simulação de estudos %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+Opcional: Inclua arquivos em anexo %0D%0A
+"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
 </center>
 
 <br>
@@ -243,7 +256,7 @@ Opcional: Inclua arquivos em anexo %0D%0A
 
 <div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Computação biomédica</h2></div>
     
-<div class="acc-body">
+<div class="acc-body" style="background-color:lightgrey;">
 
 <div><center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eletromiografia de superfície </span>
@@ -256,10 +269,26 @@ Opcional: Inclua arquivos em anexo %0D%0A
 <br>
 
 <center>
-<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Computação biomédica&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Solicito um orçamento: Computação biomédica
+&body=
+Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A
+Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A
+Marque com [ x ] as opções que deseja incluir: %0D%0A
+[  ] Protocolos de coleta de dados %0D%0A
+[  ] Processamento de sinais %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+Opcional: Inclua arquivos em anexo %0D%0A
+"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
 </center>
 
 <br>
+
+<h3> **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Protocolos de coleta de dados** </h3>
+<p>*Texto editável | Diretrizes internacionais sugeridas*</p>
+
+<h3> **`r library(fontawesome); fa("wave-square", margin_right = "0.1em")` Processamento de sinais** </h3>
+<p>*Script de processamento | Texto editável*</p>
 
 <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
 <p>*Orientação*</p>
@@ -272,7 +301,7 @@ Opcional: Inclua arquivos em anexo %0D%0A
 
 <div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Submissão de manuscritos</h2></div>
     
-<div class="acc-body last">
+<div class="acc-body last" style="background-color:lightgrey;">
 
 <div><center>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Artigo original </span>
@@ -286,7 +315,18 @@ Opcional: Inclua arquivos em anexo %0D%0A
 <br>
 
 <center>
-<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=Solicito um orçamento: Submissão de manuscritos&body=Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A Fale sobre o seu projeto: %0D%0A %0D%0A %0D%0A Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A Inclua arquivos em anexo %0D%0A %0D%0A %0D%0A"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:red; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Solicito um orçamento: Submissão de manuscritos
+&body=
+Tema da sua pesquisa: %0D%0A %0D%0A %0D%0A
+Prazo para conclusão da consultoria: %0D%0A %0D%0A %0D%0A
+Marque com [ x ] as opções que deseja incluir: %0D%0A
+[  ] Revisão de métodos %0D%0A
+[  ] Revisão de estilo científico %0D%0A
+[  ] Formatação de referências %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+Opcional: Inclua arquivos em anexo %0D%0A
+"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
 </center>
 
 <br>
