@@ -308,7 +308,7 @@ cat('\n\n<!-- -->\n\n')
 
 <br>
 
-### **Capítiulos de livros** {.tabset}
+### **Capítulos de livros** {.tabset}
 
 <br>
 

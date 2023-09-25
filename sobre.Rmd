@@ -136,9 +136,6 @@ source(file.path("Scripts", "get-metrics-from-sources.R"), local = knitr::knit_g
 <!--PUBLONS badge-->
 <div> <span id="badgeCont345"><script type="text/javascript" src="https://publons.com/mashlets?el=badgeCont345&rid=F-6831-2012&size=small"></script></span> [&nbsp;F-6831-2012](https://publons.com/researcher/F-6831-2012)</a></div>
 
-<!--TWITTER badge-->
-<!-- <div><a href="https://twitter.com/Arthur_SF_BR?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div> -->
-
 </right></div>
 
 </center></div>
@@ -368,3 +365,7 @@ if (max(dim(doi_with_altmetric)[1], 0) == 0 & max(dim(doi_without_altmetric)[1],
 <br>
 
 <a style="float:right" href="#top"><b>Início</b></a>
+
+### **[Portfolio](portfolio.html)**
+
+<br>
