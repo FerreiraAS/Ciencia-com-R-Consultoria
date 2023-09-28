@@ -9,6 +9,7 @@ creative_commons: CC BY-NC-SA
 output_dir: docs
 include:
   - header.html
+  - google-translate.html
   - footer.html
 exclude:
   - cache
@@ -52,7 +53,9 @@ output:
     theme: flatly
     highlight: textmate
     include:
-      after_body: footer.html
+      in_header: [header.html]
+      before_body: [google-translate.html]
+      after_body: [footer.html]
     css:
       - style.css
       - CSS/main-color
