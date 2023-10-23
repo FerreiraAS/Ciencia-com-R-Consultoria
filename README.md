@@ -1,4 +1,4 @@
-<h1> Consultoria | Ciência com R</h1>
+<h1>Ciência com R | Consultoria</h1>
 
 Ambiente para pesquisadores, professores, profissionais e alunos de graduação e todos os níveis de pós-graduação.
 
