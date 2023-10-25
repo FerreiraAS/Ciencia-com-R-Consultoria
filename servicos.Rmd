@@ -233,15 +233,18 @@ Opcional: %0D%0A
 <div class="acc-body" style="background-color:lightgrey;">
 
 <div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Descrição </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Comparação </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Correlação </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Associação </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Regressão </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Efeito </span>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eficácia </span>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Efetividade </span>
-<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Confiabilidade </span>
-<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Concordância </span>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Acurácia </span>
-<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Validade </span>
-<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Desempenho diagnóstico </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Concordância </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Confiabilidade </span>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Meta-análise </span>
-<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Análise de #276DC2es </span>
 <span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Códigos em R </span>
 </center></div>
 
@@ -274,6 +277,7 @@ Opções que desejo incluir [x]: %0D%0A
 [  ] Modelagem de banco de dados %0D%0A
 [  ] Plano de análise estatística %0D%0A
 [  ] Simulação de estudos %0D%0A
+[  ] Análise estatística %0D%0A
 [  ] Mentoria agendada %0D%0A %0D%0A
 
 Opcional: %0D%0A
@@ -299,6 +303,9 @@ Opcional: %0D%0A
 
 <h3> **`r library(fontawesome); fa("desktop", margin_right = "0.1em")` Simulação de estudos**</h3>
 <p>*Texto editável | Tabela descritiva | Tabela/gráfico inferencial | R Script*</p>
+
+<h3> **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Análise estatística**</h3>
+<p>*Revisão de objetivos geral/específicos | Revisão da tabela de dados | Análise em texto editável | R Script*</p></h3>
 
 <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
 <p>*Orientação*</p>
