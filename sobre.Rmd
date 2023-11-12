@@ -264,41 +264,83 @@ source("Scripts/reviewer-board.R")
 # baixa todos os artigos (com repetições)
 my_works <- rorcid::works(my_orcid) %>%
   as_tibble() %>%
-  janitor::clean_names() %>%
-  dplyr::mutate(created_date_value = anytime::anydate(created_date_value / 1000))
-my_works_ids <- my_works %>%
-  tidyr::unnest(external_ids_external_id) %>%
   janitor::clean_names()
 
-# seleciona os artigos com DOI
-my_dois_works <-
-  my_works_ids[my_works_ids$external_id_type == 'doi',]
-my_dois_works$external_id_value <-
-  tolower(my_dois_works$external_id_value)
-
-# remove as repetições pelo DOI
-my_dois_works <-
-  my_dois_works[!duplicated(my_dois_works[, "external_id_value"]), ]
-
-# cria metadados para rastreio pelo Altmetric
-dois <- data.frame(DOI = my_dois_works$external_id_value)
-
-# Data cleaning
-dois <-data.frame(DOI = dois$DOI[!duplicated(dois)])
-dois <- data.frame(DOI = dois$DOI[!is.na(dois$DOI)])
-
-# cria metadados para rastreio pelo Altmetric
-source("Scripts/altmetric-meta-from-dois.R", local = knitr::knit_global())
-
-# get metrics from Altmetric and CrossRef
-source("Scripts/get-metrics-from-dois.R", local = knitr::knit_global())
-
-# store to use downstream
-doi_with_altmetric <- get_metrics(doi_with_altmetric = doi_with_altmetric, doi_without_altmetric = NULL, citescore, scimago, qualis)
-doi_without_altmetric <- get_metrics(doi_with_altmetric = NULL, doi_without_altmetric = doi_without_altmetric, citescore, scimago, qualis)
-
-# available years of publication
-years <- na.omit(sort(unique(c(doi_with_altmetric$published_on, doi_without_altmetric$published_on)), decreasing = TRUE))
+# check if has data to continue
+if (!sjmisc::is_empty(my_works)) {
+  my_works %>%
+    dplyr::mutate(created_date_value = anytime::anydate(created_date_value / 1000))
+  
+  # drop empty elements from external_ids_external_id list
+  my_works <-
+    my_works[lapply(my_works$external_ids_external_id, length) > 0,]
+  
+  my_works_ids <- my_works %>%
+    tidyr::unnest(external_ids_external_id) %>%
+    janitor::clean_names()
+  
+  # seleciona os artigos com DOI
+  my_dois_works <-
+    my_works_ids[my_works_ids$external_id_type == 'doi', ]
+  my_dois_works$external_id_value <-
+    tolower(my_dois_works$external_id_value)
+  
+  # remove as repetições pelo DOI
+  my_dois_works <-
+    my_dois_works[!duplicated(my_dois_works[, "external_id_value"]),]
+  
+  # cria metadados para rastreio pelo Altmetric
+  dois <- data.frame(DOI = my_dois_works$external_id_value)
+  
+  # Data cleaning
+  dois <- data.frame(DOI = dois$DOI[!duplicated(dois)])
+  dois <- data.frame(DOI = dois$DOI[!is.na(dois$DOI)])
+  
+  if (!sjmisc::is_empty(dois)) {
+    # cria metadados para rastreio pelo Altmetric
+    source("Scripts/altmetric-meta-from-dois.R",
+           local = knitr::knit_global())
+    
+    # get metrics from Altmetric and CrossRef
+    source("Scripts/get-metrics-from-dois.R",
+           local = knitr::knit_global())
+    
+    # store to use downstream
+    doi_with_altmetric <-
+      get_metrics(
+        doi_with_altmetric = doi_with_altmetric,
+        doi_without_altmetric = NULL,
+        citescore,
+        scimago,
+        qualis
+      )
+    doi_without_altmetric <-
+      get_metrics(
+        doi_with_altmetric = NULL,
+        doi_without_altmetric = doi_without_altmetric,
+        citescore,
+        scimago,
+        qualis
+      )
+    
+    # available years of publication
+    years <-
+      na.omit(sort(unique(
+        c(
+          doi_with_altmetric$published_on,
+          doi_without_altmetric$published_on
+        )
+      ), decreasing = TRUE))
+    
+    # bind common data
+    doi_with_altmetric <-
+      data.frame(lapply(doi_with_altmetric, as.character),
+                 stringsAsFactors = FALSE)
+    doi_without_altmetric <-
+      data.frame(lapply(doi_without_altmetric, as.character),
+                 stringsAsFactors = FALSE)
+  }
+}
 ```
 
 ```{r print-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
