@@ -1,0 +1,440 @@
+---
+title: "**Serviços**"
+link-citations: yes
+output:
+  html_document:
+    toc: false
+bibliography: references.bib
+---
+
+```{css, echo = FALSE}
+body {
+  font-size: 1.75em;
+}
+
+div.main-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+```{css, echo = FALSE}
+.nav-pills>li>a:hover,
+.nav-pills>li>a:focus,
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus{
+   background-color: #2C3E50;
+   }
+.nav-pills > li {
+    float:none;
+    display:inline-block;
+    zoom:1;
+}
+.nav-pills {
+    text-align:center;
+}
+```
+
+```{css, echo = FALSE}
+.acc-body{
+  display:none;
+}
+
+.content{
+    margin: 20px 0 20px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.acc-head{font-size:20px;}
+
+.acc-body{
+    padding:20px;
+    font-size:16px;
+    border-style:solid;
+    border-width: 0 1px 0 1px;
+    border-color: #ddd;
+}
+
+.acc-body.last{
+    border-width: 0 1px 1px 1px;
+}
+
+.panel-body{
+    font-size:18px;
+}
+```
+
+```{js, echo = FALSE}
+$(document).ready(function() {
+
+var $container = jQuery('.acc-body'), $acc_head = jQuery('.acc-head');
+
+		$acc_head.last().addClass('last');
+		
+		$acc_head.on('click', function(e) {
+			if( jQuery(this).next().is(':hidden') ) {
+			    //Comment or uncomment the line below to control other open accordions when acc-head is clicked.
+				$acc_head.removeClass('active').next().slideUp(300);
+				jQuery(this).toggleClass('active').next().slideDown(300);
+				
+			}
+          else{
+              //Comment or Uncomment out the line below to add or remove the toggle function from acc-head
+            jQuery(this).toggleClass('active').next().slideToggle(300);
+          }
+			e.preventDefault();
+		});
+
+  
+});
+```
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--script for COMMENT -->
+
+<div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Mentoria agendada</h2></div>
+
+<div class="acc-body" style="background-color:lightgrey;">
+
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Busca de artigos</span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Sugestões de leitura </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Discussão de artigos </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Interpretação estatística </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Relação objetivos-métodos-conclusões </span>
+</center></div>
+
+<br>
+
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Mentoria agendada
+&body=
+Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
+
+Solicitante (nome e sobrenome): %0D%0A %0D%0A
+
+Tema do meu projeto: %0D%0A %0D%0A
+
+Tipo de Projeto [x]: %0D%0A
+[  ] Projeto de pesquisa %0D%0A
+[  ] Monografia %0D%0A
+[  ] Dissertação %0D%0A
+[  ] Tese %0D%0A
+[  ] Artigo %0D%0A
+[  ] Profissional %0D%0A %0D%0A
+
+Prazo para recebimento do material contratado: %0D%0A %0D%0A
+
+Opções que desejo incluir [x]: %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+
+Opcional: %0D%0A
+- Arquivos em anexo %0D%0A
+- Comentários sobre o trabalho %0D%0A
+"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+</center>
+
+<br>
+
+<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
+<p>*Orientação*</p>
+
+<br>
+
+</div>
+
+<!--script for COMMENT -->
+
+<div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Elaboração de projetos</h2></div>
+    
+<div class="acc-body" style="background-color:lightgrey;">
+
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Objetivo geral </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Objetivos específicos </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Hipóteses </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Delineamento </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Aspectos éticos </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Critérios de elegibilidade </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Formatação </span>
+</center></div>
+
+<br>
+
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Elaboração de projetos
+&body=
+Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
+
+Solicitante (nome e sobrenome): %0D%0A %0D%0A
+
+Tema do meu projeto: %0D%0A %0D%0A
+
+Tipo de Projeto [x]: %0D%0A
+[  ] Projeto de pesquisa %0D%0A
+[  ] Monografia %0D%0A
+[  ] Dissertação %0D%0A
+[  ] Tese %0D%0A
+[  ] Artigo %0D%0A
+[  ] Profissional %0D%0A %0D%0A
+
+Prazo para recebimento do material contratado: %0D%0A %0D%0A
+
+Opções que desejo incluir [x]: %0D%0A
+[  ] Completa: todas as opções abaixo %0D%0A
+[  ] Revisão de estilo científico %0D%0A
+[  ] Estimativa do tamanho de amostra %0D%0A
+[  ] Aleatorização em grupos %0D%0A
+[  ] Modelagem da tabela de dados %0D%0A
+[  ] Plano de análise estatística %0D%0A
+[  ] Formatação de referências %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+
+Opcional: %0D%0A
+- Arquivos em anexo %0D%0A
+- Comentários sobre o trabalho %0D%0A
+
+"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+</center>
+
+<br>
+
+<h3> **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**</h3>
+<p>*Revisão/sugestão de conteúdo e métodos | Revisão/sugestão de referências*</p>
+
+<h3> **`r library(fontawesome); fa("calculator", margin_right = "0.1em")` Estimativa do tamanho de amostra**</h3>
+<p>*Cálculo de tamanho amostral | R Script*</p>
+
+<h3> **`r library(fontawesome); fa("clipboard-list", margin_right = "0.1em")` Aleatorização em grupos**</h3>
+<p>*Tabela de randomização | R Script*</p>
+
+<h3> **`r library(fontawesome); fa("table", margin_right = "0.1em")` Modelagem da tabela de dados**</h3>
+<p>*Tabela editável | R Script*</p>
+
+<h3> **`r library(fontawesome); fa("list-check", margin_right = "0.1em")` Plano de análise estatística**</h3>
+<p>*Revisão de objetivos geral/específicos | Plano de análise estatística*</p>
+
+<h3> **`r library(fontawesome); fa("list", margin_right = "0.1em")` Formatação de referências**</h3>
+<p>*Formatação de referências com software gerenciador | Biblioteca de software gerenciador*</p>
+
+<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
+<p>*Orientação*</p>
+
+<br>
+
+</div>
+
+<!--script for COMMENT -->
+
+<div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Computação estatística</h2></div>
+    
+<div class="acc-body" style="background-color:lightgrey;">
+
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Descrição </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Comparação </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Correlação </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Associação </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Regressão </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Efeito </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eficácia </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Efetividade </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Acurácia </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Concordância </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Confiabilidade </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Meta-análise </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Códigos em R </span>
+</center></div>
+
+<br>
+
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Computação estatística
+&body=
+Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
+
+Solicitante (nome e sobrenome): %0D%0A %0D%0A
+
+Tema do meu projeto: %0D%0A %0D%0A
+
+Tipo de Projeto [x]: %0D%0A
+[  ] Projeto de pesquisa %0D%0A
+[  ] Monografia %0D%0A
+[  ] Dissertação %0D%0A
+[  ] Tese %0D%0A
+[  ] Artigo %0D%0A
+[  ] Profissional %0D%0A %0D%0A
+
+Prazo para recebimento do material contratado: %0D%0A %0D%0A
+
+Opções que desejo incluir [x]: %0D%0A
+[  ] Completa: todas as opções abaixo %0D%0A
+[  ] Simulação de estudos %0D%0A
+[  ] Análise estatística %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+
+Opcional: %0D%0A
+- Arquivos em anexo %0D%0A
+- Comentários sobre o trabalho %0D%0A
+
+"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+</center>
+
+<br>
+
+<h3> **`r library(fontawesome); fa("computer", margin_right = "0.1em")` Simulação de estudos**</h3>
+<p>*Dados sintéticos | R Script*</p>
+
+<h3> **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Análise estatística**</h3>
+<p>*Revisão de objetivos geral/específicos | Revisão da tabela de dados | Análise em texto editável | R Script*</p>
+
+<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
+<p>*Orientação*</p>
+
+<br>
+
+</div>
+
+<!--script for COMMENT -->
+
+<div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Computação biomédica</h2></div>
+    
+<div class="acc-body" style="background-color:lightgrey;">
+
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eletromiografia de superfície </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eletrogoniometria </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Posturografia </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Cinemetria </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Códigos em R </span>
+</center></div>
+
+<br>
+
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Computação biomédica
+&body=
+Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
+
+Solicitante (nome e sobrenome): %0D%0A %0D%0A
+
+Tema do meu projeto: %0D%0A %0D%0A
+
+Tipo de Projeto [x]: %0D%0A
+[  ] Projeto de pesquisa %0D%0A
+[  ] Monografia %0D%0A
+[  ] Dissertação %0D%0A
+[  ] Tese %0D%0A
+[  ] Artigo %0D%0A
+[  ] Profissional %0D%0A %0D%0A
+
+Prazo para recebimento do material contratado: %0D%0A %0D%0A
+
+Opções que desejo incluir [x]: %0D%0A
+[  ] Completa: todas as opções abaixo %0D%0A
+[  ] Protocolos de coleta de dados %0D%0A
+[  ] Processamento de sinais %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+
+Opcional: %0D%0A
+- Arquivos em anexo %0D%0A
+- Comentários sobre o trabalho %0D%0A
+
+"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+</center>
+
+<br>
+
+<h3> **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Protocolos de coleta de dados** </h3>
+<p>*Texto editável | Diretrizes internacionais sugeridas*</p>
+
+<h3> **`r library(fontawesome); fa("wave-square", margin_right = "0.1em")` Processamento de sinais** </h3>
+<p>*Script de processamento | Texto editável*</p>
+
+<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
+<p>*Orientação*</p>
+
+<br>
+
+</div>
+
+<!--script for COMMENT -->
+
+<div class="acc-head list-group-item"><h2>`r library(fontawesome); fa("circle-chevron-down", margin_right = "0.3em")` Submissão de manuscritos</h2></div>
+    
+<div class="acc-body last" style="background-color:lightgrey;">
+
+<div><center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Artigo original </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão de escopo </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão sistemática </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Meta-análise</span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão externa por pares </span>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Carta-resposta </span>
+</center></div>
+
+<br>
+
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Submissão de manuscritos
+&body=
+Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
+
+Solicitante (nome e sobrenome): %0D%0A %0D%0A
+
+Tema do meu projeto: %0D%0A %0D%0A
+
+Tipo de Projeto [x]: %0D%0A
+[  ] Projeto de pesquisa %0D%0A
+[  ] Monografia %0D%0A
+[  ] Dissertação %0D%0A
+[  ] Tese %0D%0A
+[  ] Artigo %0D%0A
+[  ] Profissional %0D%0A %0D%0A
+
+Prazo para recebimento do material contratado: %0D%0A %0D%0A
+
+Opções que desejo incluir [x]: %0D%0A
+[  ] Completa: todas as opções abaixo %0D%0A
+[  ] Resposta aos revisores %0D%0A
+[  ] Revisão de estilo científico %0D%0A
+[  ] Formatação de referências %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+
+Opcional: %0D%0A
+- Arquivos em anexo %0D%0A
+- Comentários sobre o trabalho %0D%0A
+
+"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
+</center>
+
+<br>
+
+<h3> **`r library(fontawesome); fa("list", margin_right = "0.1em")` Resposta aos revisores**</h3>
+<p>*Revisão de estilo da carta-resposta | Revisão/sugestão de referências*</p>
+
+<h3> **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**</h3>
+<p>*Revisão/sugestão de conteúdo e métodos | Revisão/sugestão de referências*</p>
+
+<h3> **`r library(fontawesome); fa("list", margin_right = "0.1em")` Formatação de referências**</h3>
+<p>*Formatação de referências com software gerenciador | Biblioteca de software gerenciador*</p>
+
+<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
+<p>*Orientação*</p>
+
+<br>
+
+</div>

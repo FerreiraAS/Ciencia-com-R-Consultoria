@@ -7,6 +7,13 @@ output:
 bibliography: references.bib
 ---
 
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="text-align:right;">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="business" value="4TYRTN88LV6HE">
+        <input type="hidden" name="display" value="1">
+        <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+</form>
+
 ```{css, echo = FALSE}
 body {
   font-size: 1.75em;
@@ -21,6 +28,13 @@ div.main-container {
 .center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.form-control, input {
+  box-sizing: none;
+  border: none;
+  border-width: 0;
+  border-color: white;
 }
 ```
 
@@ -91,8 +105,6 @@ var $container = jQuery('.acc-body'), $acc_head = jQuery('.acc-head');
           }
 			e.preventDefault();
 		});
-
-  
 });
 ```
 
@@ -114,41 +126,28 @@ var $container = jQuery('.acc-body'), $acc_head = jQuery('.acc-head');
 
 <br>
 
-<center>
-<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
-Mentoria agendada
-&body=
-Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
-
-Solicitante (nome e sobrenome): %0D%0A %0D%0A
-
-Tema do meu projeto: %0D%0A %0D%0A
-
-Tipo de Projeto [x]: %0D%0A
-[  ] Projeto de pesquisa %0D%0A
-[  ] Monografia %0D%0A
-[  ] Dissertação %0D%0A
-[  ] Tese %0D%0A
-[  ] Artigo %0D%0A
-[  ] Profissional %0D%0A %0D%0A
-
-Prazo para recebimento do material contratado: %0D%0A %0D%0A
-
-Opções que desejo incluir [x]: %0D%0A
-[  ] Mentoria agendada %0D%0A %0D%0A
-
-Opcional: %0D%0A
-- Arquivos em anexo %0D%0A
-- Comentários sobre o trabalho %0D%0A
-"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
-</center>
-
-<br>
-
-<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
-<p>*Orientação*</p>
-
-<br>
+<table style="width:100%;">
+  <tr>
+    <th style="text-align:left;">
+    <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Orientação*</p>
+    </td>
+    <td style="text-align:right;">
+       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="DFNWWPFAYHVXA" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+       </form>
+    </td>
+  </tr>
+</table>
 
 </div>
 
@@ -170,65 +169,143 @@ Opcional: %0D%0A
 
 <br>
 
-<center>
-<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
-Elaboração de projetos
-&body=
-Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
-
-Solicitante (nome e sobrenome): %0D%0A %0D%0A
-
-Tema do meu projeto: %0D%0A %0D%0A
-
-Tipo de Projeto [x]: %0D%0A
-[  ] Projeto de pesquisa %0D%0A
-[  ] Monografia %0D%0A
-[  ] Dissertação %0D%0A
-[  ] Tese %0D%0A
-[  ] Artigo %0D%0A
-[  ] Profissional %0D%0A %0D%0A
-
-Prazo para recebimento do material contratado: %0D%0A %0D%0A
-
-Opções que desejo incluir [x]: %0D%0A
-[  ] Completa: todas as opções abaixo %0D%0A
-[  ] Revisão de estilo científico %0D%0A
-[  ] Estimativa do tamanho de amostra %0D%0A
-[  ] Aleatorização em grupos %0D%0A
-[  ] Modelagem da tabela de dados %0D%0A
-[  ] Plano de análise estatística %0D%0A
-[  ] Formatação de referências %0D%0A
-[  ] Mentoria agendada %0D%0A %0D%0A
-
-Opcional: %0D%0A
-- Arquivos em anexo %0D%0A
-- Comentários sobre o trabalho %0D%0A
-
-"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
-</center>
-
-<br>
-
-<h3> **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**</h3>
-<p>*Revisão/sugestão de conteúdo e métodos | Revisão/sugestão de referências*</p>
-
-<h3> **`r library(fontawesome); fa("calculator", margin_right = "0.1em")` Estimativa do tamanho de amostra**</h3>
-<p>*Cálculo de tamanho amostral | R Script*</p>
-
-<h3> **`r library(fontawesome); fa("clipboard-list", margin_right = "0.1em")` Aleatorização em grupos**</h3>
-<p>*Tabela de randomização | R Script*</p>
-
-<h3> **`r library(fontawesome); fa("table", margin_right = "0.1em")` Modelagem da tabela de dados**</h3>
-<p>*Tabela editável | R Script*</p>
-
-<h3> **`r library(fontawesome); fa("list-check", margin_right = "0.1em")` Plano de análise estatística**</h3>
-<p>*Revisão de objetivos geral/específicos | Plano de análise estatística*</p>
-
-<h3> **`r library(fontawesome); fa("list", margin_right = "0.1em")` Formatação de referências**</h3>
-<p>*Formatação de referências com software gerenciador | Biblioteca de software gerenciador*</p>
-
-<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
-<p>*Orientação*</p>
+<table style="width:100%;">
+  <tr>
+    <th style="text-align:left;">
+    <h3> **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Revisão/sugestão de conteúdo e métodos | Revisão/sugestão de referências*</p>
+    </td>
+    <td style="text-align:right;">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="J6R47FR2RTCS6" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+      <h3> **`r library(fontawesome); fa("calculator", margin_right = "0.1em")` Estimativa do tamanho de amostra**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Cálculo de tamanho amostral | R Script*</p>
+    </td>
+    <td style="text-align:right;">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="2JH9QTRU23PXW" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+      <h3> **`r library(fontawesome); fa("clipboard-list", margin_right = "0.1em")` Aleatorização em grupos**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Tabela de randomização | R Script*</p>
+    </td>
+    <td style="text-align:right;">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="NKZ8UY55QMNQE" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+      <h3> **`r library(fontawesome); fa("table", margin_right = "0.1em")` Modelagem da tabela de dados**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Tabela editável | R Script*</p>
+    </td>
+    <td style="text-align:right;">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="GKKR7LNPZLV7L" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+      <h3> **`r library(fontawesome); fa("list-check", margin_right = "0.1em")` Plano de análise estatística**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Revisão de objetivos geral/específicos | Plano de análise estatística*</p>
+    </td>
+    <td style="text-align:right;">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="UZT9MJ4BJPCNN" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+      <h3> **`r library(fontawesome); fa("list", margin_right = "0.1em")` Formatação de referências**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Formatação de referências com software gerenciador | Biblioteca de software gerenciador*</p>
+    </td>
+    <td style="text-align:right;">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="JLE76BRXJ6KFE" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+      <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Orientação*</p>
+    </td>
+    <td style="text-align:right;">
+      <i>Incluída (1 hora)</i>
+    </td>
+  </tr>
+</table>
 
 <br>
 
@@ -258,49 +335,63 @@ Opcional: %0D%0A
 
 <br>
 
-<center>
-<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
-Computação estatística
-&body=
-Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
-
-Solicitante (nome e sobrenome): %0D%0A %0D%0A
-
-Tema do meu projeto: %0D%0A %0D%0A
-
-Tipo de Projeto [x]: %0D%0A
-[  ] Projeto de pesquisa %0D%0A
-[  ] Monografia %0D%0A
-[  ] Dissertação %0D%0A
-[  ] Tese %0D%0A
-[  ] Artigo %0D%0A
-[  ] Profissional %0D%0A %0D%0A
-
-Prazo para recebimento do material contratado: %0D%0A %0D%0A
-
-Opções que desejo incluir [x]: %0D%0A
-[  ] Completa: todas as opções abaixo %0D%0A
-[  ] Simulação de estudos %0D%0A
-[  ] Análise estatística %0D%0A
-[  ] Mentoria agendada %0D%0A %0D%0A
-
-Opcional: %0D%0A
-- Arquivos em anexo %0D%0A
-- Comentários sobre o trabalho %0D%0A
-
-"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
-</center>
-
-<br>
-
-<h3> **`r library(fontawesome); fa("computer", margin_right = "0.1em")` Simulação de estudos**</h3>
-<p>*Dados sintéticos | R Script*</p>
-
-<h3> **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Análise estatística**</h3>
-<p>*Revisão de objetivos geral/específicos | Revisão da tabela de dados | Análise em texto editável | R Script*</p>
-
-<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
-<p>*Orientação*</p>
+<table style="width:100%;">
+  <tr>
+    <th style="text-align:left;">
+    <h3> **`r library(fontawesome); fa("computer", margin_right = "0.1em")` Simulação de estudos**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Dados sintéticos | R Script*</p>
+    </td>
+    <td style="text-align:right;">
+       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="A9XZSRAD3S4RQ" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+    <h3> **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Análise estatística**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Revisão de objetivos geral/específicos | Revisão da tabela de dados | Análise em texto editável | R Script*</p>
+    </td>
+    <td style="text-align:right;">
+       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="S68U6NJL8H45L" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+      <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Orientação*</p>
+    </td>
+    <td style="text-align:right;">
+      <i>Incluída (1 hora)</i>
+    </td>
+  </tr>
+</table>
 
 <br>
 
@@ -322,49 +413,63 @@ Opcional: %0D%0A
 
 <br>
 
-<center>
-<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
-Computação biomédica
-&body=
-Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
-
-Solicitante (nome e sobrenome): %0D%0A %0D%0A
-
-Tema do meu projeto: %0D%0A %0D%0A
-
-Tipo de Projeto [x]: %0D%0A
-[  ] Projeto de pesquisa %0D%0A
-[  ] Monografia %0D%0A
-[  ] Dissertação %0D%0A
-[  ] Tese %0D%0A
-[  ] Artigo %0D%0A
-[  ] Profissional %0D%0A %0D%0A
-
-Prazo para recebimento do material contratado: %0D%0A %0D%0A
-
-Opções que desejo incluir [x]: %0D%0A
-[  ] Completa: todas as opções abaixo %0D%0A
-[  ] Protocolos de coleta de dados %0D%0A
-[  ] Processamento de sinais %0D%0A
-[  ] Mentoria agendada %0D%0A %0D%0A
-
-Opcional: %0D%0A
-- Arquivos em anexo %0D%0A
-- Comentários sobre o trabalho %0D%0A
-
-"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
-</center>
-
-<br>
-
-<h3> **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Protocolos de coleta de dados** </h3>
-<p>*Texto editável | Diretrizes internacionais sugeridas*</p>
-
-<h3> **`r library(fontawesome); fa("wave-square", margin_right = "0.1em")` Processamento de sinais** </h3>
-<p>*Script de processamento | Texto editável*</p>
-
-<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
-<p>*Orientação*</p>
+<table style="width:100%;">
+  <tr>
+    <th style="text-align:left;">
+    <h3> **`r library(fontawesome); fa("list-ol", margin_right = "0.1em")` Protocolos de coleta de dados** </h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Texto editável | Diretrizes internacionais sugeridas*</p>
+    </td>
+    <td style="text-align:right;">
+       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="FQD4HGG88BNPA" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+    <h3> **`r library(fontawesome); fa("wave-square", margin_right = "0.1em")` Processamento de sinais biomédicos** </h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Script de processamento | Texto editável*</p>
+    </td>
+    <td style="text-align:right;">
+       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="8BGXSV4M8FQLU" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+      <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Orientação*</p>
+    </td>
+    <td style="text-align:right;">
+      <i>Incluída (1 hora)</i>
+    </td>
+  </tr>
+</table>
 
 <br>
 
@@ -387,53 +492,83 @@ Opcional: %0D%0A
 
 <br>
 
-<center>
-<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
-Submissão de manuscritos
-&body=
-Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
-
-Solicitante (nome e sobrenome): %0D%0A %0D%0A
-
-Tema do meu projeto: %0D%0A %0D%0A
-
-Tipo de Projeto [x]: %0D%0A
-[  ] Projeto de pesquisa %0D%0A
-[  ] Monografia %0D%0A
-[  ] Dissertação %0D%0A
-[  ] Tese %0D%0A
-[  ] Artigo %0D%0A
-[  ] Profissional %0D%0A %0D%0A
-
-Prazo para recebimento do material contratado: %0D%0A %0D%0A
-
-Opções que desejo incluir [x]: %0D%0A
-[  ] Completa: todas as opções abaixo %0D%0A
-[  ] Resposta aos revisores %0D%0A
-[  ] Revisão de estilo científico %0D%0A
-[  ] Formatação de referências %0D%0A
-[  ] Mentoria agendada %0D%0A %0D%0A
-
-Opcional: %0D%0A
-- Arquivos em anexo %0D%0A
-- Comentários sobre o trabalho %0D%0A
-
-"><b>`r library(fontawesome); fa("envelope", margin_right = "0.3em")` Orçamento</b></a>
-</center>
-
-<br>
-
-<h3> **`r library(fontawesome); fa("list", margin_right = "0.1em")` Resposta aos revisores**</h3>
-<p>*Revisão de estilo da carta-resposta | Revisão/sugestão de referências*</p>
-
-<h3> **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**</h3>
-<p>*Revisão/sugestão de conteúdo e métodos | Revisão/sugestão de referências*</p>
-
-<h3> **`r library(fontawesome); fa("list", margin_right = "0.1em")` Formatação de referências**</h3>
-<p>*Formatação de referências com software gerenciador | Biblioteca de software gerenciador*</p>
-
-<h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria** </h3>
-<p>*Orientação*</p>
+<table style="width:100%;">
+  <tr>
+    <th style="text-align:left;">
+    <h3> **`r library(fontawesome); fa("list", margin_right = "0.1em")` Resposta aos revisores**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Revisão de estilo da carta-resposta | Revisão/sugestão de referências*</p>
+    </td>
+    <td style="text-align:right;">
+       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="FQD4HGG88BNPA" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+    <h3> **`r library(fontawesome); fa("comment-dots", margin_right = "0.1em")` Revisão de estilo científico**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Revisão/sugestão de conteúdo e métodos | Revisão/sugestão de referências*</p>
+    </td>
+    <td style="text-align:right;">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="J6R47FR2RTCS6" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+      <h3> **`r library(fontawesome); fa("list", margin_right = "0.1em")` Formatação de referências**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Formatação de referências com software gerenciador | Biblioteca de software gerenciador*</p>
+    </td>
+    <td style="text-align:right;">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="JLE76BRXJ6KFE" />
+  <input type="hidden" name="currency_code" value="BRL" />
+  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align:left;">
+      <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
+    </th>
+    <th></th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td style="text-align:left;">
+       <p>*Orientação*</p>
+    </td>
+    <td style="text-align:right;">
+      <i>Incluída (1 hora)</i>
+    </td>
+  </tr>
+</table>
 
 <br>
 

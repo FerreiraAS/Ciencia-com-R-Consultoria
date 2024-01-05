@@ -23,7 +23,7 @@ navbar:
       href: [index.html]
     - text: "Serviços"
       icon: "fa-list-ul"
-      href: [servicos_paypal.html]
+      href: [servicos.html]
     - text: "GitBook"
       icon: "fa-book-open"
       href: [https://ferreiraas.github.io/Ciencia-com-R/]
