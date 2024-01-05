@@ -297,7 +297,7 @@ Opcional: %0D%0A
 <p>*Dados sintéticos | R Script*</p>
 
 <h3> **`r library(fontawesome); fa("file-lines", margin_right = "0.1em")` Análise estatística**</h3>
-<p>*Revisão de objetivos geral/específicos | Revisão da tabela de dados | Análise em texto editável | R Script*</p></h3>
+<p>*Revisão de objetivos geral/específicos | Revisão da tabela de dados | Análise em texto editável | R Script*</p>
 
 <h3> **`r library(fontawesome); fa("chalkboard-user", margin_right = "0.1em")` Mentoria**</h3>
 <p>*Orientação*</p>
