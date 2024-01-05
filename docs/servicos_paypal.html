@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Serviços</title>
+
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="CSS/main-color" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    
+  </a>
+</li>
+<li>
+  <a href="servicos.html">
+    <span class="fa fa-list-ul"></span>
+     
+    Serviços
+  </a>
+</li>
+<li>
+  <a href="https://ferreiraas.github.io/Ciencia-com-R/">
+    <span class="fa fa-book-open"></span>
+     
+    GitBook
+  </a>
+</li>
+<li>
+  <a href="sobre.html">
+    <span class="fa fa-user-tie"></span>
+     
+    Arthur Ferreira
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://www.buymeacoffee.com/Arthur.Sa.Ferreira">
+    <span class="fa fa-mug-saucer"></span>
+     
+    
+  </a>
+</li>
+<li>
+  <a href="https://github.com/FerreiraAS">
+    <span class="fa fa-github"></span>
+     
+    
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-share-nodes"></span>
+     
+    
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://twitter.com/Arthur_SF_BR">
+        <span class="fa fa-twitter"></span>
+         
+        
+      </a>
+    </li>
+    <li>
+      <a href="https://br.linkedin.com/in/arthur-sá-ferreira-13054037">
+        <span class="fa fa-linkedin"></span>
+         
+        
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+<!--Script for adding a Google Translation bar-->
+
+<html lang="pt-BR">
+<div align="right" id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'pt'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
+</html>
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>Serviços</strong></h1>
+
+</div>
+
+
+<style type="text/css">
+body {
+  font-size: 1.75em;
+}
+
+div.main-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<style type="text/css">
+.nav-pills>li>a:hover,
+.nav-pills>li>a:focus,
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus{
+   background-color: #2C3E50;
+   }
+.nav-pills > li {
+    float:none;
+    display:inline-block;
+    zoom:1;
+}
+.nav-pills {
+    text-align:center;
+}
+</style>
+<style type="text/css">
+.acc-body{
+  display:none;
+}
+
+.content{
+    margin: 20px 0 20px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.acc-head{font-size:20px;}
+
+.acc-body{
+    padding:20px;
+    font-size:16px;
+    border-style:solid;
+    border-width: 0 1px 0 1px;
+    border-color: #ddd;
+}
+
+.acc-body.last{
+    border-width: 0 1px 1px 1px;
+}
+
+.panel-body{
+    font-size:18px;
+}
+</style>
+<script>
+$(document).ready(function() {
+
+var $container = jQuery('.acc-body'), $acc_head = jQuery('.acc-head');
+
+        $acc_head.last().addClass('last');
+        
+        $acc_head.on('click', function(e) {
+            if( jQuery(this).next().is(':hidden') ) {
+                //Comment or uncomment the line below to control other open accordions when acc-head is clicked.
+                $acc_head.removeClass('active').next().slideUp(300);
+                jQuery(this).toggleClass('active').next().slideDown(300);
+                
+            }
+          else{
+              //Comment or Uncomment out the line below to add or remove the toggle function from acc-head
+            jQuery(this).toggleClass('active').next().slideToggle(300);
+          }
+            e.preventDefault();
+        });
+
+  
+});
+</script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--script for COMMENT -->
+<div class="acc-head list-group-item">
+<h2>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/></svg>
+Mentoria agendada
+</h2>
+</div>
+<div class="acc-body" style="background-color:lightgrey;">
+<div>
+<center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Busca de artigos</span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Sugestões de leitura </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Discussão de artigos </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Interpretação estatística </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Relação
+objetivos-métodos-conclusões </span>
+</center>
+</div>
+<p><br></p>
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Mentoria agendada
+&body=
+Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
+
+Solicitante (nome e sobrenome): %0D%0A %0D%0A
+
+Tema do meu projeto: %0D%0A %0D%0A
+
+Tipo de Projeto [x]: %0D%0A
+[  ] Projeto de pesquisa %0D%0A
+[  ] Monografia %0D%0A
+[  ] Dissertação %0D%0A
+[  ] Tese %0D%0A
+[  ] Artigo %0D%0A
+[  ] Profissional %0D%0A %0D%0A
+
+Prazo para recebimento do material contratado: %0D%0A %0D%0A
+
+Opções que desejo incluir [x]: %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+
+Opcional: %0D%0A
+- Arquivos em anexo %0D%0A
+- Comentários sobre o trabalho %0D%0A
+"><b><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+Orçamento</b></a>
+</center>
+<p><br></p>
+<table style="width:100%;">
+<tr>
+<th style="text-align:left;">
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384V320c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v32h64V64L224 64v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></svg>
+Mentoria</strong>
+</h3>
+</th>
+<th>
+</th>
+</tr>
+<tr>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>
+<em>Orientação</em>
+</p>
+</td>
+<td style="text-align:right;">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="DFNWWPFAYHVXA" />
+<input type="hidden" name="currency_code" value="BRL" />
+<input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_cart_SM.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Adicionar ao carrinho" />
+</form>
+</td>
+</tr>
+</table>
+<p><br></p>
+</div>
+<!--script for COMMENT -->
+<div class="acc-head list-group-item">
+<h2>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/></svg>
+Elaboração de projetos
+</h2>
+</div>
+<div class="acc-body" style="background-color:lightgrey;">
+<div>
+<center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Objetivo geral </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Objetivos específicos </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Hipóteses </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Delineamento </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Aspectos
+éticos </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Critérios de elegibilidade </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Formatação </span>
+</center>
+</div>
+<p><br></p>
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Elaboração de projetos
+&body=
+Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
+
+Solicitante (nome e sobrenome): %0D%0A %0D%0A
+
+Tema do meu projeto: %0D%0A %0D%0A
+
+Tipo de Projeto [x]: %0D%0A
+[  ] Projeto de pesquisa %0D%0A
+[  ] Monografia %0D%0A
+[  ] Dissertação %0D%0A
+[  ] Tese %0D%0A
+[  ] Artigo %0D%0A
+[  ] Profissional %0D%0A %0D%0A
+
+Prazo para recebimento do material contratado: %0D%0A %0D%0A
+
+Opções que desejo incluir [x]: %0D%0A
+[  ] Completa: todas as opções abaixo %0D%0A
+[  ] Revisão de estilo científico %0D%0A
+[  ] Estimativa do tamanho de amostra %0D%0A
+[  ] Aleatorização em grupos %0D%0A
+[  ] Modelagem da tabela de dados %0D%0A
+[  ] Plano de análise estatística %0D%0A
+[  ] Formatação de referências %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+
+Opcional: %0D%0A
+- Arquivos em anexo %0D%0A
+- Comentários sobre o trabalho %0D%0A
+
+"><b><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+Orçamento</b></a>
+</center>
+<p><br></p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M168.2 384.9c-15-5.4-31.7-3.1-44.6 6.4c-8.2 6-22.3 14.8-39.4 22.7c5.6-14.7 9.9-31.3 11.3-49.4c1-12.9-3.3-25.7-11.8-35.5C60.4 302.8 48 272 48 240c0-79.5 83.3-160 208-160s208 80.5 208 160s-83.3 160-208 160c-31.6 0-61.3-5.5-87.8-15.1zM26.3 423.8c-1.6 2.7-3.3 5.4-5.1 8.1l-.3 .5c-1.6 2.3-3.2 4.6-4.8 6.9c-3.5 4.7-7.3 9.3-11.3 13.5c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c5.1 0 10.2-.3 15.3-.8l.7-.1c4.4-.5 8.8-1.1 13.2-1.9c.8-.1 1.6-.3 2.4-.5c17.8-3.5 34.9-9.5 50.1-16.1c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9zM144 272a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm144-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm80 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+Revisão de estilo científico</strong>
+</h3>
+<p>
+<em>Revisão/sugestão de conteúdo e métodos | Revisão/sugestão de
+referências</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM96 64H288c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32zm32 160a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM96 352a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM64 416c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM192 256a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm64-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM288 448a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg>
+Estimativa do tamanho de amostra</strong>
+</h3>
+<p>
+<em>Cálculo de tamanho amostral | R Script</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M192 0c-41.8 0-77.4 26.7-90.5 64H64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H282.5C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM72 272a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm104-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16z"/></svg>
+Aleatorização em grupos</strong>
+</h3>
+<p>
+<em>Tabela de randomização | R Script</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg>
+Modelagem da tabela de dados</strong>
+</h3>
+<p>
+<em>Tabela editável | R Script</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M152.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 113C-2.3 103.6-2.3 88.4 7 79s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM224 96c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zM160 416c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32zM48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+Plano de análise estatística</strong>
+</h3>
+<p>
+<em>Revisão de objetivos geral/específicos | Plano de análise
+estatística</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/></svg>
+Formatação de referências</strong>
+</h3>
+<p>
+<em>Formatação de referências com software gerenciador | Biblioteca de
+software gerenciador</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384V320c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v32h64V64L224 64v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></svg>
+Mentoria</strong>
+</h3>
+<p>
+<em>Orientação</em>
+</p>
+<p><br></p>
+</div>
+<!--script for COMMENT -->
+<div class="acc-head list-group-item">
+<h2>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/></svg>
+Computação estatística
+</h2>
+</div>
+<div class="acc-body" style="background-color:lightgrey;">
+<div>
+<center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Descrição </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Comparação </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Correlação </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Associação </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Regressão </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Efeito </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Eficácia
+</span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Efetividade </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Acurácia
+</span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Concordância </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Confiabilidade </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Meta-análise </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Códigos
+em R </span>
+</center>
+</div>
+<p><br></p>
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Computação estatística
+&body=
+Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
+
+Solicitante (nome e sobrenome): %0D%0A %0D%0A
+
+Tema do meu projeto: %0D%0A %0D%0A
+
+Tipo de Projeto [x]: %0D%0A
+[  ] Projeto de pesquisa %0D%0A
+[  ] Monografia %0D%0A
+[  ] Dissertação %0D%0A
+[  ] Tese %0D%0A
+[  ] Artigo %0D%0A
+[  ] Profissional %0D%0A %0D%0A
+
+Prazo para recebimento do material contratado: %0D%0A %0D%0A
+
+Opções que desejo incluir [x]: %0D%0A
+[  ] Completa: todas as opções abaixo %0D%0A
+[  ] Simulação de estudos %0D%0A
+[  ] Análise estatística %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+
+Opcional: %0D%0A
+- Arquivos em anexo %0D%0A
+- Comentários sobre o trabalho %0D%0A
+
+"><b><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+Orçamento</b></a>
+</center>
+<p><br></p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M384 96V320H64L64 96H384zM64 32C28.7 32 0 60.7 0 96V320c0 35.3 28.7 64 64 64H181.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H277.3l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48V432c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H528zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+Simulação de estudos</strong>
+</h3>
+<p>
+<em>Dados sintéticos | R Script</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120z"/></svg>
+Análise estatística</strong>
+</h3>
+<p>
+<em>Revisão de objetivos geral/específicos | Revisão da tabela de dados
+| Análise em texto editável | R Script</em>
+</p>
+</h3>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384V320c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v32h64V64L224 64v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></svg>
+Mentoria</strong>
+</h3>
+<p>
+<em>Orientação</em>
+</p>
+<p><br></p>
+</div>
+<!--script for COMMENT -->
+<div class="acc-head list-group-item">
+<h2>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/></svg>
+Computação biomédica
+</h2>
+</div>
+<div class="acc-body" style="background-color:lightgrey;">
+<div>
+<center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Eletromiografia de superfície </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Eletrogoniometria </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Posturografia </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Cinemetria </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Códigos em R </span>
+</center>
+</div>
+<p><br></p>
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Computação biomédica
+&body=
+Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
+
+Solicitante (nome e sobrenome): %0D%0A %0D%0A
+
+Tema do meu projeto: %0D%0A %0D%0A
+
+Tipo de Projeto [x]: %0D%0A
+[  ] Projeto de pesquisa %0D%0A
+[  ] Monografia %0D%0A
+[  ] Dissertação %0D%0A
+[  ] Tese %0D%0A
+[  ] Artigo %0D%0A
+[  ] Profissional %0D%0A %0D%0A
+
+Prazo para recebimento do material contratado: %0D%0A %0D%0A
+
+Opções que desejo incluir [x]: %0D%0A
+[  ] Completa: todas as opções abaixo %0D%0A
+[  ] Protocolos de coleta de dados %0D%0A
+[  ] Processamento de sinais %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+
+Opcional: %0D%0A
+- Arquivos em anexo %0D%0A
+- Comentários sobre o trabalho %0D%0A
+
+"><b><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+Orçamento</b></a>
+</center>
+<p><br></p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M24 56c0-13.3 10.7-24 24-24H80c13.3 0 24 10.7 24 24V176h16c13.3 0 24 10.7 24 24s-10.7 24-24 24H40c-13.3 0-24-10.7-24-24s10.7-24 24-24H56V80H48C34.7 80 24 69.3 24 56zM86.7 341.2c-6.5-7.4-18.3-6.9-24 1.2L51.5 357.9c-7.7 10.8-22.7 13.3-33.5 5.6s-13.3-22.7-5.6-33.5l11.1-15.6c23.7-33.2 72.3-35.6 99.2-4.9c21.3 24.4 20.8 60.9-1.1 84.7L86.8 432H120c13.3 0 24 10.7 24 24s-10.7 24-24 24H32c-9.5 0-18.2-5.6-22-14.4s-2.1-18.9 4.3-25.9l72-78c5.3-5.8 5.4-14.6 .3-20.5zM224 64H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 160H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 160H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+Protocolos de coleta de dados</strong>
+</h3>
+<p>
+<em>Texto editável | Diretrizes internacionais sugeridas</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M128 64c0-17.7 14.3-32 32-32H320c17.7 0 32 14.3 32 32V416h96V256c0-17.7 14.3-32 32-32H608c17.7 0 32 14.3 32 32s-14.3 32-32 32H512V448c0 17.7-14.3 32-32 32H320c-17.7 0-32-14.3-32-32V96H192V256c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h96V64z"/></svg>
+Processamento de sinais</strong>
+</h3>
+<p>
+<em>Script de processamento | Texto editável</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384V320c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v32h64V64L224 64v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></svg>
+Mentoria</strong>
+</h3>
+<p>
+<em>Orientação</em>
+</p>
+<p><br></p>
+</div>
+<!--script for COMMENT -->
+<div class="acc-head list-group-item">
+<h2>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/></svg>
+Submissão de manuscritos
+</h2>
+</div>
+<div class="acc-body last" style="background-color:lightgrey;">
+<div>
+<center>
+<span class="badge rounded-pill bg-primary" style="font-size:0.8em;">
+Artigo original </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Revisão de escopo </span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão
+sistemática </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Meta-análise</span> <span
+class="badge rounded-pill bg-primary" style="font-size:0.8em;"> Revisão
+externa por pares </span> <span class="badge rounded-pill bg-primary"
+style="font-size:0.8em;"> Carta-resposta </span>
+</center>
+</div>
+<p><br></p>
+<center>
+<a style="font-size:1em;border-width:3px;border-style: solid; border-color:white; border-radius:10px; padding:10px 20px 10px 20px; background-color:#276DC2; text-decoration:none; color:white" href="mailto:cienciacomr@gmail.com?subject=
+Submissão de manuscritos
+&body=
+Solicito orçamento de consultoria para trabalho conforme abaixo: %0D%0A %0D%0A
+
+Solicitante (nome e sobrenome): %0D%0A %0D%0A
+
+Tema do meu projeto: %0D%0A %0D%0A
+
+Tipo de Projeto [x]: %0D%0A
+[  ] Projeto de pesquisa %0D%0A
+[  ] Monografia %0D%0A
+[  ] Dissertação %0D%0A
+[  ] Tese %0D%0A
+[  ] Artigo %0D%0A
+[  ] Profissional %0D%0A %0D%0A
+
+Prazo para recebimento do material contratado: %0D%0A %0D%0A
+
+Opções que desejo incluir [x]: %0D%0A
+[  ] Completa: todas as opções abaixo %0D%0A
+[  ] Resposta aos revisores %0D%0A
+[  ] Revisão de estilo científico %0D%0A
+[  ] Formatação de referências %0D%0A
+[  ] Mentoria agendada %0D%0A %0D%0A
+
+Opcional: %0D%0A
+- Arquivos em anexo %0D%0A
+- Comentários sobre o trabalho %0D%0A
+
+"><b><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.3em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+Orçamento</b></a>
+</center>
+<p><br></p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/></svg>
+Resposta aos revisores</strong>
+</h3>
+<p>
+<em>Revisão de estilo da carta-resposta | Revisão/sugestão de
+referências</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M168.2 384.9c-15-5.4-31.7-3.1-44.6 6.4c-8.2 6-22.3 14.8-39.4 22.7c5.6-14.7 9.9-31.3 11.3-49.4c1-12.9-3.3-25.7-11.8-35.5C60.4 302.8 48 272 48 240c0-79.5 83.3-160 208-160s208 80.5 208 160s-83.3 160-208 160c-31.6 0-61.3-5.5-87.8-15.1zM26.3 423.8c-1.6 2.7-3.3 5.4-5.1 8.1l-.3 .5c-1.6 2.3-3.2 4.6-4.8 6.9c-3.5 4.7-7.3 9.3-11.3 13.5c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c5.1 0 10.2-.3 15.3-.8l.7-.1c4.4-.5 8.8-1.1 13.2-1.9c.8-.1 1.6-.3 2.4-.5c17.8-3.5 34.9-9.5 50.1-16.1c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9zM144 272a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm144-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm80 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+Revisão de estilo científico</strong>
+</h3>
+<p>
+<em>Revisão/sugestão de conteúdo e métodos | Revisão/sugestão de
+referências</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/></svg>
+Formatação de referências</strong>
+</h3>
+<p>
+<em>Formatação de referências com software gerenciador | Biblioteca de
+software gerenciador</em>
+</p>
+<h3>
+<strong><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:0.1em;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384V320c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v32h64V64L224 64v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></svg>
+Mentoria</strong>
+</h3>
+<p>
+<em>Orientação</em>
+</p>
+<p><br></p>
+</div>
+
+<footer class="footer"><center>
+
+<br>
+
+<br>
+
+<br>
+
+<!--script for generating HORIZONTAL LINE-->
+
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+<!-- CREATIVE COMMONS BADGE-->
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Ciência com R</span> de <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Arthur de Sa Ferreira</span> está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons - Atribuição-NãoComercial 4.0 Internacional</a>
+
+<!-- <img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /> -->
+
+<br>
+
+Copyright &copy; 2021 All rights reserved. Last update <span id="datetime"></span></p><script>var dt = new Date().toLocaleDateString(); document.getElementById("datetime").innerHTML=dt.toLocaleString();</script>
+
+<br>
+
+<!--print visitor counter-->
+<a href="https://hits.seeyoufarm.com">
+  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fferreiraas.github.io%2FR%2F&count_bg=%232C3E50&title_bg=%2375A5D5&icon=&icon_color=%23000000&title=Visitas&edge_flat=false"/></img>
+</a>
+
+</center></footer>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
