@@ -7,11 +7,11 @@ author:
 repository_url: https://github.com/FerreiraAS/codes
 creative_commons: CC BY-NC-SA
 output_dir: docs
-include:
+includes:
   - header.html
   - google-translate.html
   - footer.html
-exclude:
+excludes:
   - cache
   - Metrics
   - Scripts
@@ -52,7 +52,7 @@ output:
   html_document:
     theme: flatly
     highlight: textmate
-    include:
+    includes:
       in_header: [header.html]
       before_body: [google-translate.html]
       after_body: [footer.html]

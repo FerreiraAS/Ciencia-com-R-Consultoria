@@ -10,12 +10,6 @@ description:
 
 output:
   html_document:
-    theme: flatly
-    highlight: textmate
-    include:
-      after_body: footer.html
-    css:
-      - style.css
     toc: false
 link-citations: yes
 csl: american-medical-association-10th-edition.csl
