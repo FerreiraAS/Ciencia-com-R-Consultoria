@@ -65,7 +65,8 @@ for (i in 1:length(packs.cran)) {
 packs.git <-
   c("cssparser",
     "packup",
-    "rcrossref"
+    "rcrossref",
+    "emo"
     )
 
 if (!require("cssparser", character.only = TRUE, quietly = TRUE))
@@ -76,6 +77,9 @@ if (!require("packup", character.only = TRUE, quietly = TRUE))
 
 if (!require("rcrossref", character.only = TRUE, quietly = TRUE))
   devtools::install_github("ropensci/rcrossref")
+
+if (!require("emo", character.only = TRUE, quietly = TRUE))
+  devtools::install_github("hadley/emo")
 
 # load all libraries
 packs <- c(packs.cran, packs.git)
