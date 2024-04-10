@@ -1,5 +1,5 @@
 ---
-title: '**Ciência com `r library(fontawesome); fa("r-project", height = "1.5em", width = "1.5em", fill = "steelblue", margin_right = "0.1em")`** | Consultoria'
+title: '**Ciência com `r library(fontawesome); fa("r-project", height = "1.2em", width = "1.5em", fill = "steelblue", margin_right = "0.1em")`**'
 
 # author: '<br>Arthur de Sá Ferreira<a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0000-0001-7014-2002" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top"><br><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.0em" alt="ORCID iD icon"/> https://orcid.org/0000-0001-7014-2002 </a> <br>'
 
@@ -66,8 +66,6 @@ Elaboração da modelagem e análise estatística que embase e valide a conclus�
 Auxílio ao visitante no auto desenvolvimento de suas habilidades na elaboração de trabalhos científicos, acadêmicos ou profissionais, disponibilizando recursos acadêmicos e *R scripts* prontos para uso
 
 </center>
-
-<br>
 
 <form style="text-align:center;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
   <input type="hidden" name="cmd" value="_s-xclick" />
