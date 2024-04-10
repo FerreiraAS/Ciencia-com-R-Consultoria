@@ -33,20 +33,20 @@ navbar:
 
   right:
     - text: ""
+      icon: "fa-instagram"
+      href: [https://www.instagram.com/cienciacomr/]
+    - text: ""
+      icon: "fa-linkedin"
+      href: [https://br.linkedin.com/in/arthur-sá-ferreira-13054037]
+    - text: ""
+      icon: "fa-twitter"
+      href: [https://twitter.com/Arthur_SF_BR]
+    - text: ""
       icon: "fa-mug-saucer"
       href: [https://www.buymeacoffee.com/Arthur.Sa.Ferreira]
     - text: ""
       icon: "fa-github"
       href: [https://github.com/FerreiraAS]
-    - text: ""
-      icon: "fa-share-nodes"
-      menu:
-        - text: ""
-          icon: "fa-twitter"
-          href: [https://twitter.com/Arthur_SF_BR]
-        - text: ""
-          icon: "fa-linkedin"
-          href: [https://br.linkedin.com/in/arthur-sá-ferreira-13054037]
 
 output:
   html_document:
