@@ -74,7 +74,7 @@ Auxílio ao visitante no auto desenvolvimento de suas habilidades na elaboraçã
   <input type="hidden" name="hosted_button_id" value="MXLNMSC2NDPCU" />
   <input type="hidden" name="currency_code" value="BRL" />
   <input style="border-width:0; border:0" type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_buynow_LG.gif" border="0" name="submit" title="O PayPal é a forma fácil e segura de pagar suas compras on-line." alt="Comprar agora" />
-<center>*O <i>eBook</i> será enviado por email em até 24h após a confirmação do pagamento</center>
+<center>*O <i>eBook</i> será enviado para o email cadastrado no PayPal em até 24h após a confirmação do pagamento</center>
 </form>
 
 <br>
