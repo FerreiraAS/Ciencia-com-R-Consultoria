@@ -114,7 +114,7 @@ colnames(summ.table) <- c("Item", "No.")
 print(
   kableExtra::kable(summ.table, align = c("l", rep(
     "c", ncol(summ.table) - 2
-  ), "r")) %>% kableExtra::kable_styling(
+  ), "r"), escape = FALSE, format = "html") %>% kableExtra::kable_styling(
     bootstrap_options = c("striped", "hover", "condensed", "responsive"),
     full_width = T,
     position = "center"
