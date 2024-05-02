@@ -19,7 +19,7 @@ if (is.null(res[[1]]$group$`external-ids.external-id`)) {
   SJR <- c()
   for (i in 1:length(issn)) {
     SJR.i <-
-      scimago[grep(gsub("-", "", substr(issn[i], 1, 9)), scimago$Issn), 6]
+      scimago$SJR[grep(gsub("-", "", substr(issn[i], 1, 9)), scimago$Issn)]
     SJR <- c(SJR, ifelse(length(SJR.i) != 0, SJR.i, ""))
   }
 
@@ -32,7 +32,7 @@ if (is.null(res[[1]]$group$`external-ids.external-id`)) {
   # remove rows with incomplete data
   peer.review <- peer.review[complete.cases(peer.review), ]
   colnames(peer.review) <-
-    c(paste("Periódicos (", dim(peer.review)[1], ")", sep = ""), "SJR")
+    c(paste0("Periódicos (", dim(peer.review)[1], ")"), "SJR")
   rownames(peer.review) <- c()
   
   # remove duplicates
@@ -43,7 +43,7 @@ if (is.null(res[[1]]$group$`external-ids.external-id`)) {
     knitr::kable(
       peer.review,
       align = "l",
-      format = "html",
+      format = ifelse(knitr::is_html_output(), "html", "latex"),
       escape = FALSE
     ) %>%
       kableExtra::kable_styling(
