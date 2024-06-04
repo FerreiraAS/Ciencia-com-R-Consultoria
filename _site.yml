@@ -58,7 +58,7 @@ output:
       after_body: [footer.html]
     css:
       - style.css
-      - CSS/main-color
+      - ./CSS/main-color
     toc: true
     toc_depth: 3
     toc_float: true
