@@ -77,10 +77,10 @@ if (sjmisc::is_empty(doi_without_altmetric)) {
       # replace is_oa from Crossref
       my_doi_oa <-
         roadoi::oadoi_fetch(dois = doi_without_altmetric$doi[ix], email = "cienciasdareabilitacao@souunisuam.com.br")
-      doi_without_altmetric$is_oa[ix] <-
+      try(doi_without_altmetric$is_oa[ix] <-
         ifelse(length(my_doi_oa$is_oa) != 0,
                toupper(as.character(my_doi_oa$is_oa)),
-               "FALSE")
+               "FALSE"), silent = TRUE)
       # add citation counts
       try ({
         citations <-

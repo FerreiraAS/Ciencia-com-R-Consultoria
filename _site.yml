@@ -21,12 +21,15 @@ navbar:
     - text: ""
       icon: "fa-home"
       href: [index.html]
-    - text: "Serviços"
-      icon: "fa-list-ul"
-      href: [servicos.html]
     - text: "GitBook"
       icon: "fa-book-open"
       href: [https://ferreiraas.github.io/Ciencia-com-R/]
+    - text: "Serviços"
+      icon: "fa-list-ul"
+      href: [servicos.html]
+    - text: "Clientes"
+      icon: "fa-star"
+      href: [clientes.html]
     - text: "Arthur Ferreira"
       icon: "fa-user-tie"
       href: [sobre.html]

@@ -1,0 +1,243 @@
+---
+title: "**Clientes**"
+link-citations: yes
+output:
+  html_document:
+    toc: false
+    css:
+      - CSS/main-color.css
+bibliography:
+  - references.bib
+---
+
+```{css, echo = FALSE}
+body {
+  font-size: 1.75em;
+}
+
+div.main-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+<br>
+
+<!--read additional files-->
+```{r packages-sources, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
+# most packages work fine if installed from CRAN
+packs.cran <-
+  c(
+    "anytime",
+    # plyr first, then dplyr
+    "plyr",
+    "dplyr",
+    "fontawesome",
+    "gridExtra",
+    "hrbrthemes",
+    "httpuv",
+    "janitor",
+    "knitr",
+    "kableExtra",
+    "lubridate",
+    "magrittr",
+    "packup",
+    "readxl",
+    "roadoi",
+    "rorcid",
+    "tidyverse",
+    "tools",
+    "usethis"
+  )
+
+for (i in 1:length(packs.cran)) {
+  if (!require(packs.cran[i], character.only = TRUE, quietly = TRUE))
+    install.packages(packs.cran[i], character.only = TRUE)
+}
+
+# other packages work better if installed from github
+packs.git <-
+  c("cssparser",
+    "packup",
+    "rcrossref",
+    "emo"
+    )
+
+if (!require("cssparser", character.only = TRUE, quietly = TRUE))
+  remotes::install_github('coolbutuseless/cssparser')
+
+if (!require("packup", character.only = TRUE, quietly = TRUE))
+  devtools::install_github("milesmcbain/packup")
+
+if (!require("rcrossref", character.only = TRUE, quietly = TRUE))
+  devtools::install_github("ropensci/rcrossref")
+
+if (!require("emo", character.only = TRUE, quietly = TRUE))
+  devtools::install_github("hadley/emo")
+
+# load all libraries
+packs <- c(packs.cran, packs.git)
+
+for (i in 1:length(packs)) {
+  library(packs[i], character.only = TRUE)
+}
+```
+
+```{r main-color, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
+# read CSS color for this page
+css <- read_css("CSS/main-color.css")
+main.color <- css$`:root`$`--mybackgroundcolor`
+```
+
+<!--read additional files-->
+```{r source-metrics-scripts, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
+source(file.path("Scripts", "citescore.R"), local = knitr::knit_global())
+source(file.path("Scripts", "sjr.R"), local = knitr::knit_global())
+source(file.path("Scripts", "webqualis.R"), local = knitr::knit_global())
+
+source(file.path("Scripts", "get_citescore.R"),
+       local = knitr::knit_global())
+source(file.path("Scripts", "get_sjr.R"), local = knitr::knit_global())
+source(file.path("Scripts", "get_webqualis.R"),
+       local = knitr::knit_global())
+# get metrics from Scopus, SCIMago and CAPES
+source(file.path("Scripts", "get-metrics-from-sources.R"), local = knitr::knit_global())
+```
+
+### **Publicações de clientes** {#publicacoes-clientes .tabset}
+
+<!--script for generating HORIZONTAL LINE-->
+<hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
+
+```{r clientes, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
+# read the data
+works <- xlsx::read.xlsx(
+    file = "Clientes.xlsx",
+    sheetIndex = 1
+    )
+
+# seleciona os artigos com DOI
+my_dois_works <- works$DOI
+
+# cria metadados para rastreio pelo Altmetric
+dois <- data.frame(DOI = my_dois_works)
+
+# Data cleaning
+dois <- data.frame(DOI = dois$DOI[!duplicated(dois)])
+dois <- data.frame(DOI = dois$DOI[!is.na(dois$DOI)])
+
+if (!sjmisc::is_empty(dois)) {
+  # cria metadados para rastreio pelo Altmetric
+  source("Scripts/altmetric-meta-from-dois.R",
+         local = knitr::knit_global())
+  
+  # get metrics from Altmetric and CrossRef
+  source("Scripts/get-metrics-from-dois.R", local = knitr::knit_global())
+  
+  # store to use downstream
+  doi_with_altmetric <-
+    get_metrics(
+      doi_with_altmetric = doi_with_altmetric,
+      doi_without_altmetric = NULL,
+      citescore,
+      scimago,
+      qualis
+    )
+  doi_without_altmetric <-
+    get_metrics(
+      doi_with_altmetric = NULL,
+      doi_without_altmetric = doi_without_altmetric,
+      citescore,
+      scimago,
+      qualis
+    )
+  
+  # available years of publication
+  years <-
+    na.omit(sort(unique(
+      c(
+        doi_with_altmetric$published_on,
+        doi_without_altmetric$published_on
+      )
+    ), decreasing = TRUE))
+  
+  # bind common data
+  doi_with_altmetric <-
+    data.frame(lapply(doi_with_altmetric, as.character),
+               stringsAsFactors = FALSE)
+  doi_without_altmetric <-
+    data.frame(lapply(doi_without_altmetric, as.character),
+               stringsAsFactors = FALSE)
+}
+```
+
+```{r print-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
+# Verifica se há DOIs
+if (max(dim(doi_with_altmetric)[1], 0) == 0 & max(dim(doi_without_altmetric)[1], 0) == 0) {
+  cat('\n')
+  cat('*Sem produção para exibir*')
+  cat('\n')
+} else {
+  # section header
+  cat('<br>')
+  cat(paste(
+    "*Produtos (n = ",
+    max(dim(doi_with_altmetric)[1], 0) + max(dim(doi_without_altmetric)[1], 0),
+    ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, CiteScore^4^, SJR^5^, Qualis^6^, Open Access^7^)* \n\n",
+    sep = "")
+  )
+  cat('<br>')
+  
+  # print table of papers with/without badges
+  for (year in 1:length(years)) {
+  # print tab header
+    cat('\n\n<!-- -->\n\n')
+    cat("#### **", as.character(years[year]), "**", "\n", sep = "")
+
+    source("Scripts/papers-with-badges.R", local = knitr::knit_global())
+    table.with.badges(
+      show.Altmetric = TRUE,
+      show.Dimensions = TRUE,
+      show.PlumX = TRUE,
+      show.CiteScore = TRUE,
+      show.SJR = TRUE,
+      show.Qualis = TRUE,
+      doi_with_altmetric = tryCatch(
+        doi_with_altmetric[doi_with_altmetric$published_on == years[year], ],
+        error = function(e) {
+          return(doi_with_altmetric <- as.data.frame(matrix(nrow = 0, ncol = 0)))
+        }
+      ),
+      doi_without_altmetric = tryCatch(doi_without_altmetric[doi_without_altmetric$published_on == years[year], ],
+        error = function(e) {
+          return(doi_without <- data.frame())
+        }
+      ),
+      citescore = citescore,
+      scimago = scimago,
+      qualis = qualis
+    )
+  }
+}
+```
+
+<br>
+
+<!--script for generating ALTMETRIC badges-->
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+<!--script for generating multiple DIMENSIONS badges-->
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+
+<!--script for generating multiple PLUMX badges-->
+<script type="text/javascript" src="//cdn.plu.mx/widget-all.js"></script>
+
+<br>
+
+<a style="float:right" href="#top"><b>Início</b></a>

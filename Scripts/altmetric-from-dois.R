@@ -191,10 +191,10 @@ doi_with_altmetric <-
 for (i in 1:length(doi_with_altmetric$doi)) {
   my_doi_oa <-
     roadoi::oadoi_fetch(dois = doi_with_altmetric$doi[i], email = "cienciasdareabilitacao@souunisuam.com.br")
-  doi_with_altmetric$is_oa[i] <-
+  try(doi_with_altmetric$is_oa[i] <-
     ifelse(length(my_doi_oa) != 0,
            toupper(as.character(my_doi_oa$is_oa)),
-           "FALSE")
+           "FALSE"), silent = TRUE)
 }
 
 doi_with_altmetric$citations <- rep(0, dim(doi_with_altmetric)[1])
@@ -203,7 +203,7 @@ for (i in 1:dim(doi_with_altmetric)[1]) {
   try({
     citations <-
       rcrossref::cr_citation_count(doi = as.character(doi_with_altmetric$doi[i]), key = "cienciasdareabilitacao@souunisuam.com.br")
-    doi_with_altmetric$citations[i] <- citations$count
+    try(doi_with_altmetric$citations[i] <- citations$count, silent = TRUE)
   },
   silent = TRUE)
   # search for alternative source of journal name
