@@ -308,6 +308,148 @@ cat('\n\n<!-- -->\n\n')
 
 <br>
 
+### **Preprints** {.tabset}
+
+<br>
+
+```{r preprints, cache = TRUE, cache.path = "cache/"}
+# read separate sheets
+data <-
+  read_excel("Links.xlsx",
+             sheet = "preprints",
+             col_types = c("text"))
+table <- data
+
+# verifica se é open acess ou subscription
+paper.year <- c()
+for (i in 1:dim(data)[1]) {
+  # check if DOI is missing and add link
+  if (is.na(data[i, 3])) {
+    # usa o link do DRIVE
+    table[i, 3] <- paste0(
+      "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
+      data[i, 2],
+      "\" target=\"_blank\">Solicitar acesso",
+      "</a>"
+    )
+  }
+  # add OPEN ACESS badge
+  tryCatch(
+    expr = {
+      my_doi_oa <-
+        roadoi::oadoi_fetch(dois = data[i, 3], email = "arthur_sf@icloud.com")
+      paper.year <- c(paper.year, as.numeric(my_doi_oa$year))
+      if (my_doi_oa$is_oa) {
+        # usa a imagem do OA e o link pelo DOI
+        table[i, 3] <- 
+          paste0(
+            "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"https://doi.org/",
+            data[i, 3],
+            "\" target=\"_blank\">",
+            "<img height=\"18px;\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/256px-Open_Access_logo_PLoS_white.svg.png\">",
+            "</a>"
+          )
+      } else {
+        # usa o link do DRIVE
+        table[i, 3] <- paste0(
+            "<a style=\"display: inline-block; float: left; margin:0.0em 0.2em 0.0em 0.0em; padding:0.0em 0.2em 0.0em 0.0em;\" href=\"",
+            data[i, 2],
+            "\" target=\"_blank\">Solicitar acesso",
+            "</a>"
+          )
+      }
+    },
+    error = function(e) {
+      
+    }
+  )
+}
+
+# drop link column
+summ.table <- table [, -2]
+colnames(summ.table) <- c("Produção", "Acesso")
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Síntese**", "\n", sep = "")
+
+freq.table <- table(seq(min(paper.year), max(paper.year)))
+freq.table[freq.table == 1] <- 0
+freq.paper <- table(paper.year)
+freq.table[match(names(freq.paper), names(freq.table))] <- freq.paper
+
+summ.prod <- rbind(sum(freq.table), t(t(rev(freq.table))))
+rownames(summ.prod) <- c("Total", seq(max(paper.year), min(paper.year)))
+
+# print table
+print(
+  kableExtra::kable(summ.prod, align = c("l", rep(
+    "c", ncol(summ.prod) - 1
+  ), "r"), escape = FALSE, format = "html") %>% kableExtra::kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  )
+)
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+# síntese quantitativa
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Produção anual**", "\n", sep = "")
+
+barplot(freq.table, main = "Distribuição de publicações por ano", xlab = "Ano", ylab = "Frequência, n")
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat("#### **Preprints**", "\n", sep = "")
+
+# print table
+print(
+  kableExtra::kable(summ.table, align = c("l", rep(
+    "c", ncol(summ.table) - 2
+  ), "r"), escape = FALSE, format = "html") %>% kableExtra::kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "center"
+  ) %>% kableExtra::scroll_box(width = "100%", height = "600px")
+)
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+cat('\n</center>')
+cat(paste(
+  '<a style="float:right" href="#top"><b>Início',
+  fa("circle-up"),
+  '</b></a>'
+))
+cat('\n\n<!-- -->\n\n')
+cat('\n\n<!-- -->\n\n')
+```
+
+<br>
+
 ### **Livros** {.tabset}
 
 <br>
