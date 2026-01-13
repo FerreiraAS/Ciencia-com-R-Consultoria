@@ -675,6 +675,9 @@ if (sjmisc::is_empty(metricas_all)) {
   for (year in 1:length(years)) {
     metricas_all_sort <- metricas_all[metricas_all$"Ano da Produção" == years[year], ]
     
+    # drop rows with NA in Ano de Produção
+    metricas_all_sort <- metricas_all_sort[!is.na(metricas_all_sort$"Ano da Produção"), ]
+    
     # Check for empty data
     if (!sjmisc::is_empty(metricas_all_sort)) {
       # print tab header
