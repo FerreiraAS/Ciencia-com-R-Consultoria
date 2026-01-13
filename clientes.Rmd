@@ -95,31 +95,16 @@ css <- read_css("CSS/main-color.css")
 main.color <- css$`:root`$`--mybackgroundcolor`
 ```
 
-<!--read additional files-->
-```{r source-metrics-scripts, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
-source(file.path("Scripts", "citescore.R"), local = knitr::knit_global())
-source(file.path("Scripts", "sjr.R"), local = knitr::knit_global())
-source(file.path("Scripts", "webqualis.R"), local = knitr::knit_global())
-
-source(file.path("Scripts", "get_citescore.R"),
-       local = knitr::knit_global())
-source(file.path("Scripts", "get_sjr.R"), local = knitr::knit_global())
-source(file.path("Scripts", "get_webqualis.R"),
-       local = knitr::knit_global())
-# get metrics from Scopus, SCIMago and CAPES
-source(file.path("Scripts", "get-metrics-from-sources.R"), local = knitr::knit_global())
-```
-
 ### **Publicações de clientes** {#publicacoes-clientes .tabset}
 
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-```{r clientes, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
+```{r clientes, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/clientes/"}
 # read the data
-works <- xlsx::read.xlsx(
+works <- misty::read.xlsx(
     file = "Clientes.xlsx",
-    sheetIndex = 1
+    sheet = "Clientes"
     )
 
 # seleciona os artigos com DOI
@@ -132,97 +117,238 @@ dois <- data.frame(DOI = my_dois_works)
 dois <- data.frame(DOI = dois$DOI[!duplicated(dois)])
 dois <- data.frame(DOI = dois$DOI[!is.na(dois$DOI)])
 
-if (!sjmisc::is_empty(dois)) {
-  # cria metadados para rastreio pelo Altmetric
-  source("Scripts/altmetric-meta-from-dois.R",
-         local = knitr::knit_global())
-  
-  # get metrics from Altmetric and CrossRef
-  source("Scripts/get-metrics-from-dois.R", local = knitr::knit_global())
-  
-  # store to use downstream
-  doi_with_altmetric <-
-    get_metrics(
-      doi_with_altmetric = doi_with_altmetric,
-      doi_without_altmetric = NULL,
-      citescore,
-      scimago,
-      qualis
-    )
-  doi_without_altmetric <-
-    get_metrics(
-      doi_with_altmetric = NULL,
-      doi_without_altmetric = doi_without_altmetric,
-      citescore,
-      scimago,
-      qualis
-    )
-  
-  # available years of publication
-  years <-
-    na.omit(sort(unique(
-      c(
-        doi_with_altmetric$published_on,
-        doi_without_altmetric$published_on
-      )
-    ), decreasing = TRUE))
-  
-  # bind common data
-  doi_with_altmetric <-
-    data.frame(lapply(doi_with_altmetric, as.character),
-               stringsAsFactors = FALSE)
-  doi_without_altmetric <-
-    data.frame(lapply(doi_without_altmetric, as.character),
-               stringsAsFactors = FALSE)
+doi_with_error <- c()
+source_with_error <- c()
+```
+
+```{r metricas-doi,  echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/clientes/", eval = curl::has_internet()}
+# add columns for metrics and details from Altmetric, CrossRef, Scopus and CAPES
+# https://details-page-api-docs.altmetric.com/data-endpoints-counts.html
+produtos.detalhes <- data.frame(
+  my_dois_works,
+  # from CAPES
+    # from CAPES
+    Qualis = NA,
+    ISSN = NA,
+    DOI = NA,
+    # from Altmetric
+    cited_by_fbwalls_count = NA,
+    cited_by_feeds_count = NA,
+    cited_by_gplus_count = NA,
+    cited_by_msm_count = NA,
+    cited_by_rdts_count = NA,
+    cited_by_qna_count = NA,
+    cited_by_tweeters_count = NA,
+    cited_by_bluesky_count = NA,
+    cited_by_wikipedia_count = NA,
+    cited_by_policies_count = NA,
+    cited_by_guidelines_count = NA,
+    cited_by_patents_count = NA,
+    cited_by_videos_count = NA,
+    cited_by_podcasts_count = NA,
+    cited_by_posts_count = NA,
+    mendeley = NA,
+    score = NA,
+    # from Altmetric and CrossRef
+    is_oa = NA,
+    # from CrossRef
+    citations = NA,
+    # from Scopus
+    source_id = NA,
+    SJR = NA,
+    SJR_year = NA,
+    CiteScore = NA,
+    CiteScore_year = NA,
+    PlumX = NA
+)
+```
+
+```{r issn,  echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/clientes/", eval = curl::has_internet()}
+# get ISSN from DOI
+my_dois_works <- c()
+my_doi_years <- c()
+my_doi_titles <- c()
+if (!sjmisc::is_empty(dois$DOI)) {
+  for (i in 1:nrow(dois)) {
+    # get ISSN from CrossRef API
+    url <- paste0("https://api.crossref.org/works/", dois$DOI[i])
+    response <- readLines(url, warn = FALSE)
+    response_json <- jsonlite::fromJSON(paste(response, collapse = ""))
+    if (!is.null(response_json$message$ISSN)) {
+      my_dois_works$ISSN[i] <- paste0(response_json$message$ISSN)
+      # year
+      my_doi_years[i] <- response_json$message$published$`date-parts`[[1]][1]
+      # title
+      my_doi_titles[i] <- response_json$message$title
+    } else {
+      my_dois_works$ISSN[i] <- NA
+      my_doi_years[i] <- NA
+      my_doi_titles[i] <- NA
+    }
+  }
 }
 ```
 
-```{r print-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
-# Verifica se há DOIs
-if (max(dim(doi_with_altmetric)[1], 0) == 0 & max(dim(doi_without_altmetric)[1], 0) == 0) {
+```{r altmetric-doi,  echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/clientes/", eval = curl::has_internet()}
+# check if DOI is not NA
+if (!sjmisc::is_empty(dois$DOI)) {
+  produtos.detalhes$DOI <- dois$DOI
+  produtos.detalhes$ISSN <- my_dois_works$ISSN
+  produtos.detalhes$publication_date_year_value <- my_doi_years
+  produtos.detalhes$title <- my_doi_titles
+  
+  # cria metadados para rastreio pelo Altmetric
+  source("Scripts/altmetric-meta-from-dois.R", local = knitr::knit_global())
+  
+  # get Altmetric from DOI
+  source("Scripts/altmetric-from-dois.R", local = knitr::knit_global())
+  produtos.detalhes$cited_by_fbwalls_count <-
+    doi_with_metrics$cited_by_fbwalls_count
+  produtos.detalhes$cited_by_feeds_count <-
+    doi_with_metrics$cited_by_feeds_count
+  produtos.detalhes$cited_by_gplus_count <-
+    doi_with_metrics$cited_by_gplus_count
+  produtos.detalhes$cited_by_msm_count <-
+    doi_with_metrics$cited_by_msm_count
+  produtos.detalhes$cited_by_rdts_count <-
+    doi_with_metrics$cited_by_rdts_count
+  produtos.detalhes$cited_by_qna_count <-
+    doi_with_metrics$cited_by_qna_count
+  produtos.detalhes$cited_by_tweeters_count <-
+    doi_with_metrics$cited_by_tweeters_count
+  produtos.detalhes$cited_by_bluesky_count <-
+    doi_with_metrics$cited_by_bluesky_count
+  produtos.detalhes$cited_by_wikipedia_count <-
+    doi_with_metrics$cited_by_wikipedia_count
+  produtos.detalhes$cited_by_policies_count <-
+    doi_with_metrics$cited_by_policies_count
+  produtos.detalhes$cited_by_guidelines_count <-
+    doi_with_metrics$cited_by_guidelines_count
+  produtos.detalhes$cited_by_patents_count <-
+    doi_with_metrics$cited_by_patents_count
+  produtos.detalhes$cited_by_videos_count <-
+    doi_with_metrics$cited_by_videos_count
+  produtos.detalhes$cited_by_podcasts_count <-
+    doi_with_metrics$cited_by_podcasts_count
+  produtos.detalhes$cited_by_posts_count <-
+    doi_with_metrics$cited_by_posts_count
+  produtos.detalhes$mendeley <-
+    doi_with_metrics$mendeley
+  produtos.detalhes$score <-
+    doi_with_metrics$score
+  
+  # wait to respect API rate limit (polite request)
+  Sys.sleep(1)
+  # beep to alert
+  beepr::beep("coin")
+}
+
+# rename column
+data.table::setnames(produtos.detalhes, 'score', 'altmetric_score')
+```
+
+```{r crossref-doi,  echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/clientes/", eval = curl::has_internet()}
+# check if DOI is not NA
+if (!sjmisc::is_empty(dois$DOI)) {
+  # get OA and citations from DOI after Altmetric
+  source("Scripts/crossref-from-dois.R", local = knitr::knit_global())
+  produtos.detalhes$is_oa <-
+    doi_with_metrics$is_oa
+  produtos.detalhes$citations <-
+    doi_with_metrics$citations
+  
+  # wait to respect API rate limit (polite request)
+  Sys.sleep(1)
+  # beep to alert
+  beepr::beep("coin")
+}
+```
+
+```{r scopus-issn,  echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/clientes/", eval = , eval = curl::has_internet()}
+# get unique ISSN
+issn.unique <- data.frame(ISSN = as.character(unique(na.omit(produtos.detalhes$ISSN))), check.names = FALSE)
+
+# iterate item-wise
+for (item in 1:nrow(issn.unique)) {
+  # match ID da Produção entre produtos e produtos.detalhes
+  matches <- which(
+    produtos.detalhes$ISSN == issn.unique$ISSN[item],
+    arr.ind = TRUE
+  )
+  
+  # get ISSN values
+  df_scopus <- data.frame(issn = issn.unique$ISSN[item], check.names = FALSE)
+  
+  # remove - from ISSN
+  df_scopus$issn <- gsub("-", "", df_scopus$issn)
+  
+  # check if df_scopus is empty
+  if (!sjmisc::is_empty(df_scopus)) {
+    source("Scripts/scopus-from-issn.R", local = knitr::knit_global())
+    produtos.detalhes$source_id[matches] <-
+      doi_with_metrics$source_id
+    produtos.detalhes$SJR[matches] <-
+      doi_with_metrics$SJR
+    produtos.detalhes$SJR_year[matches] <-
+      doi_with_metrics$SJR_year
+    produtos.detalhes$CiteScore[matches] <-
+      doi_with_metrics$CiteScore
+    produtos.detalhes$CiteScore_year[matches] <-
+      doi_with_metrics$CiteScore_year
+    
+    # wait to respect API rate limit (polite request)
+    Sys.sleep(1)
+    # beep to alert
+    beepr::beep("coin")
+  }
+}
+```
+
+```{r bind-all,  echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/clientes/"}
+# bind sources
+metricas_all <-
+  dplyr::bind_rows(
+    produtos.detalhes
+  ) %>%
+  as.data.frame(check.names = FALSE)
+
+# rename
+metricas_all$"ID da Produção" <- seq(1:nrow(metricas_all))
+names(metricas_all)[names(metricas_all) == "publication_date_year_value"] <-
+  "Ano da Produção"
+names(metricas_all)[names(metricas_all) == "title"] <- "Nome da Produção"
+```
+
+```{r autoria, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
+# Check if there are DOIs
+if (sjmisc::is_empty(metricas_all)) {
   cat('\n')
   cat('*Sem produção para exibir*')
   cat('\n')
 } else {
-  # section header
-  cat('<br>')
-  cat(paste(
-    "*Produtos (n = ",
-    max(dim(doi_with_altmetric)[1], 0) + max(dim(doi_without_altmetric)[1], 0),
-    ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, CiteScore^4^, SJR^5^, Qualis^6^, Open Access^7^)* \n\n",
-    sep = "")
-  )
-  cat('<br>')
-  
-  # print table of papers with/without badges
+  # available years of publication
+  years <- sort(unique(na.omit(metricas_all$"Ano da Produção")), decreasing = TRUE)
   for (year in 1:length(years)) {
-  # print tab header
-    cat('\n\n<!-- -->\n\n')
-    cat("#### **", as.character(years[year]), "**", "\n", sep = "")
-
-    source("Scripts/papers-with-badges.R", local = knitr::knit_global())
-    table.with.badges(
-      show.Altmetric = TRUE,
-      show.Dimensions = TRUE,
-      show.PlumX = TRUE,
-      show.CiteScore = TRUE,
-      show.SJR = TRUE,
-      show.Qualis = TRUE,
-      doi_with_altmetric = tryCatch(
-        doi_with_altmetric[doi_with_altmetric$published_on == years[year], ],
-        error = function(e) {
-          return(doi_with_altmetric <- as.data.frame(matrix(nrow = 0, ncol = 0)))
-        }
-      ),
-      doi_without_altmetric = tryCatch(doi_without_altmetric[doi_without_altmetric$published_on == years[year], ],
-        error = function(e) {
-          return(doi_without <- data.frame())
-        }
-      ),
-      citescore = citescore,
-      scimago = scimago,
-      qualis = qualis
-    )
+    metricas_all_sort <- metricas_all[metricas_all$"Ano da Produção" == years[year], ]
+    
+    # Check for empty data
+    if (!sjmisc::is_empty(metricas_all_sort)) {
+      # print tab header
+      cat('\n\n<!-- -->\n\n')
+      cat("#### **", as.character(years[year]), "**", "\n", sep = "")
+      
+      # print table of papers with/without badges
+      source("Scripts/table-with-badges.R", local = knitr::knit_global())
+      table.with.badges(
+        show.Altmetric = TRUE,
+        show.Dimensions = TRUE,
+        show.PlumX = TRUE,
+        show.CiteScore = TRUE,
+        show.SJR = TRUE,
+        show.Qualis = FALSE,
+        metricas_all_produtos = metricas_all_sort
+      )
+    }
   }
 }
 ```

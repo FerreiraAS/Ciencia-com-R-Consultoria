@@ -10,6 +10,23 @@ bibliography:
   - references.bib
 ---
 
+<!--set up-->
+```{r setup, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', out.width = "100%", results = "hide"}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.align = 'center',
+  results = 'asis',
+  include = TRUE,
+  out.width = "100%",
+  knitr.kable.NA = '',
+  knitr.table.format = ifelse(knitr::is_html_output(), "html", "latex"),
+  webshot = "webshot",
+  dev = "png"
+)
+```
+
 ```{css, echo = FALSE}
 body {
   font-size: 1.75em;
@@ -93,21 +110,6 @@ for (i in 1:length(packs)) {
 # read CSS color for this page
 css <- read_css("CSS/main-color.css")
 main.color <- css$`:root`$`--mybackgroundcolor`
-```
-
-<!--read additional files-->
-```{r source-metrics-scripts, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
-source(file.path("Scripts", "citescore.R"), local = knitr::knit_global())
-source(file.path("Scripts", "sjr.R"), local = knitr::knit_global())
-source(file.path("Scripts", "webqualis.R"), local = knitr::knit_global())
-
-source(file.path("Scripts", "get_citescore.R"),
-       local = knitr::knit_global())
-source(file.path("Scripts", "get_sjr.R"), local = knitr::knit_global())
-source(file.path("Scripts", "get_webqualis.R"),
-       local = knitr::knit_global())
-# get metrics from Scopus, SCIMago and CAPES
-source(file.path("Scripts", "get-metrics-from-sources.R"), local = knitr::knit_global())
 ```
 
 ### **Bio** {#autor}
@@ -207,18 +209,79 @@ Compõe o corpo editoral dos periódicos internacionais e nacionais:
 
 <br>
 
-```{r my-orcid, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
-my_orcid <- c("0000-0001-7014-2002")
-```
-
 ### **Membro de Associações** {#associacoes}
 
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-```{r memberships-services, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
-reviewer.name <- "Arthur de Sá Ferreira"
-source("Scripts/memberships-services.R")
+```{r memberships-services, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/autor/", eval = curl::has_internet()}
+my_orcid <- c("0000-0001-7014-2002")
+my_name <- c("Arthur de Sá Ferreira")
+
+member.all <- c()
+services.all <- c()
+docente.name <- my_name
+source("Scripts/orcid-memberships-services.R", local = knitr::knit_global())
+member.all <- rbind(member.all, member)
+services.all <- rbind(services.all, services)
+
+# drop column Docente
+member.all <- member.all[, -which(colnames(member.all) == "Docente")]
+services.all <- services.all[, -which(colnames(services.all) == "Docente")]
+
+# print tables
+if (knitr::is_html_output() && !sjmisc::is_empty(member.all)) {
+  # use kable for HTML output
+  knitr::kable(
+    member.all,
+    align = "l",
+    escape = FALSE,
+    format = "html",
+    booktabs = TRUE,
+    linesep = "",
+    caption = "Liderança de sociedades e/ou de órgãos científicos, culturais, profissionais, sociais, governamentais"
+  ) %>% kableExtra::kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = TRUE,
+    position = "center"
+  )  %>% kableExtra::column_spec(column = 1:dim(member.all)[2], width = paste0(c(0.10,0.10,0.25,0.30,0.15,0.10)*(21-3-3), "cm")) %>%
+    kableExtra::column_spec(column = 1, bold = TRUE) %>%
+    kableExtra::row_spec(row = 0, bold = TRUE) %>%
+    kableExtra::footnote(
+      general_title = "<strong>Fontes</strong>: ",
+      general = c(
+        "<a href='https://sucupira.capes.gov.br/sucupira/'>Plataforma Sucupira</a>",
+        "<a href='https://orcid.org'>ORCID</a>"
+      ),
+      escape = FALSE)
+}
+
+# print tables
+if (knitr::is_html_output() && !sjmisc::is_empty(services.all)) {
+  # use kable for HTML output
+  knitr::kable(
+    services.all,
+    align = "l",
+    escape = FALSE,
+    format = "html",
+    booktabs = TRUE,
+    linesep = "",
+    caption = "Assessorias de ONGs, empresas, agências de fomento, revistas científicas ou órgãos de governo"
+  ) %>% kableExtra::kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = TRUE,
+    position = "center"
+  )  %>% kableExtra::column_spec(column = 1:dim(services.all)[2], width = paste0(c(0.10,0.10,0.25,0.30,0.15,0.10)*(21-3-3), "cm")) %>%
+    kableExtra::column_spec(column = 1, bold = TRUE) %>%
+    kableExtra::row_spec(row = 0, bold = TRUE) %>%
+    kableExtra::footnote(
+      general_title = "<strong>Fontes</strong>: ",
+      general = c(
+        "<a href='https://sucupira.capes.gov.br/sucupira/'>Plataforma Sucupira</a>",
+        "<a href='https://orcid.org'>ORCID</a>"
+      ),
+      escape = FALSE)
+}
 ```
 
 <br>
@@ -232,9 +295,43 @@ source("Scripts/memberships-services.R")
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-```{r invited-positions, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
-reviewer.name <- "Arthur de Sá Ferreira"
-source("Scripts/invited-positions.R")
+```{r invited-positions, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/autor/", eval = curl::has_internet()}
+my_orcid <- c("0000-0001-7014-2002")
+my_name <- c("Arthur de Sá Ferreira")
+
+editor.name.all <- c()
+docente.name <- my_name
+source("Scripts/orcid-invited-positions.R", local = knitr::knit_global())
+editor.name.all <- rbind(editor.name.all, invited.pos)
+
+# drop column Docente
+editor.name.all <- editor.name.all[, -which(colnames(editor.name.all) == "Docente")]
+
+# print tables
+if (knitr::is_html_output() && !sjmisc::is_empty(editor.name.all)) {
+  # use kable for HTML output
+  knitr::kable(
+    editor.name.all,
+    align = "l",
+    escape = FALSE,
+    format = "html",
+    booktabs = TRUE,
+    linesep = "",
+    caption = "Assessoria de ONGs, empresas, agências de fomento, revistas científicas ou órgãos de governo"
+  ) %>% kableExtra::kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = TRUE,
+    position = "center"
+  )  %>% kableExtra::column_spec(column = 1:dim(editor.name.all)[2], width = paste0(c(0.10,0.10,0.25,0.30,0.15,0.10)*(21-3-3), "cm")) %>%
+    kableExtra::column_spec(column = 1, bold = TRUE) %>%
+    kableExtra::row_spec(row = 0, bold = TRUE) %>%
+    kableExtra::footnote(
+      general_title = "<strong>Fontes</strong>: ",
+      general = c(
+        "<a href='https://orcid.org'>ORCID</a>"
+      ),
+      escape = FALSE)
+}
 ```
 
 <br>
@@ -248,9 +345,45 @@ source("Scripts/invited-positions.R")
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-```{r peer-review, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
-reviewer.name <- "Arthur de Sá Ferreira"
-source("Scripts/reviewer-board.R")
+```{r peer-review, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/autor/", eval = curl::has_internet()}
+my_orcid <- c("0000-0001-7014-2002")
+my_name <- c("Arthur de Sá Ferreira")
+
+peer.review.all <- c()
+docente.name <- my_name
+source("Scripts/orcid-reviewer-board.R", local = knitr::knit_global())
+peer.review.all <- rbind(peer.review.all, peer.review)
+
+# drop column Docente
+peer.review.all <- peer.review.all[, -which(colnames(peer.review.all) == "Docente")]
+
+rownames(peer.review.all) <- NULL
+
+# print tables
+if (knitr::is_html_output() && !sjmisc::is_empty(peer.review.all)) {
+  # use kable for HTML output
+  knitr::kable(
+    peer.review.all,
+    align = "l",
+    escape = FALSE,
+    format = "html",
+    booktabs = TRUE,
+    linesep = "",
+    caption = "Revisor de periódicos nacionais e internacionais"
+  ) %>% kableExtra::kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = TRUE,
+    position = "center"
+  )  %>% kableExtra::column_spec(column = 1:dim(peer.review.all)[2], width = paste0(c(0.05,0.05,0.25,0.25,0.10,0.10,0.10,0.10)*(21-3-3), "cm")) %>%
+    kableExtra::column_spec(column = 1, bold = TRUE) %>%
+    kableExtra::row_spec(row = 0, bold = TRUE) %>%
+    kableExtra::footnote(
+      general_title = "<strong>Fontes</strong>: ",
+      general = c(
+        "<a href='https://orcid.org'>ORCID</a>"
+      ),
+      escape = FALSE)
+}
 ```
 
 <br>
@@ -264,10 +397,15 @@ source("Scripts/reviewer-board.R")
 <!--script for generating HORIZONTAL LINE-->
 <hr style="height:2px;border-width:0;color:#2C3E50;background-color:#2C3E50">
 
-```{r read-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/"}
+```{r read-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%", cache = TRUE, cache.path = "cache/autor/", eval = curl::has_internet()}
+library(dplyr)
+
+my_orcid <- c("0000-0001-7014-2002")
+my_name <- c("Arthur de Sá Ferreira")
+
 # baixa todos os artigos (com repetições)
 my_works <- rorcid::works(my_orcid) %>%
-  as_tibble() %>%
+  tibble::as_tibble() %>%
   janitor::clean_names()
 
 # check if has data to continue
@@ -283,6 +421,22 @@ if (!sjmisc::is_empty(my_works)) {
     tidyr::unnest(external_ids_external_id) %>%
     janitor::clean_names()
   
+  # get ISSN first
+    my_dois_works_issn <-
+    my_works_ids[my_works_ids$external_id_type == 'issn', ]
+  # select put_code and issn
+  my_dois_works_issn <-
+    my_dois_works_issn[, c("put_code", "external_id_value")]
+  # parse issn (if length == 9 remove -)
+  my_dois_works_issn$external_id_value <-
+    gsub("-", "", my_dois_works_issn$external_id_value)
+  # mutate issn string into two columns (strings separated by space)
+  my_dois_works_issn <-
+    tidyr::separate(my_dois_works_issn,
+                    external_id_value,
+                    into = c("ISSN", "issn_2"),
+                    sep = " ")
+  
   # seleciona os artigos com DOI
   my_dois_works <-
     my_works_ids[my_works_ids$external_id_type == 'doi', ]
@@ -293,106 +447,224 @@ if (!sjmisc::is_empty(my_works)) {
   my_dois_works <-
     my_dois_works[!duplicated(my_dois_works[, "external_id_value"]),]
   
+  # add ISSN by match put_code
+  my_dois_works$ISSN <- my_dois_works_issn$ISSN[match(my_dois_works$put_code,
+                                 my_dois_works_issn$put_code)]
+  
+    
   # cria metadados para rastreio pelo Altmetric
   dois <- data.frame(DOI = my_dois_works$external_id_value)
+}
+
+doi_with_error <- c()
+source_with_error <- c()
+```
+
+```{r metricas-doi, cache = TRUE, cache.path = "cache/autor/", eval = curl::has_internet()}
+# add columns for metrics and details from Altmetric, CrossRef, Scopus and CAPES
+# https://details-page-api-docs.altmetric.com/data-endpoints-counts.html
+produtos.detalhes <- data.frame(
+  my_dois_works,
+  # from CAPES
+    # from CAPES
+    Qualis = NA,
+    ISSN = NA,
+    DOI = NA,
+    # from Altmetric
+    cited_by_fbwalls_count = NA,
+    cited_by_feeds_count = NA,
+    cited_by_gplus_count = NA,
+    cited_by_msm_count = NA,
+    cited_by_rdts_count = NA,
+    cited_by_qna_count = NA,
+    cited_by_tweeters_count = NA,
+    cited_by_bluesky_count = NA,
+    cited_by_wikipedia_count = NA,
+    cited_by_policies_count = NA,
+    cited_by_guidelines_count = NA,
+    cited_by_patents_count = NA,
+    cited_by_videos_count = NA,
+    cited_by_podcasts_count = NA,
+    cited_by_posts_count = NA,
+    mendeley = NA,
+    score = NA,
+    # from Altmetric and CrossRef
+    is_oa = NA,
+    # from CrossRef
+    citations = NA,
+    # from Scopus
+    source_id = NA,
+    SJR = NA,
+    SJR_year = NA,
+    CiteScore = NA,
+    CiteScore_year = NA,
+    PlumX = NA
+)
+```
+
+```{r altmetric-doi, cache = TRUE, cache.path = "cache/autor/", eval = curl::has_internet()}
+# check if DOI is not NA
+if (!sjmisc::is_empty(dois$DOI)) {
+  produtos.detalhes$DOI <- dois$DOI
+  produtos.detalhes$ISSN <- my_dois_works$ISSN
   
-  # Data cleaning
-  dois <- data.frame(DOI = dois$DOI[!duplicated(dois)])
-  dois <- data.frame(DOI = dois$DOI[!is.na(dois$DOI)])
+  # cria metadados para rastreio pelo Altmetric
+  source("Scripts/altmetric-meta-from-dois.R", local = knitr::knit_global())
   
-  if (!sjmisc::is_empty(dois)) {
-    # cria metadados para rastreio pelo Altmetric
-    source("Scripts/altmetric-meta-from-dois.R",
-           local = knitr::knit_global())
+  # get Altmetric from DOI
+  source("Scripts/altmetric-from-dois.R", local = knitr::knit_global())
+  produtos.detalhes$cited_by_fbwalls_count <-
+    doi_with_metrics$cited_by_fbwalls_count
+  produtos.detalhes$cited_by_feeds_count <-
+    doi_with_metrics$cited_by_feeds_count
+  produtos.detalhes$cited_by_gplus_count <-
+    doi_with_metrics$cited_by_gplus_count
+  produtos.detalhes$cited_by_msm_count <-
+    doi_with_metrics$cited_by_msm_count
+  produtos.detalhes$cited_by_rdts_count <-
+    doi_with_metrics$cited_by_rdts_count
+  produtos.detalhes$cited_by_qna_count <-
+    doi_with_metrics$cited_by_qna_count
+  produtos.detalhes$cited_by_tweeters_count <-
+    doi_with_metrics$cited_by_tweeters_count
+  produtos.detalhes$cited_by_bluesky_count <-
+    doi_with_metrics$cited_by_bluesky_count
+  produtos.detalhes$cited_by_wikipedia_count <-
+    doi_with_metrics$cited_by_wikipedia_count
+  produtos.detalhes$cited_by_policies_count <-
+    doi_with_metrics$cited_by_policies_count
+  produtos.detalhes$cited_by_guidelines_count <-
+    doi_with_metrics$cited_by_guidelines_count
+  produtos.detalhes$cited_by_patents_count <-
+    doi_with_metrics$cited_by_patents_count
+  produtos.detalhes$cited_by_videos_count <-
+    doi_with_metrics$cited_by_videos_count
+  produtos.detalhes$cited_by_podcasts_count <-
+    doi_with_metrics$cited_by_podcasts_count
+  produtos.detalhes$cited_by_posts_count <-
+    doi_with_metrics$cited_by_posts_count
+  produtos.detalhes$mendeley <-
+    doi_with_metrics$mendeley
+  produtos.detalhes$score <-
+    doi_with_metrics$score
+  
+  # wait to respect API rate limit (polite request)
+  Sys.sleep(1)
+  # beep to alert
+  beepr::beep("coin")
+}
+
+# rename column
+data.table::setnames(produtos.detalhes, 'score', 'altmetric_score')
+```
+
+```{r crossref-doi, cache = TRUE, cache.path = "cache/autor/", eval = curl::has_internet()}
+# check if DOI is not NA
+if (!sjmisc::is_empty(dois$DOI)) {
+  # get OA and citations from DOI after Altmetric
+  source("Scripts/crossref-from-dois.R", local = knitr::knit_global())
+  produtos.detalhes$is_oa <-
+    doi_with_metrics$is_oa
+  produtos.detalhes$citations <-
+    doi_with_metrics$citations
+  
+  # wait to respect API rate limit (polite request)
+  Sys.sleep(1)
+  # beep to alert
+  beepr::beep("coin")
+}
+```
+
+```{r scopus-issn, cache = TRUE, cache.path = "cache/autor/", eval = , eval = curl::has_internet()}
+# get unique ISSN
+issn.unique <- data.frame(ISSN = as.character(unique(na.omit(produtos.detalhes$ISSN))), check.names = FALSE)
+
+# iterate item-wise
+for (item in 1:nrow(issn.unique)) {
+  # match ID da Produção entre produtos e produtos.detalhes
+  matches <- which(
+    produtos.detalhes$ISSN == issn.unique$ISSN[item],
+    arr.ind = TRUE
+  )
+  
+  # get ISSN values
+  df_scopus <- data.frame(issn = issn.unique$ISSN[item], check.names = FALSE)
+  
+  # remove - from ISSN
+  df_scopus$issn <- gsub("-", "", df_scopus$issn)
+  
+  # check if df_scopus is empty
+  if (!sjmisc::is_empty(df_scopus)) {
+    source("Scripts/scopus-from-issn.R", local = knitr::knit_global())
+    produtos.detalhes$source_id[matches] <-
+      doi_with_metrics$source_id
+    produtos.detalhes$SJR[matches] <-
+      doi_with_metrics$SJR
+    produtos.detalhes$SJR_year[matches] <-
+      doi_with_metrics$SJR_year
+    produtos.detalhes$CiteScore[matches] <-
+      doi_with_metrics$CiteScore
+    produtos.detalhes$CiteScore_year[matches] <-
+      doi_with_metrics$CiteScore_year
     
-    # get metrics from Altmetric and CrossRef
-    source("Scripts/get-metrics-from-dois.R",
-           local = knitr::knit_global())
-    
-    # store to use downstream
-    doi_with_altmetric <-
-      get_metrics(
-        doi_with_altmetric = doi_with_altmetric,
-        doi_without_altmetric = NULL,
-        citescore,
-        scimago,
-        qualis
-      )
-    doi_without_altmetric <-
-      get_metrics(
-        doi_with_altmetric = NULL,
-        doi_without_altmetric = doi_without_altmetric,
-        citescore,
-        scimago,
-        qualis
-      )
-    
-    # available years of publication
-    years <-
-      na.omit(sort(unique(
-        c(
-          doi_with_altmetric$published_on,
-          doi_without_altmetric$published_on
-        )
-      ), decreasing = TRUE))
-    
-    # bind common data
-    doi_with_altmetric <-
-      data.frame(lapply(doi_with_altmetric, as.character),
-                 stringsAsFactors = FALSE)
-    doi_without_altmetric <-
-      data.frame(lapply(doi_without_altmetric, as.character),
-                 stringsAsFactors = FALSE)
+    # wait to respect API rate limit (polite request)
+    Sys.sleep(1)
+    # beep to alert
+    beepr::beep("coin")
   }
 }
 ```
 
-```{r print-papers, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center', results = "asis", out.width = "100%"}
-# Verifica se há DOIs
-if (max(dim(doi_with_altmetric)[1], 0) == 0 & max(dim(doi_without_altmetric)[1], 0) == 0) {
+```{r bind-all, cache = TRUE, cache.path = "cache/autor/"}
+# bind sources
+metricas_all <-
+  dplyr::bind_rows(
+    produtos.detalhes
+  ) %>%
+  as.data.frame(check.names = FALSE)
+
+# rename
+names(metricas_all)[names(metricas_all) == "put_code"] <-
+  "ID da Produção"
+metricas_all$source_year <- metricas_all$publication_date_year_value
+names(metricas_all)[names(metricas_all) == "publication_date_year_value"] <-
+  "Ano da Produção"
+names(metricas_all)[names(metricas_all) == "title_title_value"] <-
+  "Nome da Produção"
+names(metricas_all)[names(metricas_all) == "altmetric_score"] <-
+  "altmetric_score"
+```
+
+```{r autoria}
+# Check if there are DOIs
+if (sjmisc::is_empty(metricas_all)) {
   cat('\n')
   cat('*Sem produção para exibir*')
   cat('\n')
 } else {
-  # section header
-  cat('<br>')
-  cat(paste(
-    "*Produtos (n = ",
-    max(dim(doi_with_altmetric)[1], 0) + max(dim(doi_without_altmetric)[1], 0),
-    ") e Impactos (Altmetric^1^, Dimensions^2^, PlumX^3^, CiteScore^4^, SJR^5^, Qualis^6^, Open Access^7^)* \n\n",
-    sep = "")
-  )
-  cat('<br>')
-  
-  # print table of papers with/without badges
+  # available years of publication
+  years <- sort(unique(na.omit(metricas_all$"Ano da Produção")), decreasing = TRUE)
   for (year in 1:length(years)) {
-  # print tab header
-    cat('\n\n<!-- -->\n\n')
-    cat("#### **", as.character(years[year]), "**", "\n", sep = "")
-
-    source("Scripts/papers-with-badges.R", local = knitr::knit_global())
-    table.with.badges(
-      show.Altmetric = TRUE,
-      show.Dimensions = TRUE,
-      show.PlumX = TRUE,
-      show.CiteScore = TRUE,
-      show.SJR = TRUE,
-      show.Qualis = TRUE,
-      doi_with_altmetric = tryCatch(
-        doi_with_altmetric[doi_with_altmetric$published_on == years[year], ],
-        error = function(e) {
-          return(doi_with_altmetric <- as.data.frame(matrix(nrow = 0, ncol = 0)))
-        }
-      ),
-      doi_without_altmetric = tryCatch(doi_without_altmetric[doi_without_altmetric$published_on == years[year], ],
-        error = function(e) {
-          return(doi_without <- data.frame())
-        }
-      ),
-      citescore = citescore,
-      scimago = scimago,
-      qualis = qualis
-    )
+    metricas_all_sort <- metricas_all[metricas_all$"Ano da Produção" == years[year], ]
+    
+    # Check for empty data
+    if (!sjmisc::is_empty(metricas_all_sort)) {
+      # print tab header
+      cat('\n\n<!-- -->\n\n')
+      cat("#### **", as.character(years[year]), "**", "\n", sep = "")
+      
+      # print table of papers with/without badges
+      source("Scripts/table-with-badges.R", local = knitr::knit_global())
+      table.with.badges(
+        show.Altmetric = TRUE,
+        show.Dimensions = TRUE,
+        show.PlumX = TRUE,
+        show.CiteScore = TRUE,
+        show.SJR = TRUE,
+        show.Qualis = FALSE,
+        metricas_all_produtos = metricas_all_sort
+      )
+    }
   }
 }
 ```
@@ -412,6 +684,6 @@ if (max(dim(doi_with_altmetric)[1], 0) == 0 & max(dim(doi_without_altmetric)[1],
 
 <a style="float:right" href="#top"><b>Início</b></a>
 
-### **[Portfolio](portfolio.html)**
+### **[portfolio](portfolio.html)**
 
 <br>
