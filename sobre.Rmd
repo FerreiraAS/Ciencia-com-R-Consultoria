@@ -229,6 +229,21 @@ services.all <- rbind(services.all, services)
 member.all <- member.all[, -which(colnames(member.all) == "Docente")]
 services.all <- services.all[, -which(colnames(services.all) == "Docente")]
 
+rownames(member.all) <- NULL
+rownames(services.all) <- NULL
+
+# filter data based on quadrienal.vigente
+if(!sjmisc::is_empty(member.all)) {
+  # replace current year by "Atual"
+  member.all$`Ano (fim)`[member.all$`Ano (fim)` == format(Sys.Date(), "%Y")] <- "Atual"
+}
+
+# filter data based on quadrienal.vigente
+if(!sjmisc::is_empty(services.all)) {
+  # replace current year by "Atual"
+  services.all$`Ano (fim)`[services.all$`Ano (fim)` == format(Sys.Date(), "%Y")] <- "Atual"
+}
+
 # print tables
 if (knitr::is_html_output() && !sjmisc::is_empty(member.all)) {
   # use kable for HTML output
@@ -244,7 +259,7 @@ if (knitr::is_html_output() && !sjmisc::is_empty(member.all)) {
     bootstrap_options = c("striped", "hover", "condensed", "responsive"),
     full_width = TRUE,
     position = "center"
-  )  %>% kableExtra::column_spec(column = 1:dim(member.all)[2], width = paste0(c(0.10,0.10,0.25,0.30,0.15,0.10)*(21-3-3), "cm")) %>%
+  )  %>% kableExtra::column_spec(column = 1:dim(member.all)[2], width = paste0(c(0.10,0.10,0.30,0.30,0.10,0.10)*(21-3-3), "cm")) %>%
     kableExtra::column_spec(column = 1, bold = TRUE) %>%
     kableExtra::row_spec(row = 0, bold = TRUE) %>%
     kableExtra::footnote(
@@ -306,32 +321,38 @@ editor.name.all <- rbind(editor.name.all, invited.pos)
 
 # drop column Docente
 editor.name.all <- editor.name.all[, -which(colnames(editor.name.all) == "Docente")]
+rownames(editor.name.all) <- NULL
+
+# filter data based on quadrienal.vigente
+if(!sjmisc::is_empty(editor.name.all)) {
+  # replace current year by "Atual"
+  editor.name.all$`Ano (fim)`[editor.name.all$`Ano (fim)` == format(Sys.Date(), "%Y")] <- "Atual"
+}
 
 # print tables
-if (knitr::is_html_output() && !sjmisc::is_empty(editor.name.all)) {
-  # use kable for HTML output
-  knitr::kable(
-    editor.name.all,
-    align = "l",
-    escape = FALSE,
-    format = "html",
-    booktabs = TRUE,
-    linesep = "",
-    caption = "Assessoria de ONGs, empresas, agências de fomento, revistas científicas ou órgãos de governo"
-  ) %>% kableExtra::kable_styling(
-    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
-    full_width = TRUE,
-    position = "center"
-  )  %>% kableExtra::column_spec(column = 1:dim(editor.name.all)[2], width = paste0(c(0.10,0.10,0.25,0.30,0.15,0.10)*(21-3-3), "cm")) %>%
-    kableExtra::column_spec(column = 1, bold = TRUE) %>%
-    kableExtra::row_spec(row = 0, bold = TRUE) %>%
-    kableExtra::footnote(
-      general_title = "<strong>Fontes</strong>: ",
-      general = c(
-        "<a href='https://orcid.org'>ORCID</a>"
-      ),
-      escape = FALSE)
-}
+# use kable for HTML output
+knitr::kable(
+  editor.name.all,
+  align = "l",
+  escape = FALSE,
+  format = "html",
+  booktabs = TRUE,
+  linesep = "",
+  caption = "Assessoria de ONGs, empresas, agências de fomento, revistas científicas ou órgãos de governo"
+) %>% kableExtra::kable_styling(
+  bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+  full_width = TRUE,
+  position = "center"
+)  %>% kableExtra::column_spec(column = 1:dim(editor.name.all)[2], width = paste0(c(0.10,0.10,0.25,0.30,0.15,0.10)*(21-3-3), "cm")) %>%
+  kableExtra::column_spec(column = 1, bold = TRUE) %>%
+  kableExtra::row_spec(row = 0, bold = TRUE) %>%
+  kableExtra::footnote(
+    general_title = "<strong>Fontes</strong>: ",
+    general = c(
+      "<a href='https://sucupira.capes.gov.br/sucupira/'>Plataforma Sucupira</a>",
+      "<a href='https://orcid.org'>ORCID</a>"
+    ),
+    escape = FALSE)
 ```
 
 <br>
@@ -359,6 +380,12 @@ peer.review.all <- peer.review.all[, -which(colnames(peer.review.all) == "Docent
 
 rownames(peer.review.all) <- NULL
 
+# filter data based on quadrienal.vigente
+if(!sjmisc::is_empty(peer.review.all)) {
+  # replace current year by "Atual"
+  peer.review.all$`Ano (fim)`[peer.review.all$`Ano (fim)` == format(Sys.Date(), "%Y")] <- "Atual"
+}
+
 # print tables
 if (knitr::is_html_output() && !sjmisc::is_empty(peer.review.all)) {
   # use kable for HTML output
@@ -380,6 +407,7 @@ if (knitr::is_html_output() && !sjmisc::is_empty(peer.review.all)) {
     kableExtra::footnote(
       general_title = "<strong>Fontes</strong>: ",
       general = c(
+        "<a href='https://sucupira.capes.gov.br/sucupira/'>Plataforma Sucupira</a>",
         "<a href='https://orcid.org'>ORCID</a>"
       ),
       escape = FALSE)
@@ -684,6 +712,6 @@ if (sjmisc::is_empty(metricas_all)) {
 
 <a style="float:right" href="#top"><b>Início</b></a>
 
-### **[portfolio](portfolio.html)**
+### **[Portfolio](portfolio.html)**
 
 <br>
