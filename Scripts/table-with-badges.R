@@ -48,12 +48,32 @@ table.with.badges <-
         
         cat("<tr><td valign=top;>")
         cat("<br>")
-        # add title with link to DOI
-        if (length(doi) != 0 | !sjmisc::is_empty(doi)) {
-          cat(paste0('[**', title, '**](https://doi.org/', doi, '){target="_blank"}'), sep = "")
-        } else {
-          cat(paste0('**', title, '**'), sep = "")
+        
+        citation <- tryCatch(
+          rcrossref::cr_cn(
+            dois = doi,
+            format = "text",
+            style = "american-medical-association-10th-edition",
+            locale = "pt-BR"
+          ),
+          error = function(e) character(0)
+        )
+        # remove numbering (e.g., "1. ")
+        citation <- gsub("^[0-9]+\\.\\s+", "", citation)
+        
+        if (!is.null(doi) && !sjmisc::is_empty(doi) && length(citation) > 0) {
+          doi_link <- paste0(
+            'doi:<a href="https://doi.org/', doi, '" target="_blank">', doi, '</a>'
+          )
+          # substitui DOI com ou sem prefixo
+          citation <- gsub(
+            paste0("(doi:\\s*)?", doi),
+            doi_link,
+            citation,
+            ignore.case = TRUE
+          )
         }
+        cat(citation)
         
         # add OPEN ACCESS badge
         # if (length(is_oa) != 0 & !sjmisc::is_empty(is_oa)) {
