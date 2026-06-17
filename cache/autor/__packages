@@ -3,12 +3,14 @@ plyr
 dplyr
 fontawesome
 gridExtra
+hrbrthemes
 httpuv
 janitor
 knitr
 kableExtra
 lubridate
 magrittr
+packup
 readxl
 roadoi
 rorcid
@@ -21,8 +23,6 @@ purrr
 stringr
 forcats
 usethis
-rcrossref
-hrbrthemes
-packup
 cssparser
+rcrossref
 emo
