@@ -58,7 +58,7 @@ packs.cran <-
 
 for (i in 1:length(packs.cran)) {
   if (!require(packs.cran[i], character.only = TRUE, quietly = TRUE))
-    install.packages(packs.cran[i], character.only = TRUE)
+    install.packages(packs.cran[i], character.only = TRUE, repos = "https://r-project.org")
 }
 
 # other packages work better if installed from github
@@ -69,6 +69,7 @@ packs.git <-
     "emo"
     )
 
+Sys.unsetenv("GITHUB_PAT")
 if (!require("cssparser", character.only = TRUE, quietly = TRUE))
   remotes::install_github('coolbutuseless/cssparser')
 

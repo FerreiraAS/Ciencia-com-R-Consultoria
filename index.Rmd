@@ -36,6 +36,7 @@ div.main-container {
 ```
 
 ```{r packages, echo = FALSE, results = 'hide', include = FALSE}
+options(repos = c(CRAN = "https://r-project.org"))
 library(dplyr)
 ```
 

@@ -10,7 +10,6 @@ knitr
 kableExtra
 lubridate
 magrittr
-packup
 readxl
 roadoi
 rorcid
@@ -25,4 +24,5 @@ forcats
 usethis
 cssparser
 rcrossref
+packup
 emo
